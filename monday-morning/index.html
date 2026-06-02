@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brain Code | Monday Morning Models</title>
+    <link rel="stylesheet" href="styles.css?v=morning-remaining-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar" aria-label="Brain Code presentation">
+        <img class="uwf-logo" src="assets/uwf-logo-horizontal.png" alt="University of West Florida" />
+        <div class="deck-meta">
+          <strong>Brain Code</strong>
+        </div>
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          <span id="counter">1 / 18</span>
+        </div>
+      </header>
+
+      <main class="deck" id="deck" aria-live="polite">
+        <section class="frame hero-frame is-active" data-title="From Brain Loop To Notebook" data-notes="Use this as the handoff from the first 15 minutes. The familiar loop now becomes runnable code.">
+          <img class="hero-img" src="assets/daily-brain-hero.png" alt="Students learning with visible brain signal paths" />
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <h1>Brain Code</h1>
+            <p>Now we turn the brain loop into a notebook.</p>
+            <div class="brand-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-card fragment" data-fragment>
+              <span>Today’s morning goal: run small models, change one thing, and explain what changed.</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="heroSignals"></canvas>
+        </section>
+
+        <section class="frame mist-frame roadmap-frame" data-title="Morning Roadmap" data-notes="Keep this fast. Students should know the rhythm: warm up, neuron, decision, reflection.">
+          <h2>The rest of the morning has four moves.</h2>
+          <div class="roadmap-grid">
+            <article class="task-card fragment" data-fragment><b>Warm up</b><span>Open Colab, run one cell, edit one sentence.</span></article>
+            <article class="task-card green fragment" data-fragment><b>Neuron model</b><span>Change input strength and watch spikes appear.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Decision model</b><span>Let noisy evidence race toward a choice.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Discussion</b><span>Ask what the models show and what they hide.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Rule for the morning: predict first, rerun second, explain third.</div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Colab Warm-Up" data-notes="The goal is confidence with the interface, not Python mastery. Keep the first run frictionless.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook Zero</p>
+              <h2>A notebook is a place where text, code, and plots live together.</h2>
+              <article class="term fragment" data-fragment><b>Text cell</b><span>Explain what you think will happen.</span></article>
+              <article class="term fragment" data-fragment><b>Code cell</b><span>Run instructions the computer can follow.</span></article>
+              <article class="term fragment" data-fragment><b>Output</b><span>See a number, table, or plot after the code runs.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="notebookWarmup"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="First Student Task" data-notes="Give students one very small success before asking for interpretation.">
+          <h2>Your first notebook win is intentionally small.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Run</b><span>Press the play button on the first code cell.</span></article>
+            <article class="task-card green fragment" data-fragment><b>Edit</b><span>Change one markdown sentence into your own words.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Plot</b><span>Make one simple line graph appear.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Notice</b><span>Say what the graph is showing.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Checkpoint: every student has run code once before the neuron model starts.</div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="What Is A Model?" data-notes="Tie the abstract idea of model to the loop students already saw.">
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card">
+              <canvas data-animation="modelRecipe"></canvas>
+            </div>
+            <div>
+              <p class="eyebrow">Core idea</p>
+              <h2>A model is a simplified rule for a real process.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Choose a question</span>
+                <span class="fragment" data-fragment>Keep key ingredients</span>
+                <span class="fragment" data-fragment>Run the rule</span>
+                <span class="fragment" data-fragment>Compare to reality</span>
+              </div>
+              <p class="callout fragment" data-fragment>Useful models are not perfect. They are clear enough to test an idea.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame neuron-frame" data-title="Simple Neuron" data-notes="Name the LIF ingredients in plain language before code appears.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook One</p>
+              <h2>A simple neuron model asks: how much input makes a spike?</h2>
+              <article class="term fragment" data-fragment><b>Input</b><span>A push into the model neuron.</span></article>
+              <article class="term fragment" data-fragment><b>Leak</b><span>The voltage drifts back down over time.</span></article>
+              <article class="term fragment" data-fragment><b>Threshold</b><span>If voltage crosses the line, the model spikes.</span></article>
+              <article class="term fragment" data-fragment><b>Reset</b><span>After a spike, the voltage drops and starts again.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="lifNeuron"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Changing Input Strength" data-notes="Let students predict which input strength will spike most before showing the animation.">
+          <div class="media-col wide canvas-media">
+            <canvas data-animation="lifInputSweep"></canvas>
+          </div>
+          <div class="side-notes">
+            <h2>Changing one parameter can change the whole output.</h2>
+            <p class="fragment" data-fragment>Weak input may never cross threshold.</p>
+            <p class="fragment" data-fragment>Medium input may spike once or twice.</p>
+            <p class="fragment" data-fragment>Strong input can spike again and again.</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Neuron Notebook Prompts" data-notes="Use these as click-through prompts while students work.">
+          <h2>Before rerunning, make a prediction.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Prediction</b><span>If I raise input strength, I think the neuron will...</span></article>
+            <article class="task-card green fragment" data-fragment><b>Run</b><span>Change only one number, then rerun the model.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Evidence</b><span>Count the spikes and compare the plot.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Explain</b><span>The neuron spiked more or less because...</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Science habit: one clean change makes the result easier to interpret.</div>
+        </section>
+
+        <section class="frame light-frame split-frame code-frame" data-title="Code To Concept" data-notes="Do not teach every syntax detail. Point to the few code lines that match the model ingredients.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Read code like a map</p>
+              <h2>You do not need every line at once.</h2>
+              <article class="term fragment" data-fragment><b>Settings</b><span>Resting voltage, threshold, input strength.</span></article>
+              <article class="term fragment" data-fragment><b>Loop</b><span>Update the voltage one tiny time step at a time.</span></article>
+              <article class="term fragment" data-fragment><b>If statement</b><span>If voltage reaches threshold, record a spike.</span></article>
+            </div>
+            <div class="code-panel">
+              <pre><code>for each time step:
+    voltage += input - leak
+
+    if voltage >= threshold:
+        record spike
+        reset voltage</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Neuron Reflection" data-notes="Pause for pair-share before moving to decisions.">
+          <div class="final-copy">
+            <p class="eyebrow">Pair-share</p>
+            <h2>What did the neuron model help you see?</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Input matters</span>
+              <span class="fragment" data-fragment>Threshold matters</span>
+              <span class="fragment" data-fragment>Time matters</span>
+              <span class="fragment" data-fragment>Details are missing</span>
+            </div>
+            <p class="callout fragment" data-fragment>Next: decisions can be modeled as evidence accumulating over time.</p>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame light-frame split-frame decision-frame" data-title="Simple Decision Model" data-notes="Use the plain-language names: evidence push, random wobble, and how sure you want to be.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook Two</p>
+              <h2>A decision model asks: when is there enough evidence to choose?</h2>
+              <article class="term fragment" data-fragment><b>Evidence push</b><span>Information leaning toward one choice.</span></article>
+              <article class="term fragment" data-fragment><b>Random wobble</b><span>Noise that makes each trial a little different.</span></article>
+              <article class="term fragment" data-fragment><b>Decision bound</b><span>How sure the model wants to be before choosing.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="decisionDrift"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Noisy Evidence Paths" data-notes="Emphasize that same settings can produce different paths because of noise.">
+          <div class="media-col wide canvas-media">
+            <canvas data-animation="ddmTrials"></canvas>
+          </div>
+          <div class="side-notes">
+            <h2>The same model can produce different trials.</h2>
+            <p class="fragment" data-fragment>Some paths reach Choose A quickly.</p>
+            <p class="fragment" data-fragment>Some paths wobble before deciding.</p>
+            <p class="fragment" data-fragment>Noise is not a mistake. It is part of the model.</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Speed Accuracy Tradeoff" data-notes="Use this as a discussion slide before the summary plots in the notebook.">
+          <h2>What happens when the model waits to be more sure?</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Low bound</b><span>Faster choices, but more chances to be wrong.</span></article>
+            <article class="task-card green fragment" data-fragment><b>High bound</b><span>Slower choices, but more evidence collected.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Strong drift</b><span>Clear evidence usually reaches the right bound faster.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>More noise</b><span>Paths wobble more, so outcomes vary more.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Real-life question: when should speed matter more than certainty?</div>
+        </section>
+
+        <section class="frame light-frame split-frame decision-frame" data-title="Decision Summary Plots" data-notes="Connect single trial paths to the bar and reaction-time summaries.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">From trials to summaries</p>
+              <h2>Many runs reveal patterns a single run can hide.</h2>
+              <article class="term fragment" data-fragment><b>Bar chart</b><span>How often did the model choose A?</span></article>
+              <article class="term fragment" data-fragment><b>Line plot</b><span>How did reaction time change with evidence strength?</span></article>
+              <article class="term fragment" data-fragment><b>Question</b><span>Which plot answers which question?</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="decisionSummary"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="Models Can Mislead" data-notes="This is the scientific caution slide. Keep the tone balanced: useful and limited.">
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card">
+              <canvas data-animation="modelLimits"></canvas>
+            </div>
+            <div>
+              <p class="eyebrow">Be careful</p>
+              <h2>A simplified model can clarify or hide important details.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>What did we include?</span>
+                <span class="fragment" data-fragment>What did we leave out?</span>
+                <span class="fragment" data-fragment>What changed?</span>
+                <span class="fragment" data-fragment>What should we test next?</span>
+              </div>
+              <p class="callout fragment" data-fragment>Good scientists ask what the model cannot tell them.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Model Comparison" data-notes="Have groups fill the two columns verbally or on the worksheet.">
+          <h2>Compare the two models we used this morning.</h2>
+          <div class="compare-grid">
+            <article class="compare-card fragment" data-fragment>
+              <h3>Neuron model</h3>
+              <p>Question: how does input become spikes?</p>
+              <p>Output: voltage over time and spike count.</p>
+            </article>
+            <article class="compare-card green fragment" data-fragment>
+              <h3>Decision model</h3>
+              <p>Question: how does evidence become a choice?</p>
+              <p>Output: choice, reaction time, and many-trial summaries.</p>
+            </article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Both are simplified loops. Both become useful when we compare predictions to outputs.</div>
+        </section>
+
+        <section class="frame light-frame split-frame discussion-frame" data-title="Discussion Questions" data-notes="Use these questions to close the morning and prepare students for the later lab work.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Morning synthesis</p>
+              <h2>Use the model, then question the model.</h2>
+              <article class="term fragment" data-fragment><b>See</b><span>What did the plot make visible?</span></article>
+              <article class="term fragment" data-fragment><b>Miss</b><span>What real brain detail was missing?</span></article>
+              <article class="term fragment" data-fragment><b>Trust</b><span>What would make you trust the model more?</span></article>
+              <article class="term fragment" data-fragment><b>Revise</b><span>What would you change in the next version?</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="discussionBoard"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Morning Exit Ticket" data-notes="Ask students to write this individually. It gives you a quick check on model thinking.">
+          <div class="final-copy">
+            <p class="eyebrow">Exit ticket</p>
+            <h2>One model helped me understand ___, but it left out ___.</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Neuron</span>
+              <span class="fragment" data-fragment>Decision</span>
+              <span class="fragment" data-fragment>Plot</span>
+              <span class="fragment" data-fragment>Limitation</span>
+            </div>
+            <p class="callout fragment" data-fragment>After lunch, we can use the same habits to read neural data.</p>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+      </main>
+
+      <aside class="notes-panel" id="notesPanel" aria-label="Speaker notes">
+        <div>
+          <strong>Speaker Notes</strong>
+          <button type="button" id="closeNotes" aria-label="Close speaker notes">x</button>
+        </div>
+        <p id="notesText"></p>
+      </aside>
+
+      <footer class="controlbar">
+        <button type="button" id="prevBtn" aria-label="Previous">&larr;</button>
+        <button type="button" id="nextBtn" aria-label="Next">&rarr;</button>
+        <button type="button" id="fullBtn" aria-label="Fullscreen">Full</button>
+      </footer>
+    </div>
+
+    <script src="app.js?v=morning-remaining-1"></script>
+  </body>
+</html>
