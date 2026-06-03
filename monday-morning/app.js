@@ -728,7 +728,7 @@ function lifBridge(canvas, now) {
     roundedRect(ctx, rightX - 90, y - 17, 180, 28, 5, color);
     drawCenteredText(ctx, label, rightX, y + 3, 15, "#ffffff", 900);
   });
-  drawText(ctx, "kept in code", rightX - 78, cy + 134, 18, "#ffffff", 900);
+  drawCenteredText(ctx, "kept in code", rightX, cy + 160, 18, "#ffffff", 900);
   drawText(ctx, "ion-channel details are left out today", Math.max(26, leftX - 152), height - 34, 16, "rgba(255,255,255,0.84)", 800);
 }
 
