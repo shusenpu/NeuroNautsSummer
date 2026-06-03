@@ -903,6 +903,15 @@ input[type="range"] {
   gap: 30px;
 }
 
+.roadmap-frame .wide-discussion {
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  align-self: end;
+}
+
 .roadmap-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
