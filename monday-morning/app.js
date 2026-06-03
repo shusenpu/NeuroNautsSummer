@@ -595,36 +595,39 @@ function modelRecipe(canvas, now) {
   movingDot(ctx, nodes.map(({ x, y }) => ({ x, y })), t / 5, "#ffffff");
 }
 
-function lifTracePoints(width, height, strength, tShift = 0) {
+function actionPotential(canvas, now) {
+  const { ctx, width, height } = resizeCanvas(canvas);
+  clear(ctx, width, height, "#ffffff");
   const pad = 58;
   const plotW = width - pad * 1.65;
   const plotH = height - pad * 1.55;
-  let v = 0.22;
-  const points = [];
-  for (let i = 0; i <= 260; i += 1) {
-    const input = i > 34 && i < 224 ? strength : 0;
-    v += (0.08 + input - v * 0.16) * 0.045;
-    if (v > 0.78) v = 0.15;
-    const x = pad + (i / 260) * plotW;
-    const y = pad + plotH - (v + Math.sin(i / 22 + tShift) * 0.008) * plotH;
-    points.push({ x, y, spike: v < 0.18 && input > 0 });
-  }
-  return { points, pad, plotW, plotH };
-}
+  const t = now / 1000;
+  const voltageMin = -80;
+  const voltageMax = 45;
+  const toX = (time) => pad + (time / 100) * plotW;
+  const toY = (voltage) => pad + ((voltageMax - voltage) / (voltageMax - voltageMin)) * plotH;
+  const points = [
+    [0, -65],
+    [18, -65],
+    [29, -56],
+    [36, -50],
+    [43, 34],
+    [56, -15],
+    [68, -72],
+    [83, -66],
+    [100, -65],
+  ];
 
-function drawLifAxes(ctx, width, height) {
-  const pad = 58;
-  const plotW = width - pad * 1.65;
-  const plotH = height - pad * 1.55;
   ctx.strokeStyle = "#d6e3ea";
   ctx.lineWidth = 1;
-  for (let i = 0; i < 6; i += 1) {
-    const y = pad + (plotH / 5) * i;
+  [-65, -50, 0, 30].forEach((v) => {
+    const y = toY(v);
     ctx.beginPath();
     ctx.moveTo(pad, y);
     ctx.lineTo(pad + plotW, y);
     ctx.stroke();
-  }
+  });
+
   ctx.strokeStyle = "#102033";
   ctx.lineWidth = 2;
   ctx.beginPath();
@@ -632,7 +635,188 @@ function drawLifAxes(ctx, width, height) {
   ctx.lineTo(pad, pad + plotH);
   ctx.lineTo(pad + plotW, pad + plotH);
   ctx.stroke();
-  const thY = pad + plotH * 0.22;
+
+  ctx.setLineDash([8, 8]);
+  ctx.strokeStyle = "#e03c31";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(pad, toY(-50));
+  ctx.lineTo(pad + plotW, toY(-50));
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.strokeStyle = "#009cde";
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  points.forEach(([x, y], i) => {
+    if (i === 0) ctx.moveTo(toX(x), toY(y));
+    else ctx.lineTo(toX(x), toY(y));
+  });
+  ctx.stroke();
+
+  const dotIndex = Math.floor((t * 18) % (points.length - 1));
+  const local = (t * 18) % 1;
+  const a = points[dotIndex];
+  const b = points[dotIndex + 1];
+  const dotX = toX(a[0] + (b[0] - a[0]) * local);
+  const dotY = toY(a[1] + (b[1] - a[1]) * local);
+  ctx.beginPath();
+  ctx.arc(dotX, dotY, 9, 0, Math.PI * 2);
+  ctx.fillStyle = "#ffb81c";
+  ctx.fill();
+
+  const labels = [
+    ["resting", 8, -68, "#004c97"],
+    ["stimulus", 23, -56, "#775400"],
+    ["threshold", 48, -50, "#e03c31"],
+    ["spike", 44, 32, "#007a33"],
+    ["recover", 70, -75, "#004c97"],
+  ];
+  labels.forEach(([label, x, y, color]) => {
+    roundedRect(ctx, toX(x) - 46, toY(y) - 28, 92, 30, 5, color);
+    drawCenteredText(ctx, label, toX(x), toY(y) - 8, 14, "#ffffff", 900);
+  });
+  drawText(ctx, "Voltage", pad - 2, pad - 22, 16, "#004c97", 900);
+  drawText(ctx, "Time", pad + plotW - 20, pad + plotH + 34, 16, "#004c97", 900);
+  drawText(ctx, "action potential = spike", pad + plotW - 210, pad - 22, 16, "#102033", 900);
+}
+
+function lifBridge(canvas, now) {
+  const { ctx, width, height } = resizeCanvas(canvas);
+  clear(ctx, width, height, "#071927");
+  const t = now / 1000;
+  const leftX = width * 0.26;
+  const rightX = width * 0.73;
+  const cy = height * 0.50;
+
+  ctx.strokeStyle = "rgba(255,255,255,0.32)";
+  ctx.lineWidth = 5;
+  for (let i = 0; i < 5; i += 1) {
+    const angle = -1.1 + i * 0.55;
+    ctx.beginPath();
+    ctx.moveTo(leftX - 64, cy + Math.sin(angle) * 24);
+    ctx.lineTo(leftX - 145, cy + Math.sin(angle) * 78);
+    ctx.stroke();
+  }
+  ctx.beginPath();
+  ctx.arc(leftX, cy, 62 + Math.sin(t * 2) * 3, 0, Math.PI * 2);
+  ctx.fillStyle = "#009cde";
+  ctx.fill();
+  drawCenteredText(ctx, "real", leftX, cy - 8, 19, "#ffffff", 900);
+  drawCenteredText(ctx, "neuron", leftX, cy + 16, 19, "#ffffff", 900);
+  ctx.strokeStyle = "#8dc8e8";
+  ctx.lineWidth = 9;
+  ctx.beginPath();
+  ctx.moveTo(leftX + 54, cy);
+  ctx.lineTo(width * 0.48, cy + Math.sin(t * 3) * 14);
+  ctx.stroke();
+
+  drawArrow(ctx, width * 0.49, cy, width * 0.61, cy, "#ffb81c", 6);
+
+  roundedRect(ctx, rightX - 118, cy - 120, 236, 240, 8, "#f3f8fb");
+  const rules = [
+    ["voltage", "#004c97"],
+    ["input", "#009cde"],
+    ["leak", "#775400"],
+    ["threshold", "#e03c31"],
+    ["reset", "#007a33"],
+  ];
+  rules.forEach(([label, color], i) => {
+    const y = cy - 82 + i * 42;
+    roundedRect(ctx, rightX - 90, y - 17, 180, 28, 5, color);
+    drawCenteredText(ctx, label, rightX, y + 3, 15, "#ffffff", 900);
+  });
+  drawText(ctx, "kept in code", rightX - 78, cy + 134, 18, "#ffffff", 900);
+  drawText(ctx, "ion-channel details are left out today", leftX - 152, height - 34, 16, "rgba(255,255,255,0.84)", 800);
+}
+
+const lifConfig = {
+  T: 300,
+  dt: 1,
+  VRest: -65,
+  VReset: -70,
+  VThreshold: -50,
+  tauM: 20,
+  R: 1.5,
+  refractoryMs: 5,
+};
+
+function runLifSimulation(inputStrength) {
+  const time = [];
+  const voltage = [];
+  const input = [];
+  const spikes = [];
+  let v = lifConfig.VRest;
+  let refractoryLeft = 0;
+
+  for (let ms = 0; ms < lifConfig.T; ms += lifConfig.dt) {
+    const i = time.length;
+    time.push(ms);
+    input.push(ms >= 50 && ms < 250 ? inputStrength : 0);
+
+    if (i === 0) {
+      voltage.push(v);
+      continue;
+    }
+
+    if (refractoryLeft > 0) {
+      v = lifConfig.VReset;
+      refractoryLeft -= 1;
+      voltage.push(v);
+      continue;
+    }
+
+    const leak = -(voltage[i - 1] - lifConfig.VRest);
+    const push = lifConfig.R * input[i - 1];
+    const dV = (leak + push) * (lifConfig.dt / lifConfig.tauM);
+    v = voltage[i - 1] + dV;
+
+    if (v >= lifConfig.VThreshold) {
+      spikes.push(ms);
+      v = lifConfig.VReset;
+      refractoryLeft = Math.floor(lifConfig.refractoryMs / lifConfig.dt);
+    }
+    voltage.push(v);
+  }
+  return { time, voltage, input, spikes };
+}
+
+function lifPlotDims(width, height) {
+  const pad = 58;
+  const plotW = width - pad * 2.0;
+  const plotH = height - pad * 1.55;
+  const vMin = -72;
+  const vMax = -48;
+  const x = (ms) => pad + (ms / lifConfig.T) * plotW;
+  const y = (voltage) => pad + ((vMax - voltage) / (vMax - vMin)) * plotH;
+  return { pad, plotW, plotH, vMin, vMax, x, y };
+}
+
+function drawLifAxes(ctx, width, height) {
+  const dims = lifPlotDims(width, height);
+  const { pad, plotW, plotH, x, y } = dims;
+  const inputX = x(50);
+  const inputW = x(250) - x(50);
+  ctx.fillStyle = "rgba(255, 184, 28, 0.16)";
+  ctx.fillRect(inputX, pad, inputW, plotH);
+  ctx.strokeStyle = "#d6e3ea";
+  ctx.lineWidth = 1;
+  [-70, -65, -60, -55, -50].forEach((v) => {
+    const yy = y(v);
+    ctx.beginPath();
+    ctx.moveTo(pad, yy);
+    ctx.lineTo(pad + plotW, yy);
+    ctx.stroke();
+    drawText(ctx, `${v}`, pad - 36, yy + 5, 13, "#667085", 800);
+  });
+  ctx.strokeStyle = "#102033";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(pad, pad);
+  ctx.lineTo(pad, pad + plotH);
+  ctx.lineTo(pad + plotW, pad + plotH);
+  ctx.stroke();
+  const thY = y(lifConfig.VThreshold);
   ctx.setLineDash([8, 8]);
   ctx.strokeStyle = "#e03c31";
   ctx.lineWidth = 3;
@@ -641,53 +825,64 @@ function drawLifAxes(ctx, width, height) {
   ctx.lineTo(pad + plotW, thY);
   ctx.stroke();
   ctx.setLineDash([]);
-  drawText(ctx, "Voltage", pad - 4, pad - 18, 16, "#004c97", 900);
-  drawText(ctx, "Time", pad + plotW - 18, pad + plotH + 36, 16, "#004c97", 900);
-  drawText(ctx, "threshold", pad + plotW - 100, thY - 10, 15, "#e03c31", 900);
+  drawText(ctx, "Voltage (mV)", pad - 4, pad - 18, 16, "#004c97", 900);
+  drawText(ctx, "Time (ms)", Math.max(pad + 8, pad + plotW - 92), pad + plotH + 24, 16, "#004c97", 900);
+  drawText(ctx, "threshold -50 mV", pad + 18, thY - 10, 15, "#e03c31", 900);
+  drawText(ctx, "input on", inputX + inputW / 2 - 26, pad + 22, 14, "#775400", 900);
+  return dims;
+}
+
+function drawLifTrace(ctx, sim, dims, color, lineWidth = 4, markerPulse = 1) {
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lineWidth;
+  ctx.beginPath();
+  sim.time.forEach((ms, i) => {
+    const px = dims.x(ms);
+    const py = dims.y(sim.voltage[i]);
+    if (i === 0) ctx.moveTo(px, py);
+    else ctx.lineTo(px, py);
+  });
+  ctx.stroke();
+  sim.spikes.forEach((ms) => {
+    const px = dims.x(ms);
+    const py = dims.y(lifConfig.VThreshold);
+    ctx.beginPath();
+    ctx.arc(px, py, 5 + markerPulse, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffb81c";
+    ctx.fill();
+    ctx.strokeStyle = "#102033";
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  });
 }
 
 function lifNeuron(canvas, now) {
   const { ctx, width, height } = resizeCanvas(canvas);
   clear(ctx, width, height, "#ffffff");
-  drawLifAxes(ctx, width, height);
-  const { points } = lifTracePoints(width, height, 0.38, now / 900);
-  ctx.strokeStyle = "#009cde";
-  ctx.lineWidth = 5;
-  ctx.beginPath();
-  points.forEach((p, i) => {
-    if (i === 0) ctx.moveTo(p.x, p.y);
-    else ctx.lineTo(p.x, p.y);
-  });
-  ctx.stroke();
-  points.filter((p) => p.spike).forEach((p) => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 7, 0, Math.PI * 2);
-    ctx.fillStyle = "#ffb81c";
-    ctx.fill();
-  });
+  const dims = drawLifAxes(ctx, width, height);
+  const sim = runLifSimulation(12);
+  drawLifTrace(ctx, sim, dims, "#009cde", 5, 1.5 + Math.sin(now / 280) * 1.2);
+  roundedRect(ctx, width - 204, height - 98, 160, 54, 7, "#004c97");
+  drawCenteredText(ctx, "input 12", width - 124, height - 75, 16, "#ffffff", 900);
+  drawCenteredText(ctx, "4 spikes", width - 124, height - 54, 18, "#ffffff", 900);
 }
 
 function lifInputSweep(canvas, now) {
   const { ctx, width, height } = resizeCanvas(canvas);
   clear(ctx, width, height, "#ffffff");
-  drawLifAxes(ctx, width, height);
+  const dims = drawLifAxes(ctx, width, height);
   const strengths = [
-    { value: 0.18, color: "#8dc8e8", label: "input 8" },
-    { value: 0.32, color: "#009cde", label: "input 12" },
-    { value: 0.48, color: "#007a33", label: "input 16" },
+    { value: 8, color: "#8dc8e8" },
+    { value: 10, color: "#775400" },
+    { value: 12, color: "#009cde" },
+    { value: 14, color: "#007a33" },
   ];
   strengths.forEach((s, idx) => {
-    const { points } = lifTracePoints(width, height, s.value, now / 900 + idx);
-    ctx.strokeStyle = s.color;
-    ctx.lineWidth = idx === 2 ? 5 : 4;
-    ctx.beginPath();
-    points.forEach((p, i) => {
-      if (i === 0) ctx.moveTo(p.x, p.y);
-      else ctx.lineTo(p.x, p.y);
-    });
-    ctx.stroke();
-    roundedRect(ctx, width - 178, 54 + idx * 42, 132, 30, 5, s.color);
-    drawText(ctx, s.label, width - 160, 75 + idx * 42, 15, "#ffffff", 900);
+    const sim = runLifSimulation(s.value);
+    drawLifTrace(ctx, sim, dims, s.color, idx >= 2 ? 4.6 : 3.4, 1 + Math.sin(now / 260 + idx) * 0.8);
+    const legendY = 52 + idx * 44;
+    roundedRect(ctx, width - 190, legendY, 148, 32, 5, s.color);
+    drawText(ctx, `input ${s.value}: ${sim.spikes.length} spikes`, width - 178, legendY + 22, 13, "#ffffff", 900);
   });
 }
 
@@ -780,14 +975,18 @@ function decisionSummary(canvas, now) {
   const barW = width * 0.35;
   const plotH = height * 0.58;
   drawText(ctx, "% choosing A", left, top - 32, 18, "#004c97", 900);
-  [42, 68, 86].forEach((v, i) => {
+  const drifts = [0.2, 0.4, 0.6];
+  const percentA = [60.0, 66.0, 75.7];
+  const meanRt = [1.05, 1.01, 0.94];
+  percentA.forEach((v, i) => {
     const h = (v / 100) * plotH;
     const x = left + i * (barW / 3);
     const y = top + plotH - h;
     roundedRect(ctx, x, y, 52, h, 5, ["#8dc8e8", "#009cde", "#007a33"][i]);
-    drawCenteredText(ctx, `${v}%`, x + 26, y - 10, 15, "#102033", 900);
+    drawCenteredText(ctx, `${Math.round(v)}%`, x + 26, y - 10, 15, "#102033", 900);
+    drawCenteredText(ctx, `${drifts[i]}`, x + 26, top + plotH + 24, 14, "#102033", 900);
   });
-  drawText(ctx, "evidence strength", left, top + plotH + 38, 16, "#102033", 900);
+  drawText(ctx, "drift strength", left, top + plotH + 54, 16, "#102033", 900);
   const right = width * 0.56;
   drawText(ctx, "reaction time", right, top - 32, 18, "#004c97", 900);
   ctx.strokeStyle = "#d6e3ea";
@@ -797,11 +996,14 @@ function decisionSummary(canvas, now) {
   ctx.lineTo(right, top + plotH);
   ctx.lineTo(width * 0.90, top + plotH);
   ctx.stroke();
-  const pts = [
-    { x: right + 30, y: top + plotH * 0.28 },
-    { x: right + 135, y: top + plotH * 0.45 },
-    { x: right + 250, y: top + plotH * 0.66 },
-  ];
+  const rtMin = 0.88;
+  const rtMax = 1.08;
+  const toRtY = (rt) => top + ((rtMax - rt) / (rtMax - rtMin)) * plotH;
+  const pts = meanRt.map((rt, i) => ({
+    x: right + 42 + i * ((width * 0.30) / 2),
+    y: toRtY(rt),
+    rt,
+  }));
   ctx.strokeStyle = "#e03c31";
   ctx.lineWidth = 5;
   ctx.beginPath();
@@ -812,7 +1014,10 @@ function decisionSummary(canvas, now) {
     ctx.arc(p.x, p.y + Math.sin(t * 3 + i) * 2, 8, 0, Math.PI * 2);
     ctx.fillStyle = "#ffb81c";
     ctx.fill();
+    drawCenteredText(ctx, `${p.rt.toFixed(2)}s`, p.x, p.y - 16, 13, "#102033", 900);
+    drawCenteredText(ctx, `${drifts[i]}`, p.x, top + plotH + 24, 14, "#102033", 900);
   });
+  drawText(ctx, "drift strength", right + 54, top + plotH + 54, 16, "#102033", 900);
 }
 
 function modelLimits(canvas, now) {
@@ -885,9 +1090,11 @@ function tick(now) {
     brainNetwork,
     energyPlot,
     finalNetwork,
-    notebookWarmup,
-    modelRecipe,
-    lifNeuron,
+	    notebookWarmup,
+	    modelRecipe,
+	    actionPotential,
+	    lifBridge,
+	    lifNeuron,
     lifInputSweep,
     decisionDrift,
     ddmTrials,

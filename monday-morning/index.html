@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Brain Code | Monday Morning Models</title>
-    <link rel="stylesheet" href="styles.css?v=morning-remaining-1" />
+    <link rel="stylesheet" href="styles.css?v=morning-remaining-2" />
   </head>
   <body>
     <div class="app-shell">
@@ -15,7 +15,7 @@
         </div>
         <div class="progress-wrap" aria-hidden="true">
           <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-          <span id="counter">1 / 18</span>
+          <span id="counter">1 / 21</span>
         </div>
       </header>
 
@@ -90,15 +90,61 @@
           </div>
         </section>
 
+        <section class="frame light-frame split-frame firing-frame" data-title="What Is Neuron Firing?" data-notes="Use the reference-deck action-potential sequence, but translate it: neurons do not literally burn; firing means a brief electrical pulse when voltage crosses threshold.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Background before Notebook One</p>
+              <h2>When a neuron “fires,” it sends a fast electrical pulse.</h2>
+              <p class="lead">The cell’s voltage is usually quiet. Input pushes it upward. If it crosses a threshold, the neuron sends a spike and then resets.</p>
+              <article class="term fragment" data-fragment><b>Resting</b><span>The neuron is ready, but not sending a spike.</span></article>
+              <article class="term fragment" data-fragment><b>Threshold</b><span>The “enough input” line.</span></article>
+              <article class="term fragment" data-fragment><b>Spike</b><span>A brief pulse, also called an action potential.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="actionPotential"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame firing-rate-frame" data-title="Why Firing Matters" data-notes="Connect spikes to information. A single spike matters, but rate, timing, and patterns are often what downstream neurons and researchers read.">
+          <h2>Spikes are one way neurons turn input into messages.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Spike time</b><span>When did the pulse happen?</span></article>
+            <article class="task-card green fragment" data-fragment><b>Spike count</b><span>How many pulses happened during the input?</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Firing rate</b><span>How often is the neuron spiking?</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Pattern</b><span>Are spikes steady, bursty, or irregular?</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>In Colab, we will read the model by counting spikes and comparing the voltage plot.</div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="From Biology To Code" data-notes="Bridge real action potentials to the LIF abstraction. Name what the model keeps and what it leaves out so the simplification feels intentional.">
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card">
+              <canvas data-animation="lifBridge"></canvas>
+            </div>
+            <div>
+              <p class="eyebrow">Simplify carefully</p>
+              <h2>Our model keeps the firing logic, not every biological detail.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Voltage changes over time</span>
+                <span class="fragment" data-fragment>Input pushes voltage up</span>
+                <span class="fragment" data-fragment>Leak pulls voltage back</span>
+                <span class="fragment" data-fragment>Threshold triggers reset</span>
+              </div>
+              <p class="callout fragment" data-fragment>Real neurons use ion channels and chemistry. Our code keeps the part we can test today.</p>
+            </div>
+          </div>
+        </section>
+
         <section class="frame light-frame split-frame neuron-frame" data-title="Simple Neuron" data-notes="Name the LIF ingredients in plain language before code appears.">
           <div class="split">
             <div class="copy">
               <p class="eyebrow">Notebook One</p>
               <h2>A simple neuron model asks: how much input makes a spike?</h2>
-              <article class="term fragment" data-fragment><b>Input</b><span>A push into the model neuron.</span></article>
-              <article class="term fragment" data-fragment><b>Leak</b><span>The voltage drifts back down over time.</span></article>
-              <article class="term fragment" data-fragment><b>Threshold</b><span>If voltage crosses the line, the model spikes.</span></article>
-              <article class="term fragment" data-fragment><b>Reset</b><span>After a spike, the voltage drops and starts again.</span></article>
+              <article class="term fragment" data-fragment><b>Input</b><span>Turned on from 50 to 250 ms in the notebook.</span></article>
+              <article class="term fragment" data-fragment><b>Leak</b><span>Voltage is pulled back toward resting voltage.</span></article>
+              <article class="term fragment" data-fragment><b>Threshold</b><span>Crossing -50 mV records a spike time.</span></article>
+              <article class="term fragment" data-fragment><b>Reset</b><span>After a spike, voltage drops and pauses briefly.</span></article>
             </div>
             <div class="hyper-panel">
               <canvas data-animation="lifNeuron"></canvas>
@@ -111,10 +157,10 @@
             <canvas data-animation="lifInputSweep"></canvas>
           </div>
           <div class="side-notes">
-            <h2>Changing one parameter can change the whole output.</h2>
-            <p class="fragment" data-fragment>Weak input may never cross threshold.</p>
-            <p class="fragment" data-fragment>Medium input may spike once or twice.</p>
-            <p class="fragment" data-fragment>Strong input can spike again and again.</p>
+            <h2>The slide now matches the Colab sweep.</h2>
+            <p class="fragment" data-fragment>Input 8 and 10 stay below threshold: 0 spikes.</p>
+            <p class="fragment" data-fragment>Input 12 crosses threshold 4 times.</p>
+            <p class="fragment" data-fragment>Input 14 crosses threshold 6 times.</p>
           </div>
         </section>
 
@@ -133,18 +179,20 @@
           <div class="split">
             <div class="copy">
               <p class="eyebrow">Read code like a map</p>
-              <h2>You do not need every line at once.</h2>
+              <h2>You only need the few lines that match the idea.</h2>
               <article class="term fragment" data-fragment><b>Settings</b><span>Resting voltage, threshold, input strength.</span></article>
               <article class="term fragment" data-fragment><b>Loop</b><span>Update the voltage one tiny time step at a time.</span></article>
-              <article class="term fragment" data-fragment><b>If statement</b><span>If voltage reaches threshold, record a spike.</span></article>
+              <article class="term fragment" data-fragment><b>If statement</b><span>If voltage reaches threshold, record a spike and reset.</span></article>
             </div>
             <div class="code-panel">
               <pre><code>for each time step:
-    voltage += input - leak
+    leak = -(voltage - rest)
+    push = R * input[t]
+    voltage += (leak + push) * dt / tau
 
     if voltage >= threshold:
-        record spike
-        reset voltage</code></pre>
+        record spike time
+        reset and pause</code></pre>
             </div>
           </div>
         </section>
@@ -154,9 +202,9 @@
             <p class="eyebrow">Pair-share</p>
             <h2>What did the neuron model help you see?</h2>
             <div class="exit-chain">
-              <span class="fragment" data-fragment>Input matters</span>
-              <span class="fragment" data-fragment>Threshold matters</span>
-              <span class="fragment" data-fragment>Time matters</span>
+              <span class="fragment" data-fragment>Input changes spike count</span>
+              <span class="fragment" data-fragment>Threshold turns voltage into spikes</span>
+              <span class="fragment" data-fragment>Firing rate can carry information</span>
               <span class="fragment" data-fragment>Details are missing</span>
             </div>
             <p class="callout fragment" data-fragment>Next: decisions can be modeled as evidence accumulating over time.</p>
@@ -172,6 +220,7 @@
               <article class="term fragment" data-fragment><b>Evidence push</b><span>Information leaning toward one choice.</span></article>
               <article class="term fragment" data-fragment><b>Random wobble</b><span>Noise that makes each trial a little different.</span></article>
               <article class="term fragment" data-fragment><b>Decision bound</b><span>How sure the model wants to be before choosing.</span></article>
+              <p class="callout fragment" data-fragment>In the fixed Colab example, positive drift still chooses B once because noise can win a single trial.</p>
             </div>
             <div class="hyper-panel">
               <canvas data-animation="decisionDrift"></canvas>
@@ -207,8 +256,8 @@
             <div class="copy">
               <p class="eyebrow">From trials to summaries</p>
               <h2>Many runs reveal patterns a single run can hide.</h2>
-              <article class="term fragment" data-fragment><b>Bar chart</b><span>How often did the model choose A?</span></article>
-              <article class="term fragment" data-fragment><b>Line plot</b><span>How did reaction time change with evidence strength?</span></article>
+              <article class="term fragment" data-fragment><b>Bar chart</b><span>Drift 0.2, 0.4, 0.6 gives about 60%, 66%, 76% Choose A.</span></article>
+              <article class="term fragment" data-fragment><b>Line plot</b><span>Average reaction time drops from about 1.05 s to 0.94 s.</span></article>
               <article class="term fragment" data-fragment><b>Question</b><span>Which plot answers which question?</span></article>
             </div>
             <div class="hyper-panel">
@@ -242,7 +291,7 @@
             <article class="compare-card fragment" data-fragment>
               <h3>Neuron model</h3>
               <p>Question: how does input become spikes?</p>
-              <p>Output: voltage over time and spike count.</p>
+              <p>Output: voltage over time, spike times, and spike count.</p>
             </article>
             <article class="compare-card green fragment" data-fragment>
               <h3>Decision model</h3>
@@ -300,6 +349,6 @@
       </footer>
     </div>
 
-    <script src="app.js?v=morning-remaining-1"></script>
+    <script src="app.js?v=morning-remaining-2"></script>
   </body>
 </html>

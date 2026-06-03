@@ -952,7 +952,11 @@ input[type="range"] {
 
 .code-panel code {
   color: var(--white);
-  font: 800 28px/1.42 "SF Mono", Consolas, ui-monospace, monospace;
+  font: 800 24px/1.42 "SF Mono", Consolas, ui-monospace, monospace;
+}
+
+.firing-rate-frame .task-card span {
+  font-size: 22px;
 }
 
 .compare-grid {
@@ -1141,7 +1145,7 @@ input[type="range"] {
   }
 
   .code-panel code {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .topbar {
