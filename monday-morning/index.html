@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Brain Code | Monday Morning Models</title>
-    <link rel="stylesheet" href="styles.css?v=morning-remaining-3" />
+    <link rel="stylesheet" href="styles.css?v=morning-remaining-5" />
   </head>
   <body>
     <div class="app-shell">
@@ -71,6 +71,39 @@
           <div class="wide-discussion fragment" data-fragment>Checkpoint: every student has run code once before the neuron model starts.</div>
         </section>
 
+        <section class="frame light-frame colab-link-frame" data-title="Colab Access" data-notes="Before class, set the Colab Code folder and the notebooks to Anyone with the link can view. Students should open the folder first, then Notebook One for the neuron model.">
+          <div class="colab-link-layout">
+            <div class="copy">
+              <p class="eyebrow">Colab access</p>
+              <h2>Students need one folder link and one notebook link.</h2>
+              <p class="lead">Open the folder to see all morning notebooks. Open Notebook One when we start the neuron model.</p>
+            </div>
+            <div class="resource-board">
+              <a class="resource-card" href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">
+                <b>Colab Code Folder</b>
+                <span>Warm-up, neuron, and decision notebooks.</span>
+                <code>drive.google.com/.../Colab Code</code>
+              </a>
+              <a class="resource-card green" href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">
+                <b>Notebook One</b>
+                <span>Simple neuron LIF model.</span>
+                <code>colab.research.google.com/drive/...</code>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame colab-ops-frame" data-title="Colab Basic Moves" data-notes="Make the interface explicit before the science content. Students should know how to open, copy, run, edit, and rerun without feeling that Python syntax is the main hurdle.">
+          <h2>Before the model, practice the Colab moves.</h2>
+          <div class="task-grid">
+            <article class="task-card"><b>Open</b><span>Use the folder link and choose the notebook for today.</span></article>
+            <article class="task-card green"><b>Copy</b><span>Save a personal copy before changing code.</span></article>
+            <article class="task-card gold"><b>Run</b><span>Use the play button on one cell and wait for output.</span></article>
+            <article class="task-card coral"><b>Edit</b><span>Change one number or one sentence, then rerun.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>If output looks strange, run from the top once before changing more settings.</div>
+        </section>
+
         <section class="frame dark-frame loop-frame model-loop-frame" data-title="What Is A Model?" data-notes="Tie the abstract idea of model to the loop students already saw.">
           <div class="loop-layout">
             <div class="video-card model-canvas-card">
@@ -117,12 +150,12 @@
           <div class="wide-discussion fragment" data-fragment>In Colab, we will read the model by counting spikes and comparing the voltage plot.</div>
         </section>
 
-        <section class="frame dark-frame loop-frame model-loop-frame" data-title="From Biology To Code" data-notes="Bridge real action potentials to the LIF abstraction. Name what the model keeps and what it leaves out so the simplification feels intentional.">
+        <section class="frame dark-frame loop-frame model-loop-frame lif-bridge-frame" data-title="From Biology To Code" data-notes="Bridge real action potentials to the LIF abstraction. Name what the model keeps and what it leaves out so the simplification feels intentional.">
           <div class="loop-layout">
             <div class="video-card model-canvas-card">
               <canvas data-animation="lifBridge"></canvas>
             </div>
-            <div>
+            <div class="loop-copy">
               <p class="eyebrow">Simplify carefully</p>
               <h2>Our model keeps the firing logic, not every biological detail.</h2>
               <div class="loop-steps">
@@ -141,6 +174,10 @@
             <div class="copy">
               <p class="eyebrow">Notebook One</p>
               <h2>A simple neuron model asks: how much input makes a spike?</h2>
+              <div class="notebook-link-row">
+                <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+                <a class="primary" href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">Open Notebook One</a>
+              </div>
               <article class="term fragment" data-fragment><b>Input</b><span>Turned on from 50 to 250 ms in the notebook.</span></article>
               <article class="term fragment" data-fragment><b>Leak</b><span>Voltage is pulled back toward resting voltage.</span></article>
               <article class="term fragment" data-fragment><b>Threshold</b><span>Crossing -50 mV records a spike time.</span></article>
@@ -328,6 +365,10 @@
               <span class="fragment" data-fragment>Plot</span>
               <span class="fragment" data-fragment>Limitation</span>
             </div>
+            <div class="final-resource-links">
+              <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+              <a href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">Notebook One</a>
+            </div>
             <p class="callout fragment" data-fragment>After lunch, we can use the same habits to read neural data.</p>
           </div>
           <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
@@ -349,6 +390,6 @@
       </footer>
     </div>
 
-    <script src="app.js?v=morning-remaining-2"></script>
+    <script src="app.js?v=morning-remaining-5"></script>
   </body>
 </html>

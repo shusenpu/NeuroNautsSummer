@@ -654,8 +654,10 @@ function actionPotential(canvas, now) {
   });
   ctx.stroke();
 
-  const dotIndex = Math.floor((t * 18) % (points.length - 1));
-  const local = (t * 18) % 1;
+  const cycleSeconds = 5.6;
+  const progress = ((t % cycleSeconds) / cycleSeconds) * (points.length - 1);
+  const dotIndex = Math.floor(progress);
+  const local = progress % 1;
   const a = points[dotIndex];
   const b = points[dotIndex + 1];
   const dotX = toX(a[0] + (b[0] - a[0]) * local);
@@ -677,7 +679,7 @@ function actionPotential(canvas, now) {
     drawCenteredText(ctx, label, toX(x), toY(y) - 8, 14, "#ffffff", 900);
   });
   drawText(ctx, "Voltage", pad - 2, pad - 22, 16, "#004c97", 900);
-  drawText(ctx, "Time", pad + plotW - 20, pad + plotH + 34, 16, "#004c97", 900);
+  drawText(ctx, "Time", pad + plotW - 46, height - 16, 16, "#004c97", 900);
   drawText(ctx, "action potential = spike", pad + plotW - 210, pad - 22, 16, "#102033", 900);
 }
 
@@ -695,7 +697,7 @@ function lifBridge(canvas, now) {
     const angle = -1.1 + i * 0.55;
     ctx.beginPath();
     ctx.moveTo(leftX - 64, cy + Math.sin(angle) * 24);
-    ctx.lineTo(leftX - 145, cy + Math.sin(angle) * 78);
+    ctx.lineTo(Math.max(26, leftX - 126), cy + Math.sin(angle) * 78);
     ctx.stroke();
   }
   ctx.beginPath();
@@ -727,7 +729,7 @@ function lifBridge(canvas, now) {
     drawCenteredText(ctx, label, rightX, y + 3, 15, "#ffffff", 900);
   });
   drawText(ctx, "kept in code", rightX - 78, cy + 134, 18, "#ffffff", 900);
-  drawText(ctx, "ion-channel details are left out today", leftX - 152, height - 34, 16, "rgba(255,255,255,0.84)", 800);
+  drawText(ctx, "ion-channel details are left out today", Math.max(26, leftX - 152), height - 34, 16, "rgba(255,255,255,0.84)", 800);
 }
 
 const lifConfig = {
@@ -1090,11 +1092,11 @@ function tick(now) {
     brainNetwork,
     energyPlot,
     finalNetwork,
-	    notebookWarmup,
-	    modelRecipe,
-	    actionPotential,
-	    lifBridge,
-	    lifNeuron,
+    notebookWarmup,
+    modelRecipe,
+    actionPotential,
+    lifBridge,
+    lifNeuron,
     lifInputSweep,
     decisionDrift,
     ddmTrials,
@@ -1167,5 +1169,7 @@ document.addEventListener("visibilitychange", () => {
   if (!document.hidden) syncVideos();
 });
 
-setFrame(0, 0);
+const requestedSlide = Number(new URLSearchParams(window.location.search).get("slide"));
+const initialSlide = Number.isInteger(requestedSlide) ? requestedSlide - 1 : 0;
+setFrame(initialSlide, 0);
 requestAnimationFrame(tick);
