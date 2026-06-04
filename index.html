@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NeuroNauts Brain Code Slides</title>
+    <title>Brain Code Slides</title>
     <style>
       :root {
         --blue: #004c97;
@@ -81,7 +81,7 @@
         width: min(1100px, calc(100vw - 40px));
         margin: 34px auto;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: minmax(0, 1fr);
         gap: 22px;
       }
 
@@ -92,10 +92,6 @@
         border: 1px solid var(--line);
         border-left: 10px solid var(--sky);
         box-shadow: 0 22px 60px rgba(16, 32, 51, 0.14);
-      }
-
-      article:nth-child(2) {
-        border-left-color: var(--green);
       }
 
       h2 {
@@ -125,10 +121,6 @@
         text-decoration: none;
       }
 
-      article:nth-child(2) a {
-        background: var(--green);
-      }
-
       footer {
         width: min(1100px, calc(100vw - 40px));
         margin: 0 auto 34px;
@@ -146,22 +138,16 @@
   </head>
   <body>
     <header>
-      <h1>NeuroNauts Brain Code Slides</h1>
-      <p>Student-facing HTML slide decks for the computational neuroscience morning session.</p>
+      <h1>Brain Code</h1>
+      <p>One student-facing HTML slide deck for the full computational neuroscience morning session.</p>
       <div class="bars" aria-hidden="true"><span></span><span></span><span></span></div>
     </header>
 
     <main>
       <article>
-        <h2>First 15 Minutes</h2>
-        <p>Opening hook: everyday brain tasks, signals, memory, brain tissue, energy, and the brain loop.</p>
-        <a href="./first-15/index.html">Open First 15 Slides</a>
-      </article>
-
-      <article>
-        <h2>Remaining Morning Session</h2>
-        <p>Colab warm-up, simple neuron model, noisy decision model, model comparison, and exit ticket.</p>
-        <a href="./monday-morning/index.html">Open Morning Slides</a>
+        <h2>Full Morning Session</h2>
+        <p>Everyday brain tasks, the brain loop, Colab basics, neuron firing, simple neuron and decision models, model comparison, and exit ticket.</p>
+        <a href="./monday-morning/index.html">Open Brain Code</a>
       </article>
     </main>
 

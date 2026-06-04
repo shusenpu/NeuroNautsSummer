@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Brain Code | Monday Morning Models</title>
-    <link rel="stylesheet" href="styles.css?v=morning-remaining-6" />
+    <title>Brain Code</title>
+    <link rel="stylesheet" href="styles.css?v=brain-code-1" />
   </head>
   <body>
     <div class="app-shell">
@@ -15,12 +15,254 @@
         </div>
         <div class="progress-wrap" aria-hidden="true">
           <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-          <span id="counter">1 / 21</span>
+          <span id="counter">1 / 38</span>
         </div>
       </header>
 
       <main class="deck" id="deck" aria-live="polite">
-        <section class="frame hero-frame is-active" data-title="From Brain Loop To Notebook" data-notes="Use this as the handoff from the first 15 minutes. The familiar loop now becomes runnable code.">
+        <section class="frame hero-frame is-active" data-title="Brain Code" data-notes="Ask students to silently replay their morning. Let vivid examples come before vocabulary.">
+          <img class="hero-img" src="assets/daily-brain-hero.png" alt="Students doing daily activities with brain signal paths" />
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <h1>Brain Code</h1>
+            <p>What did your brain already do today?</p>
+            <div class="brand-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-card fragment" data-fragment>
+              <span>Start with everyday life, then translate it into neuroscience.</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="heroSignals"></canvas>
+        </section>
+
+        <section class="frame light-frame morning-slide" data-title="Today Starts With You" data-notes="Invite students to list three ordinary things their brain already helped them do. This should feel easy and concrete.">
+          <div class="morning-layout">
+            <div class="hyper-panel morning-panel">
+              <canvas data-animation="morningReplay"></canvas>
+            </div>
+            <div class="morning-copy">
+              <div class="morning-text">
+                <p class="eyebrow">Start here</p>
+                <h2>Think back through your morning.</h2>
+                <p class="lead">Before we code a brain model, we need to notice what your brain is already doing.</p>
+              </div>
+              <div class="prompt-box fragment" data-fragment>
+                My brain helped me <strong>___</strong> by using <strong>___</strong>.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Four Daily Brain Tasks" data-notes="Reveal one card at a time. Ask for student examples after each card, not after the full grid.">
+          <h2>Four things your brain does every day</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Recognize</b><span>Who is that person?</span></article>
+            <article class="task-card green fragment" data-fragment><b>Navigate</b><span>Where am I going?</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Choose</b><span>What should I do now?</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Learn</b><span>What changed after you tried?</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>
+            Pick one task. What information did your brain use?
+          </div>
+        </section>
+
+        <section class="frame video-frame recognition-frame" data-title="Recognizing A Friend" data-notes="Play the video first. Then reveal perception, attention, long-term memory, and working memory.">
+          <div class="recognition-media">
+            <div class="media-caption">
+              <strong>Recognizing a friend</strong>
+              <span>eyes -> attention -> memory -> action</span>
+            </div>
+            <div class="media-col">
+              <video autoplay muted loop playsinline preload="auto" poster="media/recognition_flow_cover.png?v=student-facing-25">
+                <source src="media/recognition_flow.mp4?v=student-facing-25" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="term-stack">
+            <p class="eyebrow">Real life</p>
+            <h2>Your brain can recognize a friend in a flash.</h2>
+            <article class="term fragment" data-fragment><b>Perception</b><span>Your brain turns signals into meaning.</span></article>
+            <article class="term fragment" data-fragment><b>Attention</b><span>Some information gets priority.</span></article>
+            <article class="term fragment" data-fragment><b>Long-term memory</b><span>Past experience helps you identify people and places.</span></article>
+            <article class="term fragment" data-fragment><b>Working memory</b><span>A small mental workspace holds what matters right now.</span></article>
+          </div>
+        </section>
+
+        <section class="frame dark-frame loop-frame" data-title="Brain Loop" data-notes="Use this as the first bridge to computation. The loop is input, processing, action, feedback.">
+          <div class="loop-layout">
+            <div class="video-card">
+              <video autoplay muted loop playsinline preload="auto" poster="media/brain_loop_manim_cover.png?v=student-facing-25">
+                <source src="media/brain_loop_manim.mp4?v=student-facing-25" type="video/mp4" />
+              </video>
+            </div>
+            <div>
+              <p class="eyebrow">Look for the loop</p>
+              <h2>Brain tasks often work as loops.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Input</span>
+                <span class="fragment" data-fragment>Brain processing</span>
+                <span class="fragment" data-fragment>Action</span>
+                <span class="fragment" data-fragment>Feedback</span>
+              </div>
+              <p class="callout fragment" data-fragment>In code, this can become a model: input, rule, output.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame signal-frame" data-title="Signals Over Time" data-notes="This is the first simple math background slide. A variable is something that changes; a model is a rule; time gives order.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Small math idea</p>
+              <h2>Information is a signal that can change what you do.</h2>
+              <div class="slider-row fragment" data-fragment>
+                <label for="attentionSlider">Attention</label>
+                <input id="attentionSlider" type="range" min="20" max="100" value="72" />
+              </div>
+              <article class="term fragment" data-fragment><b>Variable</b><span>Something that changes, such as signal strength.</span></article>
+              <article class="term fragment" data-fragment><b>Model</b><span>A simple rule for how one changing thing affects another.</span></article>
+              <article class="term fragment" data-fragment><b>Time</b><span>Signals unfold step by step.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="signalPlot"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame" data-title="Moving Plot" data-notes="Use the moving plot to make the axes less scary. Do not dwell on formulas; keep it visible and intuitive.">
+          <div class="media-col wide">
+            <video autoplay muted loop playsinline preload="auto" poster="media/signal_timeline_plot_cover.png?v=student-facing-25">
+              <source src="media/signal_timeline_plot.mp4?v=student-facing-25" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-notes">
+            <h2>Reading a plot is reading a story.</h2>
+            <p class="fragment" data-fragment>The x-axis is time.</p>
+            <p class="fragment" data-fragment>The line shows a changing signal.</p>
+            <p class="fragment" data-fragment>The peak is the moment the signal matters most.</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame split-frame memory-frame" data-title="Memory" data-notes="Separate the scratchpad metaphor from the library metaphor. This prepares students for state variables and learning.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Memory has different jobs</p>
+              <h2>Holding, storing, and retrieving are different jobs.</h2>
+              <article class="term fragment" data-fragment><b>Working memory</b><span>The scratchpad for this moment.</span></article>
+              <article class="term fragment" data-fragment><b>Long-term memory</b><span>The library of past knowledge and skills.</span></article>
+              <article class="term fragment" data-fragment><b>Retrieval</b><span>Finding a useful memory when a cue reminds you.</span></article>
+            </div>
+            <div class="hyper-panel image-panel">
+              <img src="assets/memory-metaphor.png" alt="Visual metaphor for memory and learning" />
+              <canvas data-animation="memoryDots"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame" data-title="Working Memory Plot" data-notes="Use this plot as a bridge to later coding: a value can be held for a short time and then fade.">
+          <div class="media-col wide">
+            <video autoplay muted loop playsinline preload="auto" poster="media/working_memory_plot_cover.png?v=student-facing-25">
+              <source src="media/working_memory_plot.mp4?v=student-facing-25" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-notes">
+            <h2>Working memory and long-term memory work together.</h2>
+            <p class="fragment" data-fragment>WM: A cue brings information into the active workspace.</p>
+            <p class="fragment" data-fragment>LM: Stored knowledge can be retrieved and used again.</p>
+            <p class="fragment" data-fragment>LM storage: Neurons change synapse strengths, making useful pathways easier to reuse.</p>
+          </div>
+        </section>
+
+        <section class="frame light-frame brain-frame" data-title="Inside The Brain" data-notes="Keep anatomy simplified. Name neurons, glia, blood vessels, and chemicals as things students will hear later.">
+          <div class="brain-layout">
+            <img class="brain-map" src="assets/brain-components.svg" alt="Upper body and brain tissue sketch showing neurons, glia, blood vessels, and chemicals" />
+            <div class="brain-copy">
+              <p class="eyebrow">What is in the brain?</p>
+              <h2>The brain is living tissue, not just an idea machine.</h2>
+              <div class="contents-grid">
+                <article class="mini fragment" data-fragment><b>Neurons</b><span>Send signals</span></article>
+                <article class="mini green fragment" data-fragment><b>Glia</b><span>Help neurons work</span></article>
+                <article class="mini coral fragment" data-fragment><b>Blood vessels</b><span>Deliver oxygen and glucose</span></article>
+                <article class="mini gold fragment" data-fragment><b>Chemicals</b><span>Change what signals mean</span></article>
+              </div>
+            </div>
+          </div>
+          <p class="bottom-banner fragment" data-fragment>Brain signals need support: cells, fuel, and chemicals all work together.</p>
+        </section>
+
+        <section class="frame mist-frame area-frame" data-title="Brain Areas" data-notes="Reveal two areas at a time. Emphasize networks, not one magic spot for every ability.">
+          <h2>Your brain uses areas and networks.</h2>
+          <div class="area-stage">
+            <canvas data-animation="brainNetwork"></canvas>
+            <div class="area-label a1 fragment" data-fragment>Frontal areas: plan and choose</div>
+            <div class="area-label a2 fragment" data-fragment>Sensory: sight, sound, touch</div>
+            <div class="area-label a3 fragment" data-fragment>Motor areas: movement commands</div>
+            <div class="area-label a4 fragment" data-fragment>Hippocampus: memory</div>
+            <div class="area-label a5 fragment" data-fragment>Cerebellum: timing and coordination</div>
+          </div>
+        </section>
+
+        <section class="frame video-frame motor-frame" data-title="Motor Control And Energy" data-notes="This brings body movement into the brain loop. Ask students to imagine catching a ball or walking into class.">
+          <div class="media-col">
+            <video autoplay muted loop playsinline preload="auto" poster="media/motor_energy_cover.png?v=student-facing-25">
+              <source src="media/motor_energy.mp4?v=student-facing-25" type="video/mp4" />
+            </video>
+          </div>
+          <div class="term-stack">
+            <p class="eyebrow">Movement uses brain code</p>
+            <h2>Catching a ball is a fast control loop.</h2>
+            <article class="term fragment" data-fragment><b>Sense</b><span>Eyes and body report what is happening.</span></article>
+            <article class="term fragment" data-fragment><b>Plan</b><span>The brain predicts what should happen next.</span></article>
+            <article class="term fragment" data-fragment><b>Command</b><span>Motor signals tell muscles what to do.</span></article>
+            <article class="term fragment" data-fragment><b>Feedback</b><span>The next command changes if movement was off.</span></article>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame energy-frame" data-title="Energy" data-notes="Keep ATP in daily language: a tiny energy currency cells spend to keep signals working.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Brains need fuel</p>
+              <h2>Thinking and learning use energy.</h2>
+              <article class="term fragment" data-fragment><b>Oxygen</b><span>from breathing, delivered by blood</span></article>
+              <article class="term fragment" data-fragment><b>Glucose</b><span>from food, used by cells</span></article>
+              <article class="term fragment" data-fragment><b>ATP</b><span>A cell's tiny energy currency</span></article>
+              <p class="callout fragment" data-fragment>Why might focus feel harder when you are tired or hungry?</p>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="energyPlot"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame" data-title="Learning From Mistakes" data-notes="Use prediction error in daily language: what I thought would happen minus what actually happened.">
+          <div class="media-col wide">
+            <video autoplay muted loop playsinline preload="auto" poster="media/learning_curve_plot_cover.png?v=student-facing-25">
+              <source src="media/learning_curve_plot.mp4?v=student-facing-25" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-notes">
+            <h2>Practice is repeating with feedback.</h2>
+            <p class="fragment" data-fragment>Prediction: what do I think will happen?</p>
+            <p class="fragment" data-fragment>Feedback: what actually happened?</p>
+            <p class="fragment" data-fragment>Update: what should change next time?</p>
+          </div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Transition" data-notes="Have students map one example to the vocabulary. Then move into the notebook/model section.">
+          <div class="final-copy">
+            <p class="eyebrow">Your turn</p>
+            <h2>Map one daily task onto the brain loop.</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Input</span>
+              <span class="fragment" data-fragment>Memory</span>
+              <span class="fragment" data-fragment>Action</span>
+              <span class="fragment" data-fragment>Feedback</span>
+              <span class="fragment" data-fragment>Energy</span>
+            </div>
+            <p class="callout fragment" data-fragment>Next: turn the brain loop into code.</p>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame hero-frame" data-title="From Brain Loop To Notebook" data-notes="Use this as the handoff from the first 15 minutes. The familiar loop now becomes runnable code.">
           <img class="hero-img" src="assets/daily-brain-hero.png" alt="Students learning with visible brain signal paths" />
           <div class="hero-shade"></div>
           <div class="hero-copy">
@@ -389,6 +631,6 @@
       </footer>
     </div>
 
-    <script src="app.js?v=morning-remaining-7"></script>
+    <script src="app.js?v=brain-code-1"></script>
   </body>
 </html>
