@@ -122,7 +122,22 @@
               <article class="term fragment" data-fragment><b>Time</b><span>Signals unfold step by step.</span></article>
             </div>
             <div class="hyper-panel">
-              <canvas data-animation="signalPlot"></canvas>
+              <svg class="signal-static-plot" viewBox="0 0 600 440" role="img" aria-label="A line plot showing signal strength changing over time">
+                <rect width="600" height="440" fill="#ffffff" />
+                <g stroke="#d6e3ea" stroke-width="1">
+                  <line x1="76" y1="76" x2="536" y2="76" />
+                  <line x1="76" y1="142" x2="536" y2="142" />
+                  <line x1="76" y1="208" x2="536" y2="208" />
+                  <line x1="76" y1="274" x2="536" y2="274" />
+                  <line x1="76" y1="340" x2="536" y2="340" />
+                </g>
+                <path d="M76 364 L76 62 M76 364 L540 364" fill="none" stroke="#102033" stroke-width="3" stroke-linecap="round" />
+                <text x="76" y="42" fill="#004c97" font-size="20" font-weight="900">Signal strength</text>
+                <text x="490" y="404" fill="#004c97" font-size="20" font-weight="900">Time</text>
+                <path d="M78 318 C118 320 138 300 162 244 C191 176 226 92 278 146 C317 187 340 306 384 250 C428 194 443 102 484 92 C510 86 525 96 540 112" fill="none" stroke="#009cde" stroke-width="7" stroke-linecap="round" />
+                <circle cx="484" cy="92" r="11" fill="#ffb81c" stroke="#102033" stroke-width="3" />
+                <text x="394" y="82" fill="#007a33" font-size="18" font-weight="900">moment that matters</text>
+              </svg>
             </div>
           </div>
         </section>

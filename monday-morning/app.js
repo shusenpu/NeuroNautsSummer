@@ -10,6 +10,7 @@ const notesPanel = document.querySelector("#notesPanel");
 const notesText = document.querySelector("#notesText");
 const counter = document.querySelector("#counter");
 const progressFill = document.querySelector("#progressFill");
+const studentAudience = document.body.dataset.audience === "student";
 
 let frameIndex = 0;
 let fragmentIndex = 0;
@@ -87,6 +88,7 @@ function prev() {
 }
 
 function toggleNotes(force) {
+  if (studentAudience || !notesPanel) return;
   const open = typeof force === "boolean" ? force : !notesPanel.classList.contains("is-open");
   notesPanel.classList.toggle("is-open", open);
 }
@@ -1126,7 +1128,7 @@ notesBtn?.addEventListener("click", (event) => {
   toggleNotes();
   event.currentTarget.blur();
 });
-closeNotes.addEventListener("click", (event) => {
+closeNotes?.addEventListener("click", (event) => {
   toggleNotes(false);
   event.currentTarget.blur();
 });
@@ -1153,9 +1155,9 @@ document.addEventListener("keydown", (event) => {
   }
   if (event.key === "Home") setFrame(0, 0);
   if (event.key === "End") setFrame(frames.length - 1, fragmentsFor(frames.at(-1)).length);
-  if (event.key.toLowerCase() === "n") toggleNotes();
+  if (!studentAudience && event.key.toLowerCase() === "n") toggleNotes();
   if (event.key.toLowerCase() === "f") toggleFullscreen();
-  if (event.key === "Escape") toggleNotes(false);
+  if (!studentAudience && event.key === "Escape") toggleNotes(false);
 });
 
 document.querySelector("#attentionSlider")?.addEventListener("input", (event) => {
