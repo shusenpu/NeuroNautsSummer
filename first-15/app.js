@@ -556,8 +556,8 @@ fullBtn.addEventListener("click", (event) => {
 document.addEventListener("mousemove", showControls);
 document.addEventListener("touchstart", showControls);
 
-deck.addEventListener("click", (event) => {
-  if (event.target.closest("button, input, a")) return;
+document.addEventListener("click", (event) => {
+  if (event.target.closest("button, input, label, a")) return;
   next();
 });
 

@@ -36,7 +36,7 @@ function updateFragments() {
 function updateProgress() {
   counter.textContent = `${frameIndex + 1} / ${frames.length}`;
   progressFill.style.width = `${((frameIndex + 1) / frames.length) * 100}%`;
-  notesText.textContent = activeFrame().dataset.notes || "";
+  if (notesText) notesText.textContent = activeFrame().dataset.notes || "";
 }
 
 function syncVideos() {
@@ -1139,8 +1139,8 @@ fullBtn.addEventListener("click", (event) => {
 document.addEventListener("mousemove", showControls);
 document.addEventListener("touchstart", showControls);
 
-deck.addEventListener("click", (event) => {
-  if (event.target.closest("button, input, a")) return;
+document.addEventListener("click", (event) => {
+  if (event.target.closest("button, input, label, a")) return;
   next();
 });
 
