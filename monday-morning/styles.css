@@ -475,15 +475,16 @@ h2 {
 
 .resource-board {
   display: grid;
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .resource-card {
   display: flex;
-  min-height: 238px;
+  min-height: 210px;
   flex-direction: column;
   justify-content: center;
-  padding: 32px 34px;
+  padding: 24px 24px;
   background: var(--white);
   border: 1px solid var(--line);
   border-left: 10px solid var(--nautilus);
@@ -496,25 +497,33 @@ h2 {
   border-left-color: var(--uwf-green);
 }
 
+.resource-card.zero {
+  border-left-color: var(--marigold);
+}
+
+.resource-card.coral {
+  border-left-color: var(--coral);
+}
+
 .resource-card b {
   color: var(--uwf-blue);
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.05;
 }
 
 .resource-card span {
-  margin-top: 12px;
+  margin-top: 10px;
   color: var(--ink);
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 800;
   line-height: 1.24;
 }
 
 .resource-card code {
   display: block;
-  margin-top: 22px;
+  margin-top: 16px;
   color: var(--uwf-green);
-  font: 800 15px/1.35 "SF Mono", Consolas, ui-monospace, monospace;
+  font: 800 12px/1.32 "SF Mono", Consolas, ui-monospace, monospace;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -1425,6 +1434,53 @@ input[type="range"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .brain-copy {
+    gap: 16px;
+  }
+
+  .contents-grid {
+    gap: 13px;
+  }
+
+  .mini {
+    min-height: 136px;
+    padding: 16px 18px;
+  }
+
+  .mini b {
+    font-size: 21px;
+  }
+
+  .mini span {
+    font-size: 17px;
+  }
+
+  .colab-link-layout {
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    gap: 30px;
+  }
+
+  .resource-board {
+    gap: 14px;
+  }
+
+  .resource-card {
+    min-height: 190px;
+    padding: 20px 18px;
+  }
+
+  .resource-card b {
+    font-size: 23px;
+  }
+
+  .resource-card span {
+    font-size: 16px;
+  }
+
+  .resource-card code {
+    font-size: 11px;
+  }
+
   .code-panel code {
     font-size: 20px;
   }
@@ -1584,6 +1640,40 @@ input[type="range"] {
   .compare-grid {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .colab-link-frame.is-active {
+    align-items: stretch;
+  }
+
+  .colab-link-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .colab-link-frame .copy {
+    gap: 12px;
+  }
+
+  .colab-link-frame .copy h2 {
+    max-width: 100%;
+    font-size: 31px;
+  }
+
+  .colab-link-frame .lead {
+    max-width: 100%;
+    font-size: 19px;
+  }
+
+  .resource-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .resource-card {
+    min-height: 176px;
+    padding: 18px 16px;
   }
 
   .roadmap-grid {
