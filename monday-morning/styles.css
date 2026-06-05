@@ -792,9 +792,15 @@ h2 {
 }
 
 .readable-motor-media .media-readable-label {
-  top: 14px;
+  top: 40px;
+  left: 40px;
+  right: auto;
+  width: max-content;
+  max-width: calc(100% - 80px);
+  padding: 6px 10px;
   color: var(--midnight);
-  font-size: clamp(18px, 2vw, 24px);
+  background: rgba(255, 255, 255, 0.88);
+  font-size: clamp(17px, 1.8vw, 20px);
   text-align: left;
 }
 
