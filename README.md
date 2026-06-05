@@ -1,9 +1,9 @@
 # NeuroNauts Summer School Brain Code Slides
 
-Static HTML slide decks for the NeuroNauts Summer School computational neuroscience morning session.
+Static HTML slides for the NeuroNauts Summer School computational neuroscience morning session.
 
-- `first-15/` opens the first 15-minute Brain Code introduction.
-- `monday-morning/` opens the remaining Monday morning model and Colab session slides.
+- `monday-morning/` opens the full Brain Code morning session.
+- `first-15/` redirects to the full morning session so older links still work.
 
 GitHub Pages URL:
 
