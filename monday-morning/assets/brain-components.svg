@@ -26,19 +26,21 @@
       <path d="M0,0 L10,5 L0,10 Z" fill="#ffb81c"/>
     </marker>
     <style>
-      .label { font: 800 36px Aptos, Inter, Arial, sans-serif; fill: #004c97; }
-      .small { font: 700 22px Aptos, Inter, Arial, sans-serif; fill: #102033; }
-      .tiny { font: 700 18px Aptos, Inter, Arial, sans-serif; fill: #102033; }
-      .call { font: 900 25px Aptos, Inter, Arial, sans-serif; fill: #fff; }
-      .callSub { font: 700 18px Aptos, Inter, Arial, sans-serif; fill: #fff; }
+      .label { font: 800 46px Aptos, Inter, Arial, sans-serif; fill: #004c97; }
+      .small { font: 800 31px Aptos, Inter, Arial, sans-serif; fill: #102033; }
+      .tiny { font: 800 26px Aptos, Inter, Arial, sans-serif; fill: #102033; }
+      .call { font: 900 44px Aptos, Inter, Arial, sans-serif; fill: #fff; }
+      .callSub { font: 800 27px Aptos, Inter, Arial, sans-serif; fill: #fff; }
+      .tissueTitle { font: 900 34px Aptos, Inter, Arial, sans-serif; fill: #fff; }
     </style>
   </defs>
 
   <rect width="900" height="1300" fill="url(#panelBg)"/>
   <path d="M0 1090 C160 1045 288 1088 450 1050 C636 1005 752 1035 900 990 L900 1300 L0 1300 Z" fill="#c6e5f6" opacity="0.55"/>
 
-  <text x="54" y="74" class="label">Brain tissue has working parts</text>
-  <text x="56" y="114" class="small">A brain is connected to the body and built from living cells.</text>
+  <text x="54" y="78" class="label">Brain tissue has working parts</text>
+  <text x="56" y="124" class="small">A brain is connected to the body</text>
+  <text x="56" y="160" class="small">and built from living cells.</text>
 
   <g filter="url(#shadow)">
     <path d="M165 580 C110 636 80 730 84 828 L84 1090 L407 1090 L407 828 C412 730 382 636 326 580 C302 557 190 557 165 580 Z" fill="url(#body)" stroke="#8dc8e8" stroke-width="4"/>
@@ -60,7 +62,7 @@
   <g transform="translate(460 430)" filter="url(#shadow)">
     <rect x="0" y="0" width="382" height="506" rx="34" fill="#ffffff" stroke="#d6e3ea" stroke-width="4"/>
     <rect x="25" y="28" width="332" height="54" rx="14" fill="#004c97"/>
-    <text x="191" y="64" text-anchor="middle" class="call">Inside brain tissue</text>
+    <text x="191" y="64" text-anchor="middle" class="tissueTitle">Brain tissue</text>
 
     <g transform="translate(28 110)">
       <path d="M108 80 C81 54 52 51 33 68 M108 80 C83 86 55 113 42 144 M108 80 C133 47 168 40 193 56 M108 80 C139 91 165 117 177 151" fill="none" stroke="#009cde" stroke-width="7" stroke-linecap="round"/>
@@ -89,24 +91,24 @@
 
   <g>
     <path d="M614 568 L512 536" fill="none" stroke="#009cde" stroke-width="5" marker-end="url(#arrowBlue)"/>
-    <rect x="40" y="728" width="348" height="94" rx="14" fill="#009cde" filter="url(#shadow)"/>
-    <text x="65" y="768" class="call">Neurons</text>
-    <text x="65" y="798" class="callSub">send electrical signals</text>
+    <rect x="40" y="728" width="420" height="104" rx="14" fill="#009cde" filter="url(#shadow)"/>
+    <text x="65" y="773" class="call">Neurons</text>
+    <text x="65" y="810" class="callSub">send electrical signals</text>
 
-    <path d="M724 537 L733 489" fill="none" stroke="#007a33" stroke-width="5" marker-end="url(#arrowGreen)"/>
-    <rect x="40" y="842" width="348" height="94" rx="14" fill="#007a33" filter="url(#shadow)"/>
-    <text x="65" y="882" class="call">Glia</text>
-    <text x="65" y="912" class="callSub">support and protect neurons</text>
+    <path d="M724 552 L733 520" fill="none" stroke="#007a33" stroke-width="5" marker-end="url(#arrowGreen)"/>
+    <rect x="40" y="846" width="420" height="104" rx="14" fill="#007a33" filter="url(#shadow)"/>
+    <text x="65" y="891" class="call">Glia</text>
+    <text x="65" y="928" class="callSub">support and protect neurons</text>
 
     <path d="M646 808 L496 828" fill="none" stroke="#e03c31" stroke-width="5" marker-end="url(#arrowRed)"/>
-    <rect x="40" y="956" width="348" height="94" rx="14" fill="#e03c31" filter="url(#shadow)"/>
-    <text x="65" y="996" class="call">Blood vessels</text>
-    <text x="65" y="1026" class="callSub">deliver O2 and glucose</text>
+    <rect x="40" y="964" width="420" height="104" rx="14" fill="#e03c31" filter="url(#shadow)"/>
+    <text x="65" y="1009" class="call">Blood vessels</text>
+    <text x="65" y="1046" class="callSub">deliver O2 and glucose</text>
 
     <path d="M712 680 L698 625" fill="none" stroke="#ffb81c" stroke-width="5" marker-end="url(#arrowGold)"/>
-    <rect x="40" y="1070" width="348" height="94" rx="14" fill="#ffb81c" filter="url(#shadow)"/>
-    <text x="65" y="1110" class="call" fill="#102033">Chemicals</text>
-    <text x="65" y="1140" class="callSub" fill="#102033">change what signals mean</text>
+    <rect x="40" y="1082" width="420" height="104" rx="14" fill="#ffb81c" filter="url(#shadow)"/>
+    <text x="65" y="1127" class="call" fill="#102033">Chemicals</text>
+    <text x="65" y="1164" class="callSub" fill="#102033">change what signals mean</text>
   </g>
 
   <g opacity="0.6">

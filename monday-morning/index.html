@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Brain Code</title>
-    <link rel="stylesheet" href="styles.css?v=brain-code-2" />
+    <link rel="stylesheet" href="styles.css?v=brain-code-4" />
   </head>
   <body data-audience="student">
     <div class="app-shell">
@@ -104,10 +104,11 @@
 
         <section class="frame dark-frame loop-frame" data-title="Brain Loop" data-notes="Use this as the first bridge to computation. The loop is input, processing, action, feedback.">
           <div class="loop-layout">
-            <div class="video-card">
+            <div class="video-card readable-loop-media">
               <video autoplay muted loop playsinline preload="auto" poster="media/brain_loop_manim_cover.png?v=student-facing-25">
                 <source src="media/brain_loop_manim.mp4?v=student-facing-25" type="video/mp4" />
               </video>
+              <div class="media-readable-label">same structure behind: recognizing, remembering, choosing, moving</div>
             </div>
             <div>
               <p class="eyebrow">Look for the loop</p>
@@ -203,7 +204,7 @@
 
         <section class="frame light-frame brain-frame" data-title="Inside The Brain" data-notes="Keep anatomy simplified. Name neurons, glia, blood vessels, and chemicals as things students will hear later.">
           <div class="brain-layout">
-            <img class="brain-map" src="assets/brain-components.svg" alt="Upper body and brain tissue sketch showing neurons, glia, blood vessels, and chemicals" />
+            <img class="brain-map" src="assets/brain-components.svg?v=brain-code-4" alt="Upper body and brain tissue sketch showing neurons, glia, blood vessels, and chemicals" />
             <div class="brain-copy">
               <p class="eyebrow">What is in the brain?</p>
               <h2>The brain is living tissue, not just an idea machine.</h2>
@@ -231,10 +232,11 @@
         </section>
 
         <section class="frame video-frame motor-frame" data-title="Motor Control And Energy" data-notes="This brings body movement into the brain loop. Ask students to imagine catching a ball or walking into class.">
-          <div class="media-col">
+          <div class="media-col readable-motor-media">
             <video autoplay muted loop playsinline preload="auto" poster="media/motor_energy_cover.png?v=student-facing-25">
               <source src="media/motor_energy.mp4?v=student-facing-25" type="video/mp4" />
             </video>
+            <div class="media-readable-label">motor control: sense -> plan -> command -> feedback</div>
           </div>
           <div class="term-stack">
             <p class="eyebrow">Movement uses brain code</p>
@@ -673,6 +675,6 @@
       </footer>
     </div>
 
-    <script src="app.js?v=brain-code-2"></script>
+    <script src="app.js?v=brain-code-4"></script>
   </body>
 </html>
