@@ -108,31 +108,18 @@
     @media print {
       @page {
         size: Letter;
-        margin: 0.72in 0.68in 0.78in;
-        @bottom-center {
-          content: counter(page);
-          color: #64748b;
-          font-size: 9pt;
-        }
-      }
-      @page:first {
-        @bottom-center { content: ""; }
+        margin: 0.65in;
       }
       html, body { background: white; }
       body {
         color: #111827;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 10.8pt;
-        line-height: 1.48;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 10.6pt;
+        line-height: 1.5;
       }
       main { width: 100%; padding: 0; box-shadow: none; }
       .book-cover {
-        display: flex;
-        min-height: 9.15in;
-        flex-direction: column;
-        justify-content: center;
-        page-break-after: always;
-        break-after: page;
+        display: none !important;
       }
       .cover-kicker {
         color: #0f766e;
@@ -169,10 +156,6 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
         font-size: 10.5pt;
       }
-      .book-title-heading,
-      .book-title-rule {
-        display: none;
-      }
       h1, h2, h3, h4 {
         color: #0f172a;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -180,7 +163,7 @@
         page-break-after: avoid;
       }
       h1 {
-        margin: 0 0 0.2in;
+        margin: 0.28in 0 0.14in;
         padding: 0 0 0.08in;
         border-bottom: 1.5pt solid #0f766e;
         font-size: 21pt;
@@ -189,8 +172,8 @@
       .front-heading,
       .chapter-heading,
       .appendix-heading {
-        page-break-before: always;
-        break-before: page;
+        page-break-before: auto;
+        break-before: auto;
       }
       .toc-heading {
         page-break-before: avoid;
