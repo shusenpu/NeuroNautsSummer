@@ -115,7 +115,8 @@
       justify-content: space-between;
       gap: 24px;
       margin-bottom: 28px;
-      padding: 18px 20px;
+      min-height: 122px;
+      padding: 9px 20px;
       background: rgba(255, 255, 255, 0.96);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.45);
@@ -131,8 +132,8 @@
       background: transparent;
       object-fit: contain;
     }
-    .brand-logo-mind { height: 82px; max-width: 58%; }
-    .brand-logo-uwf { height: 66px; max-width: 34%; }
+    .brand-logo-mind { height: 104px; max-width: 48%; }
+    .brand-logo-uwf { height: 98px; max-width: 46%; }
     .brand-kicker {
       margin: 0 0 0.45rem;
       color: #bde7ff;
@@ -206,7 +207,7 @@
     }
     @media (max-width: 720px) {
       .brand-hero { padding: 22px 18px 28px; }
-      .brand-logos { flex-direction: column; align-items: flex-start; gap: 14px; padding: 14px; }
+      .brand-logos { flex-direction: column; align-items: flex-start; gap: 14px; min-height: 0; padding: 14px; }
       .brand-logo-mind, .brand-logo-uwf { max-width: 100%; height: auto; }
       .brand-logo-mind { width: min(100%, 360px); }
       .brand-logo-uwf { width: min(100%, 280px); }
@@ -429,8 +430,8 @@
 
 <header class="brand-hero" aria-label="Research project book cover">
   <div class="brand-logos" aria-label="Lab and university logos">
-    <img class="brand-logo brand-logo-mind" src="assets/mind-lab-logo.png" alt="MIND Lab logo">
-    <img class="brand-logo brand-logo-uwf" src="assets/uwf-logo.png" alt="University of West Florida logo">
+    <img class="brand-logo brand-logo-mind" src="assets/mind-lab-logo-display.png" alt="MIND Lab logo">
+    <img class="brand-logo brand-logo-uwf" src="assets/uwf-logo-display.png" alt="University of West Florida logo">
   </div>
   <p class="brand-kicker">MIND Lab Research Project</p>
   <h1 class="brand-title">From Neuron Shape to Noisy Spike Trains</h1>
