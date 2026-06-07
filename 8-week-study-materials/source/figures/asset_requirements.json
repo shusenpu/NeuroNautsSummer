@@ -1,0 +1,86 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "asset_requirements": [
+    {
+      "asset": "Morphology comparison page",
+      "implemented_id": "morphology_comparison_page",
+      "filename": "morphology_comparison_page.svg",
+      "source_or_generation_route": "OpenStax morphology figures plus Allen Cell Types or NeuroMorpho screenshots; current implementation is a local morphology comparison page with OpenStax and public-domain real-neuron references nearby in Chapter 1.",
+      "caption": "Different neuron shapes solve different signaling problems.",
+      "data_instruction": "Use one multipolar, one sensory/unipolar-like, and one highly branched neuron.",
+      "evidence": 2
+    },
+    {
+      "asset": "Ion-gradient bar chart",
+      "implemented_id": "ion_gradient_bars",
+      "filename": "ion_gradient_bars.svg",
+      "source_or_generation_route": "Generate locally in Python.",
+      "caption": "Relative inside/outside ion concentrations create different electrochemical pulls.",
+      "data_instruction": "Use clearly labeled illustrative values kept consistent throughout the book: Na+ 12/145 mM, K+ 140/5 mM, Cl- 10/110 mM, Ca2+ 0.0001/2 mM for inside/outside.",
+      "evidence": 18
+    },
+    {
+      "asset": "Nernst sign plot",
+      "implemented_id": "nernst_sign_plot",
+      "filename": "nernst_sign_plot.svg",
+      "source_or_generation_route": "Generate locally in Python.",
+      "caption": "Equilibrium potential changes sign when the outside/inside ratio crosses one.",
+      "data_instruction": "Plot E versus [out]/[in] on a log x-axis using E = 61 log10([out]/[in]) for z = +1.",
+      "evidence": 18
+    },
+    {
+      "asset": "Synapse and summation diagram",
+      "implemented_id": "synapse_summation_diagram",
+      "filename": "synapse_summation_diagram.svg",
+      "source_or_generation_route": "Generate locally or redraw from textbook concepts.",
+      "caption": "Small excitatory and inhibitory inputs sum in time and space before threshold is reached.",
+      "data_instruction": "Use baseline -70 mV and threshold -55 mV example values consistently.",
+      "evidence": 4
+    },
+    {
+      "asset": "Action-potential phase plot",
+      "implemented_id": "action_potential_phase_plot",
+      "filename": "action_potential_phase_plot.svg",
+      "source_or_generation_route": "Generate locally.",
+      "caption": "An action potential is a timed sequence of membrane states, not a generic bump.",
+      "data_instruction": "Mark threshold, overshoot, refractory period, and after-hyperpolarization.",
+      "evidence": 22
+    },
+    {
+      "asset": "HH equivalent-circuit figure",
+      "implemented_id": "hh_equivalent_circuit",
+      "filename": "hh_equivalent_circuit.svg",
+      "source_or_generation_route": "Generate in Mermaid or vector graphics.",
+      "caption": "The membrane behaves like a capacitor in parallel with Na, K, and leak pathways.",
+      "data_instruction": "Label V_m, C_m, g_Na, g_K, and E terms.",
+      "evidence": 20
+    },
+    {
+      "asset": "Patch-clamp and single-channel trace",
+      "implemented_id": "patch_clamp_single_channel_trace",
+      "filename": "patch_clamp_single_channel_trace.svg",
+      "source_or_generation_route": "Conceptual redraw based on Molecular Biology of the Cell.",
+      "caption": "Single channels open all-or-none, but the timing of openings is random.",
+      "data_instruction": "Pair the cartoon with a step-like current trace.",
+      "evidence": 6
+    },
+    {
+      "asset": "Spike-train dashboard",
+      "implemented_id": "spike_train_dashboard",
+      "filename": "spike_train_dashboard.svg",
+      "source_or_generation_route": "Generate locally from synthetic or Allen data.",
+      "caption": "Rate, interval, and variability can be read directly from spike trains.",
+      "data_instruction": "Include raster, ISI histogram, and summary metric panel.",
+      "evidence": 9
+    },
+    {
+      "asset": "Concept maps and timelines",
+      "implemented_id": "concept_map",
+      "filename": "concept_map.svg",
+      "source_or_generation_route": "Mermaid.",
+      "caption": "This map shows how the chapter ideas connect.",
+      "data_instruction": "Use for chapter openers and the end-of-course map.",
+      "evidence": 23
+    }
+  ]
+}

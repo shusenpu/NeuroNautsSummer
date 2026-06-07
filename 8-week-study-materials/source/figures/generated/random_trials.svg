@@ -1,0 +1,33 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <title id="title">Random Trials</title>
+  <desc id="desc">Random Trials teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .axis{stroke:#334155;stroke-width:3}
+          .spike{stroke:#0f766e;stroke-width:4}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Repeated trials can have different spike times</text>
+      <text x="55" y="92" class="small">Even with the same average input, internal randomness can shift threshold crossings.</text>
+      <line x1="110" y1="460" x2="1080" y2="460" class="axis"/>
+      <text x="595" y="505" text-anchor="middle" class="small">time</text>
+      <line x1="170" y1="150" x2="170" y2="450" class="axis"/>
+      <text x="115" y="142" class="small">trial</text>
+      <g class="spike">
+        <line x1="300" y1="165" x2="300" y2="205"/><line x1="468" y1="165" x2="468" y2="205"/><line x1="640" y1="165" x2="640" y2="205"/><line x1="812" y1="165" x2="812" y2="205"/>
+        <line x1="312" y1="230" x2="312" y2="270"/><line x1="493" y1="230" x2="493" y2="270"/><line x1="651" y1="230" x2="651" y2="270"/><line x1="830" y1="230" x2="830" y2="270"/>
+        <line x1="286" y1="295" x2="286" y2="335"/><line x1="450" y1="295" x2="450" y2="335"/><line x1="626" y1="295" x2="626" y2="335"/><line x1="790" y1="295" x2="790" y2="335"/>
+        <line x1="324" y1="360" x2="324" y2="400"/><line x1="475" y1="360" x2="475" y2="400"/><line x1="668" y1="360" x2="668" y2="400"/><line x1="846" y1="360" x2="846" y2="400"/>
+      </g>
+      <text x="130" y="190" class="small">1</text><text x="130" y="255" class="small">2</text><text x="130" y="320" class="small">3</text><text x="130" y="385" class="small">4</text>
+      <rect x="930" y="160" width="190" height="205" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3" rx="14"/>
+      <text x="1025" y="205" text-anchor="middle" class="small">ISI varies</text>
+      <text x="1025" y="240" text-anchor="middle" class="small">mean = average</text>
+      <text x="1025" y="275" text-anchor="middle" class="small">SD = spread</text>
+      <text x="1025" y="310" text-anchor="middle" class="small">CV = SD / mean</text>
+    </svg>
+    

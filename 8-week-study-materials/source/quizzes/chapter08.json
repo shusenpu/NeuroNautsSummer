@@ -1,0 +1,99 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "chapter": 8,
+  "chapter_slug": "capstone_project",
+  "chapter_title": "Capstone Project: From Noise to Spike-Time Variability",
+  "item_count": 8,
+  "items": [
+    {
+      "id": "c08_mc_1",
+      "type": "multiple_choice",
+      "prompt": "Which definition best matches Research question?",
+      "choices": [
+        "Focused question the project answers.",
+        "A calculus operation used to solve differential equations.",
+        "A random number with no biological meaning.",
+        "A unit for spike rate only."
+      ],
+      "answer": "Focused question the project answers.",
+      "explanation": "Research question is introduced in this chapter vocabulary table.",
+      "difficulty": "easy",
+      "misconception_tag": "vocabulary_swap"
+    },
+    {
+      "id": "c08_mc_2",
+      "type": "multiple_choice",
+      "prompt": "What is the safest way to use the main figure in this chapter?",
+      "choices": [
+        "Use it to explain a mechanism in words.",
+        "Memorize its colors only.",
+        "Assume it proves every detail of real neurons.",
+        "Skip the caption."
+      ],
+      "answer": "Use it to explain a mechanism in words.",
+      "explanation": "Figures are learning tools for mechanism, not decoration.",
+      "difficulty": "easy",
+      "misconception_tag": "figure_as_decoration"
+    },
+    {
+      "id": "c08_mc_3",
+      "type": "multiple_choice",
+      "prompt": "Which statement best preserves the no-calculus promise?",
+      "choices": [
+        "Explain the physical story before formal equations.",
+        "Avoid all numbers.",
+        "Memorize equations without meaning.",
+        "Use calculus before vocabulary."
+      ],
+      "answer": "Explain the physical story before formal equations.",
+      "explanation": "The course uses numbers and graphs, but formal calculus waits.",
+      "difficulty": "medium",
+      "misconception_tag": "calculus_required"
+    },
+    {
+      "id": "c08_short_1",
+      "type": "short_answer",
+      "prompt": "What is the independent variable in the recommended project?",
+      "answer": "Noise strength.",
+      "explanation": "This is the first quick check from the chapter.",
+      "difficulty": "easy",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c08_short_2",
+      "type": "short_answer",
+      "prompt": "Why must the final project include a limitation?",
+      "answer": "Because a simplified model teaches one mechanism but does not prove all details of real neurons.",
+      "explanation": "This is the second quick check from the chapter.",
+      "difficulty": "medium",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c08_calc_1",
+      "type": "calculation",
+      "prompt": "Low-noise CV is 0.08 and high-noise CV is 0.31. Which condition is more variable?",
+      "answer": "High noise.",
+      "explanation": "0.31 is larger than 0.08, so timing is more variable.",
+      "difficulty": "medium",
+      "misconception_tag": "unit_or_sign_error"
+    },
+    {
+      "id": "c08_calc_2",
+      "type": "calculation",
+      "prompt": "A talk has 6 slides and lasts 6 minutes. What is the average time per slide?",
+      "answer": "1 minute per slide.",
+      "explanation": "6 minutes / 6 slides = 1 minute/slide.",
+      "difficulty": "medium",
+      "misconception_tag": "arithmetic_without_meaning"
+    },
+    {
+      "id": "c08_oral_1",
+      "type": "oral_explanation",
+      "prompt": "Explain the answer to this chapter's opening question in 60 seconds: Can the student make one evidence-based claim about noise and spike timing?",
+      "answer": "The recommended project asks how increasing noise strength affects spike-time variability in a simple threshold neuron model. The independent variable is noise strength. The dependent variable is ISI CV or ISI standard deviation. The project is not a full molecular channel-noise model. It is a beginner model for learning threshold, reset, spikes, ISIs, CV, evidence, and limitations.",
+      "explanation": "A strong oral answer links the visual story, vocabulary, and causal mechanism.",
+      "difficulty": "hard",
+      "misconception_tag": "memorized_terms_without_mechanism"
+    }
+  ]
+}

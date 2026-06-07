@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified neuron map</title>
+  <desc id="desc">Simplified neuron with labeled dendrites, soma, axon hillock, axon, terminals, and direction arrow.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#172033"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f7fafc; stroke: #c9d5e3; stroke-width: 2; rx: 18; }
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 500 18px Arial, sans-serif; fill: #4b5b73; }
+      .label { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .small { font: 500 15px Arial, sans-serif; fill: #4b5b73; }
+      .tiny { font: 500 12px Arial, sans-serif; fill: #4b5b73; }
+      .axis { stroke: #172033; stroke-width: 2; }
+      .grid { stroke: #e5edf5; stroke-width: 1; }
+      .trace { fill: none; stroke: #0f766e; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .orange-trace { fill: none; stroke: #ea580c; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .blue-trace { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .teal-fill { fill: #ccfbf1; stroke: #0f766e; stroke-width: 4; }
+      .orange-fill { fill: #fed7aa; stroke: #ea580c; stroke-width: 4; }
+      .blue-fill { fill: #dbeafe; stroke: #2563eb; stroke-width: 4; }
+      .green-fill { fill: #dcfce7; stroke: #16a34a; stroke-width: 4; }
+      .red-fill { fill: #fee2e2; stroke: #dc2626; stroke-width: 4; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="64" y="48" class="title">Simplified neuron map</text><text x="64" y="82" class="subtitle">A functional map for input, decision, and output</text><path d="M 220 360 C 150 290, 120 245, 95 210" class="trace"/><path d="M 220 360 C 145 360, 110 390, 80 420" class="trace"/><path d="M 230 350 C 230 255, 285 180, 355 130" class="trace"/><path d="M 250 370 C 290 310, 350 285, 420 270" class="trace"/><circle cx="300" cy="390" r="82" class="teal-fill"/><circle cx="300" cy="390" r="34" fill="#67e8f9"/><line x1="382" y1="390" x2="520" y2="390" stroke="#0f766e" stroke-width="12" stroke-linecap="round" class=""/><path d="M 520 390 C 660 390, 780 410, 920 390" class="trace"/><path d="M 510 365 C 530 390, 530 410, 510 435" fill="none" stroke="#0f766e" stroke-width="7"/><path d="M 625 365 C 645 390, 645 410, 625 435" fill="none" stroke="#0f766e" stroke-width="7"/><path d="M 740 365 C 760 390, 760 410, 740 435" fill="none" stroke="#0f766e" stroke-width="7"/><path d="M 855 365 C 875 390, 875 410, 855 435" fill="none" stroke="#0f766e" stroke-width="7"/><path d="M 920 390 L 1070 320 M 920 390 L 1075 405 M 920 390 L 1055 495" class="trace"/><line x1="500" y1="470" x2="845" y2="470" stroke="#172033" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)" class=""/><text x="155" y="172" class="label" text-anchor="middle">dendrites</text><text x="300" y="500" class="label" text-anchor="middle">soma</text><text x="430" y="350" class="small" text-anchor="middle">axon hillock</text><text x="710" y="350" class="label" text-anchor="middle">axon</text><text x="1040" y="285" class="label" text-anchor="middle">axon terminals</text><text x="672" y="505" class="small" text-anchor="middle">action potential direction</text>
+</svg>

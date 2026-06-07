@@ -1,0 +1,141 @@
+{
+  "front_matter": {
+    "opening_question": "How can salty water and a thin membrane make a measurable voltage?",
+    "learning_goals": [
+      "Explain why potassium is central to resting membrane potential.",
+      "Compute and interpret a simple Nernst equilibrium potential.",
+      "Distinguish concentration gradient from electrical force."
+    ],
+    "prerequisites": [
+      "Prerequisites: atoms can have charge, concentration means amount per volume, and Chapter 1 introduced the neuron as a living cell with a membrane. Recap: the bridge from the previous chapter is from neuron shape to membrane function. This chapter explains how charged ions and selective membrane permeability give that shape an electrical state."
+    ],
+    "vocabulary": [
+      {
+        "term": "Ion",
+        "definition": "Charged atom or molecule."
+      },
+      {
+        "term": "Concentration gradient",
+        "definition": "A difference in concentration from one place to another, such as high K+ inside and low K+ outside."
+      },
+      {
+        "term": "Selective permeability",
+        "definition": "A membrane property where some ions can cross more easily than others because certain channels are open."
+      },
+      {
+        "term": "Resting membrane potential",
+        "definition": "The usual membrane voltage of a neuron when it is not firing; many neurons sit near -70 mV."
+      },
+      {
+        "term": "Equilibrium potential",
+        "definition": "The voltage where one ion's concentration gradient and electrical force balance, so that ion has no net tendency to move."
+      },
+      {
+        "term": "Cation",
+        "definition": "Positive ion, such as Na+ or K+."
+      },
+      {
+        "term": "Anion",
+        "definition": "Negative ion, such as Cl-."
+      },
+      {
+        "term": "Electrical force",
+        "definition": "The push or pull on a charged particle caused by voltage."
+      },
+      {
+        "term": "Driving force",
+        "definition": "How far V_m is from an ion's equilibrium potential."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 2. Ions, Gradients, and Resting Voltage\n\n## Opening Question\n\nHow can salty water and a thin membrane make a measurable voltage?\n\n## Learning Goals\n\n- Explain why potassium is central to resting membrane potential.\n- Compute and interpret a simple Nernst equilibrium potential.\n- Distinguish concentration gradient from electrical force.\n\n## Prerequisites and Recap\n\nPrerequisites: atoms can have charge, concentration means amount per volume, and Chapter 1 introduced the neuron as a living cell with a membrane. Recap: the bridge from the previous chapter is from neuron shape to membrane function. This chapter explains how charged ions and selective membrane permeability give that shape an electrical state.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Ion | Charged atom or molecule. |\n| Concentration gradient | A difference in concentration from one place to another, such as high K+ inside and low K+ outside. |\n| Selective permeability | A membrane property where some ions can cross more easily than others because certain channels are open. |\n| Resting membrane potential | The usual membrane voltage of a neuron when it is not firing; many neurons sit near -70 mV. |\n| Equilibrium potential | The voltage where one ion's concentration gradient and electrical force balance, so that ion has no net tendency to move. |\n| Cation | Positive ion, such as Na+ or K+. |\n| Anion | Negative ion, such as Cl-. |\n| Electrical force | The push or pull on a charged particle caused by voltage. |\n| Driving force | How far V_m is from an ion's equilibrium potential. |\n\n## Visual Story\n\nStart with ions before voltage. First compare the ion concentration bars: Na+ is mostly outside, K+ is mostly inside, Cl- is often higher outside, and Ca2+ is kept extremely low inside. Then look at the Nernst sign plot: when outside/inside is less than 1 for a positive ion like K+, the equilibrium potential is negative. Finally, use the resting membrane cartoon to see why selective K+ permeability can make the inside of the neuron negative relative to outside.\n\n\n![Bar chart comparing clearly labeled illustrative inside and outside concentrations for Na+, K+, Cl-, and Ca2+.](../figures/generated/ion_gradient_bars.svg)\n\n*Relative inside/outside ion concentrations create different electrochemical pulls.*\n\n![Semilog plot of equilibrium potential E versus outside divided by inside concentration ratio, crossing zero at ratio one.](../figures/generated/nernst_sign_plot.svg)\n\n*Equilibrium potential changes sign when the outside/inside ratio crosses one.*\n\n![Membrane diagram with K+ leak channels, high K+ inside, high Na+ outside, and negative inside voltage.](../figures/generated/resting_membrane_cartoon.svg)\n\n*Resting membrane cartoon: selective K+ permeability lets K+ diffusion outward and electrical pull inward balance near a negative V_m.*\n\n## Core Concepts\n\nResting voltage comes from ion gradients plus selective permeability. The concentration gradient for K+ points outward because K+ is much more concentrated inside the neuron. The electrical force on K+ points inward once the inside becomes negative. The K+ equilibrium potential is the voltage where those two tendencies balance. Because resting membranes are often more permeable to K+ than to Na+, V_m at rest sits closer to E_K than to E_Na, though not exactly at E_K because other ions and channels also matter. The Na+/K+ pump maintains the Na+ and K+ gradients over time, but the immediate resting voltage is mainly explained by the existing gradients plus which leak channels are open. The next chapter uses this resting voltage as the starting point for synaptic inputs and graded potentials.\n\n## Worked Example A\n\n**Problem:** A membrane changes from -70 mV to -55 mV. What happened and by how much?\n\n**Solution:** It depolarized by 15 mV. The membrane became less negative, so the change is depolarization. The magnitude is 15 mV.\n\n## Quick Check A With Answer\n\n**Question:** Which is a concentration-gradient statement: 'K+ is high inside' or 'inside is negative'?\n\n**Answer:** 'K+ is high inside' is the concentration-gradient statement. 'Inside is negative' is an electrical statement.\n\n## Worked Example B\n\n**Problem:** Use E_ion = (61 / z) log10(outside/inside) at room-temperature scale. For K+, z = +1, outside = 5 mM, and inside = 140 mM. Estimate E_K and interpret its sign.\n\n**Solution:** Compute outside/inside = 5/140 = 0.0357. On a calculator, log10(0.0357) is about -1.40. E_K = 61 x -1.40 = about -85 mV. The negative sign means K+ would be balanced when the inside is substantially negative compared with outside.\n\n## Quick Check B With Answer\n\n**Question:** Why is potassium central to many resting membrane potentials?\n\n**Answer:** K+ is high inside and many resting membranes have K+ leak permeability, so K+ strongly influences where V_m settles.\n\n## Chapter Summary\n\nChapter 2 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: Resting voltage comes from ion gradients plus selective permeability.\n\n## Homework\n\n### Questions\n\n1. Make an ion table for Na+, K+, Cl-, and Ca2+ with charge, usual high side, and beginner role.\n2. Write one sentence defining concentration gradient and one sentence defining electrical force.\n3. For a positive ion, outside/inside = 10. Is log10(outside/inside) positive, negative, or zero? What does that imply for E_ion?\n4. For K+, outside = 4 mM and inside = 120 mM. Use E_K = 61 log10(outside/inside). Round to the nearest mV.\n5. Explain why opening K+ leak channels can make the inside of the neuron negative.\n6. Bridge to Chapter 3: if a synapse opens channels after the neuron is resting near -70 mV, why can that synapse change V_m?\n\n### Answer Key\n\n1. Na+ is +1 and high outside; K+ is +1 and high inside; Cl- is -1 and often higher outside; Ca2+ is +2 and extremely low inside. Na+ and K+ are central for voltage changes, Cl- often shapes inhibition, and Ca2+ is a powerful signaling ion.\n2. A concentration gradient is a difference in concentration across space. Electrical force is the push or pull on an ion caused by voltage and charge.\n3. It is positive because log10(10) = +1, so E_ion is positive for z = +1.\n4. 4/120 = 0.0333. log10(0.0333) is about -1.48. E_K is about 61 x -1.48 = -90 mV.\n5. K+ diffuses outward because it is high inside. Losing some positive charge leaves the inside relatively negative near the membrane, and that negative voltage then pulls K+ back inward.\n6. Opening channels changes selective permeability. The newly open channels let ions pull V_m toward their own equilibrium potentials, creating a graded voltage change.\n\n## Stretch Box\n\n> The Nernst equation gives one ion's balance point, but a real resting neuron has several permeable ions. Explain why V_m is usually near E_K but not exactly equal to E_K. Use the phrase 'selective permeability' and mention at least one other ion.\n\n## Mentor Note\n\n> Keep the sequence strict: ions first, concentration gradients second, electrical force third, voltage fourth. If the student says 'voltage pushes K+ out,' pause and ask what the concentration gradient and electrical force are doing separately.\n\n## Glossary Additions\n\n- Ion\n- Concentration gradient\n- Selective permeability\n- Resting membrane potential\n- Equilibrium potential\n- Electrical force\n- Driving force\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 2.1 | `ion_gradient_bars.svg` | Relative inside/outside ion concentrations create different electrochemical pulls. | Bar chart comparing clearly labeled illustrative inside and outside concentrations for Na+, K+, Cl-, and Ca2+. | Generated locally in Python using consistent illustrative values: Na+ 12/145 mM, K+ 140/5 mM, Cl- 10/110 mM, Ca2+ 0.0001/2 mM for inside/outside. |\n| 2.2 | `nernst_sign_plot.svg` | Equilibrium potential changes sign when the outside/inside ratio crosses one. | Semilog plot of equilibrium potential E versus outside divided by inside concentration ratio, crossing zero at ratio one. | Generated locally in Python from E = 61 log10([out]/[in]) for z = +1. |\n| 2.3 | `resting_membrane_cartoon.svg` | Resting membrane cartoon: selective K+ permeability lets K+ diffusion outward and electrical pull inward balance near a negative V_m. | Membrane diagram with K+ leak channels, high K+ inside, high Na+ outside, and negative inside voltage. | Original generated course figure; conceptually aligned with PhET Membrane Channels and NCBI Bookshelf ionic-basis explanations. |\n",
+  "worked_examples": [
+    {
+      "title": "Sign and magnitude",
+      "problem": "A membrane changes from -70 mV to -55 mV. What happened and by how much?",
+      "solution": "It depolarized by 15 mV. The membrane became less negative, so the change is depolarization. The magnitude is 15 mV."
+    },
+    {
+      "title": "Calculator Nernst for K+",
+      "problem": "Use E_ion = (61 / z) log10(outside/inside) at room-temperature scale. For K+, z = +1, outside = 5 mM, and inside = 140 mM. Estimate E_K and interpret its sign.",
+      "solution": "Compute outside/inside = 5/140 = 0.0357. On a calculator, log10(0.0357) is about -1.40. E_K = 61 x -1.40 = about -85 mV. The negative sign means K+ would be balanced when the inside is substantially negative compared with outside."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "Which is a concentration-gradient statement: 'K+ is high inside' or 'inside is negative'?",
+      "answer": "'K+ is high inside' is the concentration-gradient statement. 'Inside is negative' is an electrical statement."
+    },
+    {
+      "question": "Why is potassium central to many resting membrane potentials?",
+      "answer": "K+ is high inside and many resting membranes have K+ leak permeability, so K+ strongly influences where V_m settles."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Make an ion table for Na+, K+, Cl-, and Ca2+ with charge, usual high side, and beginner role.",
+      "answer_key": "Na+ is +1 and high outside; K+ is +1 and high inside; Cl- is -1 and often higher outside; Ca2+ is +2 and extremely low inside. Na+ and K+ are central for voltage changes, Cl- often shapes inhibition, and Ca2+ is a powerful signaling ion."
+    },
+    {
+      "type": "core",
+      "prompt": "Write one sentence defining concentration gradient and one sentence defining electrical force.",
+      "answer_key": "A concentration gradient is a difference in concentration across space. Electrical force is the push or pull on an ion caused by voltage and charge."
+    },
+    {
+      "type": "core",
+      "prompt": "For a positive ion, outside/inside = 10. Is log10(outside/inside) positive, negative, or zero? What does that imply for E_ion?",
+      "answer_key": "It is positive because log10(10) = +1, so E_ion is positive for z = +1."
+    },
+    {
+      "type": "core",
+      "prompt": "For K+, outside = 4 mM and inside = 120 mM. Use E_K = 61 log10(outside/inside). Round to the nearest mV.",
+      "answer_key": "4/120 = 0.0333. log10(0.0333) is about -1.48. E_K is about 61 x -1.48 = -90 mV."
+    },
+    {
+      "type": "core",
+      "prompt": "Explain why opening K+ leak channels can make the inside of the neuron negative.",
+      "answer_key": "K+ diffuses outward because it is high inside. Losing some positive charge leaves the inside relatively negative near the membrane, and that negative voltage then pulls K+ back inward."
+    },
+    {
+      "type": "core",
+      "prompt": "Bridge to Chapter 3: if a synapse opens channels after the neuron is resting near -70 mV, why can that synapse change V_m?",
+      "answer_key": "Opening channels changes selective permeability. The newly open channels let ions pull V_m toward their own equilibrium potentials, creating a graded voltage change."
+    },
+    {
+      "type": "stretch",
+      "prompt": "The Nernst equation gives one ion's balance point, but a real resting neuron has several permeable ions. Explain why V_m is usually near E_K but not exactly equal to E_K. Use the phrase 'selective permeability' and mention at least one other ion.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "2.1",
+      "caption": "Relative inside/outside ion concentrations create different electrochemical pulls.",
+      "alt_text": "Bar chart comparing clearly labeled illustrative inside and outside concentrations for Na+, K+, Cl-, and Ca2+.",
+      "source_note": "Generated locally in Python using consistent illustrative values: Na+ 12/145 mM, K+ 140/5 mM, Cl- 10/110 mM, Ca2+ 0.0001/2 mM for inside/outside."
+    },
+    {
+      "id": "2.2",
+      "caption": "Equilibrium potential changes sign when the outside/inside ratio crosses one.",
+      "alt_text": "Semilog plot of equilibrium potential E versus outside divided by inside concentration ratio, crossing zero at ratio one.",
+      "source_note": "Generated locally in Python from E = 61 log10([out]/[in]) for z = +1."
+    },
+    {
+      "id": "2.3",
+      "caption": "Resting membrane cartoon: selective K+ permeability lets K+ diffusion outward and electrical pull inward balance near a negative V_m.",
+      "alt_text": "Membrane diagram with K+ leak channels, high K+ inside, high Na+ outside, and negative inside voltage.",
+      "source_note": "Original generated course figure; conceptually aligned with PhET Membrane Channels and NCBI Bookshelf ionic-basis explanations."
+    }
+  ],
+  "glossary_additions": [
+    "Ion",
+    "Concentration gradient",
+    "Selective permeability",
+    "Resting membrane potential",
+    "Equilibrium potential",
+    "Electrical force",
+    "Driving force"
+  ],
+  "mentor_notes": "Keep the sequence strict: ions first, concentration gradients second, electrical force third, voltage fourth. If the student says 'voltage pushes K+ out,' pause and ask what the concentration gradient and electrical force are doing separately."
+}

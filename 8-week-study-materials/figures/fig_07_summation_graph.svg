@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Summation graph</title>
+  <desc id="desc">Graph of multiple graded potentials summing toward a horizontal threshold line.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#172033"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f7fafc; stroke: #c9d5e3; stroke-width: 2; rx: 18; }
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 500 18px Arial, sans-serif; fill: #4b5b73; }
+      .label { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .small { font: 500 15px Arial, sans-serif; fill: #4b5b73; }
+      .tiny { font: 500 12px Arial, sans-serif; fill: #4b5b73; }
+      .axis { stroke: #172033; stroke-width: 2; }
+      .grid { stroke: #e5edf5; stroke-width: 1; }
+      .trace { fill: none; stroke: #0f766e; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .orange-trace { fill: none; stroke: #ea580c; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .blue-trace { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .teal-fill { fill: #ccfbf1; stroke: #0f766e; stroke-width: 4; }
+      .orange-fill { fill: #fed7aa; stroke: #ea580c; stroke-width: 4; }
+      .blue-fill { fill: #dbeafe; stroke: #2563eb; stroke-width: 4; }
+      .green-fill { fill: #dcfce7; stroke: #16a34a; stroke-width: 4; }
+      .red-fill { fill: #fee2e2; stroke: #dc2626; stroke-width: 4; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="64" y="48" class="title">Summation graph</text><text x="64" y="82" class="subtitle">Small inputs combine before threshold</text><line x1="120" y1="610" x2="1040" y2="610" stroke="#172033" stroke-width="2" stroke-linecap="round" class=""/>
+<line x1="120" y1="140" x2="120" y2="610" stroke="#172033" stroke-width="2" stroke-linecap="round" class=""/>
+<text x="580.0" y="658" class="small" text-anchor="middle">Time (ms)</text>
+<text x="66" y="375.0" class="small" text-anchor="middle" transform="rotate(-90 66 375.0)">Membrane potential, V_m (mV)</text><line x1="120" y1="610.0" x2="1040" y2="610.0" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="615.0" class="tiny" text-anchor="end">-80</text><line x1="120" y1="492.5" x2="1040" y2="492.5" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="497.5" class="tiny" text-anchor="end">-70</text><line x1="120" y1="375.0" x2="1040" y2="375.0" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="380.0" class="tiny" text-anchor="end">-60</text><line x1="120" y1="316.25" x2="1040" y2="316.25" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="321.25" class="tiny" text-anchor="end">-55</text><line x1="120" y1="140.0" x2="1040" y2="140.0" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="145.0" class="tiny" text-anchor="end">-40</text><line x1="120" y1="316.25" x2="1040" y2="316.25" stroke="#dc2626" stroke-width="3" stroke-linecap="round" class=""/><text x="1058" y="321.25" class="small" text-anchor="start">threshold</text><path d="M 120 492.5 C 210 492.5 C 270 410.25 C 340 457.25 C 420 375.0 C 500 422.0 C 590 516.0 C 690 422.0 C 780 351.5 C 870 304.5 C 1010 492.5" class="trace"/><text x="300" y="355.0" class="small" text-anchor="middle">EPSP</text><text x="595" y="561.0" class="small" text-anchor="middle">IPSP</text><text x="780" y="274.5" class="label" text-anchor="middle">combined effect</text>
+</svg>

@@ -1,0 +1,89 @@
+path,type,role,status,notes
+minibook_v2/source/_toc.yml,yml,table of contents,canonical,Build order for v2 manuscript
+minibook_v2/source/_config.yml,yml,book config,canonical,Imported from original book source
+minibook_v2/source/intro.md,md,front matter and course overview,canonical,Contains syllabus and assessment architecture summary
+minibook_v2/source/chapters/neurons_as_signaling_cells.md,md,chapter,canonical,Week A chapter source
+minibook_v2/source/chapters/ions_gradients_resting_voltage.md,md,chapter,canonical,Week B chapter source
+minibook_v2/source/chapters/synapses_and_summation.md,md,chapter,canonical,Week C chapter source
+minibook_v2/source/chapters/action_potentials_and_propagation.md,md,chapter,canonical,Week D chapter source
+minibook_v2/source/chapters/spike_trains_rate_and_variability.md,md,chapter,canonical,Week E chapter source
+minibook_v2/source/chapters/circuits_and_hh_intuition.md,md,chapter,canonical,Week F chapter source
+minibook_v2/source/chapters/single_channel_noise.md,md,chapter,canonical,Week G chapter source
+minibook_v2/source/chapters/capstone_project.md,md,chapter,canonical,Week H chapter and final project source
+minibook_v2/source/glossary/math_tools_for_membrane_voltage.md,md,front appendix,canonical,No-calculus math support
+minibook_v2/source/glossary/notation_and_units.md,md,back appendix,canonical,Notation and units reference
+minibook_v2/source/glossary/glossary.md,md,glossary,canonical,Cumulative vocabulary list
+minibook_v2/source/glossary/resource_catalog.md,md,references,canonical,Resource catalog and reading list
+minibook_v2/source/code/tiny_code_snippets.md,md,code appendix,canonical,Small Python examples
+minibook_v2/source/code/chapter01_neurons_as_signaling_cells.ipynb,ipynb,notebook,canonical,Week A guided code
+minibook_v2/source/code/chapter02_ions_gradients_resting_voltage.ipynb,ipynb,notebook,canonical,Week B guided code
+minibook_v2/source/code/chapter03_synapses_and_summation.ipynb,ipynb,notebook,canonical,Week C guided code
+minibook_v2/source/code/chapter04_action_potentials_and_propagation.ipynb,ipynb,notebook,canonical,Week D guided code
+minibook_v2/source/code/chapter05_spike_trains_rate_and_variability.ipynb,ipynb,notebook,canonical,Week E guided code
+minibook_v2/source/code/chapter06_circuits_and_hh_intuition.ipynb,ipynb,notebook,canonical,Week F guided code
+minibook_v2/source/code/chapter07_single_channel_noise.ipynb,ipynb,notebook,canonical,Week G guided code
+minibook_v2/source/code/chapter08_capstone_project.ipynb,ipynb,notebook,canonical,Week H guided code
+minibook_v2/source/code/week2_nernst_explorer.ipynb,ipynb,notebook,active support,Nernst explorer seed notebook
+minibook_v2/source/code/week6_hh_intuition.ipynb,ipynb,notebook,active support,HH intuition seed notebook
+minibook_v2/source/code/week7_noise_and_cv.ipynb,ipynb,notebook,active support,Noise and CV seed notebook
+minibook_v2/source/code/week8_capstone.ipynb,ipynb,notebook,active support,Capstone seed notebook
+minibook_v2/source/figures/figure_specs.json,json,figure specs,canonical,Original figure specification set
+minibook_v2/source/figures/enrichment_figure_specs.json,json,figure specs,canonical,Expanded figure specification set
+minibook_v2/source/figures/asset_requirements.json,json,asset plan,canonical,Asset requirements and source notes
+minibook_v2/source/figures/generated/,image folder,generated figures,canonical,Contains 61 generated visual assets
+minibook_v2/source/animations/anim_01_action_potential_storyboard.md,md,animation storyboard,canonical,Action potential storyboard
+minibook_v2/source/datasets/curated_data_assets.md,md,dataset notes,canonical,Student data asset guide
+minibook_v2/source/datasets/allen_cell_types_example.md,md,dataset note,canonical,Allen example description
+minibook_v2/source/datasets/synthetic_spike_times.csv,csv,dataset,canonical,Synthetic spike-time teaching data
+minibook_v2/source/datasets/toy_pyramidal_morphology.swc,swc,dataset,canonical,Toy morphology file
+minibook_v2/source/quizzes/chapter01.json,json,quiz,canonical,Week A quiz bank
+minibook_v2/source/quizzes/chapter02.json,json,quiz,canonical,Week B quiz bank
+minibook_v2/source/quizzes/chapter03.json,json,quiz,canonical,Week C quiz bank
+minibook_v2/source/quizzes/chapter04.json,json,quiz,canonical,Week D quiz bank
+minibook_v2/source/quizzes/chapter05.json,json,quiz,canonical,Week E quiz bank
+minibook_v2/source/quizzes/chapter06.json,json,quiz,canonical,Week F quiz bank
+minibook_v2/source/quizzes/chapter07.json,json,quiz,canonical,Week G quiz bank
+minibook_v2/source/quizzes/chapter08.json,json,quiz,canonical,Week H quiz bank
+minibook_v2/source/rubrics/assessment_checkpoint_plan.md,md,assessment plan,canonical,Three-layer assessment architecture
+minibook_v2/source/rubrics/assessment_checkpoint_plan.json,json,assessment data,canonical,Structured assessment plan
+minibook_v2/source/rubrics/weekly_mastery_rubric.md,md,rubric,canonical,Weekly mastery rubric
+minibook_v2/source/rubrics/weekly_mastery_rubric.json,json,rubric data,canonical,Structured weekly rubric
+minibook_v2/source/rubrics/capstone_rubric.md,md,rubric,canonical,Final project rubric
+minibook_v2/source/rubrics/capstone_rubric.json,json,rubric data,canonical,Structured final project rubric
+minibook_v2/source/exercises/README.md,md,exercise placeholder,needs extraction,Chapter exercises remain embedded in prose
+minibook_v2/source/solutions/README.md,md,solution placeholder,needs extraction,Chapter answer keys remain embedded in prose
+minibook_v2/exports/from_neuron_shape_to_noisy_spike_trains.html,html,export,current,Generated v2 HTML
+minibook_v2/exports/from_neuron_shape_to_noisy_spike_trains.pdf,pdf,export,current,Generated v2 PDF
+minibook_v2/exports/figures/,image folder,exported figures,current,Copied figure assets for v2 HTML
+minibook_v2/planning/source_map.md,md,planning,active,Maps original sources into v2 structure
+minibook_v2/planning/final_qa_notation_checklist.md,md,planning,active,Notation QA checklist
+minibook_v2/planning/structural_audit.json,json,planning,active,Earlier structural audit
+minibook_v2/planning/structured/,json folder,planning,active,Structured chapter JSON copies
+neuro_book/intro.md,md,legacy manuscript,duplicate,Original source before v2 reorganization
+neuro_book/chapters/,md folder,legacy chapters,duplicate,Eight original chapter files
+neuro_book/appendices/,md folder,legacy appendices,duplicate,Original appendices
+neuro_book/notebooks/,ipynb folder,legacy notebooks,duplicate,Original notebooks
+neuro_book/figures/,image folder,legacy figures,duplicate,Original figure specs and generated assets
+neuro_book/quizzes/,json folder,legacy quizzes,duplicate,Original quiz banks
+neuro_book/rubrics/,md and json folder,legacy rubrics,duplicate,Original rubrics
+outputs/from-neuron-shape-to-noisy-spike-trains/from_neuron_shape_to_noisy_spike_trains.html,html,previous export,legacy,Pre-v2 generated HTML
+outputs/from-neuron-shape-to-noisy-spike-trains/from_neuron_shape_to_noisy_spike_trains.pdf,pdf,previous export,legacy,Pre-v2 generated PDF
+outputs/from-neuron-shape-to-noisy-spike-trains/figures/,image folder,previous exported figures,legacy,Figure assets for pre-v2 export
+outputs/student-neuro-biophysics-notes/student_neuro_biophysics_notes.html,html,earlier minibook draft,legacy,Earlier single-file notes version
+outputs/student-neuro-biophysics-notes/external_images/,image folder,earlier image assets,legacy,External images used by earlier notes
+colab_notebooks/monday_morning/README.md,md,slide course support,secondary,Companion notebook notes
+colab_notebooks/monday_morning/00_Brain_Code_Colab_Warmup.ipynb,ipynb,slide course support,secondary,May inform code pedagogy
+colab_notebooks/monday_morning/01_Brain_Code_Simple_Neuron_LIF.ipynb,ipynb,slide course support,secondary,May inform LIF activities
+colab_notebooks/monday_morning/02_Brain_Code_Simple_Decision_DDM.ipynb,ipynb,slide course support,secondary,May inform optional decision model
+Brain_Code_First_15_Minutes_HTML_Slides_v25/index.html,html,slide deck,secondary,Related summer-course slides
+Brain_Code_First_15_Minutes_HTML_Slides_v25/assets/,image folder,slide assets,secondary,Visual assets for related slides
+Brain_Code_HTML_Slides/index.html,html,slide deck,secondary,Related summer-course slides
+Brain_Code_HTML_Slides/assets/,image folder,slide assets,secondary,Visual assets for related slides
+Brain_Code_HTML_Slides_Humanized/index.html,html,slide deck,secondary,Related summer-course slides
+Brain_Code_HTML_Slides_Humanized/assets/,image folder,slide assets,secondary,Visual assets for related slides
+Brain_Code_Monday_Morning_Remaining_HTML_Slides_v1/index.html,html,slide deck,secondary,Related summer-course slides
+Brain_Code_Monday_Morning_Remaining_HTML_Slides_v1/assets/,image folder,slide assets,secondary,Visual assets for related slides
+website_publish/brain-code-slides/index.html,html,published slide export,secondary,Published version of related slides
+website_publish/brain-code-slides/first-15/index.html,html,published slide export,secondary,Published first-15 slide export
+website_publish/brain-code-slides/monday-morning/index.html,html,published slide export,secondary,Published Monday morning slide export
+outputs/019e7539-3909-78a2-95f9-366020f6c2b6/,mixed,generated dependency tree,ignore,Contains presentation build outputs and vendored dependencies

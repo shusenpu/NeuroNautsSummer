@@ -1,0 +1,99 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "chapter": 1,
+  "chapter_slug": "neurons_as_signaling_cells",
+  "chapter_title": "Neuron Shape and Signaling Cells",
+  "item_count": 8,
+  "items": [
+    {
+      "id": "c01_mc_1",
+      "type": "multiple_choice",
+      "prompt": "Which definition best matches Dendrite?",
+      "choices": [
+        "Branched input structure that receives many signals.",
+        "A calculus operation used to solve differential equations.",
+        "A random number with no biological meaning.",
+        "A unit for spike rate only."
+      ],
+      "answer": "Branched input structure that receives many signals.",
+      "explanation": "Dendrite is introduced in this chapter vocabulary table.",
+      "difficulty": "easy",
+      "misconception_tag": "vocabulary_swap"
+    },
+    {
+      "id": "c01_mc_2",
+      "type": "multiple_choice",
+      "prompt": "What is the safest way to use the main figure in this chapter?",
+      "choices": [
+        "Use it to explain a mechanism in words.",
+        "Memorize its colors only.",
+        "Assume it proves every detail of real neurons.",
+        "Skip the caption."
+      ],
+      "answer": "Use it to explain a mechanism in words.",
+      "explanation": "Figures are learning tools for mechanism, not decoration.",
+      "difficulty": "easy",
+      "misconception_tag": "figure_as_decoration"
+    },
+    {
+      "id": "c01_mc_3",
+      "type": "multiple_choice",
+      "prompt": "Which statement best preserves the no-calculus promise?",
+      "choices": [
+        "Explain the physical story before formal equations.",
+        "Avoid all numbers.",
+        "Memorize equations without meaning.",
+        "Use calculus before vocabulary."
+      ],
+      "answer": "Explain the physical story before formal equations.",
+      "explanation": "The course uses numbers and graphs, but formal calculus waits.",
+      "difficulty": "medium",
+      "misconception_tag": "calculus_required"
+    },
+    {
+      "id": "c01_short_1",
+      "type": "short_answer",
+      "prompt": "What are the four beginner zones of a neuron?",
+      "answer": "Input, trigger, conducting, and output zones.",
+      "explanation": "This is the first quick check from the chapter.",
+      "difficulty": "easy",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c01_short_2",
+      "type": "short_answer",
+      "prompt": "Why begin with real neuron images?",
+      "answer": "They show that neurons are real cells with varied shapes, so the cartoon should be treated as a map rather than a perfect portrait.",
+      "explanation": "This is the second quick check from the chapter.",
+      "difficulty": "medium",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c01_calc_1",
+      "type": "calculation",
+      "prompt": "A cell fires 4 spikes in 1 s, then 16 spikes in 1 s. How many more spikes per second are in the second case?",
+      "answer": "12 more spikes/s.",
+      "explanation": "16 - 4 = 12; the stronger case changes spike count/rate.",
+      "difficulty": "medium",
+      "misconception_tag": "unit_or_sign_error"
+    },
+    {
+      "id": "c01_calc_2",
+      "type": "calculation",
+      "prompt": "A drawing has 1 soma, 5 dendritic branches, and 1 axon. How many labeled structures are counted?",
+      "answer": "7 structures.",
+      "explanation": "1 + 5 + 1 = 7.",
+      "difficulty": "medium",
+      "misconception_tag": "arithmetic_without_meaning"
+    },
+    {
+      "id": "c01_oral_1",
+      "type": "oral_explanation",
+      "prompt": "Explain the answer to this chapter's opening question in 60 seconds: How does a neuron's shape help it receive, decide, and send information?",
+      "answer": "A neuron is a living cell with a communication job. Dendrites receive local inputs. The soma and nearby axon initial segment combine those inputs. If the trigger region reaches threshold, the axon carries an action potential to terminals. Shape matters because signals have to move through space, but shape is only the first layer. Later chapters explain how ions and channels create the electrical signals that travel through this shape.",
+      "explanation": "A strong oral answer links the visual story, vocabulary, and causal mechanism.",
+      "difficulty": "hard",
+      "misconception_tag": "memorized_terms_without_mechanism"
+    }
+  ]
+}

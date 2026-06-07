@@ -1,0 +1,38 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <title id="title">Log Sign Bridge</title>
+  <desc id="desc">Log Sign Bridge teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <style>
+          .title{font-family:Inter,Arial,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+          .label{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:18px;fill:#334155}
+          .axis{stroke:#0f172a;stroke-width:4}
+          .tick{stroke:#334155;stroke-width:3}
+          .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:3;rx:16}
+        </style>
+      </defs>
+      <text x="55" y="58" class="title">Log sign bridge for the Nernst equation</text>
+      <text x="55" y="92" class="small">You do not need calculus. You only need the sign of log10(outside / inside).</text>
+      <line x1="150" y1="250" x2="1050" y2="250" class="axis"/>
+      <line x1="300" y1="230" x2="300" y2="270" class="tick"/>
+      <line x1="600" y1="230" x2="600" y2="270" class="tick"/>
+      <line x1="900" y1="230" x2="900" y2="270" class="tick"/>
+      <text x="300" y="210" text-anchor="middle" class="label">0.1</text>
+      <text x="600" y="210" text-anchor="middle" class="label">1</text>
+      <text x="900" y="210" text-anchor="middle" class="label">10</text>
+      <text x="300" y="310" text-anchor="middle" class="small">log10(0.1) = -1</text>
+      <text x="600" y="310" text-anchor="middle" class="small">log10(1) = 0</text>
+      <text x="900" y="310" text-anchor="middle" class="small">log10(10) = +1</text>
+      <rect x="115" y="370" width="300" height="105" class="box"/>
+      <rect x="450" y="370" width="300" height="105" class="box"/>
+      <rect x="785" y="370" width="300" height="105" class="box"/>
+      <text x="265" y="410" text-anchor="middle" class="label">outside &lt; inside</text>
+      <text x="265" y="445" text-anchor="middle" class="small">ratio below 1 gives negative log</text>
+      <text x="600" y="410" text-anchor="middle" class="label">outside = inside</text>
+      <text x="600" y="445" text-anchor="middle" class="small">ratio 1 gives zero log</text>
+      <text x="935" y="410" text-anchor="middle" class="label">outside &gt; inside</text>
+      <text x="935" y="445" text-anchor="middle" class="small">ratio above 1 gives positive log</text>
+    </svg>
+    

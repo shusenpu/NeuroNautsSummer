@@ -1,0 +1,49 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <title id="title">Charge Separation</title>
+  <desc id="desc">Charge Separation teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="620" fill="#ffffff"/>
+      <defs>
+        <style>
+          .title{font-family:Inter,Arial,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+          .label{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:17px;fill:#334155}
+          .tiny{font-family:Inter,Arial,sans-serif;font-size:15px;fill:#334155}
+          .panel{fill:#f8fafc;stroke:#cbd5e1;stroke-width:3;rx:18}
+          .mem{fill:#fde68a;stroke:#d97706;stroke-width:4}
+          .plus{fill:#dc2626;font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700}
+          .minus{fill:#2563eb;font-family:Inter,Arial,sans-serif;font-size:30px;font-weight:700}
+        </style>
+      </defs>
+      <text x="55" y="55" class="title">Membrane voltage means tiny charge separation</text>
+      <text x="55" y="88" class="small">The bulk fluids are nearly neutral; the important imbalance is very close to the membrane.</text>
+
+      <rect x="55" y="125" width="510" height="390" class="panel"/>
+      <text x="310" y="165" text-anchor="middle" class="label">Bulk solution is nearly neutral</text>
+      <rect x="95" y="205" width="200" height="240" fill="#ecfeff" stroke="#0891b2" stroke-width="3" rx="14"/>
+      <rect x="325" y="205" width="200" height="240" fill="#fff7ed" stroke="#ea580c" stroke-width="3" rx="14"/>
+      <text x="195" y="235" text-anchor="middle" class="small">inside</text>
+      <text x="425" y="235" text-anchor="middle" class="small">outside</text>
+      <text x="135" y="295" class="plus">+</text><text x="170" y="295" class="minus">-</text><text x="205" y="295" class="plus">+</text><text x="240" y="295" class="minus">-</text>
+      <text x="135" y="355" class="minus">-</text><text x="170" y="355" class="plus">+</text><text x="205" y="355" class="minus">-</text><text x="240" y="355" class="plus">+</text>
+      <text x="365" y="295" class="plus">+</text><text x="400" y="295" class="minus">-</text><text x="435" y="295" class="plus">+</text><text x="470" y="295" class="minus">-</text>
+      <text x="365" y="355" class="minus">-</text><text x="400" y="355" class="plus">+</text><text x="435" y="355" class="minus">-</text><text x="470" y="355" class="plus">+</text>
+      <text x="310" y="482" text-anchor="middle" class="tiny">There are positive and negative ions on both sides.</text>
+
+      <rect x="635" y="125" width="510" height="390" class="panel"/>
+      <text x="890" y="165" text-anchor="middle" class="label">Voltage is measured across the membrane</text>
+      <rect x="865" y="205" width="50" height="240" class="mem"/>
+      <text x="745" y="235" text-anchor="middle" class="small">inside edge</text>
+      <text x="1035" y="235" text-anchor="middle" class="small">outside edge</text>
+      <text x="765" y="295" class="minus">-</text><text x="765" y="345" class="minus">-</text><text x="765" y="395" class="minus">-</text>
+      <text x="995" y="295" class="plus">+</text><text x="995" y="345" class="plus">+</text><text x="995" y="395" class="plus">+</text>
+      <line x1="815" y1="320" x2="965" y2="320" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow)"/>
+      <text x="890" y="470" text-anchor="middle" class="small">Vm = inside potential - outside potential</text>
+      <text x="890" y="500" text-anchor="middle" class="tiny">Example: Vm = -70 mV means inside is 70 mV lower than outside.</text>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+      </defs>
+    </svg>
+    

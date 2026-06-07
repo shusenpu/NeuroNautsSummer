@@ -1,0 +1,121 @@
+{
+  "front_matter": {
+    "opening_question": "Can the student make one evidence-based claim about noise and spike timing?",
+    "learning_goals": [
+      "Write a research question and hypothesis.",
+      "Identify independent, dependent, and controlled variables.",
+      "Make at least one voltage trace and one summary graph.",
+      "Present a claim, evidence, limitation, and next step to other students."
+    ],
+    "prerequisites": [
+      "Prerequisites: chapters 1-7. Recap: neuron shape supports signaling, ions create voltage, synapses sum inputs, action potentials propagate, spike trains carry timing, HH gives model language, and single channels motivate noise."
+    ],
+    "vocabulary": [
+      {
+        "term": "Research question",
+        "definition": "Focused question the project answers."
+      },
+      {
+        "term": "Hypothesis",
+        "definition": "Predicted answer plus reasoning."
+      },
+      {
+        "term": "Independent variable",
+        "definition": "What the student changes."
+      },
+      {
+        "term": "Dependent variable",
+        "definition": "What the student measures."
+      },
+      {
+        "term": "Control",
+        "definition": "Condition or variable kept the same."
+      },
+      {
+        "term": "Limitation",
+        "definition": "What the model or evidence does not prove."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 8. Capstone Project: From Noise to Spike-Time Variability\n\n## Opening Question\n\nCan the student make one evidence-based claim about noise and spike timing?\n\n## Learning Goals\n\n- Write a research question and hypothesis.\n- Identify independent, dependent, and controlled variables.\n- Make at least one voltage trace and one summary graph.\n- Present a claim, evidence, limitation, and next step to other students.\n\n## Prerequisites and Recap\n\nPrerequisites: chapters 1-7. Recap: neuron shape supports signaling, ions create voltage, synapses sum inputs, action potentials propagate, spike trains carry timing, HH gives model language, and single channels motivate noise.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Research question | Focused question the project answers. |\n| Hypothesis | Predicted answer plus reasoning. |\n| Independent variable | What the student changes. |\n| Dependent variable | What the student measures. |\n| Control | Condition or variable kept the same. |\n| Limitation | What the model or evidence does not prove. |\n\n## Visual Story\n\nThe project dashboard combines raw traces, spike times, ISIs, and one clean comparison graph. The audience should be able to see the evidence before hearing the conclusion.\n\n\n![Flowchart of question, model, data, graph, claim, limitation.](../figures/generated/project_workflow.svg)\n\n*Capstone workflow from question to conclusion.*\n\n![Dashboard with low/medium/high noise traces and CV bar graph.](../figures/generated/project_dashboard.svg)\n\n*Example project dashboard with traces and summary graph.*\n\n![Layer V pyramidal cell image.](../figures/generated/layer_v_pyramidal.png)\n\n*Authentic morphology can be compared cautiously in the final extension.*\n\n![CA1 pyramidal cells with synapses.](../figures/generated/ca1_pyramidal.png)\n\n*Another authentic neuron image for morphology comparison.*\n\n![Concept map linking ions, membrane voltage, synapses, action potentials, spike trains, models, noise, and capstone claims.](../figures/generated/concept_map.svg)\n\n*This map shows how the chapter ideas connect.*\n\n## Core Concepts\n\nThe recommended project asks how increasing noise strength affects spike-time variability in a simple threshold neuron model. The independent variable is noise strength. The dependent variable is ISI CV or ISI standard deviation. The project is not a full molecular channel-noise model. It is a beginner model for learning threshold, reset, spikes, ISIs, CV, evidence, and limitations.\n\n## Worked Example A\n\n**Problem:** Turn this idea into a hypothesis: more random voltage wobble should make spike timing less regular.\n\n**Solution:** If noise strength increases, then ISI variability will increase because random voltage fluctuations make threshold crossings happen earlier or later.\n\n## Quick Check A With Answer\n\n**Question:** What is the independent variable in the recommended project?\n\n**Answer:** Noise strength.\n\n## Worked Example B\n\n**Problem:** Low noise CV = 0.08. High noise CV = 0.31. Write a result sentence.\n\n**Solution:** The high-noise condition had a larger ISI CV than the low-noise condition, supporting the idea that noise can make spike timing less regular.\n\n## Quick Check B With Answer\n\n**Question:** Why must the final project include a limitation?\n\n**Answer:** Because a simplified model teaches one mechanism but does not prove all details of real neurons.\n\n## Chapter Summary\n\nChapter 8 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: The recommended project asks how increasing noise strength affects spike-time variability in a simple threshold neuron model.\n\n## Homework\n\n### Questions\n\n1. Draft a five-sentence abstract: background, question, method, result, limitation.\n2. Make a six-slide outline for the final talk.\n\n### Answer Key\n\n1. Answer should mention ions/channels/spikes, the noise question, simple threshold model or spreadsheet method, CV result, and model limitation.\n2. Slides: question, neuron map, ions make voltage, channels make spikes, model/data, claim/limitation.\n\n## Stretch Box\n\n> Add one authentic-data comparison from Allen Cell Types: compare two real neurons by morphology and firing trace, then state what the comparison cannot prove.\n\n## Mentor Note\n\n> Grade the argument, not just the polish. The student should be able to say what changed, what was measured, what was concluded, and what remains unknown.\n\n## Glossary Additions\n\n- Research question\n- Hypothesis\n- Independent variable\n- Dependent variable\n- Control\n- Limitation\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 8.1 | `project_workflow.svg` | Capstone workflow from question to conclusion. | Flowchart of question, model, data, graph, claim, limitation. | Original generated course figure. |\n| 8.2 | `project_dashboard.svg` | Example project dashboard with traces and summary graph. | Dashboard with low/medium/high noise traces and CV bar graph. | Original generated course plot. |\n| 8.3 | `layer_v_pyramidal.png` | Authentic morphology can be compared cautiously in the final extension. | Layer V pyramidal cell image. | Wikimedia Commons, CC BY-SA 4.0. |\n| 8.4 | `ca1_pyramidal.png` | Another authentic neuron image for morphology comparison. | CA1 pyramidal cells with synapses. | Wikimedia Commons, CC BY-SA 4.0. |\n| 8.5 | `concept_map.svg` | This map shows how the chapter ideas connect. | Concept map linking ions, membrane voltage, synapses, action potentials, spike trains, models, noise, and capstone claims. | Generated locally as a Mermaid-style concept map for the end-of-course review. |\n",
+  "worked_examples": [
+    {
+      "title": "Hypothesis",
+      "problem": "Turn this idea into a hypothesis: more random voltage wobble should make spike timing less regular.",
+      "solution": "If noise strength increases, then ISI variability will increase because random voltage fluctuations make threshold crossings happen earlier or later."
+    },
+    {
+      "title": "Result sentence",
+      "problem": "Low noise CV = 0.08. High noise CV = 0.31. Write a result sentence.",
+      "solution": "The high-noise condition had a larger ISI CV than the low-noise condition, supporting the idea that noise can make spike timing less regular."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "What is the independent variable in the recommended project?",
+      "answer": "Noise strength."
+    },
+    {
+      "question": "Why must the final project include a limitation?",
+      "answer": "Because a simplified model teaches one mechanism but does not prove all details of real neurons."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Draft a five-sentence abstract: background, question, method, result, limitation.",
+      "answer_key": "Answer should mention ions/channels/spikes, the noise question, simple threshold model or spreadsheet method, CV result, and model limitation."
+    },
+    {
+      "type": "core",
+      "prompt": "Make a six-slide outline for the final talk.",
+      "answer_key": "Slides: question, neuron map, ions make voltage, channels make spikes, model/data, claim/limitation."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Add one authentic-data comparison from Allen Cell Types: compare two real neurons by morphology and firing trace, then state what the comparison cannot prove.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "8.1",
+      "caption": "Capstone workflow from question to conclusion.",
+      "alt_text": "Flowchart of question, model, data, graph, claim, limitation.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "8.2",
+      "caption": "Example project dashboard with traces and summary graph.",
+      "alt_text": "Dashboard with low/medium/high noise traces and CV bar graph.",
+      "source_note": "Original generated course plot."
+    },
+    {
+      "id": "8.3",
+      "caption": "Authentic morphology can be compared cautiously in the final extension.",
+      "alt_text": "Layer V pyramidal cell image.",
+      "source_note": "Wikimedia Commons, CC BY-SA 4.0."
+    },
+    {
+      "id": "8.4",
+      "caption": "Another authentic neuron image for morphology comparison.",
+      "alt_text": "CA1 pyramidal cells with synapses.",
+      "source_note": "Wikimedia Commons, CC BY-SA 4.0."
+    },
+    {
+      "id": "8.5",
+      "caption": "This map shows how the chapter ideas connect.",
+      "alt_text": "Concept map linking ions, membrane voltage, synapses, action potentials, spike trains, models, noise, and capstone claims.",
+      "source_note": "Generated locally as a Mermaid-style concept map for the end-of-course review."
+    }
+  ],
+  "glossary_additions": [
+    "Research question",
+    "Hypothesis",
+    "Independent variable",
+    "Dependent variable",
+    "Control",
+    "Limitation"
+  ],
+  "mentor_notes": "Grade the argument, not just the polish. The student should be able to say what changed, what was measured, what was concluded, and what remains unknown."
+}

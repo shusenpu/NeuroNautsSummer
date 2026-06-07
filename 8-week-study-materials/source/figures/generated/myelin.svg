@@ -1,0 +1,41 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540">
+  <title id="title">Myelin</title>
+  <desc id="desc">Myelin teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="540" fill="#ffffff"/>
+      <defs>
+        <marker id="myarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .axon{stroke:#155e75;stroke-width:22;stroke-linecap:round;fill:none}
+          .myelin{fill:#fde68a;stroke:#d97706;stroke-width:4;rx:28}
+          .node{fill:#e0f2fe;stroke:#0284c7;stroke-width:4;rx:10}
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#myarr)}
+        </style>
+      </defs>
+      <text x="60" y="60" class="label">Myelin helps action potentials travel quickly</text>
+      <text x="60" y="95" class="small">The spike is regenerated at nodes of Ranvier instead of along every tiny piece of axon.</text>
+      <path d="M115 270 H1085" class="axon"/>
+      <rect x="165" y="215" width="150" height="110" class="myelin"/>
+      <rect x="370" y="215" width="150" height="110" class="myelin"/>
+      <rect x="575" y="215" width="150" height="110" class="myelin"/>
+      <rect x="780" y="215" width="150" height="110" class="myelin"/>
+      <rect x="320" y="228" width="45" height="84" class="node"/>
+      <rect x="525" y="228" width="45" height="84" class="node"/>
+      <rect x="730" y="228" width="45" height="84" class="node"/>
+      <rect x="935" y="228" width="45" height="84" class="node"/>
+      <text x="240" y="360" text-anchor="middle" class="small">myelin sheath</text>
+      <text x="342" y="180" text-anchor="middle" class="small">node</text>
+      <text x="548" y="180" text-anchor="middle" class="small">node</text>
+      <text x="753" y="180" text-anchor="middle" class="small">node</text>
+      <text x="958" y="180" text-anchor="middle" class="small">node</text>
+      <path d="M140 410 C260 360 315 350 342 315" class="arrow"/>
+      <path d="M370 410 C470 360 520 350 548 315" class="arrow"/>
+      <path d="M575 410 C675 360 725 350 753 315" class="arrow"/>
+      <path d="M780 410 C880 360 930 350 958 315" class="arrow"/>
+      <text x="565" y="460" text-anchor="middle" class="label">saltatory conduction: the signal effectively jumps node to node</text>
+    </svg>
+    

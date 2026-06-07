@@ -1,0 +1,46 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <title id="title">Project Workflow</title>
+  <desc id="desc">Project Workflow teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="620" fill="#ffffff"/>
+      <defs>
+        <marker id="pwarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:25px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:18px;fill:#334155}
+          .box{fill:#ecfeff;stroke:#0891b2;stroke-width:4;rx:18}
+          .box2{fill:#fff7ed;stroke:#ea580c;stroke-width:4;rx:18}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#pwarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Mini-project workflow: turn a model into evidence</text>
+      <rect x="70" y="130" width="210" height="105" class="box"/>
+      <text x="175" y="172" text-anchor="middle" class="label">Question</text>
+      <text x="175" y="205" text-anchor="middle" class="small">Does noise change ISI?</text>
+      <rect x="355" y="130" width="210" height="105" class="box"/>
+      <text x="460" y="172" text-anchor="middle" class="label">Hypothesis</text>
+      <text x="460" y="205" text-anchor="middle" class="small">more noise -> bigger CV</text>
+      <rect x="640" y="130" width="210" height="105" class="box"/>
+      <text x="745" y="172" text-anchor="middle" class="label">Model</text>
+      <text x="745" y="205" text-anchor="middle" class="small">threshold + reset</text>
+      <rect x="925" y="130" width="210" height="105" class="box"/>
+      <text x="1030" y="172" text-anchor="middle" class="label">Trials</text>
+      <text x="1030" y="205" text-anchor="middle" class="small">low, medium, high noise</text>
+      <path d="M280 182 H345" class="arrow"/><path d="M565 182 H630" class="arrow"/><path d="M850 182 H915" class="arrow"/>
+      <rect x="210" y="330" width="210" height="105" class="box2"/>
+      <text x="315" y="372" text-anchor="middle" class="label">Measure</text>
+      <text x="315" y="405" text-anchor="middle" class="small">spike times and ISIs</text>
+      <rect x="495" y="330" width="210" height="105" class="box2"/>
+      <text x="600" y="372" text-anchor="middle" class="label">Graph</text>
+      <text x="600" y="405" text-anchor="middle" class="small">trace, raster, histogram</text>
+      <rect x="780" y="330" width="210" height="105" class="box2"/>
+      <text x="885" y="372" text-anchor="middle" class="label">Conclude</text>
+      <text x="885" y="405" text-anchor="middle" class="small">claim + evidence + limit</text>
+      <path d="M1030 235 C1010 305 930 332 895 330" class="arrow"/>
+      <path d="M780 382 H715" class="arrow"/>
+      <path d="M495 382 H430" class="arrow"/>
+      <text x="600" y="535" text-anchor="middle" class="label">A good project is reproducible: another student can repeat your steps.</text>
+    </svg>
+    

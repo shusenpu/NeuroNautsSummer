@@ -1,0 +1,119 @@
+{
+  "front_matter": {
+    "opening_question": "How does a neuron's shape help it receive, decide, and send information?",
+    "learning_goals": [
+      "Identify dendrites, soma, axon initial segment, axon, myelin, nodes, and terminals.",
+      "Explain input, trigger, conducting, and output zones in plain language.",
+      "Compare real neuron morphologies without expecting every neuron to match one cartoon.",
+      "Connect neuron shape to the later ions -> voltage -> spikes -> timing story."
+    ],
+    "prerequisites": [
+      "Prerequisites: ordinary cell vocabulary: cell membrane, cytoplasm, protein, and nucleus. Recap: cells are living systems with boundaries and chemical energy. This chapter adds the idea that one cell can be shaped for communication."
+    ],
+    "vocabulary": [
+      {
+        "term": "Dendrite",
+        "definition": "Branched input structure that receives many signals."
+      },
+      {
+        "term": "Soma",
+        "definition": "Cell body that supports the neuron and helps combine inputs."
+      },
+      {
+        "term": "Axon initial segment",
+        "definition": "Common trigger region where action potentials begin."
+      },
+      {
+        "term": "Axon",
+        "definition": "Long output process that carries spikes away from the cell body."
+      },
+      {
+        "term": "Terminal",
+        "definition": "Axon ending that communicates with another cell."
+      },
+      {
+        "term": "Myelin",
+        "definition": "Insulating wrap that speeds signaling along many axons."
+      },
+      {
+        "term": "Node of Ranvier",
+        "definition": "Gap in myelin where spikes are regenerated."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 1. Neuron Shape and Signaling Cells\n\n## Opening Question\n\nHow does a neuron's shape help it receive, decide, and send information?\n\n## Learning Goals\n\n- Identify dendrites, soma, axon initial segment, axon, myelin, nodes, and terminals.\n- Explain input, trigger, conducting, and output zones in plain language.\n- Compare real neuron morphologies without expecting every neuron to match one cartoon.\n- Connect neuron shape to the later ions -> voltage -> spikes -> timing story.\n\n## Prerequisites and Recap\n\nPrerequisites: ordinary cell vocabulary: cell membrane, cytoplasm, protein, and nucleus. Recap: cells are living systems with boundaries and chemical energy. This chapter adds the idea that one cell can be shaped for communication.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Dendrite | Branched input structure that receives many signals. |\n| Soma | Cell body that supports the neuron and helps combine inputs. |\n| Axon initial segment | Common trigger region where action potentials begin. |\n| Axon | Long output process that carries spikes away from the cell body. |\n| Terminal | Axon ending that communicates with another cell. |\n| Myelin | Insulating wrap that speeds signaling along many axons. |\n| Node of Ranvier | Gap in myelin where spikes are regenerated. |\n\n## Visual Story\n\nStart with real neurons, then simplify. A Purkinje cell has a huge dendritic tree; a pyramidal neuron has a tall apical dendrite; a sensory neuron may place the soma off the main path. The simplified map is not a portrait. It is a reading tool: find input, trigger, conduction, output.\n\n\n![Comparison page with multipolar, sensory/unipolar-like, and highly branched neuron morphologies.](../figures/generated/morphology_comparison_page.svg)\n\n*Different neuron shapes solve different signaling problems.*\n\n![Several real neuron drawings with different morphologies.](../figures/generated/openstax_neuron_heterogeneity.webp)\n\n*Real neuron heterogeneity shows that neurons do not all share one cartoon shape.*\n\n![Cajal drawing of a Purkinje neuron.](../figures/generated/purkinje_cajal.gif)\n\n*A Purkinje cell drawing emphasizes how large a dendritic tree can be.*\n\n![Diagram of dendrites, soma, axon, and terminals with spike direction.](../figures/generated/neuron_map.svg)\n\n*Simplified neuron map for input, trigger, conduction, and output.*\n\n## Core Concepts\n\nA neuron is a living cell with a communication job. Dendrites receive local inputs. The soma and nearby axon initial segment combine those inputs. If the trigger region reaches threshold, the axon carries an action potential to terminals. Shape matters because signals have to move through space, but shape is only the first layer. Later chapters explain how ions and channels create the electrical signals that travel through this shape.\n\n## Worked Example A\n\n**Problem:** A drawing has a round soma, many short branches on one side, and one long thin branch leaving the soma.\n\n**Solution:** The short branches are likely dendrites, the round region is the soma, and the long thin branch is likely the axon. The signal map is input on branches, decision near soma/axon start, output along axon.\n\n## Quick Check A With Answer\n\n**Question:** What are the four beginner zones of a neuron?\n\n**Answer:** Input, trigger, conducting, and output zones.\n\n## Worked Example B\n\n**Problem:** A cell fires 4 spikes in 1 second for weak touch and 16 spikes in 1 second for stronger touch. What changed?\n\n**Solution:** The spike count and rate changed. The strong touch is not represented mainly by one giant spike. It is represented by more spike events per second or different timing.\n\n## Quick Check B With Answer\n\n**Question:** Why begin with real neuron images?\n\n**Answer:** They show that neurons are real cells with varied shapes, so the cartoon should be treated as a map rather than a perfect portrait.\n\n## Chapter Summary\n\nChapter 1 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: A neuron is a living cell with a communication job.\n\n## Homework\n\n### Questions\n\n1. Draw one real-looking neuron and one simplified signaling map. Label input, trigger, conducting, and output zones.\n2. Write four sentences explaining why a neuron is not simply a wire.\n\n### Answer Key\n\n1. The drawing should include dendrites, soma, axon initial segment, axon, and terminals, with arrows showing usual information flow.\n2. A correct answer says it is a living cell, uses ion channels and membranes, maintains chemical gradients, and actively regenerates spikes.\n\n## Stretch Box\n\n> Compare a Purkinje neuron and pyramidal neuron. Make one claim about how each shape might change input collection, but avoid claiming you know the full function from shape alone.\n\n## Mentor Note\n\n> Ask the student to point to input, trigger, conducting, and output zones on every neuron image. This one repeated question prevents memorizing labels without understanding signal direction.\n\n## Glossary Additions\n\n- Dendrite\n- Soma\n- Axon initial segment\n- Axon\n- Myelin\n- Node of Ranvier\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 1.1 | `morphology_comparison_page.svg` | Different neuron shapes solve different signaling problems. | Comparison page with multipolar, sensory/unipolar-like, and highly branched neuron morphologies. | Generated local morphology comparison, with source route documented as OpenStax morphology figures plus optional Allen Cell Types or NeuroMorpho screenshots. |\n| 1.2 | `openstax_neuron_heterogeneity.webp` | Real neuron heterogeneity shows that neurons do not all share one cartoon shape. | Several real neuron drawings with different morphologies. | OpenStax open educational resource. |\n| 1.3 | `purkinje_cajal.gif` | A Purkinje cell drawing emphasizes how large a dendritic tree can be. | Cajal drawing of a Purkinje neuron. | Wikimedia Commons, public domain. |\n| 1.4 | `neuron_map.svg` | Simplified neuron map for input, trigger, conduction, and output. | Diagram of dendrites, soma, axon, and terminals with spike direction. | Original generated course figure. |\n",
+  "worked_examples": [
+    {
+      "title": "Map a real neuron",
+      "problem": "A drawing has a round soma, many short branches on one side, and one long thin branch leaving the soma.",
+      "solution": "The short branches are likely dendrites, the round region is the soma, and the long thin branch is likely the axon. The signal map is input on branches, decision near soma/axon start, output along axon."
+    },
+    {
+      "title": "Spike count as a first information clue",
+      "problem": "A cell fires 4 spikes in 1 second for weak touch and 16 spikes in 1 second for stronger touch. What changed?",
+      "solution": "The spike count and rate changed. The strong touch is not represented mainly by one giant spike. It is represented by more spike events per second or different timing."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "What are the four beginner zones of a neuron?",
+      "answer": "Input, trigger, conducting, and output zones."
+    },
+    {
+      "question": "Why begin with real neuron images?",
+      "answer": "They show that neurons are real cells with varied shapes, so the cartoon should be treated as a map rather than a perfect portrait."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Draw one real-looking neuron and one simplified signaling map. Label input, trigger, conducting, and output zones.",
+      "answer_key": "The drawing should include dendrites, soma, axon initial segment, axon, and terminals, with arrows showing usual information flow."
+    },
+    {
+      "type": "core",
+      "prompt": "Write four sentences explaining why a neuron is not simply a wire.",
+      "answer_key": "A correct answer says it is a living cell, uses ion channels and membranes, maintains chemical gradients, and actively regenerates spikes."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Compare a Purkinje neuron and pyramidal neuron. Make one claim about how each shape might change input collection, but avoid claiming you know the full function from shape alone.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "1.1",
+      "caption": "Different neuron shapes solve different signaling problems.",
+      "alt_text": "Comparison page with multipolar, sensory/unipolar-like, and highly branched neuron morphologies.",
+      "source_note": "Generated local morphology comparison, with source route documented as OpenStax morphology figures plus optional Allen Cell Types or NeuroMorpho screenshots."
+    },
+    {
+      "id": "1.2",
+      "caption": "Real neuron heterogeneity shows that neurons do not all share one cartoon shape.",
+      "alt_text": "Several real neuron drawings with different morphologies.",
+      "source_note": "OpenStax open educational resource."
+    },
+    {
+      "id": "1.3",
+      "caption": "A Purkinje cell drawing emphasizes how large a dendritic tree can be.",
+      "alt_text": "Cajal drawing of a Purkinje neuron.",
+      "source_note": "Wikimedia Commons, public domain."
+    },
+    {
+      "id": "1.4",
+      "caption": "Simplified neuron map for input, trigger, conduction, and output.",
+      "alt_text": "Diagram of dendrites, soma, axon, and terminals with spike direction.",
+      "source_note": "Original generated course figure."
+    }
+  ],
+  "glossary_additions": [
+    "Dendrite",
+    "Soma",
+    "Axon initial segment",
+    "Axon",
+    "Myelin",
+    "Node of Ranvier"
+  ],
+  "mentor_notes": "Ask the student to point to input, trigger, conducting, and output zones on every neuron image. This one repeated question prevents memorizing labels without understanding signal direction."
+}

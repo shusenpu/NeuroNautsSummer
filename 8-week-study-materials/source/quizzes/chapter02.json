@@ -1,0 +1,99 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "chapter": 2,
+  "chapter_slug": "ions_gradients_resting_voltage",
+  "chapter_title": "Ions, Gradients, and Resting Voltage",
+  "item_count": 8,
+  "items": [
+    {
+      "id": "c02_mc_1",
+      "type": "multiple_choice",
+      "prompt": "Which definition best matches Ion?",
+      "choices": [
+        "Charged atom or molecule.",
+        "A calculus operation used to solve differential equations.",
+        "A random number with no biological meaning.",
+        "A unit for spike rate only."
+      ],
+      "answer": "Charged atom or molecule.",
+      "explanation": "Ion is introduced in this chapter vocabulary table.",
+      "difficulty": "easy",
+      "misconception_tag": "vocabulary_swap"
+    },
+    {
+      "id": "c02_mc_2",
+      "type": "multiple_choice",
+      "prompt": "What is the safest way to use the main figure in this chapter?",
+      "choices": [
+        "Use it to explain a mechanism in words.",
+        "Memorize its colors only.",
+        "Assume it proves every detail of real neurons.",
+        "Skip the caption."
+      ],
+      "answer": "Use it to explain a mechanism in words.",
+      "explanation": "Figures are learning tools for mechanism, not decoration.",
+      "difficulty": "easy",
+      "misconception_tag": "figure_as_decoration"
+    },
+    {
+      "id": "c02_mc_3",
+      "type": "multiple_choice",
+      "prompt": "Which statement best preserves the no-calculus promise?",
+      "choices": [
+        "Explain the physical story before formal equations.",
+        "Avoid all numbers.",
+        "Memorize equations without meaning.",
+        "Use calculus before vocabulary."
+      ],
+      "answer": "Explain the physical story before formal equations.",
+      "explanation": "The course uses numbers and graphs, but formal calculus waits.",
+      "difficulty": "medium",
+      "misconception_tag": "calculus_required"
+    },
+    {
+      "id": "c02_short_1",
+      "type": "short_answer",
+      "prompt": "Which is a concentration-gradient statement: 'K+ is high inside' or 'inside is negative'?",
+      "answer": "'K+ is high inside' is the concentration-gradient statement. 'Inside is negative' is an electrical statement.",
+      "explanation": "This is the first quick check from the chapter.",
+      "difficulty": "easy",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c02_short_2",
+      "type": "short_answer",
+      "prompt": "Why is potassium central to many resting membrane potentials?",
+      "answer": "K+ is high inside and many resting membranes have K+ leak permeability, so K+ strongly influences where V_m settles.",
+      "explanation": "This is the second quick check from the chapter.",
+      "difficulty": "medium",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c02_calc_1",
+      "type": "calculation",
+      "prompt": "A membrane changes from -70 mV to -55 mV. What happened and by how much?",
+      "answer": "It depolarized by 15 mV.",
+      "explanation": "The membrane became less negative, so the change is depolarization. The magnitude is 15 mV.",
+      "difficulty": "core",
+      "misconception_tag": "confuses sign with magnitude"
+    },
+    {
+      "id": "c02_calc_2",
+      "type": "calculation",
+      "prompt": "For K+, outside = 5 mM and inside = 140 mM. Use E_K = 61 log10(outside/inside). What is the approximate result?",
+      "answer": "About -85 mV.",
+      "explanation": "5/140 = 0.0357, log10(0.0357) is about -1.40, and 61 x -1.40 is about -85 mV.",
+      "difficulty": "medium",
+      "misconception_tag": "arithmetic_without_meaning"
+    },
+    {
+      "id": "c02_oral_1",
+      "type": "oral_explanation",
+      "prompt": "Explain the answer to this chapter's opening question in 60 seconds: How can salty water and a thin membrane make a measurable voltage?",
+      "answer": "Resting voltage comes from ion gradients plus selective permeability. The concentration gradient for K+ points outward because K+ is much more concentrated inside the neuron. The electrical force on K+ points inward once the inside becomes negative. The K+ equilibrium potential is the voltage where those two tendencies balance. Because resting membranes are often more permeable to K+ than to Na+, V_m at rest sits closer to E_K than to E_Na, though not exactly at E_K because other ions and channels also matter. The Na+/K+ pump maintains the Na+ and K+ gradients over time, but the immediate resting voltage is mainly explained by the existing gradients plus which leak channels are open. The next chapter uses this resting voltage as the starting point for synaptic inputs and graded potentials.",
+      "explanation": "A strong oral answer links the visual story, vocabulary, and causal mechanism.",
+      "difficulty": "hard",
+      "misconception_tag": "memorized_terms_without_mechanism"
+    }
+  ]
+}

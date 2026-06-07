@@ -1,0 +1,99 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "chapter": 6,
+  "chapter_slug": "circuits_and_hh_intuition",
+  "chapter_title": "Circuit Ideas and Hodgkin-Huxley Intuition",
+  "item_count": 8,
+  "items": [
+    {
+      "id": "c06_mc_1",
+      "type": "multiple_choice",
+      "prompt": "Which definition best matches Capacitance?",
+      "choices": [
+        "Ability to store separated charge.",
+        "A calculus operation used to solve differential equations.",
+        "A random number with no biological meaning.",
+        "A unit for spike rate only."
+      ],
+      "answer": "Ability to store separated charge.",
+      "explanation": "Capacitance is introduced in this chapter vocabulary table.",
+      "difficulty": "easy",
+      "misconception_tag": "vocabulary_swap"
+    },
+    {
+      "id": "c06_mc_2",
+      "type": "multiple_choice",
+      "prompt": "What is the safest way to use the main figure in this chapter?",
+      "choices": [
+        "Use it to explain a mechanism in words.",
+        "Memorize its colors only.",
+        "Assume it proves every detail of real neurons.",
+        "Skip the caption."
+      ],
+      "answer": "Use it to explain a mechanism in words.",
+      "explanation": "Figures are learning tools for mechanism, not decoration.",
+      "difficulty": "easy",
+      "misconception_tag": "figure_as_decoration"
+    },
+    {
+      "id": "c06_mc_3",
+      "type": "multiple_choice",
+      "prompt": "Which statement best preserves the no-calculus promise?",
+      "choices": [
+        "Explain the physical story before formal equations.",
+        "Avoid all numbers.",
+        "Memorize equations without meaning.",
+        "Use calculus before vocabulary."
+      ],
+      "answer": "Explain the physical story before formal equations.",
+      "explanation": "The course uses numbers and graphs, but formal calculus waits.",
+      "difficulty": "medium",
+      "misconception_tag": "calculus_required"
+    },
+    {
+      "id": "c06_short_1",
+      "type": "short_answer",
+      "prompt": "What changes when channels open?",
+      "answer": "Conductance increases for that ion pathway.",
+      "explanation": "This is the first quick check from the chapter.",
+      "difficulty": "easy",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c06_short_2",
+      "type": "short_answer",
+      "prompt": "What does voltage clamp measure?",
+      "answer": "Current while voltage is held at a chosen value.",
+      "explanation": "This is the second quick check from the chapter.",
+      "difficulty": "medium",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c06_calc_1",
+      "type": "calculation",
+      "prompt": "Use Q = C V_m with C = 1 microfarad and V_m = 0.070 V. What is Q?",
+      "answer": "0.070 microcoulomb.",
+      "explanation": "1 microfarad x 0.070 V = 0.070 microcoulomb.",
+      "difficulty": "medium",
+      "misconception_tag": "unit_or_sign_error"
+    },
+    {
+      "id": "c06_calc_2",
+      "type": "calculation",
+      "prompt": "If V_m = -65 mV and E_Na = +50 mV, what is the distance between them?",
+      "answer": "115 mV.",
+      "explanation": "50 - (-65) = 115 mV.",
+      "difficulty": "medium",
+      "misconception_tag": "arithmetic_without_meaning"
+    },
+    {
+      "id": "c06_oral_1",
+      "type": "oral_explanation",
+      "prompt": "Explain the answer to this chapter's opening question in 60 seconds: How did Hodgkin and Huxley turn the spike story into a measurable model?",
+      "answer": "The membrane behaves partly like a capacitor because it separates charge. Ion channels are conductance pathways because open channels let current flow. Each ion pathway pulls voltage toward its reversal potential. The HH equation says voltage changes when applied current and ion currents do not balance. The student does not need calculus yet; she needs to know what each term means.",
+      "explanation": "A strong oral answer links the visual story, vocabulary, and causal mechanism.",
+      "difficulty": "hard",
+      "misconception_tag": "memorized_terms_without_mechanism"
+    }
+  ]
+}

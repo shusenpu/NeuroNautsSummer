@@ -1,0 +1,99 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "chapter": 3,
+  "chapter_slug": "synapses_and_summation",
+  "chapter_title": "Synapses and Graded Potentials",
+  "item_count": 8,
+  "items": [
+    {
+      "id": "c03_mc_1",
+      "type": "multiple_choice",
+      "prompt": "Which definition best matches Synapse?",
+      "choices": [
+        "Communication point between neurons or between a neuron and another cell.",
+        "A calculus operation used to solve differential equations.",
+        "A random number with no biological meaning.",
+        "A unit for spike rate only."
+      ],
+      "answer": "Communication point between neurons or between a neuron and another cell.",
+      "explanation": "Synapse is introduced in this chapter vocabulary table.",
+      "difficulty": "easy",
+      "misconception_tag": "vocabulary_swap"
+    },
+    {
+      "id": "c03_mc_2",
+      "type": "multiple_choice",
+      "prompt": "What is the safest way to use the main figure in this chapter?",
+      "choices": [
+        "Use it to explain a mechanism in words.",
+        "Memorize its colors only.",
+        "Assume it proves every detail of real neurons.",
+        "Skip the caption."
+      ],
+      "answer": "Use it to explain a mechanism in words.",
+      "explanation": "Figures are learning tools for mechanism, not decoration.",
+      "difficulty": "easy",
+      "misconception_tag": "figure_as_decoration"
+    },
+    {
+      "id": "c03_mc_3",
+      "type": "multiple_choice",
+      "prompt": "Which statement best preserves the no-calculus promise?",
+      "choices": [
+        "Explain the physical story before formal equations.",
+        "Avoid all numbers.",
+        "Memorize equations without meaning.",
+        "Use calculus before vocabulary."
+      ],
+      "answer": "Explain the physical story before formal equations.",
+      "explanation": "The course uses numbers and graphs, but formal calculus waits.",
+      "difficulty": "medium",
+      "misconception_tag": "calculus_required"
+    },
+    {
+      "id": "c03_short_1",
+      "type": "short_answer",
+      "prompt": "Are graded potentials all-or-none?",
+      "answer": "No. They vary in size and can fade.",
+      "explanation": "This is the first quick check from the chapter.",
+      "difficulty": "easy",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c03_short_2",
+      "type": "short_answer",
+      "prompt": "What is the difference between temporal and spatial summation?",
+      "answer": "Temporal summation adds inputs across time; spatial summation adds inputs from different locations.",
+      "explanation": "This is the second quick check from the chapter.",
+      "difficulty": "medium",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c03_calc_1",
+      "type": "calculation",
+      "prompt": "Start at -70 mV. Add +4, +5, +6, and -3 mV. What is V_m?",
+      "answer": "-58 mV.",
+      "explanation": "-70 + 4 + 5 + 6 - 3 = -58 mV.",
+      "difficulty": "medium",
+      "misconception_tag": "unit_or_sign_error"
+    },
+    {
+      "id": "c03_calc_2",
+      "type": "calculation",
+      "prompt": "If threshold is -55 mV and V_m is -58 mV, how far below threshold is the cell?",
+      "answer": "3 mV below threshold.",
+      "explanation": "-55 - (-58) = 3 mV.",
+      "difficulty": "medium",
+      "misconception_tag": "arithmetic_without_meaning"
+    },
+    {
+      "id": "c03_oral_1",
+      "type": "oral_explanation",
+      "prompt": "Explain the answer to this chapter's opening question in 60 seconds: How do many small synaptic inputs combine before a neuron fires?",
+      "answer": "Synaptic potentials are local and graded. An EPSP often depolarizes the postsynaptic membrane. An IPSP often hyperpolarizes the membrane or makes it harder to depolarize. Because these voltage changes can overlap, the trigger zone receives a running total of recent inputs. If the total reaches threshold, the next chapter's action-potential machinery takes over.",
+      "explanation": "A strong oral answer links the visual story, vocabulary, and causal mechanism.",
+      "difficulty": "hard",
+      "misconception_tag": "memorized_terms_without_mechanism"
+    }
+  ]
+}

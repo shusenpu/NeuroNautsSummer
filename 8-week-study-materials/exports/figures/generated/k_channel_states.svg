@@ -1,0 +1,35 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+      <rect width="1200" height="520" fill="#ffffff"/>
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#334155"/>
+        </marker>
+        <style>
+          .node{fill:#ecfeff;stroke:#0891b2;stroke-width:4}
+          .open{fill:#dcfce7;stroke:#16a34a;stroke-width:5}
+          .txt{font-family:Inter,Arial,sans-serif;font-size:24px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:18px;fill:#334155}
+          .edge{stroke:#334155;stroke-width:4;fill:none;marker-end:url(#arr)}
+        </style>
+      </defs>
+      <text x="60" y="60" class="txt">A potassium channel in the HH story has four gates</text>
+      <text x="60" y="95" class="small">The channel conducts only when all four gates are open. Random gate changes are one source of channel noise.</text>
+      <g transform="translate(90,190)">
+        <circle cx="0" cy="80" r="48" class="node"/><text x="0" y="88" text-anchor="middle" class="txt">n0</text>
+        <circle cx="230" cy="80" r="48" class="node"/><text x="230" y="88" text-anchor="middle" class="txt">n1</text>
+        <circle cx="460" cy="80" r="48" class="node"/><text x="460" y="88" text-anchor="middle" class="txt">n2</text>
+        <circle cx="690" cy="80" r="48" class="node"/><text x="690" y="88" text-anchor="middle" class="txt">n3</text>
+        <circle cx="920" cy="80" r="55" class="open"/><text x="920" y="88" text-anchor="middle" class="txt">n4</text>
+        <path d="M50 62 C95 30 135 30 180 62" class="edge"/><text x="115" y="25" text-anchor="middle" class="small">open one gate</text>
+        <path d="M180 98 C135 130 95 130 50 98" class="edge"/>
+        <path d="M280 62 C325 30 365 30 410 62" class="edge"/>
+        <path d="M410 98 C365 130 325 130 280 98" class="edge"/>
+        <path d="M510 62 C555 30 595 30 640 62" class="edge"/>
+        <path d="M640 98 C595 130 555 130 510 98" class="edge"/>
+        <path d="M740 62 C785 30 825 30 865 62" class="edge"/>
+        <path d="M865 98 C825 130 785 130 740 98" class="edge"/>
+        <text x="920" y="170" text-anchor="middle" class="small">conducting state</text>
+      </g>
+    </svg>
+    

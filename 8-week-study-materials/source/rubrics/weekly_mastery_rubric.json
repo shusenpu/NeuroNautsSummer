@@ -1,0 +1,48 @@
+{
+  "rubric_title": "Weekly mastery rubric",
+  "audience": "one high-school student learning neuron biophysics",
+  "level_order": [
+    "emerging",
+    "developing",
+    "proficient",
+    "strong"
+  ],
+  "dimensions": [
+    {
+      "dimension": "Biological structure and vocabulary",
+      "emerging": "Can label a few parts but confuses roles",
+      "developing": "Labels most parts and basic functions",
+      "proficient": "Explains how structure supports signaling",
+      "strong": "Uses structure to predict signaling differences"
+    },
+    {
+      "dimension": "Causal reasoning",
+      "emerging": "Recites facts separately",
+      "developing": "Links one cause to one effect",
+      "proficient": "Explains multi-step chains such as gradient -> permeability -> voltage",
+      "strong": "Can compare alternative mechanisms and justify which dominates"
+    },
+    {
+      "dimension": "Graph interpretation",
+      "emerging": "Reads axes inconsistently",
+      "developing": "Reads axes correctly but misses meaning",
+      "proficient": "Interprets traces and rasters correctly",
+      "strong": "Uses a graph as evidence in an explanation"
+    },
+    {
+      "dimension": "Quantitative fluency",
+      "emerging": "Sign, units, and arithmetic errors common",
+      "developing": "Can solve guided problems",
+      "proficient": "Solves worked-example analogs independently",
+      "strong": "Explains what the calculation means biologically"
+    },
+    {
+      "dimension": "Communication",
+      "emerging": "Gives short or fragmented explanations",
+      "developing": "Explains with prompts",
+      "proficient": "Gives coherent written and oral explanations",
+      "strong": "Explains clearly, concisely, and with evidence"
+    }
+  ],
+  "use_guidance": "Use weekly for mentor check-ins. One level difference across dimensions is normal; the target by the final presentation is mostly proficient with at least one strong evidence-based explanation."
+}

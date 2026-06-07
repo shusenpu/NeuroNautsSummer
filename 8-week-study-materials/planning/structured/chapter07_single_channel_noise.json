@@ -1,0 +1,114 @@
+{
+  "front_matter": {
+    "opening_question": "Why are spike times not perfectly identical even when the input looks similar?",
+    "learning_goals": [
+      "Explain what a single-channel recording shows.",
+      "Define stochastic, open probability, open fraction, and channel noise.",
+      "Explain why larger channel populations average randomness better.",
+      "Connect random channel openings to spike-time variability near threshold."
+    ],
+    "prerequisites": [
+      "Prerequisites: HH variables describe average channel behavior. Recap: Chapter 6 used smooth conductances. This chapter asks what changes when channels are individual random molecules."
+    ],
+    "vocabulary": [
+      {
+        "term": "Stochastic",
+        "definition": "Involving randomness."
+      },
+      {
+        "term": "Open probability",
+        "definition": "Chance that a channel is open."
+      },
+      {
+        "term": "Open fraction",
+        "definition": "Open channels divided by total channels."
+      },
+      {
+        "term": "Channel noise",
+        "definition": "Fluctuations from random channel openings and closings."
+      },
+      {
+        "term": "Markov state",
+        "definition": "Simplified channel condition such as closed, open, or inactivated."
+      },
+      {
+        "term": "Threshold jitter",
+        "definition": "Small shifts in spike time caused by voltage fluctuations near threshold."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 7. Single Channels and Molecular Noise\n\n## Opening Question\n\nWhy are spike times not perfectly identical even when the input looks similar?\n\n## Learning Goals\n\n- Explain what a single-channel recording shows.\n- Define stochastic, open probability, open fraction, and channel noise.\n- Explain why larger channel populations average randomness better.\n- Connect random channel openings to spike-time variability near threshold.\n\n## Prerequisites and Recap\n\nPrerequisites: HH variables describe average channel behavior. Recap: Chapter 6 used smooth conductances. This chapter asks what changes when channels are individual random molecules.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Stochastic | Involving randomness. |\n| Open probability | Chance that a channel is open. |\n| Open fraction | Open channels divided by total channels. |\n| Channel noise | Fluctuations from random channel openings and closings. |\n| Markov state | Simplified channel condition such as closed, open, or inactivated. |\n| Threshold jitter | Small shifts in spike time caused by voltage fluctuations near threshold. |\n\n## Visual Story\n\nA patch-clamp trace looks like square steps. Closed means baseline. Open means current step. Many channels summed together look smoother, but the molecules underneath are still random.\n\n\n![Conceptual patch-clamp cartoon paired with a step-like single-channel current trace.](../figures/generated/patch_clamp_single_channel_trace.svg)\n\n*Single channels open all-or-none, but the timing of openings is random.*\n\n![State diagram from closed states to conducting state.](../figures/generated/k_channel_states.svg)\n\n*A simplified K+ channel state diagram prepares the student for stochastic channel models.*\n\n![Histograms comparing open fraction spread for different channel counts.](../figures/generated/channel_noise_scaling.svg)\n\n*Bigger channel populations have smaller relative fluctuations.*\n\n![Voltage traces and ISI histograms for low and high noise.](../figures/generated/lif_noise.svg)\n\n*A noisy threshold model shows how noise can change ISI variability.*\n\n## Core Concepts\n\nA single channel does not usually open halfway in the beginner picture. It switches between closed and open states. The time of switching is random. If the membrane has many channels, random openings partly average out. If the membrane has fewer channels or the neuron is near threshold, random fluctuations can change exactly when the next spike occurs.\n\n## Worked Example A\n\n**Problem:** A channel is open for 6 ms in a 20 ms recording. What is the open fraction?\n\n**Solution:** 6/20 = 0.30.\n\n## Quick Check A With Answer\n\n**Question:** Why does a single-channel trace look jumpy?\n\n**Answer:** Because the channel switches between closed and open states.\n\n## Worked Example B\n\n**Problem:** 30 out of 100 channels are open at one moment. What is the open fraction?\n\n**Solution:** 30/100 = 0.30.\n\n## Quick Check B With Answer\n\n**Question:** Why do larger channel populations have smaller relative noise?\n\n**Answer:** Random openings average out better when many channels are summed.\n\n## Chapter Summary\n\nChapter 7 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: A single channel does not usually open halfway in the beginner picture.\n\n## Homework\n\n### Questions\n\n1. Flip 20 coins ten times and record fraction heads. Then flip 100 coins ten times. Which set is less jumpy?\n2. Write the chain from molecular event to spike-time variability.\n\n### Answer Key\n\n1. The 100-coin fractions should usually be less jumpy because larger samples average randomness better.\n2. Random channel openings -> noisy current -> voltage fluctuation -> threshold jitter -> variable ISIs.\n\n## Stretch Box\n\n> Explain why channel noise may matter more near threshold than far below threshold.\n\n## Mentor Note\n\n> This is the thesis bridge. Keep the claim qualitative: random molecular events can influence macroscopic spike timing. Do not require stochastic calculus.\n\n## Glossary Additions\n\n- Stochastic\n- Open probability\n- Open fraction\n- Channel noise\n- Threshold jitter\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 7.1 | `patch_clamp_single_channel_trace.svg` | Single channels open all-or-none, but the timing of openings is random. | Conceptual patch-clamp cartoon paired with a step-like single-channel current trace. | Conceptual redraw based on standard Molecular Biology of the Cell patch-clamp teaching diagrams. |\n| 7.2 | `k_channel_states.svg` | A simplified K+ channel state diagram prepares the student for stochastic channel models. | State diagram from closed states to conducting state. | Original generated course figure. |\n| 7.3 | `channel_noise_scaling.svg` | Bigger channel populations have smaller relative fluctuations. | Histograms comparing open fraction spread for different channel counts. | Original generated course plot. |\n| 7.4 | `lif_noise.svg` | A noisy threshold model shows how noise can change ISI variability. | Voltage traces and ISI histograms for low and high noise. | Original generated course plot. |\n",
+  "worked_examples": [
+    {
+      "title": "Open fraction in time",
+      "problem": "A channel is open for 6 ms in a 20 ms recording. What is the open fraction?",
+      "solution": "6/20 = 0.30."
+    },
+    {
+      "title": "Open fraction in a population",
+      "problem": "30 out of 100 channels are open at one moment. What is the open fraction?",
+      "solution": "30/100 = 0.30."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "Why does a single-channel trace look jumpy?",
+      "answer": "Because the channel switches between closed and open states."
+    },
+    {
+      "question": "Why do larger channel populations have smaller relative noise?",
+      "answer": "Random openings average out better when many channels are summed."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Flip 20 coins ten times and record fraction heads. Then flip 100 coins ten times. Which set is less jumpy?",
+      "answer_key": "The 100-coin fractions should usually be less jumpy because larger samples average randomness better."
+    },
+    {
+      "type": "core",
+      "prompt": "Write the chain from molecular event to spike-time variability.",
+      "answer_key": "Random channel openings -> noisy current -> voltage fluctuation -> threshold jitter -> variable ISIs."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Explain why channel noise may matter more near threshold than far below threshold.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "7.1",
+      "caption": "Single channels open all-or-none, but the timing of openings is random.",
+      "alt_text": "Conceptual patch-clamp cartoon paired with a step-like single-channel current trace.",
+      "source_note": "Conceptual redraw based on standard Molecular Biology of the Cell patch-clamp teaching diagrams."
+    },
+    {
+      "id": "7.2",
+      "caption": "A simplified K+ channel state diagram prepares the student for stochastic channel models.",
+      "alt_text": "State diagram from closed states to conducting state.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "7.3",
+      "caption": "Bigger channel populations have smaller relative fluctuations.",
+      "alt_text": "Histograms comparing open fraction spread for different channel counts.",
+      "source_note": "Original generated course plot."
+    },
+    {
+      "id": "7.4",
+      "caption": "A noisy threshold model shows how noise can change ISI variability.",
+      "alt_text": "Voltage traces and ISI histograms for low and high noise.",
+      "source_note": "Original generated course plot."
+    }
+  ],
+  "glossary_additions": [
+    "Stochastic",
+    "Open probability",
+    "Open fraction",
+    "Channel noise",
+    "Threshold jitter"
+  ],
+  "mentor_notes": "This is the thesis bridge. Keep the claim qualitative: random molecular events can influence macroscopic spike timing. Do not require stochastic calculus."
+}

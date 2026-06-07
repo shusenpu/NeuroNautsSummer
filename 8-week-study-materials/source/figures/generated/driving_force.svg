@@ -1,0 +1,36 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <title id="title">Driving Force</title>
+  <desc id="desc">Driving Force teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <marker id="dfarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:3;rx:14}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#dfarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Driving force: ions pull voltage toward their reversal potentials</text>
+      <rect x="80" y="120" width="1040" height="330" class="box"/>
+      <line x1="160" y1="290" x2="1040" y2="290" stroke="#334155" stroke-width="5"/>
+      <g>
+        <line x1="230" y1="260" x2="230" y2="320" stroke="#334155" stroke-width="4"/><text x="230" y="350" text-anchor="middle" class="small">-80</text>
+        <line x1="425" y1="260" x2="425" y2="320" stroke="#334155" stroke-width="4"/><text x="425" y="350" text-anchor="middle" class="small">-55</text>
+        <line x1="610" y1="260" x2="610" y2="320" stroke="#334155" stroke-width="4"/><text x="610" y="350" text-anchor="middle" class="small">0</text>
+        <line x1="830" y1="260" x2="830" y2="320" stroke="#334155" stroke-width="4"/><text x="830" y="350" text-anchor="middle" class="small">+50</text>
+      </g>
+      <circle cx="260" cy="290" r="22" fill="#f97316"/><text x="260" y="236" text-anchor="middle" class="small">E_K</text>
+      <circle cx="830" cy="290" r="22" fill="#ef4444"/><text x="830" y="236" text-anchor="middle" class="small">E_Na</text>
+      <rect x="395" y="188" width="62" height="44" fill="#ecfeff" stroke="#0891b2" stroke-width="3" rx="10"/>
+      <text x="426" y="218" text-anchor="middle" class="small">V</text>
+      <path d="M425 240 C390 255 330 272 285 286" class="arrow"/>
+      <path d="M457 210 C565 205 690 225 805 280" class="arrow"/>
+      <text x="310" y="410" text-anchor="middle" class="small">Opening K+ channels pulls V downward</text>
+      <text x="770" y="410" text-anchor="middle" class="small">Opening Na+ channels pulls V upward</text>
+      <text x="600" y="500" text-anchor="middle" class="small">Rule of thumb: an open channel pulls membrane voltage toward that ion's E value.</text>
+    </svg>
+    

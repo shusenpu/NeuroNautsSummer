@@ -1,0 +1,37 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <marker id="tfarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .box{fill:#ecfeff;stroke:#0891b2;stroke-width:4;rx:18}
+          .hot{fill:#fff7ed;stroke:#ea580c;stroke-width:4;rx:18}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#tfarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Threshold starts a positive-feedback loop</text>
+      <rect x="85" y="180" width="230" height="105" class="box"/>
+      <text x="200" y="220" text-anchor="middle" class="label">small</text>
+      <text x="200" y="252" text-anchor="middle" class="label">depolarization</text>
+      <rect x="390" y="180" width="230" height="105" class="hot"/>
+      <text x="505" y="220" text-anchor="middle" class="label">Na+ channels</text>
+      <text x="505" y="252" text-anchor="middle" class="label">open</text>
+      <rect x="695" y="180" width="230" height="105" class="hot"/>
+      <text x="810" y="220" text-anchor="middle" class="label">Na+ enters</text>
+      <text x="810" y="252" text-anchor="middle" class="label">cell</text>
+      <rect x="390" y="355" width="230" height="105" class="box"/>
+      <text x="505" y="395" text-anchor="middle" class="label">voltage rises</text>
+      <text x="505" y="427" text-anchor="middle" class="label">more</text>
+      <path d="M315 232 H380" class="arrow"/>
+      <path d="M620 232 H685" class="arrow"/>
+      <path d="M810 285 C790 355 690 405 630 405" class="arrow"/>
+      <path d="M390 405 C280 395 210 320 200 292" class="arrow"/>
+      <text x="925" y="385" class="small">This loop is why the spike rises so fast.</text>
+      <text x="925" y="415" class="small">It stops when Na+ channels inactivate</text>
+      <text x="925" y="445" class="small">and K+ channels open.</text>
+    </svg>
+    

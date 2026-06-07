@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Action potential phase graph</title>
+  <desc id="desc">Voltage trace with labeled action-potential phases and threshold line.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#172033"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f7fafc; stroke: #c9d5e3; stroke-width: 2; rx: 18; }
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 500 18px Arial, sans-serif; fill: #4b5b73; }
+      .label { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .small { font: 500 15px Arial, sans-serif; fill: #4b5b73; }
+      .tiny { font: 500 12px Arial, sans-serif; fill: #4b5b73; }
+      .axis { stroke: #172033; stroke-width: 2; }
+      .grid { stroke: #e5edf5; stroke-width: 1; }
+      .trace { fill: none; stroke: #0f766e; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .orange-trace { fill: none; stroke: #ea580c; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .blue-trace { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .teal-fill { fill: #ccfbf1; stroke: #0f766e; stroke-width: 4; }
+      .orange-fill { fill: #fed7aa; stroke: #ea580c; stroke-width: 4; }
+      .blue-fill { fill: #dbeafe; stroke: #2563eb; stroke-width: 4; }
+      .green-fill { fill: #dcfce7; stroke: #16a34a; stroke-width: 4; }
+      .red-fill { fill: #fee2e2; stroke: #dc2626; stroke-width: 4; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="64" y="48" class="title">Action potential phase graph</text><text x="64" y="82" class="subtitle">A timed sequence of membrane states</text><line x1="120" y1="630" x2="1030" y2="630" stroke="#172033" stroke-width="2" stroke-linecap="round" class=""/>
+<line x1="120" y1="130" x2="120" y2="630" stroke="#172033" stroke-width="2" stroke-linecap="round" class=""/>
+<text x="575.0" y="678" class="small" text-anchor="middle">Time (ms)</text>
+<text x="66" y="380.0" class="small" text-anchor="middle" transform="rotate(-90 66 380.0)">Membrane potential, V_m (mV)</text><line x1="120" y1="591.5384615384615" x2="1030" y2="591.5384615384615" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="596.5384615384615" class="tiny" text-anchor="end">-80</text><line x1="120" y1="553.0769230769231" x2="1030" y2="553.0769230769231" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="558.0769230769231" class="tiny" text-anchor="end">-70</text><line x1="120" y1="495.38461538461536" x2="1030" y2="495.38461538461536" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="500.38461538461536" class="tiny" text-anchor="end">-55</text><line x1="120" y1="283.84615384615387" x2="1030" y2="283.84615384615387" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="288.84615384615387" class="tiny" text-anchor="end">0</text><line x1="120" y1="168.46153846153845" x2="1030" y2="168.46153846153845" stroke="#e5edf5" stroke-width="1" stroke-linecap="round" class=""/><text x="100" y="173.46153846153845" class="tiny" text-anchor="end">30</text><line x1="120" y1="495.38461538461536" x2="1030" y2="495.38461538461536" stroke="#dc2626" stroke-width="3" stroke-linecap="round" class=""/><path d="M 120 553.0769230769231 C 220 553.0769230769231 275 522.3076923076923 330 495.38461538461536 C 350 399.2307692307692 370 168.46153846153845 410 168.46153846153845 C 460 187.69230769230774 500 264.61538461538464 520 283.84615384615387 C 570 437.6923076923077 610 583.8461538461538 650 583.8461538461538 C 700 576.1538461538462 720 553.0769230769231 770 553.0769230769231 L 1030 553.0769230769231" class="trace"/><text x="240" y="588.0769230769231" class="small" text-anchor="middle">rest</text><text x="335" y="475.38461538461536" class="small" text-anchor="middle">threshold</text><text x="410" y="150.46153846153845" class="small" text-anchor="middle">overshoot</text><text x="560" y="360.7692307692308" class="small" text-anchor="middle">repolarization</text><text x="650" y="626.5384615384615" class="small" text-anchor="middle">AHP</text><text x="800" y="588.0769230769231" class="small" text-anchor="middle">refractory recovery</text>
+</svg>

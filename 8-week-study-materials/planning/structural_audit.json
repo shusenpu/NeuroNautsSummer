@@ -1,0 +1,69 @@
+{
+  "keep": [
+    "No-calculus promise.",
+    "Existing ions -> spikes -> noise arc.",
+    "Student-facing voice for one high-school learner.",
+    "Worked examples, quick checks, homework, mentor notes, and visual learning structure.",
+    "Real-neuron morphology examples plus original generated diagrams."
+  ],
+  "split": [
+    {
+      "from": "compressed synapses/action-potential block",
+      "into": [
+        "Chapter 3: Synapses and Graded Potentials",
+        "Chapter 4: Action Potentials and Propagation"
+      ]
+    },
+    {
+      "from": "combined spike coding/noise discussion",
+      "into": [
+        "Chapter 5: Spike Trains, Rate, and Variability",
+        "Chapter 7: Single Channels and Molecular Noise"
+      ]
+    }
+  ],
+  "move": [
+    {
+      "content": "mV, ms, Hz, scientific notation, sign changes, graph reading, and common logs",
+      "destination": "front appendix: Math tools for membrane voltage"
+    },
+    {
+      "content": "rubrics and project evaluation",
+      "destination": "rubrics JSON and capstone project chapter"
+    }
+  ],
+  "add": [
+    "Eight-item quiz JSON for every chapter.",
+    "Figure specification JSON with filename, caption, alt text, source note, code field, data table, and learning goal.",
+    "One runnable notebook per chapter.",
+    "Final notation QA checklist."
+  ],
+  "remove": [
+    "Premature calculus requirements.",
+    "Collapsed topic blocks that make synapses, propagation, or variability feel like side notes.",
+    "Ambiguous notation such as VNa or gNa when standardized forms are available."
+  ],
+  "clarify": [
+    "Voltage is a difference, not a substance.",
+    "The Na+/K+ pump maintains gradients but does not instantly create all resting voltage by itself.",
+    "Graded potentials are not action potentials.",
+    "Stronger input often changes spike timing or rate, not spike height.",
+    "Simple threshold models are learning tools, not full molecular channel models."
+  ],
+  "figure_gaps": [
+    "Need source notes and alt text for every figure.",
+    "Need each figure tied to a learning goal.",
+    "Need code or diagram spec for figure regeneration or replacement."
+  ],
+  "math_gaps": [
+    "Need front-loaded unit conversions for mV, ms, Hz.",
+    "Need positive versus negative voltage-change practice.",
+    "Need common-log sign logic before Nernst calculations.",
+    "Need CV and ISI calculations before project interpretation."
+  ],
+  "assessment_gaps": [
+    "Need uniform quiz structure across chapters.",
+    "Need misconception tags for targeted mentoring.",
+    "Need capstone rubric tied to evidence, quantitative interpretation, and limitations."
+  ]
+}

@@ -1,0 +1,29 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <title id="title">Gating Timeline</title>
+  <desc id="desc">Gating Timeline teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="620" fill="#ffffff"/>
+      <defs>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:18px;fill:#334155}
+          .axis{stroke:#334155;stroke-width:3}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Channel timing explains the shape of the action potential</text>
+      <line x1="110" y1="510" x2="1090" y2="510" class="axis"/>
+      <line x1="110" y1="125" x2="110" y2="510" class="axis"/>
+      <text x="600" y="555" text-anchor="middle" class="small">time during one spike</text>
+      <path d="M115 430 C200 430 235 425 280 360 C330 270 360 145 420 155 C485 165 520 365 600 430 C700 500 920 430 1085 430" stroke="#0f766e" stroke-width="5" fill="none"/>
+      <text x="150" y="415" class="small">voltage</text>
+      <path d="M135 485 C230 485 290 470 340 320 C370 230 400 210 455 245 C520 285 565 430 1080 465" stroke="#ef4444" stroke-width="5" fill="none"/>
+      <text x="840" y="470" class="small" fill="#ef4444">Na+ activation opens fast</text>
+      <path d="M135 220 C250 220 345 225 420 255 C500 300 585 390 725 435 C860 480 1000 485 1080 488" stroke="#9333ea" stroke-width="5" fill="none"/>
+      <text x="820" y="245" class="small" fill="#9333ea">Na+ inactivation closes availability</text>
+      <path d="M135 485 C250 485 360 480 465 445 C565 410 620 330 720 280 C830 225 980 230 1080 250" stroke="#f97316" stroke-width="5" fill="none"/>
+      <text x="760" y="315" class="small" fill="#f97316">K+ activation opens slower</text>
+      <line x1="305" y1="120" x2="305" y2="510" stroke="#dc2626" stroke-width="3" stroke-dasharray="8 8"/>
+      <text x="305" y="112" text-anchor="middle" class="small">threshold</text>
+      <text x="600" y="590" text-anchor="middle" class="small">Fast Na+ rise + delayed K+ fall = spike up, spike down, reset.</text>
+    </svg>
+    

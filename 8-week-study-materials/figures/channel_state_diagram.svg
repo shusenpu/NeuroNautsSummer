@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Channel-state diagram</title>
+  <desc id="desc">Three channel cartoons showing closed, open, and inactivated states with arrows between states.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#172033"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f7fafc; stroke: #c9d5e3; stroke-width: 2; rx: 18; }
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 500 18px Arial, sans-serif; fill: #4b5b73; }
+      .label { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .small { font: 500 15px Arial, sans-serif; fill: #4b5b73; }
+      .tiny { font: 500 12px Arial, sans-serif; fill: #4b5b73; }
+      .axis { stroke: #172033; stroke-width: 2; }
+      .grid { stroke: #e5edf5; stroke-width: 1; }
+      .trace { fill: none; stroke: #0f766e; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .orange-trace { fill: none; stroke: #ea580c; stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+      .blue-trace { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .teal-fill { fill: #ccfbf1; stroke: #0f766e; stroke-width: 4; }
+      .orange-fill { fill: #fed7aa; stroke: #ea580c; stroke-width: 4; }
+      .blue-fill { fill: #dbeafe; stroke: #2563eb; stroke-width: 4; }
+      .green-fill { fill: #dcfce7; stroke: #16a34a; stroke-width: 4; }
+      .red-fill { fill: #fee2e2; stroke: #dc2626; stroke-width: 4; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="64" y="48" class="title">Channel-state diagram</text><text x="64" y="82" class="subtitle">Channel states follow rules, but timing can vary</text><rect x="115" y="210" width="270" height="300" class="panel"/><text x="250" y="250" class="label" text-anchor="middle">closed</text><rect x="175" y="325" width="150" height="64" fill="#e5e7eb" stroke="#172033" stroke-width="4" rx="12"/><path d="M 208 325 L 292 389 M 292 325 L 208 389" stroke="#172033" stroke-width="5"/><text x="250" y="455" class="small" text-anchor="middle">ion path blocked</text><rect x="465" y="210" width="270" height="300" class="panel"/><text x="600" y="250" class="label" text-anchor="middle">open</text><rect x="525" y="325" width="150" height="64" fill="#dcfce7" stroke="#172033" stroke-width="4" rx="12"/><rect x="582" y="300" width="36" height="115" fill="#fff" stroke="#16a34a" stroke-width="5" rx="10"/><circle cx="600" cy="292" r="11" fill="#ea580c"/><circle cx="600" cy="430" r="11" fill="#ea580c"/><line x1="600" y1="285" x2="600" y2="445" stroke="#16a34a" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" class=""/><text x="600" y="455" class="small" text-anchor="middle">ion path available</text><rect x="815" y="210" width="270" height="300" class="panel"/><text x="950" y="250" class="label" text-anchor="middle">inactivated</text><rect x="875" y="325" width="150" height="64" fill="#fee2e2" stroke="#172033" stroke-width="4" rx="12"/><circle cx="950" cy="357" r="32" fill="#fecaca" stroke="#dc2626" stroke-width="4"/><text x="950" y="455" class="small" text-anchor="middle">ion path blocked</text><line x1="390" y1="360" x2="465" y2="360" stroke="#172033" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" class=""/><line x1="735" y1="360" x2="815" y2="360" stroke="#172033" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" class=""/><text x="600" y="650" class="label" text-anchor="middle">Stochastic gating: transition timing varies from trial to trial.</text>
+</svg>

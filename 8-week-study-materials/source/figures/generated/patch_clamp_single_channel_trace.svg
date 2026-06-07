@@ -1,0 +1,31 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <title id="title">Patch Clamp Single Channel Trace</title>
+  <desc id="desc">Patch Clamp Single Channel Trace teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .mem{stroke:#f59e0b;stroke-width:18;stroke-linecap:round;fill:none}
+          .trace{stroke:#0f766e;stroke-width:5;fill:none}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Patch clamp can reveal individual channel openings</text>
+      <text x="55" y="92" class="small">A glass pipette seals onto a tiny membrane patch; the measured current jumps when a channel opens.</text>
+      <path d="M120 380 C280 330 430 330 600 380" class="mem"/>
+      <path d="M370 90 L500 335 L430 360 L300 115 Z" fill="#e0f2fe" stroke="#0284c7" stroke-width="5"/>
+      <ellipse cx="465" cy="345" rx="46" ry="22" fill="#dbeafe" stroke="#0284c7" stroke-width="4"/>
+      <rect x="445" y="365" width="42" height="42" fill="#fef3c7" stroke="#d97706" stroke-width="4" rx="10"/>
+      <text x="465" y="395" text-anchor="middle" class="small">ch</text>
+      <text x="210" y="445" class="small">cell membrane</text>
+      <text x="312" y="150" class="small">glass pipette</text>
+      <rect x="700" y="125" width="410" height="300" fill="#f8fafc" stroke="#334155" stroke-width="4" rx="20"/>
+      <text x="905" y="170" text-anchor="middle" class="label">single-channel current</text>
+      <polyline points="740,320 790,320 790,240 845,240 845,320 900,320 900,240 970,240 970,320 1070,320" class="trace"/>
+      <text x="757" y="355" class="small">closed</text>
+      <text x="804" y="225" class="small">open</text>
+      <text x="910" y="225" class="small">open</text>
+      <text x="730" y="455" class="small">Key idea: openings are all-or-none but occur at random times.</text>
+    </svg>
+    

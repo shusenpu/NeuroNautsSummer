@@ -1,0 +1,99 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "chapter": 4,
+  "chapter_slug": "action_potentials_and_propagation",
+  "chapter_title": "Action Potentials and Propagation",
+  "item_count": 8,
+  "items": [
+    {
+      "id": "c04_mc_1",
+      "type": "multiple_choice",
+      "prompt": "Which definition best matches Action potential?",
+      "choices": [
+        "Rapid all-or-none membrane voltage event.",
+        "A calculus operation used to solve differential equations.",
+        "A random number with no biological meaning.",
+        "A unit for spike rate only."
+      ],
+      "answer": "Rapid all-or-none membrane voltage event.",
+      "explanation": "Action potential is introduced in this chapter vocabulary table.",
+      "difficulty": "easy",
+      "misconception_tag": "vocabulary_swap"
+    },
+    {
+      "id": "c04_mc_2",
+      "type": "multiple_choice",
+      "prompt": "What is the safest way to use the main figure in this chapter?",
+      "choices": [
+        "Use it to explain a mechanism in words.",
+        "Memorize its colors only.",
+        "Assume it proves every detail of real neurons.",
+        "Skip the caption."
+      ],
+      "answer": "Use it to explain a mechanism in words.",
+      "explanation": "Figures are learning tools for mechanism, not decoration.",
+      "difficulty": "easy",
+      "misconception_tag": "figure_as_decoration"
+    },
+    {
+      "id": "c04_mc_3",
+      "type": "multiple_choice",
+      "prompt": "Which statement best preserves the no-calculus promise?",
+      "choices": [
+        "Explain the physical story before formal equations.",
+        "Avoid all numbers.",
+        "Memorize equations without meaning.",
+        "Use calculus before vocabulary."
+      ],
+      "answer": "Explain the physical story before formal equations.",
+      "explanation": "The course uses numbers and graphs, but formal calculus waits.",
+      "difficulty": "medium",
+      "misconception_tag": "calculus_required"
+    },
+    {
+      "id": "c04_short_1",
+      "type": "short_answer",
+      "prompt": "What opens fast during the rising phase?",
+      "answer": "Voltage-gated Na+ channels.",
+      "explanation": "This is the first quick check from the chapter.",
+      "difficulty": "easy",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c04_short_2",
+      "type": "short_answer",
+      "prompt": "What two events help end the spike?",
+      "answer": "Na+ channel inactivation and delayed K+ channel opening.",
+      "explanation": "This is the second quick check from the chapter.",
+      "difficulty": "medium",
+      "misconception_tag": "core_check"
+    },
+    {
+      "id": "c04_calc_1",
+      "type": "calculation",
+      "prompt": "An ISI is 20 ms. What firing rate does 1/ISI give in Hz?",
+      "answer": "50 Hz.",
+      "explanation": "20 ms = 0.020 s, and 1/0.020 = 50 Hz.",
+      "difficulty": "medium",
+      "misconception_tag": "unit_or_sign_error"
+    },
+    {
+      "id": "c04_calc_2",
+      "type": "calculation",
+      "prompt": "V_m rises from -70 mV to +30 mV during a spike. What is the voltage change?",
+      "answer": "+100 mV.",
+      "explanation": "30 - (-70) = 100 mV.",
+      "difficulty": "medium",
+      "misconception_tag": "arithmetic_without_meaning"
+    },
+    {
+      "id": "c04_oral_1",
+      "type": "oral_explanation",
+      "prompt": "Explain the answer to this chapter's opening question in 60 seconds: How does a local voltage change become a traveling all-or-none signal?",
+      "answer": "At threshold, voltage-gated Na+ channels open quickly. Na+ entry depolarizes the membrane, which opens more Na+ channels. This positive feedback makes the rising phase. The spike ends because Na+ channels inactivate and K+ channels open, pulling voltage back downward. The refractory period helps the spike travel forward. Myelin speeds propagation by letting the signal regenerate at nodes.",
+      "explanation": "A strong oral answer links the visual story, vocabulary, and causal mechanism.",
+      "difficulty": "hard",
+      "misconception_tag": "memorized_terms_without_mechanism"
+    }
+  ]
+}

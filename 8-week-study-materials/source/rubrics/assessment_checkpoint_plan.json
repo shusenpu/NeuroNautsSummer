@@ -1,0 +1,42 @@
+{
+  "title": "Assessment checkpoint plan",
+  "purpose": "Track readiness and support needs during the no-calculus neuron biophysics course.",
+  "scoring_note": "Use these as mentor check-ins. Except for quiz targets, the goal is to decide what support the student needs next, not to assign a grade.",
+  "metrics": [
+    {
+      "metric": "Entry diagnostic on graph reading, signs, units, and basic neuron parts",
+      "when_to_measure": "Before week one",
+      "target": "Identify support needs, not a grade"
+    },
+    {
+      "metric": "Retrieval quiz score",
+      "when_to_measure": "Weekly",
+      "target": "About 80% on core items before moving on"
+    },
+    {
+      "metric": "Worked-example independence",
+      "when_to_measure": "Weekly",
+      "target": "By mid-course, the student should solve the second example in each chapter with only light prompting"
+    },
+    {
+      "metric": "Trace/raster interpretation",
+      "when_to_measure": "Weeks four through eight",
+      "target": "Student can explain what a graph shows before naming mechanisms"
+    },
+    {
+      "metric": "Quantitative accuracy",
+      "when_to_measure": "Weeks two, five, six, and seven",
+      "target": "Correct units, correct sign, and a sentence of interpretation"
+    },
+    {
+      "metric": "Notebook independence",
+      "when_to_measure": "Weeks six through eight",
+      "target": "Notebook runs top-to-bottom; student can explain each figure"
+    },
+    {
+      "metric": "Final capstone",
+      "when_to_measure": "Final week",
+      "target": "Student makes one evidence-based claim about how noise changes spike timing or variability"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <marker id="pcarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .ion{font-family:Inter,Arial,sans-serif;font-size:20px;font-weight:700;fill:#fff}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#pcarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">The sodium-potassium pump maintains the gradients</text>
+      <rect x="80" y="250" width="1040" height="46" fill="#fde68a"/>
+      <text x="95" y="230" class="small">outside cell</text>
+      <text x="95" y="335" class="small">inside cell</text>
+      <rect x="500" y="175" width="200" height="205" fill="#dbeafe" stroke="#2563eb" stroke-width="5" rx="34"/>
+      <text x="600" y="235" text-anchor="middle" class="label">Na+/K+</text>
+      <text x="600" y="270" text-anchor="middle" class="label">pump</text>
+      <text x="600" y="315" text-anchor="middle" class="small">uses ATP</text>
+      <g fill="#ef4444">
+        <circle cx="310" cy="365" r="24"/><circle cx="370" cy="365" r="24"/><circle cx="430" cy="365" r="24"/>
+      </g>
+      <text x="310" y="373" text-anchor="middle" class="ion">Na+</text><text x="370" y="373" text-anchor="middle" class="ion">Na+</text><text x="430" y="373" text-anchor="middle" class="ion">Na+</text>
+      <g fill="#f97316">
+        <circle cx="795" cy="178" r="24"/><circle cx="855" cy="178" r="24"/>
+      </g>
+      <text x="795" y="186" text-anchor="middle" class="ion">K+</text><text x="855" y="186" text-anchor="middle" class="ion">K+</text>
+      <path d="M445 350 C500 330 520 300 540 270" class="arrow"/>
+      <path d="M700 245 C750 210 770 192 792 185" class="arrow"/>
+      <path d="M710 282 C775 320 825 350 900 375" class="arrow"/>
+      <path d="M535 290 C465 245 390 205 315 180" class="arrow"/>
+      <text x="342" y="430" text-anchor="middle" class="small">3 Na+ moved out</text>
+      <text x="835" y="120" text-anchor="middle" class="small">2 K+ moved in</text>
+      <text x="915" y="425" text-anchor="middle" class="small">keeps K+ high inside</text>
+      <text x="285" y="125" text-anchor="middle" class="small">keeps Na+ high outside</text>
+    </svg>
+    

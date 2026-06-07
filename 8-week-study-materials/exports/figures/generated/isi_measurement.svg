@@ -1,0 +1,29 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <marker id="isiarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .axis{stroke:#334155;stroke-width:3}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#isiarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">How to measure interspike intervals from a voltage trace</text>
+      <line x1="105" y1="455" x2="1085" y2="455" class="axis"/>
+      <line x1="105" y1="125" x2="105" y2="455" class="axis"/>
+      <line x1="105" y1="270" x2="1085" y2="270" stroke="#dc2626" stroke-width="3" stroke-dasharray="8 8"/>
+      <text x="125" y="260" class="small">threshold</text>
+      <path d="M110 420 C170 420 185 360 210 300 C225 250 245 140 275 165 C310 190 305 390 345 420 C430 420 455 360 480 300 C500 245 515 145 545 165 C580 190 575 390 615 420 C700 420 725 360 750 300 C770 245 785 145 815 165 C850 190 845 390 885 420 C960 420 1010 420 1080 420" stroke="#0f766e" stroke-width="5" fill="none"/>
+      <line x1="265" y1="130" x2="265" y2="455" stroke="#64748b" stroke-width="3"/>
+      <line x1="535" y1="130" x2="535" y2="455" stroke="#64748b" stroke-width="3"/>
+      <line x1="805" y1="130" x2="805" y2="455" stroke="#64748b" stroke-width="3"/>
+      <path d="M265 105 H535" class="arrow"/><path d="M535 105 H805" class="arrow"/>
+      <text x="400" y="92" text-anchor="middle" class="small">ISI 1</text>
+      <text x="670" y="92" text-anchor="middle" class="small">ISI 2</text>
+      <text x="600" y="510" text-anchor="middle" class="small">ISI = next spike time - previous spike time. CV = SD(ISI) / mean(ISI).</text>
+    </svg>
+    

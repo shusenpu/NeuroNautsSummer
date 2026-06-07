@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <defs>
+    <marker id="syn_arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+    </marker>
+    <style>
+      .title{font-family:Inter,Arial,sans-serif;font-size:30px;font-weight:800;fill:#0f172a}
+      .label{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+      .small{font-family:Inter,Arial,sans-serif;font-size:17px;fill:#334155}
+      .tiny{font-family:Inter,Arial,sans-serif;font-size:14px;fill:#475569}
+      .axon{fill:#dbeafe;stroke:#2563eb;stroke-width:4}
+      .post{fill:#ecfeff;stroke:#0f766e;stroke-width:4}
+      .ves{fill:#fbbf24;stroke:#b45309;stroke-width:2}
+      .traceE{stroke:#16a34a;stroke-width:5;fill:none}
+      .traceI{stroke:#7c3aed;stroke-width:5;fill:none}
+      .axis{stroke:#475569;stroke-width:3}
+      .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#syn_arrow)}
+    </style>
+  </defs>
+  <text x="55" y="58" class="title">Synapses can push V_m toward or away from threshold</text>
+  <text x="55" y="92" class="small">Chemical transmission opens postsynaptic channels. The local voltage change is graded before threshold.</text>
+
+  <rect x="70" y="130" width="470" height="360" rx="22" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M130 205 C210 120 375 115 455 205 C485 245 485 330 455 370 C375 460 210 455 130 370 C96 330 96 245 130 205 Z" class="axon"/>
+  <text x="292" y="178" text-anchor="middle" class="label">presynaptic terminal</text>
+  <circle cx="220" cy="255" r="18" class="ves"/><circle cx="275" cy="235" r="18" class="ves"/><circle cx="335" cy="260" r="18" class="ves"/>
+  <circle cx="250" cy="315" r="18" class="ves"/><circle cx="380" cy="318" r="18" class="ves"/>
+  <text x="302" y="302" text-anchor="middle" class="small">vesicles</text>
+  <path d="M415 335 C455 350 485 370 515 402" class="arrow"/>
+  <text x="415" y="415" class="tiny">neurotransmitter</text>
+
+  <rect x="90" y="505" width="430" height="52" rx="16" class="post"/>
+  <text x="305" y="538" text-anchor="middle" class="label">postsynaptic membrane with receptors</text>
+  <text x="540" y="534" class="small">synaptic cleft</text>
+
+  <rect x="620" y="130" width="500" height="185" rx="22" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+  <text x="650" y="170" class="label">EPSP example</text>
+  <line x1="665" y1="270" x2="1065" y2="270" class="axis"/>
+  <line x1="665" y1="205" x2="665" y2="285" class="axis"/>
+  <path d="M690 260 C735 260 750 215 790 214 C830 216 845 258 890 260 C940 262 1000 260 1045 260" class="traceE"/>
+  <line x1="675" y1="230" x2="1060" y2="230" stroke="#dc2626" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="1000" y="222" class="tiny">threshold</text>
+  <text x="705" y="294" class="tiny">V_m moves upward, toward threshold</text>
+
+  <rect x="620" y="365" width="500" height="185" rx="22" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="650" y="405" class="label">IPSP example</text>
+  <line x1="665" y1="500" x2="1065" y2="500" class="axis"/>
+  <line x1="665" y1="435" x2="665" y2="520" class="axis"/>
+  <path d="M690 475 C735 475 750 520 790 522 C830 520 845 478 890 476 C940 474 1000 475 1045 475" class="traceI"/>
+  <line x1="675" y1="445" x2="1060" y2="445" stroke="#dc2626" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="1000" y="437" class="tiny">threshold</text>
+  <text x="705" y="538" class="tiny">V_m moves downward or becomes harder to excite</text>
+</svg>

@@ -1,0 +1,39 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <title id="title">Synapse</title>
+  <desc id="desc">Synapse teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="600" fill="#ffffff"/>
+      <defs>
+        <marker id="synarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#synarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Synapses change a receiving neuron's voltage</text>
+      <text x="55" y="92" class="small">Excitatory input nudges voltage upward; inhibitory input nudges it downward or stabilizes it.</text>
+      <rect x="75" y="160" width="260" height="220" fill="#ecfeff" stroke="#0891b2" stroke-width="5" rx="40"/>
+      <text x="205" y="200" text-anchor="middle" class="label">axon terminal</text>
+      <circle cx="145" cy="255" r="20" fill="#14b8a6"/><circle cx="205" cy="275" r="20" fill="#14b8a6"/><circle cx="265" cy="245" r="20" fill="#14b8a6"/>
+      <text x="205" y="330" text-anchor="middle" class="small">neurotransmitter vesicles</text>
+      <rect x="395" y="150" width="45" height="260" fill="#f8fafc" stroke="#94a3b8" stroke-width="3" rx="12"/>
+      <text x="417" y="440" text-anchor="middle" class="small">synaptic cleft</text>
+      <rect x="510" y="150" width="570" height="260" fill="#fff7ed" stroke="#ea580c" stroke-width="5" rx="40"/>
+      <text x="795" y="200" text-anchor="middle" class="label">postsynaptic membrane</text>
+      <rect x="625" y="250" width="95" height="80" fill="#fee2e2" stroke="#dc2626" stroke-width="4" rx="12"/>
+      <text x="672" y="300" text-anchor="middle" class="small">Na+</text>
+      <rect x="845" y="250" width="95" height="80" fill="#e0e7ff" stroke="#4f46e5" stroke-width="4" rx="12"/>
+      <text x="892" y="300" text-anchor="middle" class="small">Cl-</text>
+      <path d="M292 255 C340 260 365 265 397 275" class="arrow"/>
+      <path d="M720 290 C765 270 805 255 844 290" class="arrow"/>
+      <text x="665" y="372" text-anchor="middle" class="small">EPSP: voltage moves toward threshold</text>
+      <text x="905" y="372" text-anchor="middle" class="small">IPSP: voltage moves away from threshold</text>
+      <path d="M580 485 H760" stroke="#16a34a" stroke-width="7"/>
+      <path d="M840 485 H1020" stroke="#4f46e5" stroke-width="7"/>
+      <text x="670" y="525" text-anchor="middle" class="small">excitatory postsynaptic potential</text>
+      <text x="930" y="525" text-anchor="middle" class="small">inhibitory postsynaptic potential</text>
+    </svg>
+    

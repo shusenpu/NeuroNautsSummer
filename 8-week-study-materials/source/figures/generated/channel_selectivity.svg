@@ -1,0 +1,39 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <title id="title">Channel Selectivity</title>
+  <desc id="desc">Channel Selectivity teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <marker id="csarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+          <path d="M0 0 L10 5 L0 10 Z" fill="#0f172a"/>
+        </marker>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .ion{font-family:Inter,Arial,sans-serif;font-size:20px;font-weight:700;fill:#fff}
+          .arrow{stroke:#0f172a;stroke-width:4;fill:none;marker-end:url(#csarr)}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Ion channels are selective gates, not open holes</text>
+      <text x="55" y="92" class="small">Selectivity and gating are separate ideas: which ion can pass, and when the pathway is open.</text>
+      <rect x="90" y="145" width="420" height="310" fill="#ecfeff" stroke="#0891b2" stroke-width="4" rx="24"/>
+      <rect x="690" y="145" width="420" height="310" fill="#fff7ed" stroke="#ea580c" stroke-width="4" rx="24"/>
+      <text x="300" y="190" text-anchor="middle" class="label">K+ channel</text>
+      <text x="900" y="190" text-anchor="middle" class="label">Na+ channel</text>
+      <path d="M300 220 C235 260 235 340 300 390 C365 340 365 260 300 220" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+      <path d="M900 220 C835 260 835 340 900 390 C965 340 965 260 900 220" fill="#fee2e2" stroke="#dc2626" stroke-width="4"/>
+      <rect x="270" y="290" width="60" height="52" fill="#fef3c7" stroke="#d97706" stroke-width="3" rx="10"/>
+      <rect x="870" y="290" width="60" height="52" fill="#fecaca" stroke="#dc2626" stroke-width="3" rx="10"/>
+      <circle cx="170" cy="305" r="24" fill="#f97316"/><text x="170" y="313" text-anchor="middle" class="ion">K+</text>
+      <circle cx="230" cy="250" r="24" fill="#ef4444"/><text x="230" y="258" text-anchor="middle" class="ion">Na+</text>
+      <circle cx="770" cy="250" r="24" fill="#f97316"/><text x="770" y="258" text-anchor="middle" class="ion">K+</text>
+      <circle cx="830" cy="305" r="24" fill="#ef4444"/><text x="830" y="313" text-anchor="middle" class="ion">Na+</text>
+      <path d="M195 305 H268" class="arrow"/>
+      <path d="M230 275 C245 285 255 290 268 295" stroke="#dc2626" stroke-width="4" fill="none"/>
+      <path d="M855 305 H868" class="arrow"/>
+      <path d="M770 275 C790 290 812 300 868 318" stroke="#dc2626" stroke-width="4" fill="none"/>
+      <text x="300" y="430" text-anchor="middle" class="small">best fit: K+</text>
+      <text x="900" y="430" text-anchor="middle" class="small">best fit: Na+</text>
+      <text x="600" y="510" text-anchor="middle" class="small">A channel's shape, charge, and gate state determine current.</text>
+    </svg>
+    

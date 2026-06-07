@@ -1,0 +1,120 @@
+{
+  "front_matter": {
+    "opening_question": "How can spike timing carry information if individual spikes are mostly all-or-none?",
+    "learning_goals": [
+      "Show that rate and timing are both features of spike trains.",
+      "Define spike train, spike time, firing rate, ISI, standard deviation, and CV.",
+      "Compute firing rate from spike count and time.",
+      "Compute ISIs from spike times.",
+      "Explain why variability is scientifically meaningful rather than just messy data."
+    ],
+    "prerequisites": [
+      "Prerequisites: one action potential has a stereotyped shape. Recap: Chapter 4 explained single spikes. This chapter studies sequences of spikes."
+    ],
+    "vocabulary": [
+      {
+        "term": "Spike train",
+        "definition": "Sequence of action-potential times."
+      },
+      {
+        "term": "Spike time",
+        "definition": "Time when voltage crosses threshold upward."
+      },
+      {
+        "term": "Firing rate",
+        "definition": "Spikes per second, measured in Hz."
+      },
+      {
+        "term": "ISI",
+        "definition": "Interspike interval, the time between consecutive spikes."
+      },
+      {
+        "term": "Standard deviation",
+        "definition": "A measure of spread around the mean."
+      },
+      {
+        "term": "CV",
+        "definition": "Coefficient of variation: standard deviation divided by mean."
+      },
+      {
+        "term": "Raster plot",
+        "definition": "Plot of spike times across repeated trials."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 5. Spike Trains, Rate, and Variability\n\n## Opening Question\n\nHow can spike timing carry information if individual spikes are mostly all-or-none?\n\n## Learning Goals\n\n- Show that rate and timing are both features of spike trains.\n- Define spike train, spike time, firing rate, ISI, standard deviation, and CV.\n- Compute firing rate from spike count and time.\n- Compute ISIs from spike times.\n- Explain why variability is scientifically meaningful rather than just messy data.\n\n## Prerequisites and Recap\n\nPrerequisites: one action potential has a stereotyped shape. Recap: Chapter 4 explained single spikes. This chapter studies sequences of spikes.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Spike train | Sequence of action-potential times. |\n| Spike time | Time when voltage crosses threshold upward. |\n| Firing rate | Spikes per second, measured in Hz. |\n| ISI | Interspike interval, the time between consecutive spikes. |\n| Standard deviation | A measure of spread around the mean. |\n| CV | Coefficient of variation: standard deviation divided by mean. |\n| Raster plot | Plot of spike times across repeated trials. |\n\n## Visual Story\n\nDraw spikes as vertical tick marks. Weak input may produce a few ticks. Stronger input may produce more ticks. Repeated trials may produce ticks at slightly different times. The dashboard figure makes the key point: two trials can have the same number of spikes in the same time window, so their average rate looks similar, while their gaps between spikes reveal different timing regularity.\n\n\n![Spike trains for weak, medium, and strong inputs.](../figures/generated/spike_code.svg)\n\n*Stimulus strength can be represented by spike timing and frequency.*\n\n![Voltage trace with interspike intervals labeled.](../figures/generated/isi_measurement.svg)\n\n*ISI is measured between consecutive threshold crossings.*\n\n![Raster-like plot with jittered spike times across trials.](../figures/generated/random_trials.svg)\n\n*Repeated trials can show spike-time variability.*\n\n![A dashboard with a raster plot, an interspike-interval histogram, and a summary metric panel.](../figures/generated/spike_train_dashboard.svg)\n\n*Rate, interval, and variability can be read directly from spike trains.*\n\n## Core Concepts\n\nA single spike is mostly all-or-none, so information often appears in rate, timing, and which neurons fire. ISIs turn spike timing into numbers. Mean ISI gives the average gap. Standard deviation gives spread. CV gives spread relative to average. Larger CV means more irregular timing.\n\n## Worked Example A\n\n**Problem:** A neuron fires 18 spikes in 3 seconds. What is the average firing rate?\n\n**Solution:** 18 / 3 = 6 spikes per second = 6 Hz.\n\n## Quick Check A With Answer\n\n**Question:** What does Hz mean?\n\n**Answer:** Events per second.\n\n## Worked Example B\n\n**Problem:** Spike times are 10, 24, 38, 53, and 67 ms. Compute ISIs and approximate firing rate from mean ISI.\n\n**Solution:** ISIs are 14, 14, 15, 14 ms. Mean ISI is 14.25 ms = 0.01425 s. Rate is about 1/0.01425 = 70.2 Hz.\n\n## Quick Check B With Answer\n\n**Question:** What does a larger CV mean?\n\n**Answer:** More irregular timing relative to the average interval.\n\n## Chapter Summary\n\nChapter 5 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: A single spike is mostly all-or-none, so information often appears in rate, timing, and which neurons fire.\n\n## Homework\n\n### Questions\n\n1. Compute ISIs for spike times 80, 125, 166, 210, and 260 ms.\n2. Explain why two spike trains can have the same firing rate but different timing.\n\n### Answer Key\n\n1. ISIs are 45, 41, 44, and 50 ms.\n2. They can contain the same number of spikes in the same time window but have different gaps between spikes.\n\n## Stretch Box\n\n> Find or sketch two spike trains with the same rate but different CV. Explain which one is more regular.\n\n## Mentor Note\n\n> Make the student calculate from spike times by hand before using a spreadsheet. The hand calculation makes CV meaningful.\n\n## Glossary Additions\n\n- Spike train\n- Spike time\n- Firing rate\n- ISI\n- CV\n- Raster plot\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 5.1 | `spike_code.svg` | Stimulus strength can be represented by spike timing and frequency. | Spike trains for weak, medium, and strong inputs. | Original generated course plot. |\n| 5.2 | `isi_measurement.svg` | ISI is measured between consecutive threshold crossings. | Voltage trace with interspike intervals labeled. | Original generated course figure. |\n| 5.3 | `random_trials.svg` | Repeated trials can show spike-time variability. | Raster-like plot with jittered spike times across trials. | Original generated course figure. |\n| spike_train_dashboard | `spike_train_dashboard.svg` | Rate, interval, and variability can be read directly from spike trains. | A dashboard with a raster plot, an interspike-interval histogram, and a summary metric panel. | Generated locally from synthetic teaching data. |\n",
+  "worked_examples": [
+    {
+      "title": "Rate from count",
+      "problem": "A neuron fires 18 spikes in 3 seconds. What is the average firing rate?",
+      "solution": "18 / 3 = 6 spikes per second = 6 Hz."
+    },
+    {
+      "title": "ISI and rate",
+      "problem": "Spike times are 10, 24, 38, 53, and 67 ms. Compute ISIs and approximate firing rate from mean ISI.",
+      "solution": "ISIs are 14, 14, 15, 14 ms. Mean ISI is 14.25 ms = 0.01425 s. Rate is about 1/0.01425 = 70.2 Hz."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "What does Hz mean?",
+      "answer": "Events per second."
+    },
+    {
+      "question": "What does a larger CV mean?",
+      "answer": "More irregular timing relative to the average interval."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Compute ISIs for spike times 80, 125, 166, 210, and 260 ms.",
+      "answer_key": "ISIs are 45, 41, 44, and 50 ms."
+    },
+    {
+      "type": "core",
+      "prompt": "Explain why two spike trains can have the same firing rate but different timing.",
+      "answer_key": "They can contain the same number of spikes in the same time window but have different gaps between spikes."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Find or sketch two spike trains with the same rate but different CV. Explain which one is more regular.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "5.1",
+      "caption": "Stimulus strength can be represented by spike timing and frequency.",
+      "alt_text": "Spike trains for weak, medium, and strong inputs.",
+      "source_note": "Original generated course plot."
+    },
+    {
+      "id": "5.2",
+      "caption": "ISI is measured between consecutive threshold crossings.",
+      "alt_text": "Voltage trace with interspike intervals labeled.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "5.3",
+      "caption": "Repeated trials can show spike-time variability.",
+      "alt_text": "Raster-like plot with jittered spike times across trials.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "spike_train_dashboard",
+      "caption": "Rate, interval, and variability can be read directly from spike trains.",
+      "alt_text": "A dashboard with a raster plot, an interspike-interval histogram, and a summary metric panel.",
+      "source_note": "Generated locally from synthetic teaching data."
+    }
+  ],
+  "glossary_additions": [
+    "Spike train",
+    "Spike time",
+    "Firing rate",
+    "ISI",
+    "CV",
+    "Raster plot"
+  ],
+  "mentor_notes": "Make the student calculate from spike times by hand before using a spreadsheet. The hand calculation makes CV meaningful."
+}

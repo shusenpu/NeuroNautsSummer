@@ -1,0 +1,136 @@
+{
+  "book_title": "From neuron shape to noisy spike trains",
+  "purpose": "Exact enrichment figure set requested for textbook-style infrastructure.",
+  "figures": [
+    {
+      "filename": "fig_01_real_neuron_gallery.svg",
+      "figure_type": "Morphology gallery",
+      "placement": "Week A",
+      "caption": "Different neuron shapes, same signaling job. Real neurons differ greatly in shape, but all still have receiving regions, a trigger zone, and an output path.",
+      "alt_text": "Gallery of several neuron morphologies showing diverse branching patterns and cell-body positions.",
+      "source_anchor": "OpenStax morphology framing and Allen/real cell resources",
+      "is": "Morphology comparison teaching figure.",
+      "is_not": "A complete functional classification of neuron types."
+    },
+    {
+      "filename": "fig_02_neuron_map.svg",
+      "figure_type": "Simplified labeled cartoon",
+      "placement": "Week A",
+      "caption": "A simplified signaling map of a neuron. The cartoon removes detail so the reader can track where input arrives, where spikes begin, and where output goes.",
+      "alt_text": "Simplified neuron with labeled dendrites, soma, axon hillock, axon, and terminals.",
+      "source_anchor": "Current minibook backbone",
+      "is": "Canonical beginner signaling map.",
+      "is_not": "A portrait of every real neuron."
+    },
+    {
+      "filename": "fig_03_ion_gradients_barplot.svg",
+      "figure_type": "Bar chart or log-scale comparison",
+      "placement": "Week B",
+      "caption": "Different ions are unevenly distributed across the membrane. The pattern, not the exact number, is the key beginner lesson.",
+      "alt_text": "Bar chart comparing intracellular and extracellular concentrations of four major ions.",
+      "source_anchor": "OpenStax membrane section and current minibook emphasis",
+      "is": "Illustrative ion concentration comparison.",
+      "is_not": "A universal measurement for every neuron."
+    },
+    {
+      "filename": "fig_04_electrochemical_push.svg",
+      "figure_type": "Two-force schematic",
+      "placement": "Week B",
+      "caption": "Electrochemical force combines two pushes. Diffusion and electrical attraction can oppose each other, and the balance point defines a reversal potential.",
+      "alt_text": "Diagram showing potassium pushed outward by concentration and inward by negative interior.",
+      "source_anchor": "Resting potential and reversal-potential concepts",
+      "is": "Conceptual force-separation diagram.",
+      "is_not": "A complete molecular simulation."
+    },
+    {
+      "filename": "fig_05_membrane_potential_measurement.svg",
+      "figure_type": "Voltmeter diagram",
+      "placement": "Week B",
+      "caption": "Membrane potential is a voltage difference. A neuron's inside is measured relative to the outside reference.",
+      "alt_text": "Cell membrane with recording electrode inside and reference outside, meter reading negative voltage.",
+      "source_anchor": "OpenStax measurement figure description",
+      "is": "Measurement cartoon.",
+      "is_not": "A statement that the whole cell interior is strongly negative."
+    },
+    {
+      "filename": "fig_06_synapse_and_psps.svg",
+      "figure_type": "Synaptic transmission plus graded effects",
+      "placement": "Week C",
+      "caption": "Synapses change postsynaptic voltage. The same neuron may be pushed toward or away from threshold depending on which channels open.",
+      "alt_text": "Presynaptic terminal releasing transmitter onto postsynaptic membrane, with excitatory and inhibitory examples.",
+      "source_anchor": "Synapse and graded-potential sections",
+      "is": "Conceptual synapse and PSP diagram.",
+      "is_not": "A full biochemical receptor model."
+    },
+    {
+      "filename": "fig_07_summation_graph.svg",
+      "figure_type": "Time-series graph",
+      "placement": "Week C",
+      "caption": "Small inputs can combine before a spike begins. Threshold depends on the total membrane effect of multiple graded inputs.",
+      "alt_text": "Graph of multiple graded potentials summing toward a threshold line.",
+      "source_anchor": "OpenStax summation discussion",
+      "is": "Graph-reading exercise for summation.",
+      "is_not": "A literal dendritic cable model."
+    },
+    {
+      "filename": "fig_08_action_potential_phases.svg",
+      "figure_type": "Annotated line graph",
+      "placement": "Week D",
+      "caption": "The action potential is a stereotyped voltage event. Fast sodium entry drives the rise; delayed potassium effects help end the spike and reset the membrane.",
+      "alt_text": "Voltage trace with labeled phases and threshold line.",
+      "source_anchor": "OpenStax action-potential section",
+      "is": "Canonical teaching trace.",
+      "is_not": "A raw recording from a specific cell."
+    },
+    {
+      "filename": "anim_01_action_potential_storyboard.md",
+      "figure_type": "Animation frame script",
+      "placement": "Week D",
+      "caption": "Storyboard for an action potential animation. Each frame should pair channel state with the matching segment of the voltage trace.",
+      "alt_text": "Text storyboard describing successive phases of an action potential animation.",
+      "source_anchor": "Action potential and channel timing concepts",
+      "is": "Storyboard script.",
+      "is_not": "A rendered video."
+    },
+    {
+      "filename": "fig_09_spike_raster_and_rate.svg",
+      "figure_type": "Raster plus rate panel",
+      "placement": "Week E",
+      "caption": "A stronger message is often more spikes, not taller spikes. Information can be carried by firing rate and timing, not by action-potential amplitude.",
+      "alt_text": "Raster plots and rate annotations showing more frequent spikes in stronger conditions.",
+      "source_anchor": "Current minibook and action-potential all-or-none framing",
+      "is": "Synthetic spike-train teaching figure.",
+      "is_not": "A complete theory of neural coding."
+    },
+    {
+      "filename": "fig_10_HH_circuit.svg",
+      "figure_type": "Equivalent circuit diagram",
+      "placement": "Week F",
+      "caption": "Hodgkin-Huxley turns membrane biophysics into a circuit language. The membrane stores charge, while ion-channel pathways pull voltage toward their reversal potentials.",
+      "alt_text": "Membrane represented by capacitor with sodium, potassium, and leak branches.",
+      "source_anchor": "HH circuit interpretation and NEURON/NetPyNE relevance",
+      "is": "Circuit analogy.",
+      "is_not": "Literal metal electronics inside a neuron."
+    },
+    {
+      "filename": "fig_11_patch_clamp_trace.svg",
+      "figure_type": "Single-channel recording schematic",
+      "placement": "Week G",
+      "caption": "Single channels open all-or-none, but at variable times. Patch clamp made channel randomness experimentally visible.",
+      "alt_text": "Pipette attached to membrane and a current trace jumping between closed and open states.",
+      "source_anchor": "Patch clamp significance and Nobel-linked impact",
+      "is": "Conceptual recording schematic.",
+      "is_not": "A student-generated experimental trace."
+    },
+    {
+      "filename": "fig_12_noise_to_jitter_panel.svg",
+      "figure_type": "Multi-panel data figure",
+      "placement": "Week G/H",
+      "caption": "Small fluctuations can shift threshold crossing time. Near threshold, noise changes spike timing even when the average input is similar.",
+      "alt_text": "Voltage traces and spike-timing summaries comparing low-, medium-, and high-noise conditions.",
+      "source_anchor": "Allen/ModelDB/NEURON-compatible modeling workflow and current minibook project arc",
+      "is": "Synthetic model-output evidence panel.",
+      "is_not": "A real Allen or DANDI recording."
+    }
+  ]
+}

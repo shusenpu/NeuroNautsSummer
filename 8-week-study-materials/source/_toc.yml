@@ -1,0 +1,38 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Front Appendix
+    chapters:
+      - file: glossary/math_tools_for_membrane_voltage
+  - caption: Core Chapters
+    chapters:
+      - file: chapters/neurons_as_signaling_cells
+      - file: chapters/ions_gradients_resting_voltage
+      - file: chapters/synapses_and_summation
+      - file: chapters/action_potentials_and_propagation
+      - file: chapters/spike_trains_rate_and_variability
+      - file: chapters/circuits_and_hh_intuition
+      - file: chapters/single_channel_noise
+      - file: chapters/capstone_project
+  - caption: Back Appendices
+    chapters:
+      - file: glossary/notation_and_units
+      - file: code/tiny_code_snippets
+      - file: datasets/curated_data_assets
+      - file: glossary/resource_catalog
+      - file: glossary/glossary
+  - caption: Assessment
+    chapters:
+      - file: rubrics/assessment_checkpoint_plan
+      - file: rubrics/weekly_mastery_rubric
+      - file: rubrics/capstone_rubric
+  - caption: Guided Notebooks
+    chapters:
+      - file: code/chapter01_neurons_as_signaling_cells
+      - file: code/chapter02_ions_gradients_resting_voltage
+      - file: code/chapter03_synapses_and_summation
+      - file: code/chapter04_action_potentials_and_propagation
+      - file: code/chapter05_spike_trains_rate_and_variability
+      - file: code/chapter06_circuits_and_hh_intuition
+      - file: code/chapter07_single_channel_noise
+      - file: code/chapter08_capstone_project

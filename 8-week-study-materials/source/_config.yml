@@ -1,0 +1,9 @@
+title: From neuron shape to noisy spike trains
+author: Shusen Pu and Codex
+only_build_toc_files: true
+execute:
+  execute_notebooks: off
+html:
+  use_repository_button: false
+  use_issues_button: false
+  use_edit_page_button: false

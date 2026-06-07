@@ -1,0 +1,72 @@
+
+    <svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <title id="title">Fig 01 Real Neuron Gallery</title>
+  <desc id="desc">Fig 01 Real Neuron Gallery teaching figure for the neuroscience minibook; see surrounding caption for interpretation.</desc>
+      <rect width="1200" height="700" fill="#ffffff"/>
+      <defs>
+        <style>
+          .title{font-family:Inter,Arial,sans-serif;font-size:30px;font-weight:700;fill:#0f172a}
+          .label{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:16px;fill:#334155}
+          .cell{stroke:#155e75;stroke-width:10;stroke-linecap:round;fill:none}
+          .cell2{stroke:#0f766e;stroke-width:9;stroke-linecap:round;fill:none}
+          .cell3{stroke:#ea580c;stroke-width:9;stroke-linecap:round;fill:none}
+          .cell4{stroke:#4f46e5;stroke-width:9;stroke-linecap:round;fill:none}
+          .axon{stroke:#334155;stroke-width:6;stroke-linecap:round;fill:none}
+          .panel{fill:#f8fafc;stroke:#cbd5e1;stroke-width:3;rx:18}
+        </style>
+      </defs>
+      <text x="55" y="58" class="title">Neuron morphology: different shapes, same signaling ingredients</text>
+      <text x="55" y="92" class="small">Real neurons are not one standard cartoon. Shape hints at job, but all still use membranes, ions, channels, and voltage.</text>
+      <rect x="55" y="130" width="250" height="480" class="panel"/>
+      <rect x="335" y="130" width="250" height="480" class="panel"/>
+      <rect x="615" y="130" width="250" height="480" class="panel"/>
+      <rect x="895" y="130" width="250" height="480" class="panel"/>
+
+      <text x="180" y="170" text-anchor="middle" class="label">Pyramidal neuron</text>
+      <text x="180" y="198" text-anchor="middle" class="small">cortex-like input tree</text>
+      <circle cx="180" cy="370" r="42" fill="#ccfbf1" stroke="#155e75" stroke-width="6"/>
+      <path d="M180 328 C165 260 130 235 100 205" class="cell"/>
+      <path d="M180 328 C185 258 215 232 250 205" class="cell"/>
+      <path d="M180 328 C180 245 178 215 178 185" class="cell"/>
+      <path d="M150 372 C100 350 82 315 70 280" class="cell"/>
+      <path d="M210 372 C255 350 278 318 290 280" class="cell"/>
+      <path d="M180 412 C178 470 178 525 178 575" class="axon"/>
+
+      <text x="460" y="170" text-anchor="middle" class="label">Purkinje-like neuron</text>
+      <text x="460" y="198" text-anchor="middle" class="small">large flat dendritic fan</text>
+      <circle cx="460" cy="430" r="35" fill="#dcfce7" stroke="#0f766e" stroke-width="6"/>
+      <path d="M460 395 C445 300 390 250 365 205" class="cell2"/>
+      <path d="M460 395 C460 295 460 245 460 190" class="cell2"/>
+      <path d="M460 395 C475 300 530 250 555 205" class="cell2"/>
+      <path d="M405 265 C375 245 360 225 350 200" class="cell2"/>
+      <path d="M515 265 C545 245 560 225 570 200" class="cell2"/>
+      <path d="M425 315 C380 300 360 282 340 260" class="cell2"/>
+      <path d="M495 315 C540 300 560 282 580 260" class="cell2"/>
+      <path d="M460 465 C458 505 458 545 458 580" class="axon"/>
+
+      <text x="740" y="170" text-anchor="middle" class="label">Motor neuron</text>
+      <text x="740" y="198" text-anchor="middle" class="small">many dendrites, long axon</text>
+      <circle cx="740" cy="345" r="46" fill="#ffedd5" stroke="#ea580c" stroke-width="6"/>
+      <path d="M740 300 C705 260 680 232 650 205" class="cell3"/>
+      <path d="M740 300 C745 250 780 225 820 205" class="cell3"/>
+      <path d="M698 345 C655 335 630 315 620 290" class="cell3"/>
+      <path d="M782 345 C825 335 850 315 860 290" class="cell3"/>
+      <path d="M740 390 C740 455 740 528 740 600" class="axon"/>
+      <path d="M740 600 C720 630 700 640 680 650" class="axon"/>
+      <path d="M740 600 C760 630 780 640 800 650" class="axon"/>
+
+      <text x="1020" y="170" text-anchor="middle" class="label">Sensory neuron</text>
+      <text x="1020" y="198" text-anchor="middle" class="small">signal enters from body</text>
+      <path d="M940 365 C1000 365 1045 365 1100 365" class="axon"/>
+      <circle cx="1020" cy="315" r="34" fill="#e0e7ff" stroke="#4f46e5" stroke-width="6"/>
+      <path d="M1020 348 C1020 358 1020 362 1020 365" class="cell4"/>
+      <path d="M940 365 C930 335 920 315 900 300" class="cell4"/>
+      <path d="M1100 365 C1110 335 1120 315 1140 300" class="cell4"/>
+      <text x="945" y="430" text-anchor="middle" class="small">peripheral end</text>
+      <text x="1090" y="430" text-anchor="middle" class="small">central end</text>
+
+      <rect x="210" y="635" width="780" height="42" fill="#ecfeff" stroke="#0891b2" stroke-width="3" rx="14"/>
+      <text x="600" y="662" text-anchor="middle" class="small">Study rule: always ask "where is input, where is trigger, where is output?"</text>
+    </svg>
+    

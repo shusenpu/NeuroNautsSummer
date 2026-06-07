@@ -1,0 +1,119 @@
+{
+  "front_matter": {
+    "opening_question": "How does a local voltage change become a traveling all-or-none signal?",
+    "learning_goals": [
+      "Describe the phases of an action potential.",
+      "Connect rising phase to Na+ channel activation.",
+      "Connect falling phase to Na+ inactivation and delayed K+ channel opening.",
+      "Explain refractory period, one-way travel, myelin, and nodes of Ranvier."
+    ],
+    "prerequisites": [
+      "Prerequisites: synaptic inputs can depolarize the trigger zone toward threshold. Recap: Chapter 3 explained graded inputs. This chapter explains the all-or-none event that begins when threshold is crossed."
+    ],
+    "vocabulary": [
+      {
+        "term": "Action potential",
+        "definition": "Rapid all-or-none membrane voltage event."
+      },
+      {
+        "term": "Threshold",
+        "definition": "Voltage where spike feedback becomes self-amplifying."
+      },
+      {
+        "term": "Depolarization",
+        "definition": "Voltage becomes less negative."
+      },
+      {
+        "term": "Repolarization",
+        "definition": "Voltage returns downward after the spike."
+      },
+      {
+        "term": "Hyperpolarization",
+        "definition": "Voltage becomes more negative than rest."
+      },
+      {
+        "term": "Refractory period",
+        "definition": "Short time after a spike when firing is impossible or harder."
+      },
+      {
+        "term": "Saltatory conduction",
+        "definition": "Fast conduction where the spike is regenerated at nodes of Ranvier."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 4. Action Potentials and Propagation\n\n## Opening Question\n\nHow does a local voltage change become a traveling all-or-none signal?\n\n## Learning Goals\n\n- Describe the phases of an action potential.\n- Connect rising phase to Na+ channel activation.\n- Connect falling phase to Na+ inactivation and delayed K+ channel opening.\n- Explain refractory period, one-way travel, myelin, and nodes of Ranvier.\n\n## Prerequisites and Recap\n\nPrerequisites: synaptic inputs can depolarize the trigger zone toward threshold. Recap: Chapter 3 explained graded inputs. This chapter explains the all-or-none event that begins when threshold is crossed.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Action potential | Rapid all-or-none membrane voltage event. |\n| Threshold | Voltage where spike feedback becomes self-amplifying. |\n| Depolarization | Voltage becomes less negative. |\n| Repolarization | Voltage returns downward after the spike. |\n| Hyperpolarization | Voltage becomes more negative than rest. |\n| Refractory period | Short time after a spike when firing is impossible or harder. |\n| Saltatory conduction | Fast conduction where the spike is regenerated at nodes of Ranvier. |\n\n## Visual Story\n\nThe voltage trace rises quickly, peaks, falls, dips below rest, and returns. Under that shape is channel timing: Na+ channels open fast, Na+ channels inactivate, and K+ channels open more slowly.\n\n\n![Action-potential plot labeled with threshold, overshoot, refractory period, and after-hyperpolarization.](../figures/generated/action_potential_phase_plot.svg)\n\n*An action potential is a timed sequence of membrane states, not a generic bump.*\n\n![Strip diagram connecting phases to Na+ and K+ channel behavior.](../figures/generated/ap_phase_strip.svg)\n\n*Action potential phases can be narrated by ion-channel events.*\n\n![Timeline of voltage, Na+ activation, Na+ inactivation, and K+ activation.](../figures/generated/gating_timeline.svg)\n\n*Channel timing explains spike shape.*\n\n![Myelinated axon with nodes of Ranvier and arrows.](../figures/generated/myelin.svg)\n\n*Myelin and nodes speed propagation.*\n\n## Core Concepts\n\nAt threshold, voltage-gated Na+ channels open quickly. Na+ entry depolarizes the membrane, which opens more Na+ channels. This positive feedback makes the rising phase. The spike ends because Na+ channels inactivate and K+ channels open, pulling voltage back downward. The refractory period helps the spike travel forward. Myelin speeds propagation by letting the signal regenerate at nodes.\n\n## Worked Example A\n\n**Problem:** A voltage trace starts at -70 mV, crosses -55 mV, peaks near +30 mV, falls to -80 mV, then returns to -70 mV. Label the phases.\n\n**Solution:** Rest, threshold, depolarization/rising phase, peak, repolarization/falling phase, hyperpolarization, reset.\n\n## Quick Check A With Answer\n\n**Question:** What opens fast during the rising phase?\n\n**Answer:** Voltage-gated Na+ channels.\n\n## Worked Example B\n\n**Problem:** Why would myelin make an axon faster if channels are concentrated at nodes?\n\n**Solution:** The signal does not need to be regenerated continuously along every membrane patch. It spreads under myelin and is boosted at nodes, so conduction is faster.\n\n## Quick Check B With Answer\n\n**Question:** What two events help end the spike?\n\n**Answer:** Na+ channel inactivation and delayed K+ channel opening.\n\n## Chapter Summary\n\nChapter 4 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: At threshold, voltage-gated Na+ channels open quickly.\n\n## Homework\n\n### Questions\n\n1. Make a seven-row action-potential table: rest, threshold, depolarization, peak, repolarization, hyperpolarization, refractory period.\n2. Explain why action potentials usually travel one direction along an axon.\n\n### Answer Key\n\n1. Each row should include voltage behavior and the main channel event.\n2. The region behind the spike is refractory, so it is temporarily unable or less able to fire again.\n\n## Stretch Box\n\n> Compare unmyelinated and myelinated propagation. Explain why demyelination would slow or disrupt signaling.\n\n## Mentor Note\n\n> Ask the student to narrate the spike as a story of gates, not just a memorized curve.\n\n## Glossary Additions\n\n- Action potential\n- Threshold\n- Depolarization\n- Repolarization\n- Hyperpolarization\n- Refractory period\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 4.1 | `action_potential_phase_plot.svg` | An action potential is a timed sequence of membrane states, not a generic bump. | Action-potential plot labeled with threshold, overshoot, refractory period, and after-hyperpolarization. | Generated locally in Python from schematic membrane-voltage values. |\n| 4.2 | `ap_phase_strip.svg` | Action potential phases can be narrated by ion-channel events. | Strip diagram connecting phases to Na+ and K+ channel behavior. | Original generated course plot. |\n| 4.3 | `gating_timeline.svg` | Channel timing explains spike shape. | Timeline of voltage, Na+ activation, Na+ inactivation, and K+ activation. | Original generated course figure. |\n| 4.4 | `myelin.svg` | Myelin and nodes speed propagation. | Myelinated axon with nodes of Ranvier and arrows. | Original generated course figure. |\n",
+  "worked_examples": [
+    {
+      "title": "Phase labeling",
+      "problem": "A voltage trace starts at -70 mV, crosses -55 mV, peaks near +30 mV, falls to -80 mV, then returns to -70 mV. Label the phases.",
+      "solution": "Rest, threshold, depolarization/rising phase, peak, repolarization/falling phase, hyperpolarization, reset."
+    },
+    {
+      "title": "Conduction speed intuition",
+      "problem": "Why would myelin make an axon faster if channels are concentrated at nodes?",
+      "solution": "The signal does not need to be regenerated continuously along every membrane patch. It spreads under myelin and is boosted at nodes, so conduction is faster."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "What opens fast during the rising phase?",
+      "answer": "Voltage-gated Na+ channels."
+    },
+    {
+      "question": "What two events help end the spike?",
+      "answer": "Na+ channel inactivation and delayed K+ channel opening."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Make a seven-row action-potential table: rest, threshold, depolarization, peak, repolarization, hyperpolarization, refractory period.",
+      "answer_key": "Each row should include voltage behavior and the main channel event."
+    },
+    {
+      "type": "core",
+      "prompt": "Explain why action potentials usually travel one direction along an axon.",
+      "answer_key": "The region behind the spike is refractory, so it is temporarily unable or less able to fire again."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Compare unmyelinated and myelinated propagation. Explain why demyelination would slow or disrupt signaling.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "4.1",
+      "caption": "An action potential is a timed sequence of membrane states, not a generic bump.",
+      "alt_text": "Action-potential plot labeled with threshold, overshoot, refractory period, and after-hyperpolarization.",
+      "source_note": "Generated locally in Python from schematic membrane-voltage values."
+    },
+    {
+      "id": "4.2",
+      "caption": "Action potential phases can be narrated by ion-channel events.",
+      "alt_text": "Strip diagram connecting phases to Na+ and K+ channel behavior.",
+      "source_note": "Original generated course plot."
+    },
+    {
+      "id": "4.3",
+      "caption": "Channel timing explains spike shape.",
+      "alt_text": "Timeline of voltage, Na+ activation, Na+ inactivation, and K+ activation.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "4.4",
+      "caption": "Myelin and nodes speed propagation.",
+      "alt_text": "Myelinated axon with nodes of Ranvier and arrows.",
+      "source_note": "Original generated course figure."
+    }
+  ],
+  "glossary_additions": [
+    "Action potential",
+    "Threshold",
+    "Depolarization",
+    "Repolarization",
+    "Hyperpolarization",
+    "Refractory period"
+  ],
+  "mentor_notes": "Ask the student to narrate the spike as a story of gates, not just a memorized curve."
+}

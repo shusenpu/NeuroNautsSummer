@@ -1,0 +1,117 @@
+{
+  "front_matter": {
+    "opening_question": "How do many small synaptic inputs combine before a neuron fires?",
+    "learning_goals": [
+      "Define synapse, neurotransmitter, receptor, EPSP, IPSP, and graded potential.",
+      "Distinguish graded potentials from action potentials.",
+      "Explain temporal and spatial summation.",
+      "Use simple arithmetic to reason about threshold without pretending the neuron is that simple."
+    ],
+    "prerequisites": [
+      "Prerequisites: membrane potential can move up or down, and opening channels pulls voltage toward ion reversal potentials. Recap: Chapter 2 explained why channel opening changes voltage. This chapter applies that idea to synaptic input."
+    ],
+    "vocabulary": [
+      {
+        "term": "Synapse",
+        "definition": "Communication point between neurons or between a neuron and another cell."
+      },
+      {
+        "term": "Neurotransmitter",
+        "definition": "Chemical messenger released by a presynaptic cell."
+      },
+      {
+        "term": "Receptor",
+        "definition": "Postsynaptic protein that responds to neurotransmitter."
+      },
+      {
+        "term": "EPSP",
+        "definition": "Excitatory postsynaptic potential, usually toward threshold."
+      },
+      {
+        "term": "IPSP",
+        "definition": "Inhibitory postsynaptic potential, usually away from threshold or stabilizing."
+      },
+      {
+        "term": "Graded potential",
+        "definition": "Local voltage change that can vary in size."
+      },
+      {
+        "term": "Temporal summation",
+        "definition": "Inputs close together in time add up."
+      },
+      {
+        "term": "Spatial summation",
+        "definition": "Inputs from different locations add up."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 3. Synapses and Graded Potentials\n\n## Opening Question\n\nHow do many small synaptic inputs combine before a neuron fires?\n\n## Learning Goals\n\n- Define synapse, neurotransmitter, receptor, EPSP, IPSP, and graded potential.\n- Distinguish graded potentials from action potentials.\n- Explain temporal and spatial summation.\n- Use simple arithmetic to reason about threshold without pretending the neuron is that simple.\n\n## Prerequisites and Recap\n\nPrerequisites: membrane potential can move up or down, and opening channels pulls voltage toward ion reversal potentials. Recap: Chapter 2 explained why channel opening changes voltage. This chapter applies that idea to synaptic input.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Synapse | Communication point between neurons or between a neuron and another cell. |\n| Neurotransmitter | Chemical messenger released by a presynaptic cell. |\n| Receptor | Postsynaptic protein that responds to neurotransmitter. |\n| EPSP | Excitatory postsynaptic potential, usually toward threshold. |\n| IPSP | Inhibitory postsynaptic potential, usually away from threshold or stabilizing. |\n| Graded potential | Local voltage change that can vary in size. |\n| Temporal summation | Inputs close together in time add up. |\n| Spatial summation | Inputs from different locations add up. |\n\n## Visual Story\n\nA presynaptic terminal releases neurotransmitter into a narrow cleft. Receptors on the postsynaptic cell open channels. The local voltage nudges upward or downward. Many nudges can combine before the trigger zone reaches threshold.\n\n\n![Diagram of presynaptic terminal, cleft, and postsynaptic channels.](../figures/generated/synapse.svg)\n\n*Chemical synapses change postsynaptic voltage by opening receptor-controlled channels.*\n\n![Combined synapse and summation diagram using baseline -70 mV and threshold -55 mV.](../figures/generated/synapse_summation_diagram.svg)\n\n*Small excitatory and inhibitory inputs sum in time and space before threshold is reached.*\n\n![Feedback diagram from depolarization to Na+ channel opening.](../figures/generated/threshold_feedback.svg)\n\n*Threshold begins feedback, but synaptic inputs before threshold are graded.*\n\n## Core Concepts\n\nSynaptic potentials are local and graded. An EPSP often depolarizes the postsynaptic membrane. An IPSP often hyperpolarizes the membrane or makes it harder to depolarize. Because these voltage changes can overlap, the trigger zone receives a running total of recent inputs. If the total reaches threshold, the next chapter's action-potential machinery takes over.\n\n## Worked Example A\n\n**Problem:** Start at -70 mV. Inputs are +4, +5, +6, and -3 mV. Threshold is -55 mV. Does the neuron reach threshold?\n\n**Solution:** -70 + 4 + 5 + 6 - 3 = -58 mV. It does not reach -55 mV; it is 3 mV below threshold.\n\n## Quick Check A With Answer\n\n**Question:** Are graded potentials all-or-none?\n\n**Answer:** No. They vary in size and can fade.\n\n## Worked Example B\n\n**Problem:** Two +6 mV EPSPs arrive far apart and fade before overlapping. A different pair arrives close together. Which pair is more likely to reach threshold?\n\n**Solution:** The close-together pair is more likely to add because their voltage effects overlap in time.\n\n## Quick Check B With Answer\n\n**Question:** What is the difference between temporal and spatial summation?\n\n**Answer:** Temporal summation adds inputs across time; spatial summation adds inputs from different locations.\n\n## Chapter Summary\n\nChapter 3 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: Synaptic potentials are local and graded.\n\n## Homework\n\n### Questions\n\n1. Write a six-sentence mini-lesson explaining EPSP, IPSP, graded potential, and threshold.\n2. Create and solve two threshold arithmetic problems, one that reaches threshold and one that does not.\n\n### Answer Key\n\n1. A complete answer says EPSPs tend to move toward threshold, IPSPs tend to oppose firing or stabilize voltage, graded potentials vary in size, and threshold is where spike feedback begins.\n2. Answer key should show starting voltage, input changes, final voltage, threshold comparison, and conclusion.\n\n## Stretch Box\n\n> Explain why inhibition is not just 'turning the neuron off.' Include the idea that inhibition can stabilize voltage or reduce the effect of excitation.\n\n## Mentor Note\n\n> Keep saying 'graded is not spike.' This chapter exists so the student does not collapse every voltage change into an action potential.\n\n## Glossary Additions\n\n- Synapse\n- EPSP\n- IPSP\n- Graded potential\n- Temporal summation\n- Spatial summation\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 3.1 | `synapse.svg` | Chemical synapses change postsynaptic voltage by opening receptor-controlled channels. | Diagram of presynaptic terminal, cleft, and postsynaptic channels. | Original generated course figure. |\n| 3.2 | `synapse_summation_diagram.svg` | Small excitatory and inhibitory inputs sum in time and space before threshold is reached. | Combined synapse and summation diagram using baseline -70 mV and threshold -55 mV. | Generated locally as a vector redraw from standard textbook synapse and summation concepts. |\n| 3.3 | `threshold_feedback.svg` | Threshold begins feedback, but synaptic inputs before threshold are graded. | Feedback diagram from depolarization to Na+ channel opening. | Original generated course figure. |\n",
+  "worked_examples": [
+    {
+      "title": "Simple summation",
+      "problem": "Start at -70 mV. Inputs are +4, +5, +6, and -3 mV. Threshold is -55 mV. Does the neuron reach threshold?",
+      "solution": "-70 + 4 + 5 + 6 - 3 = -58 mV. It does not reach -55 mV; it is 3 mV below threshold."
+    },
+    {
+      "title": "Temporal summation logic",
+      "problem": "Two +6 mV EPSPs arrive far apart and fade before overlapping. A different pair arrives close together. Which pair is more likely to reach threshold?",
+      "solution": "The close-together pair is more likely to add because their voltage effects overlap in time."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "Are graded potentials all-or-none?",
+      "answer": "No. They vary in size and can fade."
+    },
+    {
+      "question": "What is the difference between temporal and spatial summation?",
+      "answer": "Temporal summation adds inputs across time; spatial summation adds inputs from different locations."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Write a six-sentence mini-lesson explaining EPSP, IPSP, graded potential, and threshold.",
+      "answer_key": "A complete answer says EPSPs tend to move toward threshold, IPSPs tend to oppose firing or stabilize voltage, graded potentials vary in size, and threshold is where spike feedback begins."
+    },
+    {
+      "type": "core",
+      "prompt": "Create and solve two threshold arithmetic problems, one that reaches threshold and one that does not.",
+      "answer_key": "Answer key should show starting voltage, input changes, final voltage, threshold comparison, and conclusion."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Explain why inhibition is not just 'turning the neuron off.' Include the idea that inhibition can stabilize voltage or reduce the effect of excitation.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "3.1",
+      "caption": "Chemical synapses change postsynaptic voltage by opening receptor-controlled channels.",
+      "alt_text": "Diagram of presynaptic terminal, cleft, and postsynaptic channels.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "3.2",
+      "caption": "Small excitatory and inhibitory inputs sum in time and space before threshold is reached.",
+      "alt_text": "Combined synapse and summation diagram using baseline -70 mV and threshold -55 mV.",
+      "source_note": "Generated locally as a vector redraw from standard textbook synapse and summation concepts."
+    },
+    {
+      "id": "3.3",
+      "caption": "Threshold begins feedback, but synaptic inputs before threshold are graded.",
+      "alt_text": "Feedback diagram from depolarization to Na+ channel opening.",
+      "source_note": "Original generated course figure."
+    }
+  ],
+  "glossary_additions": [
+    "Synapse",
+    "EPSP",
+    "IPSP",
+    "Graded potential",
+    "Temporal summation",
+    "Spatial summation"
+  ],
+  "mentor_notes": "Keep saying 'graded is not spike.' This chapter exists so the student does not collapse every voltage change into an action potential."
+}

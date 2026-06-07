@@ -1,0 +1,95 @@
+{
+  "title": "Final Project Rubric",
+  "purpose": "Assess scientific explanation, not coding sophistication.",
+  "total_points": 100,
+  "criteria": [
+    {
+      "name": "conceptual_accuracy",
+      "points": 20,
+      "description": "Correctly connects neuron shape, ions/channels, voltage, spikes, timing, and noise.",
+      "levels": {
+        "emerging": "Describes pieces separately or with major errors.",
+        "developing": "Gives a mostly correct story but misses one key link.",
+        "proficient": "Correctly connects neuron shape, voltage, spikes, timing, and noise.",
+        "strong": "Explains the causal chain clearly and can answer a follow-up question."
+      }
+    },
+    {
+      "name": "correct_graph_labeling_and_figure_interpretation",
+      "points": 15,
+      "description": "Labels axes, units, conditions, and uses the graph as evidence.",
+      "levels": {
+        "emerging": "Figure lacks key labels or the student cannot explain it.",
+        "developing": "Labels are partly correct but interpretation is incomplete.",
+        "proficient": "Axes, units, conditions, and visual pattern are clear.",
+        "strong": "Uses the figure as evidence and notes what it does not show."
+      }
+    },
+    {
+      "name": "correct_use_of_terms",
+      "points": 15,
+      "description": "Uses core terms accurately, including V_m, spike train, ISI, CV, model, and limitation.",
+      "levels": {
+        "emerging": "Terms are missing or used incorrectly.",
+        "developing": "Uses most terms correctly with prompting.",
+        "proficient": "Uses core terms accurately.",
+        "strong": "Defines terms in student-friendly language while using them precisely."
+      }
+    },
+    {
+      "name": "timing_metric_calculation",
+      "points": 15,
+      "description": "Correctly calculates and interprets at least one timing metric.",
+      "levels": {
+        "emerging": "Calculation is missing or has major sign/unit errors.",
+        "developing": "Calculation is mostly correct but interpretation is weak.",
+        "proficient": "At least one timing metric is correct and interpreted.",
+        "strong": "Calculation is correct, labeled, and used as evidence in the claim."
+      }
+    },
+    {
+      "name": "limitation_explanation",
+      "points": 15,
+      "description": "Explains what the model or evidence does not prove.",
+      "levels": {
+        "emerging": "No limitation or only says it might be wrong.",
+        "developing": "Gives a vague limitation.",
+        "proficient": "States a clear limitation of the simplified model.",
+        "strong": "Explains why the limitation matters and suggests a reasonable next step."
+      }
+    },
+    {
+      "name": "model_output_vs_biological_evidence",
+      "points": 20,
+      "description": "Distinguishes simulation output from direct biological evidence.",
+      "levels": {
+        "emerging": "Treats simulation output as direct proof about real neurons.",
+        "developing": "Partly distinguishes model and biology but overclaims.",
+        "proficient": "Clearly says what is model output and what would count as biological evidence.",
+        "strong": "Compares model, cartoon, and real data carefully without overclaiming."
+      }
+    }
+  ],
+  "score_bands": [
+    {
+      "range": "90-100",
+      "label": "strong",
+      "meaning": "Clear evidence-based explanation with careful limits."
+    },
+    {
+      "range": "75-89",
+      "label": "proficient",
+      "meaning": "Scientifically sound and presentation-ready after minor edits."
+    },
+    {
+      "range": "60-74",
+      "label": "developing",
+      "meaning": "Useful work, but needs revision in graph use, calculation, or limitation."
+    },
+    {
+      "range": "below 60",
+      "label": "emerging",
+      "meaning": "Return to the chapter checks before presenting."
+    }
+  ]
+}

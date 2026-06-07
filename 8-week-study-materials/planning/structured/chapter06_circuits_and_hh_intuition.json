@@ -1,0 +1,119 @@
+{
+  "front_matter": {
+    "opening_question": "How did Hodgkin and Huxley turn the spike story into a measurable model?",
+    "learning_goals": [
+      "Translate capacitance, conductance, current, and reversal potential into neuron language.",
+      "Read I_ion = g_ion (V_m - E_ion) as a sentence.",
+      "Explain current clamp, voltage clamp, and patch clamp at a beginner level.",
+      "Read the HH voltage equation without solving calculus."
+    ],
+    "prerequisites": [
+      "Prerequisites: action potentials are caused by Na+ and K+ channel timing. Recap: Chapter 4 named the channel events. This chapter shows how those events become a model."
+    ],
+    "vocabulary": [
+      {
+        "term": "Capacitance",
+        "definition": "Ability to store separated charge."
+      },
+      {
+        "term": "Current",
+        "definition": "Movement of charge."
+      },
+      {
+        "term": "Conductance",
+        "definition": "Ease of current flow through a pathway."
+      },
+      {
+        "term": "Current clamp",
+        "definition": "Inject current and measure voltage."
+      },
+      {
+        "term": "Voltage clamp",
+        "definition": "Hold voltage and measure current."
+      },
+      {
+        "term": "Patch clamp",
+        "definition": "Measure current through a membrane patch or single channel."
+      },
+      {
+        "term": "Gate variable",
+        "definition": "HH variable summarizing channel activation or inactivation."
+      }
+    ]
+  },
+  "chapter_markdown": "\n# Chapter 6. Circuit Ideas and Hodgkin-Huxley Intuition\n\n## Opening Question\n\nHow did Hodgkin and Huxley turn the spike story into a measurable model?\n\n## Learning Goals\n\n- Translate capacitance, conductance, current, and reversal potential into neuron language.\n- Read I_ion = g_ion (V_m - E_ion) as a sentence.\n- Explain current clamp, voltage clamp, and patch clamp at a beginner level.\n- Read the HH voltage equation without solving calculus.\n\n## Prerequisites and Recap\n\nPrerequisites: action potentials are caused by Na+ and K+ channel timing. Recap: Chapter 4 named the channel events. This chapter shows how those events become a model.\n\n## Vocabulary\n\n| Term | Student-facing definition |\n|---|---|\n| Capacitance | Ability to store separated charge. |\n| Current | Movement of charge. |\n| Conductance | Ease of current flow through a pathway. |\n| Current clamp | Inject current and measure voltage. |\n| Voltage clamp | Hold voltage and measure current. |\n| Patch clamp | Measure current through a membrane patch or single channel. |\n| Gate variable | HH variable summarizing channel activation or inactivation. |\n\n## Visual Story\n\nThe HH circuit picture replaces membrane biophysics with a capacitor plus Na+, K+, and leak conductance pathways. The picture is a bridge between a biological membrane and equations.\n\n\n![Equivalent-circuit figure labeling V_m, C_m, g_Na, g_K, leak conductance, and E terms.](../figures/generated/hh_equivalent_circuit.svg)\n\n*The membrane behaves like a capacitor in parallel with Na, K, and leak pathways.*\n\n![Membrane capacitor analogy with separated charges.](../figures/generated/capacitance.svg)\n\n*Membrane capacitance means separated charge can be stored.*\n\n![Comparison of current clamp and voltage clamp traces.](../figures/generated/clamp.svg)\n\n*Current clamp and voltage clamp answer different questions.*\n\n![Voltage, gate variables, and conductance plots.](../figures/generated/hh_simulation.svg)\n\n*HH-style simulation shows fast sodium and slower potassium conductance.*\n\n## Core Concepts\n\nThe membrane behaves partly like a capacitor because it separates charge. Ion channels are conductance pathways because open channels let current flow. Each ion pathway pulls voltage toward its reversal potential. The HH equation says voltage changes when applied current and ion currents do not balance. The student does not need calculus yet; she needs to know what each term means.\n\n## Worked Example A\n\n**Problem:** Use Q = C V_m with C = 1 microfarad and V_m = 70 mV.\n\n**Solution:** 70 mV = 0.070 V, so Q = 1 microfarad x 0.070 V = 0.070 microcoulomb.\n\n## Quick Check A With Answer\n\n**Question:** What changes when channels open?\n\n**Answer:** Conductance increases for that ion pathway.\n\n## Worked Example B\n\n**Problem:** If V_m = -65 mV and E_Na = +50 mV, is sodium pull large or small?\n\n**Solution:** Large. V_m is 115 mV away from E_Na, so opening Na+ channels strongly pulls voltage upward.\n\n## Quick Check B With Answer\n\n**Question:** What does voltage clamp measure?\n\n**Answer:** Current while voltage is held at a chosen value.\n\n## Chapter Summary\n\nChapter 6 answers the opening question by connecting the visual story to a mechanism the student can explain without calculus. The key move is: The membrane behaves partly like a capacitor because it separates charge.\n\n## Homework\n\n### Questions\n\n1. Write the HH equation as a paragraph using capacitance, applied current, sodium, potassium, leak, conductance, and reversal potential.\n2. Make a two-column table comparing current clamp and voltage clamp.\n\n### Answer Key\n\n1. A correct paragraph says voltage changes when applied current and Na+, K+, and leak currents do not balance; conductances and reversal potentials determine those currents.\n2. Current clamp: inject current, observe voltage. Voltage clamp: hold voltage, measure current.\n\n## Stretch Box\n\n> Explain why a model can be useful even if it is simplified. Name one thing the HH model includes and one thing a beginner version leaves out.\n\n## Mentor Note\n\n> Keep calculus notation out of the first explanation. Let dV/dt mean 'how fast voltage changes' only after the physical terms are clear.\n\n## Glossary Additions\n\n- Capacitance\n- Current\n- Conductance\n- Current clamp\n- Voltage clamp\n- Patch clamp\n\n## Source Notes\n\n| Figure | Asset | Caption | Alt text | Source notes |\n|---|---|---|---|---|\n| 6.1 | `hh_equivalent_circuit.svg` | The membrane behaves like a capacitor in parallel with Na, K, and leak pathways. | Equivalent-circuit figure labeling V_m, C_m, g_Na, g_K, leak conductance, and E terms. | Generated locally as a vector Hodgkin-Huxley equivalent-circuit figure. |\n| 6.2 | `capacitance.svg` | Membrane capacitance means separated charge can be stored. | Membrane capacitor analogy with separated charges. | Original generated course figure. |\n| 6.3 | `clamp.svg` | Current clamp and voltage clamp answer different questions. | Comparison of current clamp and voltage clamp traces. | Original generated course figure. |\n| 6.4 | `hh_simulation.svg` | HH-style simulation shows fast sodium and slower potassium conductance. | Voltage, gate variables, and conductance plots. | Original generated course plot. |\n",
+  "worked_examples": [
+    {
+      "title": "Capacitance",
+      "problem": "Use Q = C V_m with C = 1 microfarad and V_m = 70 mV.",
+      "solution": "70 mV = 0.070 V, so Q = 1 microfarad x 0.070 V = 0.070 microcoulomb."
+    },
+    {
+      "title": "Driving force",
+      "problem": "If V_m = -65 mV and E_Na = +50 mV, is sodium pull large or small?",
+      "solution": "Large. V_m is 115 mV away from E_Na, so opening Na+ channels strongly pulls voltage upward."
+    }
+  ],
+  "quick_checks": [
+    {
+      "question": "What changes when channels open?",
+      "answer": "Conductance increases for that ion pathway."
+    },
+    {
+      "question": "What does voltage clamp measure?",
+      "answer": "Current while voltage is held at a chosen value."
+    }
+  ],
+  "homework": [
+    {
+      "type": "core",
+      "prompt": "Write the HH equation as a paragraph using capacitance, applied current, sodium, potassium, leak, conductance, and reversal potential.",
+      "answer_key": "A correct paragraph says voltage changes when applied current and Na+, K+, and leak currents do not balance; conductances and reversal potentials determine those currents."
+    },
+    {
+      "type": "core",
+      "prompt": "Make a two-column table comparing current clamp and voltage clamp.",
+      "answer_key": "Current clamp: inject current, observe voltage. Voltage clamp: hold voltage, measure current."
+    },
+    {
+      "type": "stretch",
+      "prompt": "Explain why a model can be useful even if it is simplified. Name one thing the HH model includes and one thing a beginner version leaves out.",
+      "answer_key": "A strong answer uses the chapter vocabulary, states the mechanism in words, and names a limitation or condition."
+    }
+  ],
+  "figures": [
+    {
+      "id": "6.1",
+      "caption": "The membrane behaves like a capacitor in parallel with Na, K, and leak pathways.",
+      "alt_text": "Equivalent-circuit figure labeling V_m, C_m, g_Na, g_K, leak conductance, and E terms.",
+      "source_note": "Generated locally as a vector Hodgkin-Huxley equivalent-circuit figure."
+    },
+    {
+      "id": "6.2",
+      "caption": "Membrane capacitance means separated charge can be stored.",
+      "alt_text": "Membrane capacitor analogy with separated charges.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "6.3",
+      "caption": "Current clamp and voltage clamp answer different questions.",
+      "alt_text": "Comparison of current clamp and voltage clamp traces.",
+      "source_note": "Original generated course figure."
+    },
+    {
+      "id": "6.4",
+      "caption": "HH-style simulation shows fast sodium and slower potassium conductance.",
+      "alt_text": "Voltage, gate variables, and conductance plots.",
+      "source_note": "Original generated course plot."
+    }
+  ],
+  "glossary_additions": [
+    "Capacitance",
+    "Current",
+    "Conductance",
+    "Current clamp",
+    "Voltage clamp",
+    "Patch clamp"
+  ],
+  "mentor_notes": "Keep calculus notation out of the first explanation. Let dV/dt mean 'how fast voltage changes' only after the physical terms are clear."
+}

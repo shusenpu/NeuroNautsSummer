@@ -1,0 +1,28 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+      <rect width="1200" height="560" fill="#ffffff"/>
+      <defs>
+        <style>
+          .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:700;fill:#0f172a}
+          .small{font-family:Inter,Arial,sans-serif;font-size:19px;fill:#334155}
+          .box{fill:#f8fafc;stroke:#334155;stroke-width:4;rx:20}
+          .trace{stroke:#0f766e;stroke-width:5;fill:none}
+        </style>
+      </defs>
+      <text x="55" y="58" class="label">Current clamp asks what voltage does; voltage clamp asks what current flows</text>
+      <rect x="70" y="120" width="500" height="370" class="box"/>
+      <rect x="630" y="120" width="500" height="370" class="box"/>
+      <text x="320" y="165" text-anchor="middle" class="label">Current clamp</text>
+      <text x="320" y="200" text-anchor="middle" class="small">Inject current, measure voltage response</text>
+      <polyline points="130,360 190,360 190,270 250,270 250,360 530,360" stroke="#ea580c" stroke-width="5" fill="none"/>
+      <polyline points="130,300 160,300 190,295 210,255 235,185 260,330 300,370 340,290 365,190 390,330 430,370 470,320 530,315" class="trace"/>
+      <text x="150" y="405" class="small">input current step</text>
+      <text x="150" y="245" class="small">voltage spikes</text>
+      <text x="880" y="165" text-anchor="middle" class="label">Voltage clamp</text>
+      <text x="880" y="200" text-anchor="middle" class="small">Hold voltage fixed, measure ionic current</text>
+      <polyline points="690,330 760,330 760,240 1040,240 1040,330 1090,330" class="trace"/>
+      <path d="M690 390 C725 390 745 300 770 300 C805 300 805 440 845 440 C910 440 940 360 995 360 C1030 360 1060 385 1090 385" stroke="#4f46e5" stroke-width="5" fill="none"/>
+      <text x="710" y="245" class="small">command voltage</text>
+      <text x="710" y="455" class="small">measured current</text>
+    </svg>
+    

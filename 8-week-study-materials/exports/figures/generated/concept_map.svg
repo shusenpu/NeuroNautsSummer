@@ -1,0 +1,53 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+      <rect width="1200" height="620" fill="#f8fafc"/>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+        </marker>
+        <style>
+          .box{fill:#ffffff;stroke:#0f766e;stroke-width:3;rx:18}
+          .box2{fill:#fff7ed;stroke:#c2410c;stroke-width:3;rx:18}
+          .box3{fill:#eef2ff;stroke:#4338ca;stroke-width:3;rx:18}
+          .t{font-family:Inter,Arial,sans-serif;font-size:29px;font-weight:700;fill:#0f172a}
+          .s{font-family:Inter,Arial,sans-serif;font-size:20px;fill:#334155}
+          .edge{stroke:#334155;stroke-width:4;fill:none;marker-end:url(#arrow)}
+        </style>
+      </defs>
+      <text x="60" y="65" class="t">The whole learning path in one picture</text>
+      <rect x="70" y="120" width="220" height="105" class="box"/>
+      <text x="180" y="162" text-anchor="middle" class="t">Ions</text>
+      <text x="180" y="195" text-anchor="middle" class="s">Na+, K+, Cl-, Ca2+</text>
+      <rect x="370" y="120" width="220" height="105" class="box"/>
+      <text x="480" y="162" text-anchor="middle" class="t">Membrane</text>
+      <text x="480" y="195" text-anchor="middle" class="s">thin insulator</text>
+      <rect x="670" y="120" width="220" height="105" class="box3"/>
+      <text x="780" y="162" text-anchor="middle" class="t">Voltage</text>
+      <text x="780" y="195" text-anchor="middle" class="s">charge separation</text>
+      <rect x="970" y="120" width="160" height="105" class="box3"/>
+      <text x="1050" y="162" text-anchor="middle" class="t">Current</text>
+      <text x="1050" y="195" text-anchor="middle" class="s">ion flow</text>
+      <path class="edge" d="M290 172 H360"/>
+      <path class="edge" d="M590 172 H660"/>
+      <path class="edge" d="M890 172 H960"/>
+
+      <rect x="220" y="315" width="230" height="110" class="box2"/>
+      <text x="335" y="357" text-anchor="middle" class="t">Ion channels</text>
+      <text x="335" y="390" text-anchor="middle" class="s">gates open/close</text>
+      <rect x="535" y="315" width="230" height="110" class="box2"/>
+      <text x="650" y="357" text-anchor="middle" class="t">Action potential</text>
+      <text x="650" y="390" text-anchor="middle" class="s">all-or-none spike</text>
+      <rect x="850" y="315" width="230" height="110" class="box2"/>
+      <text x="965" y="357" text-anchor="middle" class="t">Timing</text>
+      <text x="965" y="390" text-anchor="middle" class="s">information + jitter</text>
+      <path class="edge" d="M1050 225 C1035 285 995 305 965 315"/>
+      <path class="edge" d="M450 370 H525"/>
+      <path class="edge" d="M765 370 H840"/>
+      <path class="edge" d="M780 225 C725 285 690 300 650 315"/>
+      <path class="edge" d="M480 225 C420 285 370 300 335 315"/>
+
+      <rect x="185" y="492" width="830" height="86" fill="#ecfeff" stroke="#0891b2" stroke-width="3" rx="18"/>
+      <text x="600" y="527" text-anchor="middle" class="t" style="font-size:24px">Thesis bridge: microscopic random channel events</text>
+      <text x="600" y="560" text-anchor="middle" class="t" style="font-size:24px">can change macroscopic spike timing.</text>
+    </svg>
+    
