@@ -11,6 +11,8 @@ const notesText = document.querySelector("#notesText");
 const counter = document.querySelector("#counter");
 const progressFill = document.querySelector("#progressFill");
 const studentAudience = document.body.dataset.audience === "student";
+const STAGE_WIDTH = 1920;
+const STAGE_HEIGHT = 1080;
 
 let frameIndex = 0;
 let fragmentIndex = 0;
@@ -107,18 +109,27 @@ function showControls() {
   controlsTimer = window.setTimeout(() => shell.classList.remove("controls-visible"), 1600);
 }
 
+function fitStageToViewport() {
+  const viewport = window.visualViewport || window;
+  const width = viewport.width || window.innerWidth;
+  const height = viewport.height || window.innerHeight;
+  const scale = Math.min(width / STAGE_WIDTH, height / STAGE_HEIGHT);
+  document.documentElement.style.setProperty("--stage-scale", String(Math.max(0.01, scale)));
+}
+
 function resizeCanvas(canvas) {
-  const rect = canvas.getBoundingClientRect();
-  const dpr = window.devicePixelRatio || 1;
-  const width = Math.max(1, Math.floor(rect.width * dpr));
-  const height = Math.max(1, Math.floor(rect.height * dpr));
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const cssWidth = Math.max(1, Math.floor(canvas.clientWidth || canvas.getBoundingClientRect().width));
+  const cssHeight = Math.max(1, Math.floor(canvas.clientHeight || canvas.getBoundingClientRect().height));
+  const width = Math.max(1, Math.floor(cssWidth * dpr));
+  const height = Math.max(1, Math.floor(cssHeight * dpr));
   if (canvas.width !== width || canvas.height !== height) {
     canvas.width = width;
     canvas.height = height;
   }
   const ctx = canvas.getContext("2d");
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  return { ctx, width: rect.width, height: rect.height };
+  return { ctx, width: cssWidth, height: cssHeight };
 }
 
 function clear(ctx, width, height, color = "#ffffff") {
@@ -1164,14 +1175,22 @@ document.querySelector("#attentionSlider")?.addEventListener("input", (event) =>
   state.attention = Number(event.target.value);
 });
 
-window.addEventListener("resize", () => {
-  document.querySelectorAll("canvas").forEach((canvas) => resizeCanvas(canvas));
-});
+function refreshStageFit() {
+  fitStageToViewport();
+  requestAnimationFrame(() => {
+    document.querySelectorAll("canvas").forEach((canvas) => resizeCanvas(canvas));
+  });
+}
+
+window.addEventListener("resize", refreshStageFit);
+window.visualViewport?.addEventListener("resize", refreshStageFit);
+window.addEventListener("orientationchange", refreshStageFit);
 document.addEventListener("visibilitychange", () => {
   if (!document.hidden) syncVideos();
 });
 
 const requestedSlide = Number(new URLSearchParams(window.location.search).get("slide"));
 const initialSlide = Number.isInteger(requestedSlide) ? requestedSlide - 1 : 0;
+fitStageToViewport();
 setFrame(initialSlide, 0);
 requestAnimationFrame(tick);
