@@ -1533,6 +1533,81 @@ input[type="range"] {
 }
 
 @media (max-height: 820px) {
+  .morning-slide {
+    padding-top: 122px;
+    padding-bottom: 26px;
+  }
+
+  .morning-layout {
+    grid-template-rows: minmax(0, 250px) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .morning-panel,
+  .hyper-panel.morning-panel {
+    min-height: 0;
+  }
+
+  .morning-example-board {
+    width: min(980px, calc(100% - 44px));
+    margin-top: 16px;
+    padding: 18px 22px;
+  }
+
+  .morning-example-board h3 {
+    margin: 4px 0 14px;
+    font-size: 28px;
+  }
+
+  .morning-example-grid article {
+    min-height: 78px;
+    padding: 12px 14px;
+  }
+
+  .morning-example-grid b {
+    font-size: 18px;
+  }
+
+  .morning-example-grid span {
+    margin-top: 7px;
+    font-size: 14px;
+  }
+
+  .morning-copy {
+    gap: 10px;
+  }
+
+  .morning-text {
+    gap: 8px;
+    padding-top: 0;
+  }
+
+  .morning-copy h2 {
+    font-size: 34px;
+  }
+
+  .morning-copy .lead {
+    font-size: 19px;
+    line-height: 1.24;
+  }
+
+  .morning-question-row span {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+
+  .morning-copy .prompt-box {
+    min-height: 78px;
+    padding: 16px 22px;
+    font-size: 22px;
+  }
+
+  .morning-copy .prompt-box small {
+    margin-top: 6px;
+    font-size: 15px;
+  }
+
   .recognition-frame .term-stack,
   .motor-frame .term-stack {
     height: 100%;
