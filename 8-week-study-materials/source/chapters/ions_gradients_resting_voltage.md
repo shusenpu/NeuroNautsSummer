@@ -14,8 +14,8 @@ How can salty water and a thin membrane make a measurable voltage?
 
 | Field | Week B plan |
 |---|---|
-| Current minibook anchor | Ions, diffusion, resting potential |
-| Revised textbook-style chapter | Ions, gradients, and why rest is negative |
+| Weekly focus | Ions, diffusion, resting potential |
+| Chapter | Ions, gradients, and why rest is negative |
 | Prerequisites | Week A |
 | Learning objectives | Explain Na+, K+, Cl-, Ca2+ distributions; distinguish diffusion vs electrical force; explain selective permeability |
 | Basic calculations | Sign-only Nernst reasoning; simple concentration-ratio thinking |

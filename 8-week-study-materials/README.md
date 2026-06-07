@@ -1,23 +1,20 @@
-# Minibook v2 Revision Workspace
+# From Neuron Shape to Noisy Spike Trains
 
-This folder is the working structure for the revised textbook, **From neuron shape to noisy spike trains**.
+Eight-week neuroscience study materials for a high-school student learning neuron biophysics from the beginning.
 
 ## Structure
 
-- `source/`: editable source material.
-- `source/chapters/`: eight textbook chapters.
-- `source/figures/`: figure specs and generated visual assets.
-- `source/animations/`: storyboard files and future animation assets.
-- `source/exercises/`: extracted practice prompts and future worksheets.
-- `source/solutions/`: extracted answer keys and future solution guides.
-- `source/quizzes/`: weekly quiz JSON files.
-- `source/code/`: notebooks and small code snippets.
-- `source/datasets/`: curated teaching datasets and data notes.
-- `source/glossary/`: glossary, math appendix, notation, and reference notes.
-- `source/rubrics/`: assessment architecture and rubrics.
-- `exports/`: generated HTML/PDF deliverables.
-- `planning/`: audits, structural notes, and revision planning files.
+- `exports/minibook.html`: the main student-facing web version.
+- `exports/minibook.pdf`: printable PDF version.
+- `chapters/`: chapter drafts.
+- `exercises/` and `solutions/`: practice questions and answer keys.
+- `quizzes/`: weekly checks and answer keys.
+- `code/`: beginner-friendly Python examples.
+- `datasets/`: synthetic teaching data and notes for optional real-data examples.
+- `figures/`: diagrams and figure notes.
+- `glossary/`: cumulative vocabulary support.
+- `rubrics/`: final project and mastery rubrics.
 
-## Build
+## How to use
 
-Use `scripts/build_minibook_v2_outputs.py` to build from this v2 structure.
+Start with `exports/minibook.html` and work through the chapters in order.

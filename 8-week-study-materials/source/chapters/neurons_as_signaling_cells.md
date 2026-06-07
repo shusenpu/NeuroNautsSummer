@@ -16,8 +16,8 @@ How does a neuron's shape help it receive, decide, and send information?
 
 | Field | Week A plan |
 |---|---|
-| Current minibook anchor | Neuron shape, parts, voltage language |
-| Revised textbook-style chapter | Neurons as signaling cells |
+| Weekly focus | Neuron shape, parts, voltage language |
+| Chapter | Neurons as signaling cells |
 | Prerequisites | Basic cell biology, atoms/charge |
 | Learning objectives | Identify dendrites, soma, axon, terminals; explain input/decision/output; distinguish charge, potential, voltage |
 | Basic calculations | mV changes such as -70 to -55 mV |

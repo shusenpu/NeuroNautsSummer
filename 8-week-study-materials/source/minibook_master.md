@@ -1,9 +1,5 @@
 # From Neuron Shape to Noisy Spike Trains
 
-An eight-chapter no-calculus minibook for a high-school student learning the biophysics of neuroscience from scratch.
-
-**Compiled version:** minibook_v2
-
 
 
 ---
@@ -35,9 +31,9 @@ An eight-chapter no-calculus minibook for a high-school student learning the bio
 
 <a id="course-overview"></a>
 
-# From neuron shape to noisy spike trains
+# Course Overview
 
-This is the source version of the eight-chapter high-school textbook. It keeps the no-calculus promise and preserves the ions -> spikes -> noise story while making the course systematic.
+Start here and read the chapters in order. The course begins with neuron shape, then builds toward ions, voltage, synapses, spikes, circuits, noise, and a final presentation.
 
 The student should read the chapters in order. The core path is:
 
@@ -54,16 +50,16 @@ The student should read the chapters in order. The core path is:
 
 ## Week-By-Week Syllabus
 
-This syllabus mirrors the biological and quantitative dependencies in the minibook while making the neuro-information layer explicit. The student should not skip ahead: each week supplies vocabulary, graph-reading habits, and small calculations needed later.
+This syllabus follows the order of the biology. The student should not skip ahead: each week supplies vocabulary, graph-reading habits, and small calculations needed later.
 
-| Week | Current minibook anchor | Revised textbook-style chapter | Prerequisites | Learning objectives | Basic calculations | Estimated total time |
+| Week | Weekly focus | Chapter | Prerequisites | Learning objectives | Basic calculations | Estimated total time |
 |---|---|---|---|---|---|---:|
 | Week A | Neuron shape, parts, voltage language | Neurons as signaling cells | Basic cell biology, atoms/charge | Identify dendrites, soma, axon, terminals; explain input/decision/output; distinguish charge, potential, voltage | mV changes such as -70 to -55 mV | 4.0-4.5 h |
 | Week B | Ions, diffusion, resting potential | Ions, gradients, and why rest is negative | Week A | Explain Na+, K+, Cl-, Ca2+ distributions; distinguish diffusion vs electrical force; explain selective permeability | Sign-only Nernst reasoning; simple concentration-ratio thinking | 4.5-5.0 h |
 | Week C | Synapses and threshold | Graded signals and threshold | Weeks A-B | Explain EPSPs, IPSPs, temporal/spatial summation, trigger zone | Add simple EPSP values to estimate threshold approach | 4.0-4.5 h |
 | Week D | Action potentials and propagation | How spikes begin and travel | Weeks A-C | Narrate depolarization, repolarization, refractory period, myelin, nodes | Read phase durations and threshold crossings from graphs | 4.5-5.0 h |
 | Week E | Spike trains are present but compressed | Spike trains and neural information | Weeks A-D | Distinguish single-spike amplitude from firing rate/timing; interpret rasters and rate plots | Spike rate, ISI, mean ISI | 4.0-4.5 h |
-| Week F | HH week | Circuits and Hodgkin-Huxley intuition | Weeks A-E | Read membrane-as-capacitor analogy; interpret conductance and reversal potential; explain clamp experiments | Use I = g(V_m - E) qualitatively and numerically in simple cases | 4.5-5.0 h |
+| Week F | Circuit model intuition | Circuits and Hodgkin-Huxley intuition | Weeks A-E | Read membrane-as-capacitor analogy; interpret conductance and reversal potential; explain clamp experiments | Use I = g(V_m - E) qualitatively and numerically in simple cases | 4.5-5.0 h |
 | Week G | Random channels and variability | From single channels to timing variability | Weeks A-F | Explain stochastic gating, channel noise, finite-size fluctuations, CV of ISI, trial-to-trial jitter | ISI SD and CV; open-fraction fluctuations from repeated trials | 4.5-5.0 h |
 | Week H | Mini-project and final talk | Evidence, explanation, and communication | All earlier weeks | Form a hypothesis, run a simple model, summarize evidence, state limitations, communicate clearly | Compare conditions, summarize means/CVs | 4.0-5.0 h |
 
@@ -326,8 +322,8 @@ How does a neuron's shape help it receive, decide, and send information?
 
 | Field | Week A plan |
 |---|---|
-| Current minibook anchor | Neuron shape, parts, voltage language |
-| Revised textbook-style chapter | Neurons as signaling cells |
+| Weekly focus | Neuron shape, parts, voltage language |
+| Chapter | Neurons as signaling cells |
 | Prerequisites | Basic cell biology, atoms/charge |
 | Learning objectives | Identify dendrites, soma, axon, terminals; explain input/decision/output; distinguish charge, potential, voltage |
 | Basic calculations | mV changes such as -70 to -55 mV |
@@ -576,8 +572,8 @@ How can salty water and a thin membrane make a measurable voltage?
 
 | Field | Week B plan |
 |---|---|
-| Current minibook anchor | Ions, diffusion, resting potential |
-| Revised textbook-style chapter | Ions, gradients, and why rest is negative |
+| Weekly focus | Ions, diffusion, resting potential |
+| Chapter | Ions, gradients, and why rest is negative |
 | Prerequisites | Week A |
 | Learning objectives | Explain Na+, K+, Cl-, Ca2+ distributions; distinguish diffusion vs electrical force; explain selective permeability |
 | Basic calculations | Sign-only Nernst reasoning; simple concentration-ratio thinking |
@@ -845,8 +841,8 @@ How do many small synaptic inputs combine before a neuron fires?
 
 | Field | Week C plan |
 |---|---|
-| Current minibook anchor | Synapses and threshold |
-| Revised textbook-style chapter | Graded signals and threshold |
+| Weekly focus | Synapses and threshold |
+| Chapter | Graded signals and threshold |
 | Prerequisites | Weeks A-B |
 | Learning objectives | Explain EPSPs, IPSPs, temporal/spatial summation, trigger zone |
 | Basic calculations | Add simple EPSP values to estimate threshold approach |
@@ -1092,8 +1088,8 @@ How does a local voltage change become a traveling all-or-none signal?
 
 | Field | Week D plan |
 |---|---|
-| Current minibook anchor | Action potentials and propagation |
-| Revised textbook-style chapter | How spikes begin and travel |
+| Weekly focus | Action potentials and propagation |
+| Chapter | How spikes begin and travel |
 | Prerequisites | Weeks A-C |
 | Learning objectives | Narrate depolarization, repolarization, refractory period, myelin, nodes |
 | Basic calculations | Read phase durations and threshold crossings from graphs |
@@ -1353,8 +1349,8 @@ How can spike timing carry information if individual spikes are mostly all-or-no
 
 | Field | Week E plan |
 |---|---|
-| Current minibook anchor | Spike trains are present but compressed |
-| Revised textbook-style chapter | Spike trains and neural information |
+| Weekly focus | Spike trains are present but compressed |
+| Chapter | Spike trains and neural information |
 | Prerequisites | Weeks A-D |
 | Learning objectives | Distinguish single-spike amplitude from firing rate/timing; interpret rasters and rate plots |
 | Basic calculations | Spike rate, ISI, mean ISI |
@@ -1610,8 +1606,8 @@ How did Hodgkin and Huxley turn the spike story into a measurable model?
 
 | Field | Week F plan |
 |---|---|
-| Current minibook anchor | HH week |
-| Revised textbook-style chapter | Circuits and Hodgkin-Huxley intuition |
+| Weekly focus | Circuit model intuition |
+| Chapter | Circuits and Hodgkin-Huxley intuition |
 | Prerequisites | Weeks A-E |
 | Learning objectives | Read membrane-as-capacitor analogy; interpret conductance and reversal potential; explain clamp experiments |
 | Basic calculations | Use I = g(V_m - E) qualitatively and numerically in simple cases |
@@ -1864,8 +1860,8 @@ Why are spike times not perfectly identical even when the input looks similar?
 
 | Field | Week G plan |
 |---|---|
-| Current minibook anchor | Random channels and variability |
-| Revised textbook-style chapter | From single channels to timing variability |
+| Weekly focus | Random channels and variability |
+| Chapter | From single channels to timing variability |
 | Prerequisites | Weeks A-F |
 | Learning objectives | Explain stochastic gating, channel noise, finite-size fluctuations, CV of ISI, trial-to-trial jitter |
 | Basic calculations | ISI SD and CV; open-fraction fluctuations from repeated trials |
@@ -2122,8 +2118,8 @@ Can the student make one evidence-based claim about noise and spike timing?
 
 | Field | Week H plan |
 |---|---|
-| Current minibook anchor | Mini-project and final talk |
-| Revised textbook-style chapter | Evidence, explanation, and communication |
+| Weekly focus | Mini-project and final talk |
+| Chapter | Evidence, explanation, and communication |
 | Prerequisites | All earlier weeks |
 | Learning objectives | Form a hypothesis, run a simple model, summarize evidence, state limitations, communicate clearly |
 | Basic calculations | Compare conditions, summarize means/CVs |

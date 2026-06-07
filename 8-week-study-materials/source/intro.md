@@ -1,6 +1,6 @@
-# From neuron shape to noisy spike trains
+# Course Overview
 
-This is the source version of the eight-chapter high-school textbook. It keeps the no-calculus promise and preserves the ions -> spikes -> noise story while making the course systematic.
+Start here and read the chapters in order. The course begins with neuron shape, then builds toward ions, voltage, synapses, spikes, circuits, noise, and a final presentation.
 
 The student should read the chapters in order. The core path is:
 
@@ -17,16 +17,16 @@ The student should read the chapters in order. The core path is:
 
 ## Week-By-Week Syllabus
 
-This syllabus mirrors the biological and quantitative dependencies in the minibook while making the neuro-information layer explicit. The student should not skip ahead: each week supplies vocabulary, graph-reading habits, and small calculations needed later.
+This syllabus follows the order of the biology. The student should not skip ahead: each week supplies vocabulary, graph-reading habits, and small calculations needed later.
 
-| Week | Current minibook anchor | Revised textbook-style chapter | Prerequisites | Learning objectives | Basic calculations | Estimated total time |
+| Week | Weekly focus | Chapter | Prerequisites | Learning objectives | Basic calculations | Estimated total time |
 |---|---|---|---|---|---|---:|
 | Week A | Neuron shape, parts, voltage language | Neurons as signaling cells | Basic cell biology, atoms/charge | Identify dendrites, soma, axon, terminals; explain input/decision/output; distinguish charge, potential, voltage | mV changes such as -70 to -55 mV | 4.0-4.5 h |
 | Week B | Ions, diffusion, resting potential | Ions, gradients, and why rest is negative | Week A | Explain Na+, K+, Cl-, Ca2+ distributions; distinguish diffusion vs electrical force; explain selective permeability | Sign-only Nernst reasoning; simple concentration-ratio thinking | 4.5-5.0 h |
 | Week C | Synapses and threshold | Graded signals and threshold | Weeks A-B | Explain EPSPs, IPSPs, temporal/spatial summation, trigger zone | Add simple EPSP values to estimate threshold approach | 4.0-4.5 h |
 | Week D | Action potentials and propagation | How spikes begin and travel | Weeks A-C | Narrate depolarization, repolarization, refractory period, myelin, nodes | Read phase durations and threshold crossings from graphs | 4.5-5.0 h |
 | Week E | Spike trains are present but compressed | Spike trains and neural information | Weeks A-D | Distinguish single-spike amplitude from firing rate/timing; interpret rasters and rate plots | Spike rate, ISI, mean ISI | 4.0-4.5 h |
-| Week F | HH week | Circuits and Hodgkin-Huxley intuition | Weeks A-E | Read membrane-as-capacitor analogy; interpret conductance and reversal potential; explain clamp experiments | Use I = g(V_m - E) qualitatively and numerically in simple cases | 4.5-5.0 h |
+| Week F | Circuit model intuition | Circuits and Hodgkin-Huxley intuition | Weeks A-E | Read membrane-as-capacitor analogy; interpret conductance and reversal potential; explain clamp experiments | Use I = g(V_m - E) qualitatively and numerically in simple cases | 4.5-5.0 h |
 | Week G | Random channels and variability | From single channels to timing variability | Weeks A-F | Explain stochastic gating, channel noise, finite-size fluctuations, CV of ISI, trial-to-trial jitter | ISI SD and CV; open-fraction fluctuations from repeated trials | 4.5-5.0 h |
 | Week H | Mini-project and final talk | Evidence, explanation, and communication | All earlier weeks | Form a hypothesis, run a simple model, summarize evidence, state limitations, communicate clearly | Compare conditions, summarize means/CVs | 4.0-5.0 h |
 

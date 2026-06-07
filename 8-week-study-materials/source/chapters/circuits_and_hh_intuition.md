@@ -15,8 +15,8 @@ How did Hodgkin and Huxley turn the spike story into a measurable model?
 
 | Field | Week F plan |
 |---|---|
-| Current minibook anchor | HH week |
-| Revised textbook-style chapter | Circuits and Hodgkin-Huxley intuition |
+| Weekly focus | Circuit model intuition |
+| Chapter | Circuits and Hodgkin-Huxley intuition |
 | Prerequisites | Weeks A-E |
 | Learning objectives | Read membrane-as-capacitor analogy; interpret conductance and reversal potential; explain clamp experiments |
 | Basic calculations | Use I = g(V_m - E) qualitatively and numerically in simple cases |

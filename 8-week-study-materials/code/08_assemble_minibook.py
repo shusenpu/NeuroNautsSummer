@@ -328,10 +328,6 @@ def build_markdown(target_dir: Path) -> str:
     sections = all_sections(target_dir)
     title = """# From Neuron Shape to Noisy Spike Trains
 
-An eight-chapter no-calculus minibook for a high-school student learning the biophysics of neuroscience from scratch.
-
-**Compiled version:** minibook_v2
-
 """
     parts = [title, toc_for(sections)]
     for section in sections:
@@ -523,8 +519,8 @@ def main() -> None:
     export_md = build_markdown(EXPORTS)
 
     master_path = SOURCE / "minibook_master.md"
-    export_md_path = EXPORTS / "minibook_v2.md"
-    html_path = EXPORTS / "minibook_v2.html"
+    export_md_path = EXPORTS / "minibook.md"
+    html_path = EXPORTS / "minibook.html"
 
     master_path.write_text(master_md, encoding="utf-8")
     export_md_path.write_text(export_md, encoding="utf-8")

@@ -15,8 +15,8 @@ Can the student make one evidence-based claim about noise and spike timing?
 
 | Field | Week H plan |
 |---|---|
-| Current minibook anchor | Mini-project and final talk |
-| Revised textbook-style chapter | Evidence, explanation, and communication |
+| Weekly focus | Mini-project and final talk |
+| Chapter | Evidence, explanation, and communication |
 | Prerequisites | All earlier weeks |
 | Learning objectives | Form a hypothesis, run a simple model, summarize evidence, state limitations, communicate clearly |
 | Basic calculations | Compare conditions, summarize means/CVs |

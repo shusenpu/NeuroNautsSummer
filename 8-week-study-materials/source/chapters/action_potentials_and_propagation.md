@@ -15,8 +15,8 @@ How does a local voltage change become a traveling all-or-none signal?
 
 | Field | Week D plan |
 |---|---|
-| Current minibook anchor | Action potentials and propagation |
-| Revised textbook-style chapter | How spikes begin and travel |
+| Weekly focus | Action potentials and propagation |
+| Chapter | How spikes begin and travel |
 | Prerequisites | Weeks A-C |
 | Learning objectives | Narrate depolarization, repolarization, refractory period, myelin, nodes |
 | Basic calculations | Read phase durations and threshold crossings from graphs |

@@ -15,8 +15,8 @@ Why are spike times not perfectly identical even when the input looks similar?
 
 | Field | Week G plan |
 |---|---|
-| Current minibook anchor | Random channels and variability |
-| Revised textbook-style chapter | From single channels to timing variability |
+| Weekly focus | Random channels and variability |
+| Chapter | From single channels to timing variability |
 | Prerequisites | Weeks A-F |
 | Learning objectives | Explain stochastic gating, channel noise, finite-size fluctuations, CV of ISI, trial-to-trial jitter |
 | Basic calculations | ISI SD and CV; open-fraction fluctuations from repeated trials |

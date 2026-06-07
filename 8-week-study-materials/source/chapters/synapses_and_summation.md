@@ -15,8 +15,8 @@ How do many small synaptic inputs combine before a neuron fires?
 
 | Field | Week C plan |
 |---|---|
-| Current minibook anchor | Synapses and threshold |
-| Revised textbook-style chapter | Graded signals and threshold |
+| Weekly focus | Synapses and threshold |
+| Chapter | Graded signals and threshold |
 | Prerequisites | Weeks A-B |
 | Learning objectives | Explain EPSPs, IPSPs, temporal/spatial summation, trigger zone |
 | Basic calculations | Add simple EPSP values to estimate threshold approach |

@@ -16,8 +16,8 @@ How can spike timing carry information if individual spikes are mostly all-or-no
 
 | Field | Week E plan |
 |---|---|
-| Current minibook anchor | Spike trains are present but compressed |
-| Revised textbook-style chapter | Spike trains and neural information |
+| Weekly focus | Spike trains are present but compressed |
+| Chapter | Spike trains and neural information |
 | Prerequisites | Weeks A-D |
 | Learning objectives | Distinguish single-spike amplitude from firing rate/timing; interpret rasters and rate plots |
 | Basic calculations | Spike rate, ISI, mean ISI |
