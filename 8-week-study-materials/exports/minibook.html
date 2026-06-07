@@ -97,6 +97,7 @@
     th { background: var(--soft); text-align: left; }
     hr { border: 0; border-top: 1px solid var(--line); margin: 2.3rem 0; }
     ul, ol { padding-left: 1.35rem; }
+    .book-cover { display: none; }
     @media (max-width: 720px) {
       body { background: white; font-size: 16px; }
       main { padding: 22px 18px 44px; box-shadow: none; }
@@ -105,29 +106,208 @@
       table { min-width: 560px; }
     }
     @media print {
-      @page { size: Letter; margin: 0.6in; }
+      @page {
+        size: Letter;
+        margin: 0.72in 0.68in 0.78in;
+        @bottom-center {
+          content: counter(page);
+          color: #64748b;
+          font-size: 9pt;
+        }
+      }
+      @page:first {
+        @bottom-center { content: ""; }
+      }
       html, body { background: white; }
-      body { font-size: 11pt; line-height: 1.48; }
+      body {
+        color: #111827;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 10.8pt;
+        line-height: 1.48;
+      }
       main { width: 100%; padding: 0; box-shadow: none; }
-      h1 { page-break-before: always; font-size: 20pt; }
-      main > h1:first-child { page-break-before: avoid; }
-      h2 { font-size: 15pt; }
-      h3 { font-size: 12.5pt; }
+      .book-cover {
+        display: flex;
+        min-height: 9.15in;
+        flex-direction: column;
+        justify-content: center;
+        page-break-after: always;
+        break-after: page;
+      }
+      .cover-kicker {
+        color: #0f766e;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 11pt;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .book-cover h1 {
+        max-width: 8.5in;
+        margin: 0.25in 0 0.18in;
+        padding: 0;
+        border: 0;
+        color: #0f172a;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34pt;
+        line-height: 1.08;
+      }
+      .cover-subtitle {
+        max-width: 6.4in;
+        color: #334155;
+        font-size: 14pt;
+        line-height: 1.45;
+      }
+      .cover-line {
+        width: 2.2in;
+        height: 2pt;
+        margin: 0.35in 0;
+        background: #0f766e;
+      }
+      .cover-meta {
+        color: #475569;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 10.5pt;
+      }
+      .book-title-heading,
+      .book-title-rule {
+        display: none;
+      }
+      h1, h2, h3, h4 {
+        color: #0f172a;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+      h1 {
+        margin: 0 0 0.2in;
+        padding: 0 0 0.08in;
+        border-bottom: 1.5pt solid #0f766e;
+        font-size: 21pt;
+        line-height: 1.16;
+      }
+      .front-heading,
+      .chapter-heading,
+      .appendix-heading {
+        page-break-before: always;
+        break-before: page;
+      }
+      .toc-heading {
+        page-break-before: avoid;
+        break-before: avoid;
+      }
+      h2 {
+        margin-top: 0.22in;
+        font-size: 14.5pt;
+      }
+      h3 {
+        margin-top: 0.16in;
+        font-size: 12.2pt;
+      }
+      h4 {
+        margin-top: 0.12in;
+        font-size: 10.8pt;
+      }
+      p, li {
+        max-width: none;
+        orphans: 3;
+        widows: 3;
+      }
+      p {
+        margin: 0 0 0.08in;
+      }
+      ul, ol {
+        margin-top: 0.04in;
+        margin-bottom: 0.12in;
+      }
+      li > p:first-child {
+        margin-bottom: 0.03in;
+      }
+      li > ul,
+      li > ol {
+        margin-top: 0.02in;
+        margin-bottom: 0.08in;
+      }
+      ol > li,
+      ul > li {
+        margin-bottom: 0.035in;
+      }
       a { color: black; text-decoration: none; }
-      img { max-height: 7in; page-break-inside: avoid; }
-      .table-wrap, table, blockquote, pre { page-break-inside: avoid; }
-      .table-wrap { overflow: visible; border: 1px solid #bbb; }
-      table { min-width: 0; font-size: 8.7pt; }
-      th, td { padding: 0.25rem 0.35rem; }
-      hr { page-break-after: auto; }
+      img {
+        max-width: 100%;
+        max-height: 6.45in;
+        margin: 0.12in auto 0.1in;
+        border: 0.75pt solid #cbd5e1;
+        border-radius: 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .figure-image {
+        margin: 0.08in 0 0.05in;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      blockquote {
+        margin: 0.12in 0;
+        padding: 0.11in 0.14in;
+        background: #f0fdfa;
+        border-left: 3pt solid #0f766e;
+        border-radius: 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      pre {
+        white-space: pre-wrap;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .table-wrap {
+        overflow: visible;
+        margin: 0.1in 0 0.16in;
+        border: 0.75pt solid #cbd5e1;
+        border-radius: 0;
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+      table {
+        min-width: 0;
+        font-size: 8.8pt;
+        line-height: 1.28;
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+      thead {
+        display: table-header-group;
+      }
+      tr {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      th, td {
+        padding: 0.055in 0.07in;
+      }
+      hr {
+        margin: 0.2in 0;
+        page-break-after: auto;
+        break-after: auto;
+      }
     }
     </style>
 </head>
 <body>
+
+<section class="book-cover" aria-label="Book cover">
+  <div class="cover-kicker">NeuroNauts Summer Study Materials</div>
+  <h1>From Neuron Shape to Noisy Spike Trains</h1>
+  <p class="cover-subtitle">An eight-week neuroscience study guide with chapters, figures, worked examples, labs, quizzes, code, and a final presentation project.</p>
+  <div class="cover-line" aria-hidden="true"></div>
+  <p class="cover-meta">Designed for a high-school student learning neuron biophysics from the beginning.</p>
+</section>
+
 <main>
-<h1 id="from-neuron-shape-to-noisy-spike-trains">From Neuron Shape to Noisy Spike Trains</h1>
-<hr/>
-<h1 id="table-of-contents">Table of Contents</h1>
+<h1 class="book-title-heading" id="from-neuron-shape-to-noisy-spike-trains">From Neuron Shape to Noisy Spike Trains</h1>
+<hr class="book-title-rule"/>
+<h1 class="toc-heading" id="table-of-contents">Table of Contents</h1>
 <ul>
 <li><a href="#course-overview">Course Overview</a></li>
 <li><a href="#math-tools-for-membrane-voltage">Front Appendix. Math Tools for Membrane Voltage</a></li>
@@ -150,7 +330,7 @@
 </ul>
 <hr/>
 <p><a id="course-overview"></a></p>
-<h1 id="course-overview">Course Overview</h1>
+<h1 class="front-heading" id="course-overview">Course Overview</h1>
 <p>Start here and read the chapters in order. The course begins with neuron shape, then builds toward ions, voltage, synapses, spikes, circuits, noise, and a final presentation.</p>
 <p>The student should read the chapters in order. The core path is:</p>
 <ol>
@@ -163,7 +343,7 @@
 <li>Week G: random single channels can affect spike-time variability.</li>
 <li>Week H: a capstone project turns the course into evidence and communication.</li>
 </ol>
-<p><img alt="Learning roadmap" src="../source/figures/generated/week_roadmap.svg"/></p>
+<p class="figure-image"><img alt="Learning roadmap" src="../source/figures/generated/week_roadmap.svg"/></p>
 <h2 id="week-by-week-syllabus">Week-By-Week Syllabus</h2>
 <p>This syllabus follows the order of the biology. The student should not skip ahead: each week supplies vocabulary, graph-reading habits, and small calculations needed later.</p>
 <div class="table-wrap"><table>
@@ -563,7 +743,7 @@
 <p>The target final presentation is a short scientific explanation for other high-school students: how neuron shape, ions, membranes, channels, and random channel behavior can affect spike timing.</p>
 <hr/>
 <p><a id="math-tools-for-membrane-voltage"></a></p>
-<h1 id="math-tools-for-membrane-voltage">Math tools for membrane voltage</h1>
+<h1 class="" id="math-tools-for-membrane-voltage">Math tools for membrane voltage</h1>
 <p>This front appendix gives the minimum math needed before calculus. The student should read it before Chapter 2 and return to it whenever a symbol or graph feels slippery.</p>
 <h2 id="1-millivolts-milliseconds-and-hertz">1. Millivolts, milliseconds, and hertz</h2>
 <p>Neurons use small voltages and fast times, so the units look unfamiliar at first.</p>
@@ -661,7 +841,7 @@ micro = one millionth = 10^-6
 </tr>
 </tbody>
 </table></div>
-<p><img alt="Log sign bridge" src="../source/figures/generated/log_sign_bridge.svg"/></p>
+<p class="figure-image"><img alt="Log sign bridge" src="../source/figures/generated/log_sign_bridge.svg"/></p>
 <p>The student does not need to derive the equation. She only needs the sign logic:</p>
 <pre><code class="language-text">E_ion in mV = (61 / z) log10(outside concentration / inside concentration)
 </code></pre>
@@ -670,7 +850,7 @@ micro = one millionth = 10^-6
 <p>This book uses graph slopes and rate language, but it does not require derivatives. When a symbol such as dV/dt appears in a source note, read it only as "how fast voltage changes." Formal calculus can wait until the physical story is stable.</p>
 <hr/>
 <p><a id="notation-and-units"></a></p>
-<h1 id="notation-and-units">Notation and Units</h1>
+<h1 class="" id="notation-and-units">Notation and Units</h1>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -762,7 +942,7 @@ micro = one millionth = 10^-6
 </code></pre>
 <hr/>
 <p><a id="chapter-1-neurons-as-signaling-cells"></a></p>
-<h1 id="week-a-chapter-1-neurons-as-signaling-cells">Week A / Chapter 1. Neurons as Signaling Cells</h1>
+<h1 class="chapter-heading" id="week-a-chapter-1-neurons-as-signaling-cells">Week A / Chapter 1. Neurons as Signaling Cells</h1>
 <h2 id="opening-question">Opening Question</h2>
 <p>How does a neuron's shape help it receive, decide, and send information?</p>
 <h2 id="learning-goals">Learning Goals</h2>
@@ -935,7 +1115,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener">Visual Opener</h2>
 <p>Start with real neurons, then simplify. A Purkinje cell has a huge dendritic tree; a pyramidal neuron has a tall apical dendrite; a sensory neuron may place the soma off the main path. The simplified map is not a portrait. It is a reading tool: find input, trigger, conduction, output.</p>
 <h3 id="reality-figure-b-real-neuron-gallery">Reality Figure B: Real Neuron Gallery</h3>
-<p><img alt="Gallery of several neuron morphologies showing diverse branching patterns and cell-body positions." src="../source/figures/generated/fig_01_real_neuron_gallery.svg"/></p>
+<p class="figure-image"><img alt="Gallery of several neuron morphologies showing diverse branching patterns and cell-body positions." src="../source/figures/generated/fig_01_real_neuron_gallery.svg"/></p>
 <p><em>Different neuron shapes, same signaling job. Real neurons differ greatly in shape, but all still have receiving regions, a trigger zone, and an output path.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A morphology gallery that helps you compare cell-body position and branching patterns.</p>
@@ -943,16 +1123,16 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Local vector teaching figure based on OpenStax morphology framing and Allen/real-cell morphology resources.</p>
 </blockquote>
 <h3 id="concept-figure-a-simplified-signaling-map">Concept Figure A: Simplified Signaling Map</h3>
-<p><img alt="Simplified neuron with labeled dendrites, soma, axon hillock, axon, and terminals." src="../source/figures/generated/fig_02_neuron_map.svg"/></p>
+<p class="figure-image"><img alt="Simplified neuron with labeled dendrites, soma, axon hillock, axon, and terminals." src="../source/figures/generated/fig_02_neuron_map.svg"/></p>
 <p><em>A simplified signaling map of a neuron. The cartoon removes detail so the reader can track where input arrives, where spikes begin, and where output goes.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A clean map for input, trigger, conducting, and output zones.</p>
 <p><strong>What this figure is not:</strong> It is not a literal portrait of every neuron.</p>
 <p><strong>Source note:</strong> Original generated course cartoon used as the minibook backbone.</p>
 </blockquote>
-<p><img alt="Several real neuron drawings with different morphologies." src="../source/figures/generated/openstax_neuron_heterogeneity.webp"/></p>
+<p class="figure-image"><img alt="Several real neuron drawings with different morphologies." src="../source/figures/generated/openstax_neuron_heterogeneity.webp"/></p>
 <p><em>Real neuron heterogeneity shows that neurons do not all share one cartoon shape.</em></p>
-<p><img alt="Cajal drawing of a Purkinje neuron." src="../source/figures/generated/purkinje_cajal.gif"/></p>
+<p class="figure-image"><img alt="Cajal drawing of a Purkinje neuron." src="../source/figures/generated/purkinje_cajal.gif"/></p>
 <p><em>A Purkinje cell drawing emphasizes how large a dendritic tree can be.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -1098,7 +1278,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-2-ions-gradients-and-resting-voltage"></a></p>
-<h1 id="week-b-chapter-2-ions-gradients-and-why-rest-is-negative">Week B / Chapter 2. Ions, Gradients, and Why Rest Is Negative</h1>
+<h1 class="chapter-heading" id="week-b-chapter-2-ions-gradients-and-why-rest-is-negative">Week B / Chapter 2. Ions, Gradients, and Why Rest Is Negative</h1>
 <h2 id="opening-question_1">Opening Question</h2>
 <p>How can salty water and a thin membrane make a measurable voltage?</p>
 <h2 id="learning-goals_1">Learning Goals</h2>
@@ -1276,7 +1456,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_1">Visual Opener</h2>
 <p>Start with ions before voltage. First compare the ion concentration bars: Na+ is mostly outside, K+ is mostly inside, Cl- is often higher outside, and Ca2+ is kept extremely low inside. Then look at the Nernst sign plot: when outside/inside is less than 1 for a positive ion like K+, the equilibrium potential is negative. Finally, use the resting membrane cartoon to see why selective K+ permeability can make the inside of the neuron negative relative to outside.</p>
 <h3 id="reality-figure-b-ion-gradient-barplot">Reality Figure B: Ion Gradient Barplot</h3>
-<p><img alt="Bar chart comparing intracellular and extracellular concentrations of four major ions." src="../source/figures/generated/fig_03_ion_gradients_barplot.svg"/></p>
+<p class="figure-image"><img alt="Bar chart comparing intracellular and extracellular concentrations of four major ions." src="../source/figures/generated/fig_03_ion_gradients_barplot.svg"/></p>
 <p><em>Different ions are unevenly distributed across the membrane. The pattern, not the exact number, is the key beginner lesson.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A quantitative comparison of typical inside/outside ion concentrations.</p>
@@ -1284,7 +1464,7 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Generated locally from standard illustrative ion distributions used in introductory membrane-potential lessons.</p>
 </blockquote>
 <h3 id="concept-figure-a-electrochemical-push">Concept Figure A: Electrochemical Push</h3>
-<p><img alt="Diagram showing potassium pushed outward by concentration and inward by negative interior." src="../source/figures/generated/fig_04_electrochemical_push.svg"/></p>
+<p class="figure-image"><img alt="Diagram showing potassium pushed outward by concentration and inward by negative interior." src="../source/figures/generated/fig_04_electrochemical_push.svg"/></p>
 <p><em>Electrochemical force combines two pushes. Diffusion and electrical attraction can oppose each other, and the balance point defines a reversal potential.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A two-force diagram that separates concentration push from electrical pull.</p>
@@ -1292,16 +1472,16 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Generated locally from resting-potential and reversal-potential concepts.</p>
 </blockquote>
 <h3 id="measurement-figure-membrane-potential">Measurement Figure: Membrane Potential</h3>
-<p><img alt="Cell membrane with recording electrode inside and reference outside, meter reading negative voltage." src="../source/figures/generated/fig_05_membrane_potential_measurement.svg"/></p>
+<p class="figure-image"><img alt="Cell membrane with recording electrode inside and reference outside, meter reading negative voltage." src="../source/figures/generated/fig_05_membrane_potential_measurement.svg"/></p>
 <p><em>Membrane potential is a voltage difference. A neuron's inside is measured relative to the outside reference.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A measurement cartoon showing what -70 mV means operationally.</p>
 <p><strong>What this figure is not:</strong> It is not saying the whole inside of the cell has become strongly negative.</p>
 <p><strong>Source note:</strong> Generated locally from the standard membrane-potential measurement description used in introductory physiology.</p>
 </blockquote>
-<p><img alt="Semilog plot of equilibrium potential E versus outside divided by inside concentration ratio, crossing zero at ratio one." src="../source/figures/generated/nernst_sign_plot.svg"/></p>
+<p class="figure-image"><img alt="Semilog plot of equilibrium potential E versus outside divided by inside concentration ratio, crossing zero at ratio one." src="../source/figures/generated/nernst_sign_plot.svg"/></p>
 <p><em>Equilibrium potential changes sign when the outside/inside ratio crosses one.</em></p>
-<p><img alt="Membrane diagram with K+ leak channels, high K+ inside, high Na+ outside, and negative inside voltage." src="../source/figures/generated/resting_membrane_cartoon.svg"/></p>
+<p class="figure-image"><img alt="Membrane diagram with K+ leak channels, high K+ inside, high Na+ outside, and negative inside voltage." src="../source/figures/generated/resting_membrane_cartoon.svg"/></p>
 <p><em>Resting membrane cartoon: selective K+ permeability lets K+ diffusion outward and electrical pull inward balance near a negative V_m.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -1446,7 +1626,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-3-synapses-graded-signals-and-summation"></a></p>
-<h1 id="week-c-chapter-3-graded-signals-and-threshold">Week C / Chapter 3. Graded Signals and Threshold</h1>
+<h1 class="chapter-heading" id="week-c-chapter-3-graded-signals-and-threshold">Week C / Chapter 3. Graded Signals and Threshold</h1>
 <h2 id="opening-question_2">Opening Question</h2>
 <p>How do many small synaptic inputs combine before a neuron fires?</p>
 <h2 id="learning-goals_2">Learning Goals</h2>
@@ -1621,7 +1801,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_2">Visual Opener</h2>
 <p>A presynaptic terminal releases neurotransmitter into a narrow cleft. Receptors on the postsynaptic cell open channels. The local voltage nudges upward or downward. Many nudges can combine before the trigger zone reaches threshold.</p>
 <h3 id="concept-figure-a-synapse-and-postsynaptic-potentials">Concept Figure A: Synapse And Postsynaptic Potentials</h3>
-<p><img alt="Presynaptic terminal releasing transmitter onto postsynaptic membrane, with excitatory and inhibitory examples." src="../source/figures/generated/fig_06_synapse_and_psps.svg"/></p>
+<p class="figure-image"><img alt="Presynaptic terminal releasing transmitter onto postsynaptic membrane, with excitatory and inhibitory examples." src="../source/figures/generated/fig_06_synapse_and_psps.svg"/></p>
 <p><em>Synapses change postsynaptic voltage. The same neuron may be pushed toward or away from threshold depending on which channels open.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A conceptual synapse diagram paired with EPSP and IPSP voltage effects.</p>
@@ -1629,14 +1809,14 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Generated locally from OpenStax-style synapse and graded-potential concepts.</p>
 </blockquote>
 <h3 id="reality-figure-b-summation-graph">Reality Figure B: Summation Graph</h3>
-<p><img alt="Graph of multiple graded potentials summing toward a threshold line." src="../source/figures/generated/fig_07_summation_graph.svg"/></p>
+<p class="figure-image"><img alt="Graph of multiple graded potentials summing toward a threshold line." src="../source/figures/generated/fig_07_summation_graph.svg"/></p>
 <p><em>Small inputs can combine before a spike begins. Threshold depends on the total membrane effect of multiple graded inputs.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A trace-reading exercise for temporal and spatial summation.</p>
 <p><strong>What this figure is not:</strong> It is not a guarantee that real dendrites add inputs with simple arithmetic.</p>
 <p><strong>Source note:</strong> Generated locally as a simplified summation graph using threshold as the reading anchor.</p>
 </blockquote>
-<p><img alt="Feedback diagram from depolarization to Na+ channel opening." src="../source/figures/generated/threshold_feedback.svg"/></p>
+<p class="figure-image"><img alt="Feedback diagram from depolarization to Na+ channel opening." src="../source/figures/generated/threshold_feedback.svg"/></p>
 <p><em>Threshold begins feedback, but synaptic inputs before threshold are graded.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -1776,7 +1956,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-4-action-potentials-and-propagation"></a></p>
-<h1 id="week-d-chapter-4-how-spikes-begin-and-travel">Week D / Chapter 4. How Spikes Begin and Travel</h1>
+<h1 class="chapter-heading" id="week-d-chapter-4-how-spikes-begin-and-travel">Week D / Chapter 4. How Spikes Begin and Travel</h1>
 <h2 id="opening-question_3">Opening Question</h2>
 <p>How does a local voltage change become a traveling all-or-none signal?</p>
 <h2 id="learning-goals_3">Learning Goals</h2>
@@ -1947,7 +2127,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_3">Visual Opener</h2>
 <p>The voltage trace rises quickly, peaks, falls, dips below rest, and returns. Under that shape is channel timing: Na+ channels open fast, Na+ channels inactivate, and K+ channels open more slowly.</p>
 <h3 id="concept-figure-a-action-potential-phases">Concept Figure A: Action-Potential Phases</h3>
-<p><img alt="Voltage trace with labeled phases and threshold line." src="../source/figures/generated/fig_08_action_potential_phases.svg"/></p>
+<p class="figure-image"><img alt="Voltage trace with labeled phases and threshold line." src="../source/figures/generated/fig_08_action_potential_phases.svg"/></p>
 <p><em>An action potential is a timed sequence of membrane states, not a generic bump.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A canonical voltage-time graph for labeling rest, threshold, depolarization, peak, repolarization, after-hyperpolarization, and refractory timing.</p>
@@ -1955,7 +2135,7 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Generated locally from standard action-potential phase values and OpenStax-style graph interpretation.</p>
 </blockquote>
 <h3 id="animation-storyboard">Animation Storyboard</h3>
-<p><img alt="Storyboard frames showing action-potential phases and matching channel states." src="../figures/anim_01_action_potential_storyboard.svg"/></p>
+<p class="figure-image"><img alt="Storyboard frames showing action-potential phases and matching channel states." src="../figures/anim_01_action_potential_storyboard.svg"/></p>
 <p><em>Action-potential storyboard frames connect each phase of the voltage trace to Na+ and K+ channel behavior.</em></p>
 <p><a href="../source/figures/generated/anim_01_action_potential_storyboard.md">Action-potential storyboard</a></p>
 <p><em>Storyboard for an action potential animation. Each frame should pair channel state with the matching segment of the voltage trace.</em></p>
@@ -1964,11 +2144,11 @@ micro = one millionth = 10^-6
 <p><strong>What this storyboard is not:</strong> It is not a video file or a complete Hodgkin-Huxley simulation.</p>
 <p><strong>Source note:</strong> Generated locally from introductory action-potential and channel-timing concepts.</p>
 </blockquote>
-<p><img alt="Strip diagram connecting phases to Na+ and K+ channel behavior." src="../source/figures/generated/ap_phase_strip.svg"/></p>
+<p class="figure-image"><img alt="Strip diagram connecting phases to Na+ and K+ channel behavior." src="../source/figures/generated/ap_phase_strip.svg"/></p>
 <p><em>Action potential phases can be narrated by ion-channel events.</em></p>
-<p><img alt="Timeline of voltage, Na+ activation, Na+ inactivation, and K+ activation." src="../source/figures/generated/gating_timeline.svg"/></p>
+<p class="figure-image"><img alt="Timeline of voltage, Na+ activation, Na+ inactivation, and K+ activation." src="../source/figures/generated/gating_timeline.svg"/></p>
 <p><em>Channel timing explains spike shape.</em></p>
-<p><img alt="Myelinated axon with nodes of Ranvier and arrows." src="../source/figures/generated/myelin.svg"/></p>
+<p class="figure-image"><img alt="Myelinated axon with nodes of Ranvier and arrows." src="../source/figures/generated/myelin.svg"/></p>
 <p><em>Myelin and nodes speed propagation.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -2115,7 +2295,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-5-spike-trains-rate-and-variability"></a></p>
-<h1 id="week-e-chapter-5-spike-trains-and-neural-information">Week E / Chapter 5. Spike Trains and Neural Information</h1>
+<h1 class="chapter-heading" id="week-e-chapter-5-spike-trains-and-neural-information">Week E / Chapter 5. Spike Trains and Neural Information</h1>
 <h2 id="opening-question_4">Opening Question</h2>
 <p>How can spike timing carry information if individual spikes are mostly all-or-none?</p>
 <h2 id="learning-goals_4">Learning Goals</h2>
@@ -2287,7 +2467,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_4">Visual Opener</h2>
 <p>Draw spikes as vertical tick marks. Weak input may produce a few ticks. Stronger input may produce more ticks. Repeated trials may produce ticks at slightly different times. The dashboard figure makes the key point: two trials can have the same number of spikes in the same time window, so their average rate looks similar, while their gaps between spikes reveal different timing regularity.</p>
 <h3 id="concept-figure-a-raster-and-rate">Concept Figure A: Raster And Rate</h3>
-<p><img alt="Raster plots and rate annotations showing more frequent spikes in stronger conditions." src="../source/figures/generated/fig_09_spike_raster_and_rate.svg"/></p>
+<p class="figure-image"><img alt="Raster plots and rate annotations showing more frequent spikes in stronger conditions." src="../source/figures/generated/fig_09_spike_raster_and_rate.svg"/></p>
 <p><em>A stronger message is often more spikes, not taller spikes. Information can be carried by firing rate and timing, not by action-potential amplitude.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A teaching raster that separates spike count and timing from spike height.</p>
@@ -2295,18 +2475,18 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Generated locally from synthetic teaching spike trains.</p>
 </blockquote>
 <h3 id="reality-figure-b-spike-train-dashboard">Reality Figure B: Spike-Train Dashboard</h3>
-<p><img alt="A dashboard with a raster plot, an interspike-interval histogram, and a summary metric panel." src="../source/figures/generated/spike_train_dashboard.svg"/></p>
+<p class="figure-image"><img alt="A dashboard with a raster plot, an interspike-interval histogram, and a summary metric panel." src="../source/figures/generated/spike_train_dashboard.svg"/></p>
 <p><em>Rate, interval, and variability can be read directly from spike trains.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A synthetic data dashboard for reading rate, ISI, and variability together.</p>
 <p><strong>What this figure is not:</strong> It is not an Allen recording; it is clean teaching data designed to make the graph skills visible.</p>
 <p><strong>Source note:</strong> Generated locally from synthetic spike-time data.</p>
 </blockquote>
-<p><img alt="Voltage trace with interspike intervals labeled." src="../source/figures/generated/isi_measurement.svg"/></p>
-<p><img alt="ISI histogram and CV panel comparing interval variability." src="../figures/isi_histogram_cv_panel.svg"/></p>
+<p class="figure-image"><img alt="Voltage trace with interspike intervals labeled." src="../source/figures/generated/isi_measurement.svg"/></p>
+<p class="figure-image"><img alt="ISI histogram and CV panel comparing interval variability." src="../figures/isi_histogram_cv_panel.svg"/></p>
 <p><em>ISI histograms and CV summarize spike-timing regularity after the raster has been read.</em></p>
 <p><em>ISI is measured between consecutive threshold crossings.</em></p>
-<p><img alt="Raster-like plot with jittered spike times across trials." src="../source/figures/generated/random_trials.svg"/></p>
+<p class="figure-image"><img alt="Raster-like plot with jittered spike times across trials." src="../source/figures/generated/random_trials.svg"/></p>
 <p><em>Repeated trials can show spike-time variability.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -2453,7 +2633,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-6-circuits-and-hodgkin-huxley-intuition"></a></p>
-<h1 id="week-f-chapter-6-circuits-and-hodgkin-huxley-intuition">Week F / Chapter 6. Circuits and Hodgkin-Huxley Intuition</h1>
+<h1 class="chapter-heading" id="week-f-chapter-6-circuits-and-hodgkin-huxley-intuition">Week F / Chapter 6. Circuits and Hodgkin-Huxley Intuition</h1>
 <h2 id="opening-question_5">Opening Question</h2>
 <p>How did Hodgkin and Huxley turn the spike story into a measurable model?</p>
 <h2 id="learning-goals_5">Learning Goals</h2>
@@ -2624,7 +2804,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_5">Visual Opener</h2>
 <p>The HH circuit picture replaces membrane biophysics with a capacitor plus Na+, K+, and leak conductance pathways. The picture is a bridge between a biological membrane and equations.</p>
 <h3 id="concept-figure-a-hodgkin-huxley-circuit">Concept Figure A: Hodgkin-Huxley Circuit</h3>
-<p><img alt="Membrane represented by capacitor with sodium, potassium, and leak branches." src="../source/figures/generated/fig_10_HH_circuit.svg"/></p>
+<p class="figure-image"><img alt="Membrane represented by capacitor with sodium, potassium, and leak branches." src="../source/figures/generated/fig_10_HH_circuit.svg"/></p>
 <p><em>Hodgkin-Huxley turns membrane biophysics into a circuit language. The membrane stores charge, while ion-channel pathways pull voltage toward their reversal potentials.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A circuit analogy for capacitance, conductance, and reversal potentials.</p>
@@ -2632,16 +2812,16 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Generated locally from Hodgkin-Huxley equivalent-circuit interpretation and NEURON/NetPyNE-relevant model language.</p>
 </blockquote>
 <h3 id="reality-figure-b-hh-style-model-output">Reality Figure B: HH-Style Model Output</h3>
-<p><img alt="Voltage, gate variables, and conductance plots." src="../source/figures/generated/hh_simulation.svg"/></p>
+<p class="figure-image"><img alt="Voltage, gate variables, and conductance plots." src="../source/figures/generated/hh_simulation.svg"/></p>
 <p><em>HH-style simulation shows fast sodium and slower potassium conductance.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A simulation output that connects the circuit idea to voltage and conductance traces.</p>
 <p><strong>What this figure is not:</strong> It is not a full molecular model of every channel protein.</p>
 <p><strong>Source note:</strong> Generated locally as a beginner HH-style model output.</p>
 </blockquote>
-<p><img alt="Membrane capacitor analogy with separated charges." src="../source/figures/generated/capacitance.svg"/></p>
+<p class="figure-image"><img alt="Membrane capacitor analogy with separated charges." src="../source/figures/generated/capacitance.svg"/></p>
 <p><em>Membrane capacitance means separated charge can be stored.</em></p>
-<p><img alt="Comparison of current clamp and voltage clamp traces." src="../source/figures/generated/clamp.svg"/></p>
+<p class="figure-image"><img alt="Comparison of current clamp and voltage clamp traces." src="../source/figures/generated/clamp.svg"/></p>
 <p><em>Current clamp and voltage clamp answer different questions.</em></p>
 <p>The clamp sketch uses mV for voltage and relative units for current. Relative units mean the current trace is drawn to show direction and timing, not a calibrated ampere value.</p>
 <blockquote>
@@ -2789,7 +2969,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-7-single-channel-noise-and-spike-time-variability"></a></p>
-<h1 id="week-g-chapter-7-from-single-channels-to-timing-variability">Week G / Chapter 7. From Single Channels to Timing Variability</h1>
+<h1 class="chapter-heading" id="week-g-chapter-7-from-single-channels-to-timing-variability">Week G / Chapter 7. From Single Channels to Timing Variability</h1>
 <h2 id="opening-question_6">Opening Question</h2>
 <p>Why are spike times not perfectly identical even when the input looks similar?</p>
 <h2 id="learning-goals_6">Learning Goals</h2>
@@ -2956,7 +3136,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_6">Visual Opener</h2>
 <p>A patch-clamp trace looks like square steps. Closed means baseline. Open means current step. Many channels summed together look smoother, but the molecules underneath are still random.</p>
 <h3 id="concept-figure-a-patch-clamp-and-single-channel-trace">Concept Figure A: Patch Clamp And Single-Channel Trace</h3>
-<p><img alt="Pipette attached to membrane and a current trace jumping between closed and open states." src="../source/figures/generated/fig_11_patch_clamp_trace.svg"/></p>
+<p class="figure-image"><img alt="Pipette attached to membrane and a current trace jumping between closed and open states." src="../source/figures/generated/fig_11_patch_clamp_trace.svg"/></p>
 <p><em>Single channels open all-or-none, but the timing of openings is random.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A conceptual patch-clamp setup paired with a square-step current trace.</p>
@@ -2964,20 +3144,20 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Conceptual redraw based on standard patch-clamp and single-channel recording teaching diagrams.</p>
 </blockquote>
 <h3 id="reality-figure-b-noise-to-timing-jitter">Reality Figure B: Noise To Timing Jitter</h3>
-<p><img alt="Voltage traces and spike-timing summaries comparing low-, medium-, and high-noise conditions." src="../source/figures/generated/fig_12_noise_to_jitter_panel.svg"/></p>
+<p class="figure-image"><img alt="Voltage traces and spike-timing summaries comparing low-, medium-, and high-noise conditions." src="../source/figures/generated/fig_12_noise_to_jitter_panel.svg"/></p>
 <p><em>Small fluctuations can shift threshold crossing time. Near threshold, noise changes spike timing even when the average input is similar.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A model-data panel that links voltage fluctuations, spike timing, ISIs, and CV.</p>
 <p><strong>What this figure is not:</strong> It is not proof that every biological variability source is channel noise.</p>
 <p><strong>Source note:</strong> Generated locally from a simple threshold/noise modeling workflow compatible with the capstone arc.</p>
 </blockquote>
-<p><img alt="State diagram from closed states to conducting state." src="../source/figures/generated/k_channel_states.svg"/></p>
-<p><img alt="Channel state diagram showing transitions between closed and open states." src="../figures/channel_state_diagram.svg"/></p>
+<p class="figure-image"><img alt="State diagram from closed states to conducting state." src="../source/figures/generated/k_channel_states.svg"/></p>
+<p class="figure-image"><img alt="Channel state diagram showing transitions between closed and open states." src="../figures/channel_state_diagram.svg"/></p>
 <p><em>A channel-state diagram is a compact map of possible closed and open states.</em></p>
 <p><em>A simplified K+ channel state diagram prepares the student for stochastic channel models.</em></p>
-<p><img alt="Histograms comparing open fraction spread for different channel counts." src="../source/figures/generated/channel_noise_scaling.svg"/></p>
+<p class="figure-image"><img alt="Histograms comparing open fraction spread for different channel counts." src="../source/figures/generated/channel_noise_scaling.svg"/></p>
 <p><em>Bigger channel populations have smaller relative fluctuations.</em></p>
-<p><img alt="Voltage traces and ISI histograms for low and high noise." src="../source/figures/generated/lif_noise.svg"/></p>
+<p class="figure-image"><img alt="Voltage traces and ISI histograms for low and high noise." src="../source/figures/generated/lif_noise.svg"/></p>
 <p><em>A noisy threshold model shows how noise can change ISI variability.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -3123,7 +3303,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="chapter-8-capstone-project-and-final-presentation"></a></p>
-<h1 id="week-h-chapter-8-evidence-explanation-and-communication">Week H / Chapter 8. Evidence, Explanation, and Communication</h1>
+<h1 class="chapter-heading" id="week-h-chapter-8-evidence-explanation-and-communication">Week H / Chapter 8. Evidence, Explanation, and Communication</h1>
 <h2 id="opening-question_7">Opening Question</h2>
 <p>Can the student make one evidence-based claim about noise and spike timing?</p>
 <h2 id="learning-goals_7">Learning Goals</h2>
@@ -3290,7 +3470,7 @@ micro = one millionth = 10^-6
 <h2 id="visual-opener_7">Visual Opener</h2>
 <p>The project dashboard combines raw traces, spike times, ISIs, and one clean comparison graph. The audience should be able to see the evidence before hearing the conclusion.</p>
 <h3 id="concept-figure-a-project-workflow">Concept Figure A: Project Workflow</h3>
-<p><img alt="Flowchart of question, model, data, graph, claim, limitation." src="../source/figures/generated/project_workflow.svg"/></p>
+<p class="figure-image"><img alt="Flowchart of question, model, data, graph, claim, limitation." src="../source/figures/generated/project_workflow.svg"/></p>
 <p><em>Capstone workflow from question to conclusion.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A planning map for turning a question into an evidence-based claim.</p>
@@ -3298,18 +3478,18 @@ micro = one millionth = 10^-6
 <p><strong>Source note:</strong> Original generated course workflow figure.</p>
 </blockquote>
 <h3 id="reality-figure-b-noise-to-jitter-evidence-panel">Reality Figure B: Noise-To-Jitter Evidence Panel</h3>
-<p><img alt="Voltage traces and spike-timing summaries comparing low-, medium-, and high-noise conditions." src="../source/figures/generated/fig_12_noise_to_jitter_panel.svg"/></p>
+<p class="figure-image"><img alt="Voltage traces and spike-timing summaries comparing low-, medium-, and high-noise conditions." src="../source/figures/generated/fig_12_noise_to_jitter_panel.svg"/></p>
 <p><em>Example project dashboard with traces and summary graph.</em></p>
 <blockquote>
 <p><strong>What this figure is:</strong> A model-output dashboard that the student can use as a template for the final evidence slide.</p>
 <p><strong>What this figure is not:</strong> It is not a claim by itself; the student must still state what changed, what was measured, and what limitation remains.</p>
 <p><strong>Source note:</strong> Generated locally from synthetic low-, medium-, and high-noise threshold-model outputs.</p>
 </blockquote>
-<p><img alt="Layer V pyramidal cell image." src="../source/figures/generated/layer_v_pyramidal.png"/></p>
+<p class="figure-image"><img alt="Layer V pyramidal cell image." src="../source/figures/generated/layer_v_pyramidal.png"/></p>
 <p><em>Authentic morphology can be compared cautiously in the final extension.</em></p>
-<p><img alt="CA1 pyramidal cells with synapses." src="../source/figures/generated/ca1_pyramidal.png"/></p>
+<p class="figure-image"><img alt="CA1 pyramidal cells with synapses." src="../source/figures/generated/ca1_pyramidal.png"/></p>
 <p><em>Another authentic neuron image for morphology comparison.</em></p>
-<p><img alt="Concept map linking ions, membrane voltage, synapses, action potentials, spike trains, models, noise, and capstone claims." src="../source/figures/generated/concept_map.svg"/></p>
+<p class="figure-image"><img alt="Concept map linking ions, membrane voltage, synapses, action potentials, spike trains, models, noise, and capstone claims." src="../source/figures/generated/concept_map.svg"/></p>
 <p><em>This map shows how the chapter ideas connect.</em></p>
 <blockquote>
 <p><strong>Quick Check: Visual opener</strong><br/>
@@ -3463,7 +3643,7 @@ micro = one millionth = 10^-6
 </table></div>
 <hr/>
 <p><a id="lab-sheet-appendix"></a></p>
-<h1 id="lab-sheets">Lab Sheets</h1>
+<h1 class="" id="lab-sheets">Lab Sheets</h1>
 <p>These labs are designed for a high-school student with no calculus background. Each lab can be done with paper, common classroom materials, or a basic spreadsheet. The goal is to connect a visible action to a neuroscience idea.</p>
 <h2 id="lab-1-coin-flip-channel-noise-activity">Lab 1. Coin-Flip Channel Noise Activity</h2>
 <h3 id="concept">Concept</h3>
@@ -3889,7 +4069,7 @@ micro = one millionth = 10^-6
 <p>These are dry labs and computer activities. They do not use live tissue, chemicals, or human data collection. The goal is conceptual understanding and graph-based explanation.</p>
 <hr/>
 <p><a id="final-project-rubric"></a></p>
-<h1 id="final-project-rubric">Final Project Rubric</h1>
+<h1 class="appendix-heading" id="final-project-rubric">Final Project Rubric</h1>
 <p>Use this rubric for the final Week H presentation in <em>From neuron shape to noisy spike trains</em>. The project should assess scientific explanation, not coding sophistication. A student may use a hand-labeled graph, a spreadsheet, or a Python-generated figure if the evidence is clear and the explanation is accurate.</p>
 <h2 id="required-deliverables">Required Deliverables</h2>
 <ol>
@@ -4041,7 +4221,7 @@ micro = one millionth = 10^-6
 <p>Do not grade the project on fancy coding, advanced math, or the number of figures. A simple project with one accurate graph, one correct metric, and one honest explanation is stronger than a complicated project the student cannot explain.</p>
 <hr/>
 <p><a id="quiz-appendix"></a></p>
-<h1 id="quiz-appendix">Quiz Appendix</h1>
+<h1 class="appendix-heading" id="quiz-appendix">Quiz Appendix</h1>
 <h2 id="chapter-1-quiz-neurons-as-signaling-cells">Chapter 1 Quiz: Neurons as Signaling Cells</h2>
 <ul>
 <li>Estimated time: 12-15 minutes</li>
@@ -4052,39 +4232,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice">Multiple Choice</h3>
 <ol>
 <li>
-<p>Which neuron part usually receives many incoming signals?
-   - A. Axon terminal
-   - B. Dendrite
-   - C. Myelin
-   - D. Node of Ranvier</p>
+<p>Which neuron part usually receives many incoming signals?</p>
+<ul>
+<li>A. Axon terminal</li>
+<li>B. Dendrite</li>
+<li>C. Myelin</li>
+<li>D. Node of Ranvier</li>
+</ul>
 </li>
 <li>
-<p>Which region is often the trigger zone where a spike begins?
-   - A. Axon hillock or initial segment
-   - B. Synaptic cleft
-   - C. Nucleus
-   - D. Axon terminal</p>
+<p>Which region is often the trigger zone where a spike begins?</p>
+<ul>
+<li>A. Axon hillock or initial segment</li>
+<li>B. Synaptic cleft</li>
+<li>C. Nucleus</li>
+<li>D. Axon terminal</li>
+</ul>
 </li>
 <li>
-<p>If V_m changes from -70 mV to -55 mV, what happened?
-   - A. It hyperpolarized by 15 mV
-   - B. It depolarized by 15 mV
-   - C. It depolarized by 125 mV
-   - D. It did not change</p>
+<p>If V_m changes from -70 mV to -55 mV, what happened?</p>
+<ul>
+<li>A. It hyperpolarized by 15 mV</li>
+<li>B. It depolarized by 15 mV</li>
+<li>C. It depolarized by 125 mV</li>
+<li>D. It did not change</li>
+</ul>
 </li>
 <li>
-<p>A simplified neuron cartoon is best used as:
-   - A. proof that every neuron has the same shape
-   - B. a functional map for input, trigger, and output
-   - C. a complete molecular diagram
-   - D. a voltage recording</p>
+<p>A simplified neuron cartoon is best used as:</p>
+<ul>
+<li>A. proof that every neuron has the same shape</li>
+<li>B. a functional map for input, trigger, and output</li>
+<li>C. a complete molecular diagram</li>
+<li>D. a voltage recording</li>
+</ul>
 </li>
 <li>
-<p>Which statement best describes voltage?
-   - A. voltage is a type of ion
-   - B. voltage is a measured difference between two places
-   - C. voltage is the same as a dendrite
-   - D. voltage is a protein in the membrane</p>
+<p>Which statement best describes voltage?</p>
+<ul>
+<li>A. voltage is a type of ion</li>
+<li>B. voltage is a measured difference between two places</li>
+<li>C. voltage is the same as a dendrite</li>
+<li>D. voltage is a protein in the membrane</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer">Short Answer</h3>
@@ -4141,39 +4331,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_1">Multiple Choice</h3>
 <ol>
 <li>
-<p>What is an ion?
-   - A. a cell part that stores DNA
-   - B. an atom or molecule with net electric charge
-   - C. a type of synapse
-   - D. a voltage graph</p>
+<p>What is an ion?</p>
+<ul>
+<li>A. a cell part that stores DNA</li>
+<li>B. an atom or molecule with net electric charge</li>
+<li>C. a type of synapse</li>
+<li>D. a voltage graph</li>
+</ul>
 </li>
 <li>
-<p>If K+ is high inside and low outside, which way does its concentration gradient push it?
-   - A. outward
-   - B. inward
-   - C. nowhere
-   - D. only through the nucleus</p>
+<p>If K+ is high inside and low outside, which way does its concentration gradient push it?</p>
+<ul>
+<li>A. outward</li>
+<li>B. inward</li>
+<li>C. nowhere</li>
+<li>D. only through the nucleus</li>
+</ul>
 </li>
 <li>
-<p>Selective permeability means:
-   - A. all substances cross the membrane equally
-   - B. no ions can cross the membrane
-   - C. some ions cross more easily than others
-   - D. the membrane has no proteins</p>
+<p>Selective permeability means:</p>
+<ul>
+<li>A. all substances cross the membrane equally</li>
+<li>B. no ions can cross the membrane</li>
+<li>C. some ions cross more easily than others</li>
+<li>D. the membrane has no proteins</li>
+</ul>
 </li>
 <li>
-<p>For a +1 ion, if outside/inside is less than 1, the simple Nernst sign is usually:
-   - A. positive
-   - B. negative
-   - C. always zero
-   - D. unrelated to concentration</p>
+<p>For a +1 ion, if outside/inside is less than 1, the simple Nernst sign is usually:</p>
+<ul>
+<li>A. positive</li>
+<li>B. negative</li>
+<li>C. always zero</li>
+<li>D. unrelated to concentration</li>
+</ul>
 </li>
 <li>
-<p>Which ion is especially central to the beginner explanation of resting membrane potential?
-   - A. K+
-   - B. glucose
-   - C. oxygen gas
-   - D. DNA</p>
+<p>Which ion is especially central to the beginner explanation of resting membrane potential?</p>
+<ul>
+<li>A. K+</li>
+<li>B. glucose</li>
+<li>C. oxygen gas</li>
+<li>D. DNA</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_1">Short Answer</h3>
@@ -4230,39 +4430,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_2">Multiple Choice</h3>
 <ol>
 <li>
-<p>An EPSP usually moves V_m:
-   - A. toward threshold
-   - B. away from threshold
-   - C. to exactly 0 mV every time
-   - D. only inside the nucleus</p>
+<p>An EPSP usually moves V_m:</p>
+<ul>
+<li>A. toward threshold</li>
+<li>B. away from threshold</li>
+<li>C. to exactly 0 mV every time</li>
+<li>D. only inside the nucleus</li>
+</ul>
 </li>
 <li>
-<p>An IPSP usually makes spiking:
-   - A. more likely
-   - B. less likely
-   - C. impossible forever
-   - D. unrelated to voltage</p>
+<p>An IPSP usually makes spiking:</p>
+<ul>
+<li>A. more likely</li>
+<li>B. less likely</li>
+<li>C. impossible forever</li>
+<li>D. unrelated to voltage</li>
+</ul>
 </li>
 <li>
-<p>Temporal summation means inputs combine:
-   - A. across different times
-   - B. only across different species
-   - C. only inside the axon terminal
-   - D. without changing V_m</p>
+<p>Temporal summation means inputs combine:</p>
+<ul>
+<li>A. across different times</li>
+<li>B. only across different species</li>
+<li>C. only inside the axon terminal</li>
+<li>D. without changing V_m</li>
+</ul>
 </li>
 <li>
-<p>Spatial summation means inputs combine:
-   - A. from different synaptic locations
-   - B. only after a spike reaches the terminal
-   - C. only in a voltage clamp
-   - D. only if all inputs are inhibitory</p>
+<p>Spatial summation means inputs combine:</p>
+<ul>
+<li>A. from different synaptic locations</li>
+<li>B. only after a spike reaches the terminal</li>
+<li>C. only in a voltage clamp</li>
+<li>D. only if all inputs are inhibitory</li>
+</ul>
 </li>
 <li>
-<p>If threshold is -55 mV and the combined V_m is -60 mV, threshold is:
-   - A. crossed
-   - B. not crossed
-   - C. impossible to determine because -60 is positive
-   - D. exactly reached</p>
+<p>If threshold is -55 mV and the combined V_m is -60 mV, threshold is:</p>
+<ul>
+<li>A. crossed</li>
+<li>B. not crossed</li>
+<li>C. impossible to determine because -60 is positive</li>
+<li>D. exactly reached</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_2">Short Answer</h3>
@@ -4319,39 +4529,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_3">Multiple Choice</h3>
 <ol>
 <li>
-<p>The rapid rising phase of an action potential is mainly associated with:
-   - A. Na+ entry
-   - B. DNA leaving the cell
-   - C. glucose diffusion
-   - D. myelin dissolving</p>
+<p>The rapid rising phase of an action potential is mainly associated with:</p>
+<ul>
+<li>A. Na+ entry</li>
+<li>B. DNA leaving the cell</li>
+<li>C. glucose diffusion</li>
+<li>D. myelin dissolving</li>
+</ul>
 </li>
 <li>
-<p>Repolarization is the phase when V_m:
-   - A. moves back down toward negative values
-   - B. stays exactly at +30 mV
-   - C. becomes a dendrite
-   - D. stops being voltage</p>
+<p>Repolarization is the phase when V_m:</p>
+<ul>
+<li>A. moves back down toward negative values</li>
+<li>B. stays exactly at +30 mV</li>
+<li>C. becomes a dendrite</li>
+<li>D. stops being voltage</li>
+</ul>
 </li>
 <li>
-<p>The refractory period is important because it:
-   - A. makes firing again immediately harder
-   - B. permanently stops the neuron
-   - C. removes all ions
-   - D. makes spikes taller each time</p>
+<p>The refractory period is important because it:</p>
+<ul>
+<li>A. makes firing again immediately harder</li>
+<li>B. permanently stops the neuron</li>
+<li>C. removes all ions</li>
+<li>D. makes spikes taller each time</li>
+</ul>
 </li>
 <li>
-<p>Myelin helps action potentials travel by:
-   - A. reducing signal loss along wrapped axon regions
-   - B. replacing the axon
-   - C. storing neurotransmitter
-   - D. eliminating nodes of Ranvier</p>
+<p>Myelin helps action potentials travel by:</p>
+<ul>
+<li>A. reducing signal loss along wrapped axon regions</li>
+<li>B. replacing the axon</li>
+<li>C. storing neurotransmitter</li>
+<li>D. eliminating nodes of Ranvier</li>
+</ul>
 </li>
 <li>
-<p>If threshold crossing is at 2 ms and return near rest is at 6 ms, the approximate spike duration is:
-   - A. 2 ms
-   - B. 4 ms
-   - C. 6 ms
-   - D. 8 ms</p>
+<p>If threshold crossing is at 2 ms and return near rest is at 6 ms, the approximate spike duration is:</p>
+<ul>
+<li>A. 2 ms</li>
+<li>B. 4 ms</li>
+<li>C. 6 ms</li>
+<li>D. 8 ms</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_3">Short Answer</h3>
@@ -4408,39 +4628,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_4">Multiple Choice</h3>
 <ol>
 <li>
-<p>A spike train is:
-   - A. a sequence of spike times
-   - B. a type of neuron membrane
-   - C. a single ion channel
-   - D. a voltage unit</p>
+<p>A spike train is:</p>
+<ul>
+<li>A. a sequence of spike times</li>
+<li>B. a type of neuron membrane</li>
+<li>C. a single ion channel</li>
+<li>D. a voltage unit</li>
+</ul>
 </li>
 <li>
-<p>A raster plot usually shows spikes as:
-   - A. tick marks over time
-   - B. cell nuclei
-   - C. concentration bars
-   - D. equations only</p>
+<p>A raster plot usually shows spikes as:</p>
+<ul>
+<li>A. tick marks over time</li>
+<li>B. cell nuclei</li>
+<li>C. concentration bars</li>
+<li>D. equations only</li>
+</ul>
 </li>
 <li>
-<p>A neuron fires 10 spikes in 2 s. Its firing rate is:
-   - A. 2 Hz
-   - B. 5 Hz
-   - C. 10 Hz
-   - D. 20 Hz</p>
+<p>A neuron fires 10 spikes in 2 s. Its firing rate is:</p>
+<ul>
+<li>A. 2 Hz</li>
+<li>B. 5 Hz</li>
+<li>C. 10 Hz</li>
+<li>D. 20 Hz</li>
+</ul>
 </li>
 <li>
-<p>ISI means:
-   - A. interspike interval
-   - B. inside sodium index
-   - C. ion storage input
-   - D. initial segment image</p>
+<p>ISI means:</p>
+<ul>
+<li>A. interspike interval</li>
+<li>B. inside sodium index</li>
+<li>C. ion storage input</li>
+<li>D. initial segment image</li>
+</ul>
 </li>
 <li>
-<p>Two spike trains can have the same firing rate but different:
-   - A. timing patterns
-   - B. number of seconds in a minute
-   - C. meaning of Hz
-   - D. definition of mV</p>
+<p>Two spike trains can have the same firing rate but different:</p>
+<ul>
+<li>A. timing patterns</li>
+<li>B. number of seconds in a minute</li>
+<li>C. meaning of Hz</li>
+<li>D. definition of mV</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_4">Short Answer</h3>
@@ -4497,39 +4727,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_5">Multiple Choice</h3>
 <ol>
 <li>
-<p>In HH-style notation, V_m means:
-   - A. membrane potential
-   - B. motor velocity
-   - C. molecular volume
-   - D. myelin voltage only</p>
+<p>In HH-style notation, V_m means:</p>
+<ul>
+<li>A. membrane potential</li>
+<li>B. motor velocity</li>
+<li>C. molecular volume</li>
+<li>D. myelin voltage only</li>
+</ul>
 </li>
 <li>
-<p>Conductance describes:
-   - A. how easily current can flow through a pathway
-   - B. how many dendrites a neuron has
-   - C. the color of a graph
-   - D. the number of chromosomes</p>
+<p>Conductance describes:</p>
+<ul>
+<li>A. how easily current can flow through a pathway</li>
+<li>B. how many dendrites a neuron has</li>
+<li>C. the color of a graph</li>
+<li>D. the number of chromosomes</li>
+</ul>
 </li>
 <li>
-<p>E_K is:
-   - A. potassium reversal potential
-   - B. calcium concentration
-   - C. axon length
-   - D. firing rate</p>
+<p>E_K is:</p>
+<ul>
+<li>A. potassium reversal potential</li>
+<li>B. calcium concentration</li>
+<li>C. axon length</li>
+<li>D. firing rate</li>
+</ul>
 </li>
 <li>
-<p>If V_m equals E for a pathway, the simplified driving force V_m - E is:
-   - A. 0 mV
-   - B. 10 mV
-   - C. always positive
-   - D. always negative</p>
+<p>If V_m equals E for a pathway, the simplified driving force V_m - E is:</p>
+<ul>
+<li>A. 0 mV</li>
+<li>B. 10 mV</li>
+<li>C. always positive</li>
+<li>D. always negative</li>
+</ul>
 </li>
 <li>
-<p>Voltage clamp controls:
-   - A. voltage
-   - B. neuron shape
-   - C. DNA sequence
-   - D. synapse number only</p>
+<p>Voltage clamp controls:</p>
+<ul>
+<li>A. voltage</li>
+<li>B. neuron shape</li>
+<li>C. DNA sequence</li>
+<li>D. synapse number only</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_5">Short Answer</h3>
@@ -4586,39 +4826,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_6">Multiple Choice</h3>
 <ol>
 <li>
-<p>Stochastic gating means channel opening and closing:
-   - A. has probabilistic timing
-   - B. has no biological cause
-   - C. is controlled by the nucleus only
-   - D. never changes</p>
+<p>Stochastic gating means channel opening and closing:</p>
+<ul>
+<li>A. has probabilistic timing</li>
+<li>B. has no biological cause</li>
+<li>C. is controlled by the nucleus only</li>
+<li>D. never changes</li>
+</ul>
 </li>
 <li>
-<p>In a simple single-channel current trace, an open channel often appears as:
-   - A. a step away from the closed current level
-   - B. a drawing of a dendrite
-   - C. a concentration bar
-   - D. a flat line with no current change</p>
+<p>In a simple single-channel current trace, an open channel often appears as:</p>
+<ul>
+<li>A. a step away from the closed current level</li>
+<li>B. a drawing of a dendrite</li>
+<li>C. a concentration bar</li>
+<li>D. a flat line with no current change</li>
+</ul>
 </li>
 <li>
-<p>Open fraction equals:
-   - A. time open divided by total time
-   - B. total time divided by mV
-   - C. firing rate divided by voltage
-   - D. spike height divided by axon length</p>
+<p>Open fraction equals:</p>
+<ul>
+<li>A. time open divided by total time</li>
+<li>B. total time divided by mV</li>
+<li>C. firing rate divided by voltage</li>
+<li>D. spike height divided by axon length</li>
+</ul>
 </li>
 <li>
-<p>CV equals:
-   - A. standard deviation divided by mean
-   - B. mean divided by voltage
-   - C. calcium divided by sodium
-   - D. current divided by charge</p>
+<p>CV equals:</p>
+<ul>
+<li>A. standard deviation divided by mean</li>
+<li>B. mean divided by voltage</li>
+<li>C. calcium divided by sodium</li>
+<li>D. current divided by charge</li>
+</ul>
 </li>
 <li>
-<p>More spread in spike times across repeated trials means more:
-   - A. jitter
-   - B. myelin
-   - C. sodium concentration outside
-   - D. dendrite branching</p>
+<p>More spread in spike times across repeated trials means more:</p>
+<ul>
+<li>A. jitter</li>
+<li>B. myelin</li>
+<li>C. sodium concentration outside</li>
+<li>D. dendrite branching</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_6">Short Answer</h3>
@@ -4675,39 +4925,49 @@ micro = one millionth = 10^-6
 <h3 id="multiple-choice_7">Multiple Choice</h3>
 <ol>
 <li>
-<p>A scientific claim should be:
-   - A. a statement that can be supported or challenged with evidence
-   - B. a graph with no explanation
-   - C. a list of all code lines
-   - D. a sentence with no limits</p>
+<p>A scientific claim should be:</p>
+<ul>
+<li>A. a statement that can be supported or challenged with evidence</li>
+<li>B. a graph with no explanation</li>
+<li>C. a list of all code lines</li>
+<li>D. a sentence with no limits</li>
+</ul>
 </li>
 <li>
-<p>Evidence in this project could be:
-   - A. a labeled graph and timing calculation
-   - B. only a decorative image
-   - C. an unlabeled axis
-   - D. a guess without data</p>
+<p>Evidence in this project could be:</p>
+<ul>
+<li>A. a labeled graph and timing calculation</li>
+<li>B. only a decorative image</li>
+<li>C. an unlabeled axis</li>
+<li>D. a guess without data</li>
+</ul>
 </li>
 <li>
-<p>CV is useful because it:
-   - A. summarizes relative timing variability
-   - B. proves a model is a real neuron
-   - C. replaces all graph labels
-   - D. measures dendrite length</p>
+<p>CV is useful because it:</p>
+<ul>
+<li>A. summarizes relative timing variability</li>
+<li>B. proves a model is a real neuron</li>
+<li>C. replaces all graph labels</li>
+<li>D. measures dendrite length</li>
+</ul>
 </li>
 <li>
-<p>A limitation should:
-   - A. state what the model or evidence does not prove
-   - B. hide uncertainty
-   - C. remove all calculations
-   - D. make the graph unreadable</p>
+<p>A limitation should:</p>
+<ul>
+<li>A. state what the model or evidence does not prove</li>
+<li>B. hide uncertainty</li>
+<li>C. remove all calculations</li>
+<li>D. make the graph unreadable</li>
+</ul>
 </li>
 <li>
-<p>Model output is:
-   - A. produced by a simulation or mathematical model
-   - B. always direct biological evidence
-   - C. the same as a patch-clamp recording
-   - D. never useful</p>
+<p>Model output is:</p>
+<ul>
+<li>A. produced by a simulation or mathematical model</li>
+<li>B. always direct biological evidence</li>
+<li>C. the same as a patch-clamp recording</li>
+<li>D. never useful</li>
+</ul>
 </li>
 </ol>
 <h3 id="short-answer_7">Short Answer</h3>
@@ -4756,7 +5016,7 @@ micro = one millionth = 10^-6
 </ol>
 <hr/>
 <p><a id="exercise-appendix"></a></p>
-<h1 id="exercise-appendix">Exercise Appendix</h1>
+<h1 class="appendix-heading" id="exercise-appendix">Exercise Appendix</h1>
 <h2 id="chapter-1-exercises-neurons-as-signaling-cells">Chapter 1 Exercises: Neurons as Signaling Cells</h2>
 <h3 id="vocabulary">Vocabulary</h3>
 <ol>
@@ -4959,7 +5219,7 @@ micro = one millionth = 10^-6
 </ol>
 <hr/>
 <p><a id="solution-appendix"></a></p>
-<h1 id="solution-appendix">Solution Appendix</h1>
+<h1 class="appendix-heading" id="solution-appendix">Solution Appendix</h1>
 <h2 id="chapter-1-solutions-neurons-as-signaling-cells">Chapter 1 Solutions: Neurons as Signaling Cells</h2>
 <h3 id="vocabulary_8">Vocabulary</h3>
 <ol>
@@ -5434,7 +5694,7 @@ micro = one millionth = 10^-6
 </ol>
 <hr/>
 <p><a id="cumulative-glossary"></a></p>
-<h1 id="cumulative-glossary">Cumulative Glossary</h1>
+<h1 class="appendix-heading" id="cumulative-glossary">Cumulative Glossary</h1>
 <p>This glossary covers the technical vocabulary used across Chapters 1-8 of <em>From neuron shape to noisy spike trains</em>. It is written for a high-school reader, but each entry also includes a more formal definition for mentor use.</p>
 <p><a id="action-potential"></a></p>
 <h3 id="action-potential">Action potential</h3>
@@ -6358,7 +6618,7 @@ micro = one millionth = 10^-6
 </ul>
 <hr/>
 <p><a id="references-and-source-notes"></a></p>
-<h1 id="resource-catalog">Resource Catalog</h1>
+<h1 class="" id="resource-catalog">Resource Catalog</h1>
 <p>This catalog prioritizes resources that are official, widely used, or both. When reuse terms are resource-specific or not obvious from a stable landing page, the catalog says so instead of guessing. For this minibook, the safest default is to link to external resources, use locally generated teaching figures, and avoid redistributing third-party assets unless the license is clear.</p>
 <div class="table-wrap"><table>
 <thead>

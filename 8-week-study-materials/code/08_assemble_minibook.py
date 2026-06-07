@@ -104,6 +104,17 @@ def demote_headings(text: str, levels: int) -> str:
     return HEADING_PATTERN.sub(repl, text)
 
 
+def normalize_nested_choice_lists(text: str) -> str:
+    """Indent multiple-choice options enough for Python-Markdown nested lists."""
+    fixed_lines: list[str] = []
+    for line in text.splitlines():
+        if re.match(r"^ {3}- [A-D]\.", line):
+            fixed_lines.append(" " + line)
+        else:
+            fixed_lines.append(line)
+    return "\n".join(fixed_lines) + "\n"
+
+
 def clean_glossary_for_book(text: str) -> str:
     """Remove editor-facing link-plan directions from the student export."""
     lines = text.splitlines()
@@ -222,7 +233,7 @@ def build_quiz_appendix(target_dir: Path) -> str:
     for idx in range(1, 9):
         quiz = read_text(ROOT / "quizzes" / f"ch{idx:02d}_quiz.md")
         key = read_text(ROOT / "quizzes" / f"ch{idx:02d}_quiz_key.md")
-        chunks.append(demote_headings(quiz, 1))
+        chunks.append(normalize_nested_choice_lists(demote_headings(quiz, 1)))
         chunks.append("\n")
         chunks.append(demote_headings(key, 2))
         chunks.append("\n")
@@ -345,6 +356,38 @@ def render_html(markdown_text: str) -> str:
     for table in list(soup.find_all("table")):
         wrapper = soup.new_tag("div", attrs={"class": "table-wrap"})
         table.wrap(wrapper)
+    for paragraph in soup.find_all("p"):
+        if paragraph.find("img", recursive=False):
+            paragraph["class"] = (paragraph.get("class", []) + ["figure-image"])
+
+    h1s = soup.find_all("h1")
+    if h1s:
+        h1s[0]["class"] = (h1s[0].get("class", []) + ["book-title-heading"])
+        next_node = h1s[0].find_next_sibling()
+        if next_node and getattr(next_node, "name", None) == "hr":
+            next_node["class"] = (next_node.get("class", []) + ["book-title-rule"])
+
+    appendix_titles = {
+        "Lab Sheet Appendix",
+        "Final Project Rubric",
+        "Quiz Appendix",
+        "Exercise Appendix",
+        "Solution Appendix",
+        "Cumulative Glossary",
+        "References and Source Notes",
+    }
+    for heading in h1s:
+        text = heading.get_text(" ", strip=True)
+        classes = heading.get("class", [])
+        if text == "Table of Contents":
+            classes.append("toc-heading")
+        elif text == "Course Overview" or text.startswith("Front Appendix"):
+            classes.append("front-heading")
+        elif text.startswith("Week ") or text.startswith("Chapter "):
+            classes.append("chapter-heading")
+        elif text in appendix_titles:
+            classes.append("appendix-heading")
+        heading["class"] = classes
 
     css = """
     :root {
@@ -439,6 +482,7 @@ def render_html(markdown_text: str) -> str:
     th { background: var(--soft); text-align: left; }
     hr { border: 0; border-top: 1px solid var(--line); margin: 2.3rem 0; }
     ul, ol { padding-left: 1.35rem; }
+    .book-cover { display: none; }
     @media (max-width: 720px) {
       body { background: white; font-size: 16px; }
       main { padding: 22px 18px 44px; box-shadow: none; }
@@ -447,23 +491,202 @@ def render_html(markdown_text: str) -> str:
       table { min-width: 560px; }
     }
     @media print {
-      @page { size: Letter; margin: 0.6in; }
+      @page {
+        size: Letter;
+        margin: 0.72in 0.68in 0.78in;
+        @bottom-center {
+          content: counter(page);
+          color: #64748b;
+          font-size: 9pt;
+        }
+      }
+      @page:first {
+        @bottom-center { content: ""; }
+      }
       html, body { background: white; }
-      body { font-size: 11pt; line-height: 1.48; }
+      body {
+        color: #111827;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 10.8pt;
+        line-height: 1.48;
+      }
       main { width: 100%; padding: 0; box-shadow: none; }
-      h1 { page-break-before: always; font-size: 20pt; }
-      main > h1:first-child { page-break-before: avoid; }
-      h2 { font-size: 15pt; }
-      h3 { font-size: 12.5pt; }
+      .book-cover {
+        display: flex;
+        min-height: 9.15in;
+        flex-direction: column;
+        justify-content: center;
+        page-break-after: always;
+        break-after: page;
+      }
+      .cover-kicker {
+        color: #0f766e;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 11pt;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .book-cover h1 {
+        max-width: 8.5in;
+        margin: 0.25in 0 0.18in;
+        padding: 0;
+        border: 0;
+        color: #0f172a;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34pt;
+        line-height: 1.08;
+      }
+      .cover-subtitle {
+        max-width: 6.4in;
+        color: #334155;
+        font-size: 14pt;
+        line-height: 1.45;
+      }
+      .cover-line {
+        width: 2.2in;
+        height: 2pt;
+        margin: 0.35in 0;
+        background: #0f766e;
+      }
+      .cover-meta {
+        color: #475569;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 10.5pt;
+      }
+      .book-title-heading,
+      .book-title-rule {
+        display: none;
+      }
+      h1, h2, h3, h4 {
+        color: #0f172a;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+      h1 {
+        margin: 0 0 0.2in;
+        padding: 0 0 0.08in;
+        border-bottom: 1.5pt solid #0f766e;
+        font-size: 21pt;
+        line-height: 1.16;
+      }
+      .front-heading,
+      .chapter-heading,
+      .appendix-heading {
+        page-break-before: always;
+        break-before: page;
+      }
+      .toc-heading {
+        page-break-before: avoid;
+        break-before: avoid;
+      }
+      h2 {
+        margin-top: 0.22in;
+        font-size: 14.5pt;
+      }
+      h3 {
+        margin-top: 0.16in;
+        font-size: 12.2pt;
+      }
+      h4 {
+        margin-top: 0.12in;
+        font-size: 10.8pt;
+      }
+      p, li {
+        max-width: none;
+        orphans: 3;
+        widows: 3;
+      }
+      p {
+        margin: 0 0 0.08in;
+      }
+      ul, ol {
+        margin-top: 0.04in;
+        margin-bottom: 0.12in;
+      }
+      li > p:first-child {
+        margin-bottom: 0.03in;
+      }
+      li > ul,
+      li > ol {
+        margin-top: 0.02in;
+        margin-bottom: 0.08in;
+      }
+      ol > li,
+      ul > li {
+        margin-bottom: 0.035in;
+      }
       a { color: black; text-decoration: none; }
-      img { max-height: 7in; page-break-inside: avoid; }
-      .table-wrap, table, blockquote, pre { page-break-inside: avoid; }
-      .table-wrap { overflow: visible; border: 1px solid #bbb; }
-      table { min-width: 0; font-size: 8.7pt; }
-      th, td { padding: 0.25rem 0.35rem; }
-      hr { page-break-after: auto; }
+      img {
+        max-width: 100%;
+        max-height: 6.45in;
+        margin: 0.12in auto 0.1in;
+        border: 0.75pt solid #cbd5e1;
+        border-radius: 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .figure-image {
+        margin: 0.08in 0 0.05in;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      blockquote {
+        margin: 0.12in 0;
+        padding: 0.11in 0.14in;
+        background: #f0fdfa;
+        border-left: 3pt solid #0f766e;
+        border-radius: 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      pre {
+        white-space: pre-wrap;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .table-wrap {
+        overflow: visible;
+        margin: 0.1in 0 0.16in;
+        border: 0.75pt solid #cbd5e1;
+        border-radius: 0;
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+      table {
+        min-width: 0;
+        font-size: 8.8pt;
+        line-height: 1.28;
+        page-break-inside: auto;
+        break-inside: auto;
+      }
+      thead {
+        display: table-header-group;
+      }
+      tr {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      th, td {
+        padding: 0.055in 0.07in;
+      }
+      hr {
+        margin: 0.2in 0;
+        page-break-after: auto;
+        break-after: auto;
+      }
     }
     """
+    cover = """
+<section class="book-cover" aria-label="Book cover">
+  <div class="cover-kicker">NeuroNauts Summer Study Materials</div>
+  <h1>From Neuron Shape to Noisy Spike Trains</h1>
+  <p class="cover-subtitle">An eight-week neuroscience study guide with chapters, figures, worked examples, labs, quizzes, code, and a final presentation project.</p>
+  <div class="cover-line" aria-hidden="true"></div>
+  <p class="cover-meta">Designed for a high-school student learning neuron biophysics from the beginning.</p>
+</section>
+"""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -473,6 +696,7 @@ def render_html(markdown_text: str) -> str:
   <style>{css}</style>
 </head>
 <body>
+{cover}
 <main>
 {soup}
 </main>

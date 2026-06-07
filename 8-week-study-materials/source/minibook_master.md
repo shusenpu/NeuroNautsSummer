@@ -2746,34 +2746,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. Which neuron part usually receives many incoming signals?
-   - A. Axon terminal
-   - B. Dendrite
-   - C. Myelin
-   - D. Node of Ranvier
+    - A. Axon terminal
+    - B. Dendrite
+    - C. Myelin
+    - D. Node of Ranvier
 
 2. Which region is often the trigger zone where a spike begins?
-   - A. Axon hillock or initial segment
-   - B. Synaptic cleft
-   - C. Nucleus
-   - D. Axon terminal
+    - A. Axon hillock or initial segment
+    - B. Synaptic cleft
+    - C. Nucleus
+    - D. Axon terminal
 
 3. If V_m changes from -70 mV to -55 mV, what happened?
-   - A. It hyperpolarized by 15 mV
-   - B. It depolarized by 15 mV
-   - C. It depolarized by 125 mV
-   - D. It did not change
+    - A. It hyperpolarized by 15 mV
+    - B. It depolarized by 15 mV
+    - C. It depolarized by 125 mV
+    - D. It did not change
 
 4. A simplified neuron cartoon is best used as:
-   - A. proof that every neuron has the same shape
-   - B. a functional map for input, trigger, and output
-   - C. a complete molecular diagram
-   - D. a voltage recording
+    - A. proof that every neuron has the same shape
+    - B. a functional map for input, trigger, and output
+    - C. a complete molecular diagram
+    - D. a voltage recording
 
 5. Which statement best describes voltage?
-   - A. voltage is a type of ion
-   - B. voltage is a measured difference between two places
-   - C. voltage is the same as a dendrite
-   - D. voltage is a protein in the membrane
+    - A. voltage is a type of ion
+    - B. voltage is a measured difference between two places
+    - C. voltage is the same as a dendrite
+    - D. voltage is a protein in the membrane
 
 ### Short Answer
 
@@ -2829,34 +2829,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. What is an ion?
-   - A. a cell part that stores DNA
-   - B. an atom or molecule with net electric charge
-   - C. a type of synapse
-   - D. a voltage graph
+    - A. a cell part that stores DNA
+    - B. an atom or molecule with net electric charge
+    - C. a type of synapse
+    - D. a voltage graph
 
 2. If K+ is high inside and low outside, which way does its concentration gradient push it?
-   - A. outward
-   - B. inward
-   - C. nowhere
-   - D. only through the nucleus
+    - A. outward
+    - B. inward
+    - C. nowhere
+    - D. only through the nucleus
 
 3. Selective permeability means:
-   - A. all substances cross the membrane equally
-   - B. no ions can cross the membrane
-   - C. some ions cross more easily than others
-   - D. the membrane has no proteins
+    - A. all substances cross the membrane equally
+    - B. no ions can cross the membrane
+    - C. some ions cross more easily than others
+    - D. the membrane has no proteins
 
 4. For a +1 ion, if outside/inside is less than 1, the simple Nernst sign is usually:
-   - A. positive
-   - B. negative
-   - C. always zero
-   - D. unrelated to concentration
+    - A. positive
+    - B. negative
+    - C. always zero
+    - D. unrelated to concentration
 
 5. Which ion is especially central to the beginner explanation of resting membrane potential?
-   - A. K+
-   - B. glucose
-   - C. oxygen gas
-   - D. DNA
+    - A. K+
+    - B. glucose
+    - C. oxygen gas
+    - D. DNA
 
 ### Short Answer
 
@@ -2912,34 +2912,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. An EPSP usually moves V_m:
-   - A. toward threshold
-   - B. away from threshold
-   - C. to exactly 0 mV every time
-   - D. only inside the nucleus
+    - A. toward threshold
+    - B. away from threshold
+    - C. to exactly 0 mV every time
+    - D. only inside the nucleus
 
 2. An IPSP usually makes spiking:
-   - A. more likely
-   - B. less likely
-   - C. impossible forever
-   - D. unrelated to voltage
+    - A. more likely
+    - B. less likely
+    - C. impossible forever
+    - D. unrelated to voltage
 
 3. Temporal summation means inputs combine:
-   - A. across different times
-   - B. only across different species
-   - C. only inside the axon terminal
-   - D. without changing V_m
+    - A. across different times
+    - B. only across different species
+    - C. only inside the axon terminal
+    - D. without changing V_m
 
 4. Spatial summation means inputs combine:
-   - A. from different synaptic locations
-   - B. only after a spike reaches the terminal
-   - C. only in a voltage clamp
-   - D. only if all inputs are inhibitory
+    - A. from different synaptic locations
+    - B. only after a spike reaches the terminal
+    - C. only in a voltage clamp
+    - D. only if all inputs are inhibitory
 
 5. If threshold is -55 mV and the combined V_m is -60 mV, threshold is:
-   - A. crossed
-   - B. not crossed
-   - C. impossible to determine because -60 is positive
-   - D. exactly reached
+    - A. crossed
+    - B. not crossed
+    - C. impossible to determine because -60 is positive
+    - D. exactly reached
 
 ### Short Answer
 
@@ -2995,34 +2995,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. The rapid rising phase of an action potential is mainly associated with:
-   - A. Na+ entry
-   - B. DNA leaving the cell
-   - C. glucose diffusion
-   - D. myelin dissolving
+    - A. Na+ entry
+    - B. DNA leaving the cell
+    - C. glucose diffusion
+    - D. myelin dissolving
 
 2. Repolarization is the phase when V_m:
-   - A. moves back down toward negative values
-   - B. stays exactly at +30 mV
-   - C. becomes a dendrite
-   - D. stops being voltage
+    - A. moves back down toward negative values
+    - B. stays exactly at +30 mV
+    - C. becomes a dendrite
+    - D. stops being voltage
 
 3. The refractory period is important because it:
-   - A. makes firing again immediately harder
-   - B. permanently stops the neuron
-   - C. removes all ions
-   - D. makes spikes taller each time
+    - A. makes firing again immediately harder
+    - B. permanently stops the neuron
+    - C. removes all ions
+    - D. makes spikes taller each time
 
 4. Myelin helps action potentials travel by:
-   - A. reducing signal loss along wrapped axon regions
-   - B. replacing the axon
-   - C. storing neurotransmitter
-   - D. eliminating nodes of Ranvier
+    - A. reducing signal loss along wrapped axon regions
+    - B. replacing the axon
+    - C. storing neurotransmitter
+    - D. eliminating nodes of Ranvier
 
 5. If threshold crossing is at 2 ms and return near rest is at 6 ms, the approximate spike duration is:
-   - A. 2 ms
-   - B. 4 ms
-   - C. 6 ms
-   - D. 8 ms
+    - A. 2 ms
+    - B. 4 ms
+    - C. 6 ms
+    - D. 8 ms
 
 ### Short Answer
 
@@ -3078,34 +3078,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. A spike train is:
-   - A. a sequence of spike times
-   - B. a type of neuron membrane
-   - C. a single ion channel
-   - D. a voltage unit
+    - A. a sequence of spike times
+    - B. a type of neuron membrane
+    - C. a single ion channel
+    - D. a voltage unit
 
 2. A raster plot usually shows spikes as:
-   - A. tick marks over time
-   - B. cell nuclei
-   - C. concentration bars
-   - D. equations only
+    - A. tick marks over time
+    - B. cell nuclei
+    - C. concentration bars
+    - D. equations only
 
 3. A neuron fires 10 spikes in 2 s. Its firing rate is:
-   - A. 2 Hz
-   - B. 5 Hz
-   - C. 10 Hz
-   - D. 20 Hz
+    - A. 2 Hz
+    - B. 5 Hz
+    - C. 10 Hz
+    - D. 20 Hz
 
 4. ISI means:
-   - A. interspike interval
-   - B. inside sodium index
-   - C. ion storage input
-   - D. initial segment image
+    - A. interspike interval
+    - B. inside sodium index
+    - C. ion storage input
+    - D. initial segment image
 
 5. Two spike trains can have the same firing rate but different:
-   - A. timing patterns
-   - B. number of seconds in a minute
-   - C. meaning of Hz
-   - D. definition of mV
+    - A. timing patterns
+    - B. number of seconds in a minute
+    - C. meaning of Hz
+    - D. definition of mV
 
 ### Short Answer
 
@@ -3161,34 +3161,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. In HH-style notation, V_m means:
-   - A. membrane potential
-   - B. motor velocity
-   - C. molecular volume
-   - D. myelin voltage only
+    - A. membrane potential
+    - B. motor velocity
+    - C. molecular volume
+    - D. myelin voltage only
 
 2. Conductance describes:
-   - A. how easily current can flow through a pathway
-   - B. how many dendrites a neuron has
-   - C. the color of a graph
-   - D. the number of chromosomes
+    - A. how easily current can flow through a pathway
+    - B. how many dendrites a neuron has
+    - C. the color of a graph
+    - D. the number of chromosomes
 
 3. E_K is:
-   - A. potassium reversal potential
-   - B. calcium concentration
-   - C. axon length
-   - D. firing rate
+    - A. potassium reversal potential
+    - B. calcium concentration
+    - C. axon length
+    - D. firing rate
 
 4. If V_m equals E for a pathway, the simplified driving force V_m - E is:
-   - A. 0 mV
-   - B. 10 mV
-   - C. always positive
-   - D. always negative
+    - A. 0 mV
+    - B. 10 mV
+    - C. always positive
+    - D. always negative
 
 5. Voltage clamp controls:
-   - A. voltage
-   - B. neuron shape
-   - C. DNA sequence
-   - D. synapse number only
+    - A. voltage
+    - B. neuron shape
+    - C. DNA sequence
+    - D. synapse number only
 
 ### Short Answer
 
@@ -3244,34 +3244,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. Stochastic gating means channel opening and closing:
-   - A. has probabilistic timing
-   - B. has no biological cause
-   - C. is controlled by the nucleus only
-   - D. never changes
+    - A. has probabilistic timing
+    - B. has no biological cause
+    - C. is controlled by the nucleus only
+    - D. never changes
 
 2. In a simple single-channel current trace, an open channel often appears as:
-   - A. a step away from the closed current level
-   - B. a drawing of a dendrite
-   - C. a concentration bar
-   - D. a flat line with no current change
+    - A. a step away from the closed current level
+    - B. a drawing of a dendrite
+    - C. a concentration bar
+    - D. a flat line with no current change
 
 3. Open fraction equals:
-   - A. time open divided by total time
-   - B. total time divided by mV
-   - C. firing rate divided by voltage
-   - D. spike height divided by axon length
+    - A. time open divided by total time
+    - B. total time divided by mV
+    - C. firing rate divided by voltage
+    - D. spike height divided by axon length
 
 4. CV equals:
-   - A. standard deviation divided by mean
-   - B. mean divided by voltage
-   - C. calcium divided by sodium
-   - D. current divided by charge
+    - A. standard deviation divided by mean
+    - B. mean divided by voltage
+    - C. calcium divided by sodium
+    - D. current divided by charge
 
 5. More spread in spike times across repeated trials means more:
-   - A. jitter
-   - B. myelin
-   - C. sodium concentration outside
-   - D. dendrite branching
+    - A. jitter
+    - B. myelin
+    - C. sodium concentration outside
+    - D. dendrite branching
 
 ### Short Answer
 
@@ -3327,34 +3327,34 @@ Do not grade the project on fancy coding, advanced math, or the number of figure
 ### Multiple Choice
 
 1. A scientific claim should be:
-   - A. a statement that can be supported or challenged with evidence
-   - B. a graph with no explanation
-   - C. a list of all code lines
-   - D. a sentence with no limits
+    - A. a statement that can be supported or challenged with evidence
+    - B. a graph with no explanation
+    - C. a list of all code lines
+    - D. a sentence with no limits
 
 2. Evidence in this project could be:
-   - A. a labeled graph and timing calculation
-   - B. only a decorative image
-   - C. an unlabeled axis
-   - D. a guess without data
+    - A. a labeled graph and timing calculation
+    - B. only a decorative image
+    - C. an unlabeled axis
+    - D. a guess without data
 
 3. CV is useful because it:
-   - A. summarizes relative timing variability
-   - B. proves a model is a real neuron
-   - C. replaces all graph labels
-   - D. measures dendrite length
+    - A. summarizes relative timing variability
+    - B. proves a model is a real neuron
+    - C. replaces all graph labels
+    - D. measures dendrite length
 
 4. A limitation should:
-   - A. state what the model or evidence does not prove
-   - B. hide uncertainty
-   - C. remove all calculations
-   - D. make the graph unreadable
+    - A. state what the model or evidence does not prove
+    - B. hide uncertainty
+    - C. remove all calculations
+    - D. make the graph unreadable
 
 5. Model output is:
-   - A. produced by a simulation or mathematical model
-   - B. always direct biological evidence
-   - C. the same as a patch-clamp recording
-   - D. never useful
+    - A. produced by a simulation or mathematical model
+    - B. always direct biological evidence
+    - C. the same as a patch-clamp recording
+    - D. never useful
 
 ### Short Answer
 
