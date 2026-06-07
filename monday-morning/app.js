@@ -17,6 +17,7 @@ const STAGE_HEIGHT = 1080;
 let frameIndex = 0;
 let fragmentIndex = 0;
 let controlsTimer = 0;
+let currentStageScale = 1;
 const state = {
   attention: 72,
 };
@@ -114,21 +115,29 @@ function fitStageToViewport() {
   const width = viewport.width || window.innerWidth;
   const height = viewport.height || window.innerHeight;
   const scale = Math.min(width / STAGE_WIDTH, height / STAGE_HEIGHT);
-  document.documentElement.style.setProperty("--stage-scale", String(Math.max(0.01, scale)));
+  const dpr = window.devicePixelRatio || 1;
+  const snapped = (value) => Math.round(value * dpr) / dpr;
+  currentStageScale = Math.max(0.01, scale);
+  const offsetX = snapped(Math.max(0, (width - STAGE_WIDTH * currentStageScale) / 2));
+  const offsetY = snapped(Math.max(0, (height - STAGE_HEIGHT * currentStageScale) / 2));
+  document.documentElement.style.setProperty("--stage-scale", String(currentStageScale));
+  document.documentElement.style.setProperty("--stage-left", `${offsetX / currentStageScale}px`);
+  document.documentElement.style.setProperty("--stage-top", `${offsetY / currentStageScale}px`);
 }
 
 function resizeCanvas(canvas) {
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const dpr = window.devicePixelRatio || 1;
+  const backingScale = Math.min(3, Math.max(1, dpr * currentStageScale));
   const cssWidth = Math.max(1, Math.floor(canvas.clientWidth || canvas.getBoundingClientRect().width));
   const cssHeight = Math.max(1, Math.floor(canvas.clientHeight || canvas.getBoundingClientRect().height));
-  const width = Math.max(1, Math.floor(cssWidth * dpr));
-  const height = Math.max(1, Math.floor(cssHeight * dpr));
+  const width = Math.max(1, Math.floor(cssWidth * backingScale));
+  const height = Math.max(1, Math.floor(cssHeight * backingScale));
   if (canvas.width !== width || canvas.height !== height) {
     canvas.width = width;
     canvas.height = height;
   }
   const ctx = canvas.getContext("2d");
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.setTransform(backingScale, 0, 0, backingScale, 0, 0);
   return { ctx, width: cssWidth, height: cssHeight };
 }
 
