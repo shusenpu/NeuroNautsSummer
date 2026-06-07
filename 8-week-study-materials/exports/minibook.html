@@ -11,7 +11,9 @@
       --muted: #4b5563;
       --line: #d1d5db;
       --soft: #f8fafc;
-      --accent: #0f766e;
+      --accent: #004C97;
+      --accent-2: #007A33;
+      --accent-3: #009CDE;
       --callout: #fff7ed;
     }
     * { box-sizing: border-box; }
@@ -19,7 +21,7 @@
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       color: var(--ink);
-      background: #eef2f7;
+      background: #eef4fa;
       line-height: 1.65;
       font-size: 16px;
     }
@@ -44,7 +46,7 @@
     h2 { font-size: 1.45rem; }
     h3 { font-size: 1.15rem; }
     p, li { max-width: 78ch; }
-    a { color: #0f766e; text-decoration-thickness: 0.08em; }
+    a { color: var(--accent); text-decoration-thickness: 0.08em; }
     img {
       display: block;
       max-width: 100%;
@@ -59,7 +61,7 @@
       margin: 1rem 0;
       padding: 0.85rem 1rem;
       border-left: 4px solid var(--accent);
-      background: #ecfeff;
+      background: #eef7fd;
       border-radius: 0 6px 6px 0;
     }
     code {
@@ -98,8 +100,115 @@
     hr { border: 0; border-top: 1px solid var(--line); margin: 2.3rem 0; }
     ul, ol { padding-left: 1.35rem; }
     .book-cover { display: none; }
+    .brand-hero {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 30px 58px 34px;
+      background: linear-gradient(135deg, #004C97 0%, #06345f 72%);
+      color: white;
+      box-shadow: 0 12px 34px rgba(0, 76, 151, 0.22);
+    }
+    .brand-logos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 122px;
+      margin-bottom: 28px;
+      padding: 9px 20px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 10px;
+    }
+    .brand-logo {
+      display: block;
+      width: auto;
+      max-width: none;
+      height: 70px;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      object-fit: contain;
+    }
+    .brand-logo-mind { height: 104px; max-width: 48%; }
+    .brand-logo-uwf { height: 98px; max-width: 46%; }
+    .brand-kicker {
+      margin: 0 0 0.45rem;
+      color: #bde7ff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      max-width: 13ch;
+      margin: 0 0 0.7rem;
+      padding: 0;
+      border: 0;
+      color: white;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.02;
+    }
+    .brand-subtitle {
+      max-width: 66ch;
+      margin: 0 0 1.15rem;
+      color: #e9f7ff;
+      font-size: 1.08rem;
+      line-height: 1.55;
+    }
+    .brand-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1.1rem;
+    }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+    .book-title-heading,
+    .book-title-rule {
+      display: none;
+    }
+    main {
+      border-top: 6px solid var(--accent-3);
+    }
+    h1 {
+      color: #003B71;
+    }
+    h2, h3, h4 {
+      color: #0b2440;
+    }
+    th {
+      background: #eaf4fb;
+      color: #003B71;
+    }
     @media (max-width: 720px) {
       body { background: white; font-size: 16px; }
+      .brand-hero { padding: 22px 18px 28px; }
+      .brand-logos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        min-height: 0;
+        padding: 14px;
+      }
+      .brand-logo-mind,
+      .brand-logo-uwf {
+        max-width: 100%;
+        height: auto;
+      }
+      .brand-logo-mind { width: min(100%, 360px); }
+      .brand-logo-uwf { width: min(100%, 280px); }
+      .brand-title { max-width: 12ch; }
       main { padding: 22px 18px 44px; box-shadow: none; }
       h1 { font-size: 1.65rem; }
       h2 { font-size: 1.25rem; }
@@ -118,11 +227,52 @@
         line-height: 1.5;
       }
       main { width: 100%; padding: 0; box-shadow: none; }
+      .brand-hero {
+        width: 100%;
+        margin: 0 0 0.25in;
+        padding: 0 0 0.25in;
+        color: #111827;
+        background: white !important;
+        border-bottom: 2pt solid #004C97;
+        box-shadow: none;
+      }
+      .brand-logos {
+        gap: 0.25in;
+        margin-bottom: 0.25in;
+        padding: 0;
+        background: white !important;
+        border: 0;
+      }
+      .brand-logo {
+        max-height: 0.68in;
+      }
+      .brand-title {
+        max-width: none;
+        color: #003B71;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28pt;
+        line-height: 1.06;
+      }
+      .brand-kicker,
+      .brand-subtitle,
+      .brand-pill {
+        color: #111827;
+      }
+      .brand-meta {
+        gap: 6pt;
+      }
+      .brand-pill {
+        border: 0.75pt solid #94a3b8;
+        background: white;
+      }
+      main {
+        border-top: 0;
+      }
       .book-cover {
         display: none !important;
       }
       .cover-kicker {
-        color: #0f766e;
+        color: #004C97;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
         font-size: 11pt;
         font-weight: 700;
@@ -149,7 +299,7 @@
         width: 2.2in;
         height: 2pt;
         margin: 0.35in 0;
-        background: #0f766e;
+        background: #004C97;
       }
       .cover-meta {
         color: #475569;
@@ -165,7 +315,7 @@
       h1 {
         margin: 0.28in 0 0.14in;
         padding: 0 0 0.08in;
-        border-bottom: 1.5pt solid #0f766e;
+        border-bottom: 1.5pt solid #004C97;
         font-size: 21pt;
         line-height: 1.16;
       }
@@ -233,8 +383,8 @@
       blockquote {
         margin: 0.12in 0;
         padding: 0.11in 0.14in;
-        background: #f0fdfa;
-        border-left: 3pt solid #0f766e;
+        background: #eef7fd;
+        border-left: 3pt solid #004C97;
         border-radius: 0;
         page-break-inside: avoid;
         break-inside: avoid;
@@ -279,13 +429,20 @@
 </head>
 <body>
 
-<section class="book-cover" aria-label="Book cover">
-  <div class="cover-kicker">NeuroNauts Summer Study Materials</div>
-  <h1>From Neuron Shape to Noisy Spike Trains</h1>
-  <p class="cover-subtitle">An eight-week neuroscience study guide with chapters, figures, worked examples, labs, quizzes, code, and a final presentation project.</p>
-  <div class="cover-line" aria-hidden="true"></div>
-  <p class="cover-meta">Designed for a high-school student learning neuron biophysics from the beginning.</p>
-</section>
+<header class="brand-hero" aria-label="MIND Lab minibook cover">
+  <div class="brand-logos" aria-label="Lab and university logos">
+    <img class="brand-logo brand-logo-mind" src="../assets/mind-lab-logo.png" alt="MIND Lab logo">
+    <img class="brand-logo brand-logo-uwf" src="../assets/uwf-logo.png" alt="University of West Florida logo">
+  </div>
+  <p class="brand-kicker">MIND Lab NeuroNauts Summer Study Materials</p>
+  <h1 class="brand-title">From Neuron Shape to Noisy Spike Trains</h1>
+  <p class="brand-subtitle">An eight-week, no-calculus neuroscience minibook for learning how neuron structure, ions, synapses, spikes, circuits, and noise fit together.</p>
+  <div class="brand-meta" aria-label="Book details">
+    <span class="brand-pill">Author: Dr. Shusen Pu</span>
+    <span class="brand-pill">MIND Lab</span>
+    <span class="brand-pill">University of West Florida</span>
+  </div>
+</header>
 
 <main>
 <h1 class="book-title-heading" id="from-neuron-shape-to-noisy-spike-trains">From Neuron Shape to Noisy Spike Trains</h1>

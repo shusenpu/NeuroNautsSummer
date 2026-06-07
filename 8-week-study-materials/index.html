@@ -32,6 +32,45 @@
         background: linear-gradient(135deg, #003865, #071927);
       }
 
+      .site-logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 124px;
+        margin-bottom: 30px;
+        padding: 10px 22px;
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 10px;
+      }
+
+      .site-logo {
+        display: block;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        object-fit: contain;
+      }
+
+      .site-logo-mind {
+        height: 106px;
+        max-width: 48%;
+      }
+
+      .site-logo-uwf {
+        height: 98px;
+        max-width: 46%;
+      }
+
+      .kicker {
+        margin: 0 0 10px;
+        color: #bde7ff;
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
       h1,
       h2,
       p {
@@ -51,6 +90,13 @@
         color: rgba(255, 255, 255, 0.86);
         font-size: 20px;
         line-height: 1.4;
+      }
+
+      .author-line {
+        margin-top: 14px;
+        color: white;
+        font-size: 17px;
+        font-weight: 800;
       }
 
       .bars {
@@ -138,12 +184,45 @@
         font-size: 14px;
         line-height: 1.4;
       }
+
+      @media (max-width: 720px) {
+        header {
+          padding: 28px 18px;
+        }
+
+        .site-logos {
+          flex-direction: column;
+          align-items: flex-start;
+          min-height: 0;
+          padding: 14px;
+        }
+
+        .site-logo-mind,
+        .site-logo-uwf {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .site-logo-mind {
+          width: min(100%, 360px);
+        }
+
+        .site-logo-uwf {
+          width: min(100%, 280px);
+        }
+      }
     </style>
   </head>
   <body>
     <header>
+      <div class="site-logos" aria-label="MIND Lab and University of West Florida logos">
+        <img class="site-logo site-logo-mind" src="./assets/mind-lab-logo.png" alt="MIND Lab logo">
+        <img class="site-logo site-logo-uwf" src="./assets/uwf-logo.png" alt="University of West Florida logo">
+      </div>
+      <p class="kicker">MIND Lab NeuroNauts Summer Study Materials</p>
       <h1>From Neuron Shape to Noisy Spike Trains</h1>
       <p>An eight-week high-school study guide for learning neuron biophysics from scratch, with figures, worked examples, labs, quizzes, code, and a final presentation project.</p>
+      <p class="author-line">Author: Dr. Shusen Pu | MIND Lab | University of West Florida</p>
       <div class="bars" aria-hidden="true"><span></span><span></span><span></span></div>
     </header>
 
@@ -152,8 +231,8 @@
         <h2>Start the Minibook</h2>
         <p>Use the HTML version for daily study. It includes the full textbook, appendices, quizzes, exercises, solutions, glossary, and source notes.</p>
         <div class="links">
-          <a class="button" href="./exports/minibook.html?v=20260607-course-update">Open HTML Minibook</a>
-          <a class="button secondary" href="./exports/minibook.pdf?v=20260607-course-update">Download PDF</a>
+          <a class="button" href="./exports/minibook.html?v=20260607-brand-update">Open HTML Minibook</a>
+          <a class="button secondary" href="./exports/minibook.pdf?v=20260607-brand-update">Download PDF</a>
         </div>
       </article>
 
@@ -161,12 +240,12 @@
         <h2>Use the Compiled Minibook</h2>
         <p>Use these links for studying. They open the polished HTML minibook at the matching sections, so the wording, figures, quizzes, exercises, and answer keys match the PDF.</p>
         <div class="links">
-          <a class="button secondary" href="./exports/minibook.html?v=20260607-course-update#chapter-1-neurons-as-signaling-cells">Chapters</a>
-          <a class="button secondary" href="./exports/minibook.html?v=20260607-course-update#exercise-appendix">Exercises</a>
-          <a class="button secondary" href="./exports/minibook.html?v=20260607-course-update#solution-appendix">Answer Keys</a>
-          <a class="button secondary" href="./exports/minibook.html?v=20260607-course-update#quiz-appendix">Quizzes</a>
-          <a class="button secondary" href="./exports/minibook.html?v=20260607-course-update#lab-sheet-appendix">Labs</a>
-          <a class="button secondary" href="./exports/minibook.html?v=20260607-course-update#cumulative-glossary">Glossary</a>
+          <a class="button secondary" href="./exports/minibook.html?v=20260607-brand-update#chapter-1-neurons-as-signaling-cells">Chapters</a>
+          <a class="button secondary" href="./exports/minibook.html?v=20260607-brand-update#exercise-appendix">Exercises</a>
+          <a class="button secondary" href="./exports/minibook.html?v=20260607-brand-update#solution-appendix">Answer Keys</a>
+          <a class="button secondary" href="./exports/minibook.html?v=20260607-brand-update#quiz-appendix">Quizzes</a>
+          <a class="button secondary" href="./exports/minibook.html?v=20260607-brand-update#lab-sheet-appendix">Labs</a>
+          <a class="button secondary" href="./exports/minibook.html?v=20260607-brand-update#cumulative-glossary">Glossary</a>
         </div>
       </article>
     </main>
