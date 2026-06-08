@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brain Code | One-Day 6-Hour Tutorial</title>
+    <link rel="icon" href="assets/uwf-logo-horizontal.png" />
+    <link rel="stylesheet" href="styles.css?v=brain-code-fit-sharp-1" />
+  </head>
+  <body data-audience="student">
+    <div class="app-shell">
+      <header class="topbar" aria-label="Brain Code presentation">
+        <img class="uwf-logo" src="assets/uwf-logo-horizontal.png" alt="University of West Florida" />
+        <div class="deck-meta">
+          <strong>Brain Code</strong>
+        </div>
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          <span id="counter">1 / 80</span>
+        </div>
+      </header>
+
+      <main class="deck" id="deck" aria-live="polite">
+        <section class="frame hero-frame is-active" data-title="Brain Code" data-notes="Cue: Ask students to silently replay their morning. Let vivid examples come before vocabulary. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <img class="hero-img" src="assets/daily-brain-hero.png" alt="Students doing daily activities with brain signal paths" />
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <h1>Brain Code</h1>
+            <p>What did your brain already do today?</p>
+            <div class="brand-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-card fragment" data-fragment>
+              <span>Start with everyday life, then translate it into neuroscience.</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="heroSignals"></canvas>
+        </section>
+
+        <section class="frame light-frame morning-slide" data-title="Today Starts With You" data-notes="Cue: Invite students to list three ordinary things their brain already helped them do. This should feel easy and concrete. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="morning-layout">
+            <div class="hyper-panel morning-panel">
+              <div class="morning-example-board">
+                <p class="eyebrow">Pick one moment</p>
+                <h3>What did your brain already help you do?</h3>
+                <div class="morning-example-grid">
+                  <article><b>Wake up</b><span>sound, attention, action</span></article>
+                  <article><b>Find your way</b><span>signs, memory, direction</span></article>
+                  <article><b>Choose food</b><span>hunger, options, choice</span></article>
+                  <article><b>Recognize someone</b><span>face, memory, name</span></article>
+                </div>
+              </div>
+            </div>
+            <div class="morning-copy fragment" data-fragment>
+              <div class="morning-text">
+                <p class="eyebrow">Start here</p>
+                <h2>Think back through your morning.</h2>
+                <p class="lead">Before we code a brain model, we need to notice what your brain is already doing.</p>
+              </div>
+              <div class="morning-question-row">
+                <span>What information came in?</span>
+                <span>What did memory add?</span>
+                <span>What action did you take?</span>
+              </div>
+              <div class="prompt-box">
+                <span>My brain helped me <strong>___</strong> by using <strong>___</strong>.</span>
+                <small>Example: find this room by using signs and memory.</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Four Daily Brain Tasks" data-notes="Cue: Reveal one card at a time. Ask for student examples after each card, not after the full grid. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>Four things your brain does every day</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Recognize</b><span>Who is that person?</span></article>
+            <article class="task-card green fragment" data-fragment><b>Navigate</b><span>Where am I going?</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Choose</b><span>What should I do now?</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Learn</b><span>What changed after you tried?</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>
+            Pick one task. What information did your brain use?
+          </div>
+        </section>
+
+        <section class="frame video-frame recognition-frame" data-title="Recognizing A Friend" data-notes="Cue: Play the video first. Then reveal perception, attention, long-term memory, and working memory. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="recognition-media">
+            <div class="media-caption">
+              <strong>Recognizing a friend</strong>
+              <span>eyes -> attention -> memory -> action</span>
+            </div>
+            <div class="media-col">
+              <video autoplay muted loop playsinline preload="auto" poster="media/recognition_flow_cover.png?v=student-facing-25">
+                <source src="media/recognition_flow.mp4?v=student-facing-25" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="term-stack">
+            <p class="eyebrow">Real life</p>
+            <h2>Your brain can recognize a friend in a flash.</h2>
+            <article class="term fragment" data-fragment><b>Perception</b><span>Your brain turns signals into meaning.</span></article>
+            <article class="term fragment" data-fragment><b>Attention</b><span>Some information gets priority.</span></article>
+            <article class="term fragment" data-fragment><b>Long-term memory</b><span>Past experience helps you identify people and places.</span></article>
+            <article class="term fragment" data-fragment><b>Working memory</b><span>A small mental workspace holds what matters right now.</span></article>
+          </div>
+        </section>
+
+        <section class="frame dark-frame loop-frame" data-title="Brain Loop" data-notes="Cue: Use this as the first bridge to computation. The loop is input, processing, action, feedback. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="loop-layout">
+            <div class="video-card readable-loop-media">
+              <video autoplay muted loop playsinline preload="auto" poster="media/brain_loop_manim_cover.png?v=student-facing-31">
+                <source src="media/brain_loop_manim.mp4?v=student-facing-31" type="video/mp4" />
+              </video>
+            </div>
+            <div>
+              <p class="eyebrow">Look for the loop</p>
+              <h2>Brain tasks often work as loops.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Input</span>
+                <span class="fragment" data-fragment>Brain processing</span>
+                <span class="fragment" data-fragment>Action</span>
+                <span class="fragment" data-fragment>Feedback</span>
+              </div>
+              <p class="callout fragment" data-fragment>In code, this can become a model: input, rule, output.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame signal-frame" data-title="Signals Over Time" data-notes="Cue: This is the first simple math background slide. A variable is something that changes; a model is a rule; time gives order. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Small math idea</p>
+              <h2>Information is a signal that can change what you do.</h2>
+              <div class="slider-row fragment" data-fragment>
+                <label for="attentionSlider">Attention</label>
+                <input id="attentionSlider" type="range" min="20" max="100" value="72" />
+              </div>
+              <article class="term fragment" data-fragment><b>Variable</b><span>Something that changes, such as signal strength.</span></article>
+              <article class="term fragment" data-fragment><b>Model</b><span>A simple rule for how one changing thing affects another.</span></article>
+              <article class="term fragment" data-fragment><b>Time</b><span>Signals unfold step by step.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <svg class="signal-static-plot" viewBox="0 0 600 440" role="img" aria-label="A line plot showing signal strength changing over time">
+                <rect width="600" height="440" fill="#ffffff" />
+                <g stroke="#d6e3ea" stroke-width="1">
+                  <line x1="76" y1="76" x2="536" y2="76" />
+                  <line x1="76" y1="142" x2="536" y2="142" />
+                  <line x1="76" y1="208" x2="536" y2="208" />
+                  <line x1="76" y1="274" x2="536" y2="274" />
+                  <line x1="76" y1="340" x2="536" y2="340" />
+                </g>
+                <path d="M76 364 L76 62 M76 364 L540 364" fill="none" stroke="#102033" stroke-width="3" stroke-linecap="round" />
+                <text x="76" y="42" fill="#004c97" font-size="20" font-weight="900">Signal strength</text>
+                <text x="490" y="404" fill="#004c97" font-size="20" font-weight="900">Time</text>
+                <path d="M78 318 C118 320 138 300 162 244 C191 176 226 92 278 146 C317 187 340 306 384 250 C428 194 443 102 484 92 C510 86 525 96 540 112" fill="none" stroke="#009cde" stroke-width="7" stroke-linecap="round" />
+                <circle cx="484" cy="92" r="11" fill="#ffb81c" stroke="#102033" stroke-width="3" />
+                <text x="394" y="82" fill="#007a33" font-size="18" font-weight="900">moment that matters</text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame" data-title="Moving Plot" data-notes="Cue: Use the moving plot to make the axes less scary. Do not dwell on formulas; keep it visible and intuitive. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="media-col wide">
+            <video autoplay muted loop playsinline preload="auto" poster="media/signal_timeline_plot_cover.png?v=student-facing-26">
+              <source src="media/signal_timeline_plot.mp4?v=student-facing-26" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-notes">
+            <h2>Reading a plot is reading a story.</h2>
+            <p class="fragment" data-fragment>The x-axis is time.</p>
+            <p class="fragment" data-fragment>The line shows a changing signal.</p>
+            <p class="fragment" data-fragment>The peak is the moment the signal matters most.</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame split-frame memory-frame" data-title="Memory" data-notes="Cue: Separate the scratchpad metaphor from the library metaphor. This prepares students for state variables and learning. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Memory has different jobs</p>
+              <h2>Holding, storing, and retrieving are different jobs.</h2>
+              <article class="term fragment" data-fragment><b>Working memory</b><span>The scratchpad for this moment.</span></article>
+              <article class="term fragment" data-fragment><b>Long-term memory</b><span>The library of past knowledge and skills.</span></article>
+              <article class="term fragment" data-fragment><b>Retrieval</b><span>Finding a useful memory when a cue reminds you.</span></article>
+            </div>
+            <div class="hyper-panel image-panel">
+              <img src="assets/memory-metaphor.png" alt="Visual metaphor for memory and learning" />
+              <canvas data-animation="memoryDots"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame" data-title="Working Memory Plot" data-notes="Cue: Use this plot as a bridge to later coding: a value can be held for a short time and then fade. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="media-col wide">
+            <video autoplay muted loop playsinline preload="auto" poster="media/working_memory_plot_cover.png?v=student-facing-27">
+              <source src="media/working_memory_plot.mp4?v=student-facing-27" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-notes">
+            <h2>Working memory and long-term memory work together.</h2>
+            <p class="fragment" data-fragment>WM: A cue brings information into the active workspace.</p>
+            <p class="fragment" data-fragment>LM: Stored knowledge can be retrieved and used again.</p>
+            <p class="fragment" data-fragment>LM storage: Neurons change synapse strengths, making useful pathways easier to reuse.</p>
+          </div>
+        </section>
+
+        <section class="frame light-frame brain-frame" data-title="Inside The Brain" data-notes="Cue: Keep anatomy simplified. Name neurons, glia, blood vessels, and chemicals as things students will hear later. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="brain-layout">
+            <img class="brain-map" src="assets/brain-components.svg?v=brain-code-4" alt="Upper body and brain tissue sketch showing neurons, glia, blood vessels, and chemicals" />
+            <div class="brain-copy">
+              <p class="eyebrow">What is in the brain?</p>
+              <h2>The brain is living tissue, not just an idea machine.</h2>
+              <div class="contents-grid">
+                <article class="mini fragment" data-fragment><b>Neurons</b><span>Send signals</span></article>
+                <article class="mini green fragment" data-fragment><b>Glia</b><span>Help neurons work</span></article>
+                <article class="mini coral fragment" data-fragment><b>Blood vessels</b><span>Deliver oxygen and glucose</span></article>
+                <article class="mini gold fragment" data-fragment><b>Chemicals</b><span>Change what signals mean</span></article>
+              </div>
+            </div>
+          </div>
+          <p class="bottom-banner fragment" data-fragment>Brain signals need support: cells, fuel, and chemicals all work together.</p>
+        </section>
+
+        <section class="frame mist-frame area-frame" data-title="Brain Areas" data-notes="Cue: Reveal two areas at a time. Emphasize networks, not one magic spot for every ability. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>Your brain uses areas and networks.</h2>
+          <div class="area-stage">
+            <canvas data-animation="brainNetwork"></canvas>
+            <div class="area-label a1 fragment" data-fragment>Frontal areas: plan and choose</div>
+            <div class="area-label a2 fragment" data-fragment>Sensory: sight, sound, touch</div>
+            <div class="area-label a3 fragment" data-fragment>Motor areas: movement commands</div>
+            <div class="area-label a4 fragment" data-fragment>Hippocampus: memory</div>
+            <div class="area-label a5 fragment" data-fragment>Cerebellum: timing and coordination</div>
+          </div>
+        </section>
+
+        <section class="frame video-frame motor-frame" data-title="Motor Control And Energy" data-notes="Cue: This brings body movement into the brain loop. Ask students to imagine catching a ball or walking into class. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="media-col readable-motor-media">
+            <video autoplay muted loop playsinline preload="auto" poster="media/motor_energy_cover.png?v=student-facing-32">
+              <source src="media/motor_energy.mp4?v=student-facing-32" type="video/mp4" />
+            </video>
+          </div>
+          <div class="term-stack">
+            <p class="eyebrow">Movement uses brain code</p>
+            <h2>Catching a ball is a fast control loop.</h2>
+            <article class="term fragment" data-fragment><b>Sense</b><span>Eyes and body report what is happening.</span></article>
+            <article class="term fragment" data-fragment><b>Plan</b><span>The brain predicts what should happen next.</span></article>
+            <article class="term fragment" data-fragment><b>Command</b><span>Motor signals tell muscles what to do.</span></article>
+            <article class="term fragment" data-fragment><b>Feedback</b><span>The next command changes if movement was off.</span></article>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame energy-frame" data-title="Energy" data-notes="Cue: Keep ATP in daily language: a tiny energy currency cells spend to keep signals working. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Brains need fuel</p>
+              <h2>Thinking and learning use energy.</h2>
+              <article class="term fragment" data-fragment><b>Oxygen</b><span>from breathing, delivered by blood</span></article>
+              <article class="term fragment" data-fragment><b>Glucose</b><span>from food, used by cells</span></article>
+              <article class="term fragment" data-fragment><b>ATP</b><span>A cell's tiny energy currency</span></article>
+              <p class="callout fragment" data-fragment>Why might focus feel harder when you are tired or hungry?</p>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="energyPlot"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame" data-title="Learning From Mistakes" data-notes="Cue: Use prediction error in daily language: what I thought would happen minus what actually happened. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="media-col wide">
+            <video autoplay muted loop playsinline preload="auto" poster="media/learning_curve_plot_cover.png?v=student-facing-30">
+              <source src="media/learning_curve_plot.mp4?v=student-facing-30" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-notes">
+            <h2>Practice is repeating with feedback.</h2>
+            <p class="fragment" data-fragment>Prediction: what do I think will happen?</p>
+            <p class="fragment" data-fragment>Feedback: what actually happened?</p>
+            <p class="fragment" data-fragment>Update: what should change next time?</p>
+          </div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Transition" data-notes="Cue: Have students map one example to the vocabulary. Then move into the notebook/model section. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="final-copy">
+            <p class="eyebrow">Your turn</p>
+            <h2>Map one daily task onto the brain loop.</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Input</span>
+              <span class="fragment" data-fragment>Memory</span>
+              <span class="fragment" data-fragment>Action</span>
+              <span class="fragment" data-fragment>Feedback</span>
+              <span class="fragment" data-fragment>Energy</span>
+            </div>
+            <p class="callout fragment" data-fragment>Next: turn the brain loop into code.</p>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame hero-frame" data-title="From Brain Loop To Notebook" data-notes="Cue: Use this as the handoff from the first 15 minutes. The familiar loop now becomes runnable code. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <img class="hero-img" src="assets/daily-brain-hero.png" alt="Students learning with visible brain signal paths" />
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <h1>Brain Code</h1>
+            <p>Now we turn the brain loop into a notebook.</p>
+            <div class="brand-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-card fragment" data-fragment>
+              <span>Today’s morning goal: run small models, change one thing, and explain what changed.</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="heroSignals"></canvas>
+        </section>
+
+        <section class="frame mist-frame roadmap-frame" data-title="Today’s Roadmap" data-notes="Cue: Keep this fast. Students should know the rhythm: warm up, neuron, decision, reflection. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>The full day has four habits.</h2>
+          <div class="roadmap-grid">
+            <article class="task-card fragment" data-fragment><b>Warm up</b><span>Open Colab, run one cell, edit one sentence.</span></article>
+            <article class="task-card green fragment" data-fragment><b>Neuron model</b><span>Change input strength and watch spikes appear.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Decision model</b><span>Let noisy evidence race toward a choice.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Discussion</b><span>Ask what the models show and what they hide.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Rule for today: Predict. Run. Look. Explain.</div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Colab Warm-Up" data-notes="Cue: The goal is confidence with the interface, not Python mastery. Keep the first run frictionless. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook Zero</p>
+              <h2>A notebook is a place where text, code, and plots live together.</h2>
+              <div class="notebook-link-row">
+                <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+                <a class="primary" href="https://colab.research.google.com/drive/1nvXbt6HHNDYvwjQsyyec9LceSyUMfLVv" target="_blank" rel="noopener">Open Notebook Zero</a>
+              </div>
+              <article class="term fragment" data-fragment><b>Text cell</b><span>Explain what you think will happen.</span></article>
+              <article class="term fragment" data-fragment><b>Code cell</b><span>Run instructions the computer can follow.</span></article>
+              <article class="term fragment" data-fragment><b>Output</b><span>See a number, table, or plot after the code runs.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="notebookWarmup"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="First Student Task" data-notes="Cue: Give students one very small success before asking for interpretation. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>Your first notebook goal is intentionally small.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Run</b><span>Press the play button on the first code cell.</span></article>
+            <article class="task-card green fragment" data-fragment><b>Edit</b><span>Change one markdown sentence into your own words.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Plot</b><span>Make one simple line graph appear.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Notice</b><span>Say what the graph is showing.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Checkpoint: every student has run code once before the neuron model starts.</div>
+        </section>
+
+        <section class="frame light-frame colab-link-frame" data-title="Colab Access" data-notes="Cue: Before class, set the Colab Code folder and the notebooks to Anyone with the link can view. Students should open the folder first, then Notebook One for the morning neuron model. Misconception: Students may think all notebooks do the same job. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="colab-link-layout">
+            <div class="copy">
+              <p class="eyebrow">Colab access</p>
+              <h2>Use the folder, then open the notebook for the current activity.</h2>
+              <p class="lead">All notebook links are view-only. In Colab, make your own copy before editing code or text.</p>
+            </div>
+            <div class="resource-board">
+              <a class="resource-card" href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">
+                <b>Colab Code Folder</b>
+                <span>Shared starter notebooks.</span>
+                <code>https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX</code>
+              </a>
+              <a class="resource-card zero" href="https://colab.research.google.com/drive/1nvXbt6HHNDYvwjQsyyec9LceSyUMfLVv" target="_blank" rel="noopener">
+                <b>Notebook Zero</b>
+                <span>Colab warm-up.</span>
+                <code>https://colab.research.google.com/drive/1nvXbt6HHNDYvwjQsyyec9LceSyUMfLVv</code>
+              </a>
+              <a class="resource-card green" href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">
+                <b>Notebook One</b>
+                <span>Simple neuron LIF model.</span>
+                <code>https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk</code>
+              </a>
+              <a class="resource-card coral" href="https://colab.research.google.com/drive/1UNOOj6Nwk5EoTeLu8mVPwVmG_2MOzf6v" target="_blank" rel="noopener">
+                <b>Notebook Two</b>
+                <span>Intro decision first look.</span>
+                <code>https://colab.research.google.com/drive/1UNOOj6Nwk5EoTeLu8mVPwVmG_2MOzf6v</code>
+              </a>
+              <a class="resource-card" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/03_Brain_Code_Afternoon_Graph_Spike_Lab.ipynb" target="_blank" rel="noopener">
+                <b>Notebook Three</b>
+                <span>More complete afternoon graph experiment lab.</span>
+                <code>github/shusenpu/NeuroNautsSummer/UWF_NeuroNauts_2026_Dr_Pu/notebooks/03_Brain_Code_Afternoon_Graph_Spike_Lab.ipynb</code>
+              </a>
+              <a class="resource-card green" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb" target="_blank" rel="noopener">
+                <b>Notebook Four</b>
+                <span>New spike-train lab.</span>
+                <code>github/shusenpu/NeuroNautsSummer/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb</code>
+              </a>
+              <a class="resource-card coral" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/05_Brain_Code_Decision_Practice_Lab.ipynb" target="_blank" rel="noopener">
+                <b>Notebook Five</b>
+                <span>Decision restart and bridge.</span>
+                <code>github/shusenpu/NeuroNautsSummer/UWF_NeuroNauts_2026_Dr_Pu/notebooks/05_Brain_Code_Decision_Practice_Lab.ipynb</code>
+              </a>
+              <a class="resource-card" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">
+                <b>Notebook Six</b>
+                <span>Comprehensive decision lab.</span>
+                <code>github/shusenpu/NeuroNautsSummer/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb</code>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame colab-ops-frame" data-title="Colab Basic Moves" data-notes="Cue: Make the interface explicit before the science content. Students should know how to open, copy, run, edit, and rerun without feeling that Python syntax is the main hurdle. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>Before the model, practice the Colab moves.</h2>
+          <div class="task-grid">
+            <article class="task-card"><b>Open</b><span>Use the folder link and choose the notebook for today.</span></article>
+            <article class="task-card green"><b>Copy</b><span>Save a personal copy before changing code.</span></article>
+            <article class="task-card gold"><b>Run</b><span>Use the play button on one cell and wait for output.</span></article>
+            <article class="task-card coral"><b>Edit</b><span>Change one number or one sentence, then rerun.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>If output looks strange, run from the top once before changing more settings.</div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="What Is A Model?" data-notes="Cue: Tie the abstract idea of model to the loop students already saw. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card">
+              <canvas data-animation="modelRecipe"></canvas>
+            </div>
+            <div>
+              <p class="eyebrow">Core idea</p>
+              <h2>A model is a simplified rule for a real process.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Choose a question</span>
+                <span class="fragment" data-fragment>Keep key ingredients</span>
+                <span class="fragment" data-fragment>Run the rule</span>
+                <span class="fragment" data-fragment>Compare to reality</span>
+              </div>
+              <p class="callout fragment" data-fragment>Useful models are not perfect. They are clear enough to test an idea.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame firing-frame" data-title="What Is Neuron Firing?" data-notes="Cue: Use the reference-deck action-potential sequence, but translate it: neurons do not literally burn; firing means a brief electrical pulse when voltage crosses threshold. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Background before Notebook One</p>
+              <h2>When a neuron “fires,” it sends a fast electrical pulse.</h2>
+              <p class="lead">Voltage starts quiet. Input pushes up. Threshold makes a spike.</p>
+              <article class="term fragment" data-fragment><b>Resting</b><span>The neuron is ready, but not sending a spike.</span></article>
+              <article class="term fragment" data-fragment><b>Threshold</b><span>The “enough input” line.</span></article>
+              <article class="term fragment" data-fragment><b>Spike</b><span>A brief pulse, also called an action potential.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="actionPotential"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame firing-rate-frame" data-title="Why Firing Matters" data-notes="Cue: Connect spikes to information. A single spike matters, but rate, timing, and patterns are often what downstream neurons and researchers read. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>Spikes are one way neurons turn input into messages.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Spike time</b><span>When did the pulse happen?</span></article>
+            <article class="task-card green fragment" data-fragment><b>Spike count</b><span>How many pulses happened during the input?</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Firing rate</b><span>How often is the neuron spiking?</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Pattern</b><span>Are spikes steady, bursty, or irregular?</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>In Colab, we will read the model by counting spikes and comparing the voltage plot.</div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame lif-bridge-frame" data-title="From Biology To Code" data-notes="Cue: Bridge real action potentials to the LIF abstraction. Name what the model keeps and what it leaves out so the simplification feels intentional. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card">
+              <canvas data-animation="lifBridge"></canvas>
+            </div>
+            <div class="loop-copy">
+              <p class="eyebrow">Simplify carefully</p>
+              <h2>Our model keeps the firing logic, not every biological detail.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Voltage changes over time</span>
+                <span class="fragment" data-fragment>Input pushes voltage up</span>
+                <span class="fragment" data-fragment>Leak pulls voltage back</span>
+                <span class="fragment" data-fragment>Threshold triggers reset</span>
+              </div>
+              <p class="callout fragment" data-fragment>Real neurons use ion channels and chemistry. Our code keeps the part we can test today.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame neuron-frame" data-title="Simple Neuron" data-notes="Cue: Name the LIF ingredients in plain language before code appears. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook One</p>
+              <h2>A simple neuron model asks: how much input makes a spike?</h2>
+              <div class="notebook-link-row">
+                <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+                <a class="primary" href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">Open Notebook One</a>
+              </div>
+              <article class="term fragment" data-fragment><b>Input</b><span>Turned on from 50 to 250 ms in the notebook.</span></article>
+              <article class="term fragment" data-fragment><b>Leak</b><span>Voltage is pulled back toward resting voltage.</span></article>
+              <article class="term fragment" data-fragment><b>Threshold</b><span>Crossing -50 mV records a spike time.</span></article>
+              <article class="term fragment" data-fragment><b>Reset</b><span>After a spike, voltage drops and pauses briefly.</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="lifNeuron"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Changing Input Strength" data-notes="Cue: Let students predict which input strength will spike most before showing the animation. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="media-col wide canvas-media">
+            <canvas data-animation="lifInputSweep"></canvas>
+          </div>
+          <div class="side-notes">
+            <p class="fragment" data-fragment>Input 8 and 10 stay below threshold: 0 spikes.</p>
+            <p class="fragment" data-fragment>Input 12 crosses threshold 4 times.</p>
+            <p class="fragment" data-fragment>Input 14 crosses threshold 6 times.</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Neuron Notebook Prompts" data-notes="Cue: Use these as click-through prompts while students work. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>Before rerunning, make a prediction.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Prediction</b><span>If I raise input strength, I think the neuron will...</span></article>
+            <article class="task-card green fragment" data-fragment><b>Run</b><span>Change only one number, then rerun the model.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Evidence</b><span>Count the spikes and compare the plot.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Explain</b><span>The neuron spiked more or less because...</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Science habit: one clean change makes the result easier to interpret.</div>
+        </section>
+
+        <section class="frame light-frame split-frame code-frame" data-title="Code To Concept" data-notes="Cue: Do not teach every syntax detail. Point to the few code lines that match the model ingredients. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Read code like a map</p>
+              <h2>You only need the few lines that match the idea.</h2>
+              <article class="term fragment" data-fragment><b>Settings</b><span>Resting voltage, threshold, input strength.</span></article>
+              <article class="term fragment" data-fragment><b>Loop</b><span>Update the voltage one tiny time step at a time.</span></article>
+              <article class="term fragment" data-fragment><b>If statement</b><span>If voltage reaches threshold, record a spike and reset.</span></article>
+            </div>
+            <div class="code-panel">
+              <pre><code>for each time step:
+    leak = -(voltage - rest)
+    push = R * input[t]
+    voltage += (leak + push) * dt / tau
+
+    if voltage >= threshold:
+        record spike time
+        reset and pause</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Neuron Reflection" data-notes="Cue: Pause for pair-share before moving to decisions. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="final-copy">
+            <p class="eyebrow">Pair-share</p>
+            <h2>What did the neuron model help you see?</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Input changes spike count</span>
+              <span class="fragment" data-fragment>Threshold turns voltage into spikes</span>
+              <span class="fragment" data-fragment>Firing rate can carry information</span>
+              <span class="fragment" data-fragment>Details are missing</span>
+            </div>
+            <p class="callout fragment" data-fragment>Next: decisions can be modeled as evidence accumulating over time.</p>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Student Pause: What Changed?" data-notes="Cue: Pause before the decision model so students name evidence from the neuron plot. Misconception: Students may say “it worked” without pointing to the graph. Transition: Next, make prediction explicit before each run.">
+
+          <div class="final-copy">
+            <p class="eyebrow">Student pause</p>
+            <h2>What changed in the graph?</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>input</span>
+              <span class="fragment" data-fragment>voltage</span>
+              <span class="fragment" data-fragment>spikes</span>
+              <span class="fragment" data-fragment>explanation</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Mini Whiteboard: Predict Before Run" data-notes="Cue: Have students write a prediction before touching the notebook. Misconception: Students may run first and explain afterward from hindsight. Transition: Next, turn the prediction into a simple rule card.">
+
+          <h2>Predict before running.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>I predict</b><span>more / fewer spikes</span></article>
+            <article class="task-card green fragment" data-fragment><b>Because</b><span>one setting changed</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Evidence</b><span>will come from the graph</span></article>
+            <article class="task-card coral fragment" data-fragment><b>Then</b><span>I will explain</span></article>
+          </div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="Model Rule Card" data-notes="Cue: Use this as a compact memory aid for the neuron model. Misconception: Students may think the model includes every biological detail. Transition: Next, the same rule pattern appears in the decision model.">
+
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card"><canvas data-animation="modelRecipe"></canvas></div>
+            <div>
+              <p class="eyebrow">Rule card</p>
+              <h2>One clear rule makes testing easier.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>Change one setting</span>
+                <span class="fragment" data-fragment>Run the rule</span>
+                <span class="fragment" data-fragment>Read the graph</span>
+                <span class="fragment" data-fragment>Explain the result</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame decision-frame" data-title="Simple Decision Model" data-notes="Cue: Use the plain-language names: evidence push, random wobble, and how sure you want to be. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook Two</p>
+              <h2>A decision model asks: when is there enough evidence to choose?</h2>
+              <div class="notebook-link-row">
+                <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+                <a class="primary" href="https://colab.research.google.com/drive/1UNOOj6Nwk5EoTeLu8mVPwVmG_2MOzf6v" target="_blank" rel="noopener">Open Notebook Two</a>
+              </div>
+              <article class="term fragment" data-fragment><b>Evidence push</b><span>Information leaning toward one choice.</span></article>
+              <article class="term fragment" data-fragment><b>Random wobble</b><span>Noise that makes each trial a little different.</span></article>
+              <article class="term fragment" data-fragment><b>Decision bound</b><span>How sure the model wants to be before choosing.</span></article>
+              <p class="callout fragment" data-fragment>In the fixed Colab example, positive drift still chooses B once because noise can win a single trial.</p>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="decisionDrift"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Noisy Evidence Paths" data-notes="Cue: Emphasize that same settings can produce different paths because of noise. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="media-col wide canvas-media">
+            <canvas data-animation="ddmTrials"></canvas>
+          </div>
+          <div class="side-notes">
+            <h2>The same model can produce different trials.</h2>
+            <p class="fragment" data-fragment>Some paths reach Choose A quickly.</p>
+            <p class="fragment" data-fragment>Some paths wobble before deciding.</p>
+            <p class="fragment" data-fragment>Noise is not a mistake. It is part of the model.</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Speed Accuracy Tradeoff" data-notes="Cue: Use this as a discussion slide before the summary plots in the notebook. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <h2>What happens when the model waits to be more sure?</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>Low bound</b><span>Faster choices, but more chances to be wrong.</span></article>
+            <article class="task-card green fragment" data-fragment><b>High bound</b><span>Slower choices, but more evidence collected.</span></article>
+            <article class="task-card gold fragment" data-fragment><b>Strong drift</b><span>Clear evidence usually reaches the right bound faster.</span></article>
+            <article class="task-card coral fragment" data-fragment><b>More noise</b><span>Paths wobble more, so outcomes vary more.</span></article>
+          </div>
+          <div class="wide-discussion fragment" data-fragment>Real-life question: when should speed matter more than certainty?</div>
+        </section>
+
+        <section class="frame light-frame split-frame decision-frame" data-title="Decision Summary Plots" data-notes="Cue: Connect single trial paths to the bar and reaction-time summaries. Misconception: Students may treat a simple picture or model as the whole brain. Transition: Keep using Predict, Run, Look, Explain.">
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">From trials to summaries</p>
+              <h2>Many runs reveal patterns a single run can hide.</h2>
+              <article class="term fragment" data-fragment><b>Bar chart</b><span>Drift 0.2, 0.4, 0.6 gives about 60%, 66%, 76% Choose A.</span></article>
+              <article class="term fragment" data-fragment><b>Line plot</b><span>Average reaction time drops from about 1.05 s to 0.94 s.</span></article>
+              <article class="term fragment" data-fragment><b>Question</b><span>Which plot answers which question?</span></article>
+            </div>
+            <div class="hyper-panel">
+              <canvas data-animation="decisionSummary"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Midday Checkpoint" data-notes="Cue: Use this as the bridge from morning modeling to afternoon practice. Misconception: Students may think lunch resets the habits; emphasize the rhythm stays the same. Transition: After lunch, students reuse the same rhythm with simpler graph practice.">
+
+          <div class="final-copy">
+            <p class="eyebrow">Midday checkpoint</p>
+            <h2>Same rhythm after lunch.</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Predict</span>
+              <span class="fragment" data-fragment>Run</span>
+              <span class="fragment" data-fragment>Look</span>
+              <span class="fragment" data-fragment>Explain</span>
+            </div>
+            <div class="final-resource-links">
+              <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+              <a href="https://colab.research.google.com/drive/1nvXbt6HHNDYvwjQsyyec9LceSyUMfLVv" target="_blank" rel="noopener">Notebook Zero</a>
+              <a href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">Notebook One</a>
+              <a href="https://colab.research.google.com/drive/1UNOOj6Nwk5EoTeLu8mVPwVmG_2MOzf6v" target="_blank" rel="noopener">Notebook Two</a>
+              <a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/03_Brain_Code_Afternoon_Graph_Spike_Lab.ipynb" target="_blank" rel="noopener">Notebook Three</a>
+              <a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb" target="_blank" rel="noopener">Notebook Four</a>
+              <a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/05_Brain_Code_Decision_Practice_Lab.ipynb" target="_blank" rel="noopener">Notebook Five</a>
+              <a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">Notebook Six</a>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Afternoon Restart" data-notes="Cue: Restart with continuity, then name the higher evidence standard. Misconception: Students may think the afternoon only repeats the morning. Transition: Next, rebuild the day chain as a testable path.">
+
+          <div class="final-copy">
+            <p class="eyebrow">Afternoon</p>
+            <h2>Same habits, sharper evidence.</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>Predict clearly</span>
+              <span class="fragment" data-fragment>Run one change</span>
+              <span class="fragment" data-fragment>Look for numbers</span>
+              <span class="fragment" data-fragment>Explain with limits</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="The Day Chain" data-notes="Cue: Show the afternoon turns morning concepts into evidence claims. Misconception: Students may see graphs as separate from brain questions. Transition: Next, read a graph as a comparison.">
+
+          <div class="loop-layout">
+            <div class="video-card model-canvas-card"><canvas data-animation="dayChain"></canvas></div>
+            <div>
+              <p class="eyebrow">Connect the pieces</p>
+              <h2>Brain tasks become testable questions.</h2>
+              <div class="loop-steps">
+                <span class="fragment" data-fragment>brain task</span>
+                <span class="fragment" data-fragment>signal</span>
+                <span class="fragment" data-fragment>variable</span>
+                <span class="fragment" data-fragment>comparison</span>
+                <span class="fragment" data-fragment>evidence claim</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame" data-title="What Does A Graph Show?" data-notes="Cue: Make axes visible before interpretation, then ask what is being compared. Misconception: Students may jump to conclusions without reading axes. Transition: Next, use the checklist to make fair claims.">
+
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Graph habit</p>
+              <h2>A graph compares change.</h2>
+              <article class="term fragment" data-fragment><b>x-axis</b><span>time or setting</span></article>
+              <article class="term fragment" data-fragment><b>y-axis</b><span>measured output</span></article>
+              <article class="term fragment" data-fragment><b>pattern</b><span>difference to explain</span></article>
+            </div>
+            <div class="hyper-panel"><canvas data-animation="graphChecklist"></canvas></div>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Graph Reading Checklist" data-notes="Cue: Ask these questions before any explanation or claim. Misconception: Students may confuse a change with proof of a cause. Transition: Next, open Notebook Three for a fair comparison lab.">
+
+          <h2>Check before claiming.</h2>
+          <div class="task-grid">
+            <article class="task-card fragment" data-fragment><b>What changed?</b></article>
+            <article class="task-card green fragment" data-fragment><b>What stayed fixed?</b></article>
+            <article class="task-card gold fragment" data-fragment><b>How much?</b></article>
+            <article class="task-card coral fragment" data-fragment><b>What else could explain it?</b></article>
+          </div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Notebook Three: Afternoon Lab" data-notes="Cue: Connect this slide to Notebook One: the morning notebook was a first look, and Notebook Three is the fuller afternoon lab. Misconception: Students may think this is just reopening the same notebook. Transition: Next, practice input strength as a fair comparison.">
+
+          <div class="split">
+            <div class="copy">
+              <p class="eyebrow">Notebook Three</p>
+              <h2>Now use the full lab.</h2>
+              <p class="callout">Notebook One got the model running. Notebook Three compares, measures, and summarizes.</p>
+              <div class="notebook-link-row">
+                <a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a>
+                <a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/03_Brain_Code_Afternoon_Graph_Spike_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Three</a>
+              </div>
+              <article class="term fragment" data-fragment><b>Change</b><span>one parameter</span></article>
+              <article class="term fragment" data-fragment><b>Keep</b><span>everything else fixed</span></article>
+              <article class="term fragment" data-fragment><b>Measure</b><span>count or timing</span></article>
+              <article class="term fragment" data-fragment><b>Explain</b><span>use evidence</span></article>
+            </div>
+            <div class="hyper-panel"><canvas data-animation="notebookWarmup"></canvas></div>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Experiment A: Input Strength" data-notes="Cue: Have students predict spike count before comparing levels. Misconception: Students may think stronger input makes taller spikes. Transition: Next, test whether threshold changes the rule.">
+
+          <div class="media-col wide canvas-media"><canvas data-animation="inputStrengthPractice"></canvas></div>
+          <div class="side-notes">
+            <h2>Does strength change count?</h2>
+            <p class="fragment" data-fragment>predict count</p>
+            <p class="fragment" data-fragment>compare levels</p>
+            <p class="fragment" data-fragment>find the pattern</p>
+            <p class="fragment" data-fragment>write one claim</p>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Experiment B: Threshold" data-notes="Cue: Make threshold a visible rule line, then compare counts. Misconception: Students may treat threshold as a moving spike height. Transition: Next, test whether duration changes the opportunity to spike.">
+
+          <div class="media-col wide canvas-media"><canvas data-animation="thresholdPractice"></canvas></div>
+          <div class="side-notes">
+            <h2>Does threshold change the rule?</h2>
+            <p class="fragment" data-fragment>lower threshold</p>
+            <p class="fragment" data-fragment>same input</p>
+            <p class="fragment" data-fragment>higher threshold</p>
+            <p class="fragment" data-fragment>compare spike count</p>
+          </div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Experiment C: Input Duration" data-notes="Cue: Show duration as an input window, not a new model. Misconception: Students may ignore time and only watch height. Transition: Next, record evidence from all three fair comparisons.">
+
+          <div class="media-col wide canvas-media"><canvas data-animation="inputDurationPractice"></canvas></div>
+          <div class="side-notes">
+            <h2>Does duration change opportunity?</h2>
+            <p class="fragment" data-fragment>same strength</p>
+            <p class="fragment" data-fragment>short window</p>
+            <p class="fragment" data-fragment>long window</p>
+            <p class="fragment" data-fragment>compare spike count</p>
+          </div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Results Table" data-notes="Cue: Use the table to slow students down and collect evidence, not guesses. Misconception: Students may remember only the final answer. Transition: Next, compare strength of evidence with a partner.">
+
+          <h2>Record evidence, not guesses.</h2>
+          <table class="results-table">
+            <thead><tr><th>What changed?</th><th>Prediction</th><th>What happened?</th><th>Explanation</th></tr></thead>
+            <tbody><tr><td>input</td><td></td><td></td><td></td></tr><tr><td>threshold</td><td></td><td></td><td></td></tr><tr><td>duration</td><td></td><td></td><td></td></tr></tbody>
+          </table>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Pair Share" data-notes="Cue: Ask for the strongest evidence, not personal preference. Misconception: Students may choose an answer without pointing to data. Transition: Next, simplify spikes into event times.">
+
+          <div class="final-copy">
+            <p class="eyebrow">Pair share</p>
+            <h2>Which change has strongest evidence?</h2>
+            <div class="exit-chain">
+              <span class="fragment" data-fragment>largest graph change</span>
+              <span class="fragment" data-fragment>clearest pattern</span>
+              <span class="fragment" data-fragment>best explanation</span>
+              <span class="fragment" data-fragment>one limitation</span>
+            </div>
+          </div>
+          <canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="From Spike Shape To Spike Time" data-notes="Cue: Introduce event time as a useful simplification after students have seen voltage shape. Misconception: Students may think simplifying means throwing away everything. Transition: Next, define a spike train as a list of event times.">
+<div class="media-col wide canvas-media"><canvas data-animation="traceToTick"></canvas></div><div class="side-notes"><h2>A spike can become a time stamp.</h2><p class="fragment" data-fragment>shape is hidden</p><p class="fragment" data-fragment>time remains</p></div>
+        </section>
+
+        <section class="frame light-frame split-frame" data-title="What Is A Spike Train?" data-notes="Cue: Define spike train with tick marks and event order, not advanced statistics. Misconception: Students may expect a spike train to be a waveform. Transition: Next, count spikes inside a time window.">
+<div class="split"><div class="copy"><p class="eyebrow">Spike times</p><h2>A spike train is an event list.</h2><article class="term fragment" data-fragment><b>tick</b><span>one spike time</span></article><article class="term fragment" data-fragment><b>order</b><span>which came first</span></article><article class="term fragment" data-fragment><b>window</b><span>where we count</span></article><article class="term fragment" data-fragment><b>train</b><span>all ticks together</span></article></div><div class="hyper-panel"><canvas data-animation="spikeTrainTicks"></canvas></div></div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Count The Spikes" data-notes="Cue: Let students count inside the shown window before the answer appears. Misconception: Students may count ticks outside the window. Transition: Next, turn count and window length into rate.">
+<div class="media-col wide canvas-media"><canvas data-animation="spikeTrainTicks"></canvas></div><div class="side-notes"><h2>Count inside the window.</h2><p class="fragment" data-fragment>six spikes</p><p class="fragment" data-fragment>same window for all</p></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Firing Rate" data-notes="Cue: Keep rate as a simple division example using the same time window. Misconception: Students may compare rates from different windows. Transition: Next, compare inputs with the same window.">
+<h2>Rate uses count and time.</h2><div class="big-template"><span>6 spikes in 2 seconds = 3 Hz</span></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Stronger Input, More Spikes" data-notes="Cue: Connect back to the neuron model while emphasizing input-output comparison. Misconception: Students may think more input always means a taller spike. Transition: Next, show why count is not the whole pattern.">
+<h2>Compare input to output.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>weak input</b><span>low rate</span></article><article class="task-card green fragment" data-fragment><b>medium input</b><span>middle rate</span></article><article class="task-card gold fragment" data-fragment><b>strong input</b><span>high rate</span></article></div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Timing Also Matters" data-notes="Cue: Use same-count examples to motivate why timing is new information. Misconception: Students may think count tells the whole story. Transition: Next, name the gap between neighboring spikes.">
+<div class="media-col wide canvas-media"><canvas data-animation="spikeTrainTicks"></canvas></div><div class="side-notes"><h2>Same count can hide timing.</h2><p class="fragment" data-fragment>same total</p><p class="fragment" data-fragment>different spacing</p><p class="fragment" data-fragment>different story</p></div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Interspike Interval" data-notes="Cue: Spell out interspike interval before using ISI, and define it as a gap between neighboring ticks. Misconception: Students may think ISI is spike height or subtract from the first spike every time. Transition: Next, do one tiny calculation.">
+<div class="media-col wide canvas-media"><canvas data-animation="isiGaps"></canvas></div><div class="side-notes"><h2>Interspike interval means gap between spikes.</h2><p class="fragment" data-fragment>short name: ISI</p><p class="fragment" data-fragment>between neighboring spikes</p><p class="fragment" data-fragment>not spike height</p></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Tiny Calculation" data-notes="Cue: Do this together slowly and visibly with units. Misconception: Students may forget that each gap compares neighbors. Transition: Next, use the notebook for count and rate.">
+<h2>Subtract neighboring spike times.</h2><div class="calc-card"><b>Spike times:</b> 8, 29, 37, 58, 66 ms</div><div class="wide-discussion fragment" data-fragment><b>Gaps:</b> 21, 8, 21, 8 ms</div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Notebook Four: Spike Counter" data-notes="Cue: Open Notebook Four as a new spike-train lab, not as a continuation of the graph experiment lab. Misconception: Students may expect another voltage-model activity; emphasize spike times are the new material. Transition: Next, find timing gaps.">
+<div class="split"><div class="copy"><p class="eyebrow">Notebook Four</p><h2>New material: spike trains.</h2><div class="notebook-link-row"><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Four</a></div><p class="callout fragment" data-fragment>This spike train has ___ spikes, so the rate is ___.</p></div><div class="hyper-panel"><canvas data-animation="firingRateExample"></canvas></div></div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Notebook Four: Timing Gaps" data-notes="Cue: Have students find gaps by reading neighboring spike times in Notebook Four. Misconception: Students may try to calculate before identifying the ticks. Transition: Next, state what count misses.">
+<div class="split"><div class="copy"><p class="eyebrow">Notebook Four</p><h2>Compare the gaps.</h2><div class="notebook-link-row"><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Four</a></div><p class="callout fragment" data-fragment>The gaps are regular / irregular because ___.</p></div><div class="hyper-panel"><canvas data-animation="isiGaps"></canvas></div></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="What Spike Count Misses" data-notes="Cue: Make count useful but incomplete, then connect to limitations. Misconception: Students may think one number captures the pattern. Transition: Next, reflect on the new spike-train idea.">
+<h2>One number can hide rhythm.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>count</b><span>how many</span></article><article class="task-card green fragment" data-fragment><b>spacing</b><span>how spread out</span></article><article class="task-card gold fragment" data-fragment><b>comparison</b><span>which pattern changed</span></article></div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Spike Train Reflection" data-notes="Cue: Close the spike section with one student sentence about what event times reveal. Misconception: Students may repeat terms without interpretation. Transition: Next, return to decisions and many runs.">
+<div class="final-copy"><p class="eyebrow">Reflection</p><h2>Event times helped me see ___.</h2></div><canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame light-frame split-frame decision-frame" data-title="Back To Decisions" data-notes="Cue: Connect this slide to Notebook Two: the morning notebook introduced one decision path, and Notebook Five is the fuller afternoon lab. Misconception: Students may think this is just reopening the same notebook. Transition: Next, compare one trial with many.">
+<div class="split"><div class="copy"><p class="eyebrow">Notebook Five</p><h2>Restart the decision picture.</h2><p class="callout">Notebook Two introduced one path. Notebook Five reconnects the idea.</p><div class="notebook-link-row"><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/05_Brain_Code_Decision_Practice_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Five</a></div></div><div class="hyper-panel"><canvas data-animation="decisionDrift"></canvas></div></div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Single Trial vs Many Trials" data-notes="Cue: Show why rerunning matters before comparing model settings. Misconception: Students may overtrust one run. Transition: Next, name noise as the source of spread.">
+<div class="media-col wide canvas-media"><canvas data-animation="manyTrialsSimple"></canvas></div><div class="side-notes"><h2>One run is one sample.</h2><p class="fragment" data-fragment>one path</p><p class="fragment" data-fragment>many paths</p><p class="fragment" data-fragment>spread of results</p></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Noise Makes Variation" data-notes="Cue: Keep noise as plain random wobble and connect it to spread. Misconception: Students may hear noise as an error or bug. Transition: Next, rerun without changing settings.">
+<h2>Noise creates a spread.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>same settings</b><span>one setup</span></article><article class="task-card green fragment" data-fragment><b>different paths</b><span>many samples</span></article><article class="task-card gold fragment" data-fragment><b>different times</b><span>spread to compare</span></article></div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Notebook Six: Run Again" data-notes="Cue: Open Notebook Six as the comprehensive decision lab, not as a return to Notebook Two. Misconception: Students may think same settings guarantee identical output. Transition: Next, change the bound and compare summaries.">
+<div class="split"><div class="copy"><p class="eyebrow">Notebook Six</p><h2>Run the comprehensive lab.</h2><p class="callout">New notebook: rerun, compare bound, compare noise.</p><div class="notebook-link-row"><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Six</a></div><p class="callout fragment" data-fragment>Did the spread look the same?</p></div><div class="hyper-panel"><canvas data-animation="manyTrialsSimple"></canvas></div></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Change The Bound" data-notes="Cue: Use bound as how much evidence is enough, then compare averages rather than one favorite trial. Misconception: Students may think slower always means worse. Transition: Next, compare wobble.">
+<h2>Bound changes the decision standard.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>low bound</b><span>lower standard</span></article><article class="task-card green fragment" data-fragment><b>high bound</b><span>higher standard</span></article><article class="task-card gold fragment" data-fragment><b>compare</b><span>average time</span></article></div>
+        </section>
+
+        <section class="frame video-frame plot-video-frame canvas-plot-frame" data-title="Change The Noise" data-notes="Cue: Keep noise visual and compare spread, not hidden formulas. Misconception: Students may think noise means broken code. Transition: Next, choose the graph that matches the question.">
+<div class="media-col wide canvas-media"><canvas data-animation="manyTrialsSimple"></canvas></div><div class="side-notes"><h2>More noise widens the spread.</h2><p class="fragment" data-fragment>low noise</p><p class="fragment" data-fragment>high noise</p><p class="fragment" data-fragment>compare variation</p></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Which Plot Answers Which Question?" data-notes="Cue: Separate choice, average time, and variation questions. Misconception: Students may use one graph for every question. Transition: Next, reflect on the decision model.">
+<h2>Match graph to question.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>choice percent</b><span>which option</span></article><article class="task-card green fragment" data-fragment><b>average time</b><span>how fast</span></article><article class="task-card gold fragment" data-fragment><b>path spread</b><span>how variable</span></article></div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Decision Reflection" data-notes="Cue: Close the decision section with one sentence about many-run evidence. Misconception: Students may describe the plot without saying what it helped show. Transition: Next, discuss model limits.">
+<div class="final-copy"><p class="eyebrow">Reflection</p><h2>Many runs helped me see ___.</h2></div><canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="Models Can Mislead" data-notes="Cue: Send students to Notebook Six Activity 17 and frame this as an assumption audit before the final share. Misconception: Students may think a simulation proves the real brain works the same way. Transition: Next, choose which model level their graph represents.">
+<div class="loop-layout"><div class="video-card model-canvas-card"><canvas data-animation="modelLimits"></canvas></div><div><p class="eyebrow">Notebook Six final section</p><h2>Audit the model before you share.</h2><div class="notebook-link-row"><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Six</a></div><div class="loop-steps"><span class="fragment" data-fragment>Find Activity 17</span><span class="fragment" data-fragment>choose one graph</span><span class="fragment" data-fragment>name the limitation</span><span class="fragment" data-fragment>prepare to share</span></div></div></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Three Models Today" data-notes="Cue: In Notebook Six Activity 17, students label the model level behind their final graph. Misconception: Students may forget the signal plot is also a model. Transition: Next, decide what their chosen graph helps them see.">
+<h2>Notebook Six: label your graph.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>signal sketch</b><span>tracks change</span></article><article class="task-card green fragment" data-fragment><b>neuron rule</b><span>tracks spikes</span></article><article class="task-card gold fragment" data-fragment><b>decision rule</b><span>tracks choices</span></article><article class="task-card coral fragment" data-fragment><b>your graph</b><span>circle one</span></article></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="What Each Model Helps Us See" data-notes="Cue: Have students write the useful pattern from their Notebook Six graph before they write a claim. Misconception: Students may overstate model power. Transition: Next, pair the useful pattern with a blind spot.">
+<h2>Notebook Six: write the useful pattern.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>what changed?</b><span>setting or condition</span></article><article class="task-card green fragment" data-fragment><b>what moved?</b><span>line, bar, spread</span></article><article class="task-card gold fragment" data-fragment><b>what pattern?</b><span>increase or decrease</span></article><article class="task-card coral fragment" data-fragment><b>what claim?</b><span>one idea</span></article></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="What Each Model Leaves Out" data-notes="Cue: Students add one limitation in Notebook Six before writing the final sentence frame. Misconception: Students may think limitations mean failure. Transition: Next, put claim, evidence, meaning, and limitation into one frame.">
+<h2>Notebook Six: add one blind spot.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>simple rules</b><span>not a full brain</span></article><article class="task-card green fragment" data-fragment><b>few settings</b><span>not every case</span></article><article class="task-card gold fragment" data-fragment><b>model noise</b><span>not human context</span></article><article class="task-card coral fragment" data-fragment><b>limitation</b><span>write one</span></article></div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Claim, Evidence, Limitation" data-notes="Cue: Students fill this sentence frame in Notebook Six Activity 17. Misconception: Students may make a claim without evidence or a limitation. Transition: Next, choose a graph with a clear comparison.">
+<canvas class="float-canvas" data-animation="miniShareBoard"></canvas>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Choose Your Graph" data-notes="Cue: Use Notebook Six Activity 17 to choose a final graph with a visible comparison. Misconception: Students may waste time searching for the perfect graph. Transition: Next, build four evidence sentences.">
+<h2>Notebook Six: pick the final graph.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>bound plot</b><span>low versus high</span></article><article class="task-card green fragment" data-fragment><b>noise plot</b><span>tight versus wide</span></article><article class="task-card gold fragment" data-fragment><b>trial paths</b><span>one versus many</span></article><article class="task-card coral fragment" data-fragment><b>final choice</b><span>star one graph</span></article></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="Build Your Mini-Share" data-notes="Cue: Students write the four final sentences in Notebook Six, using their chosen graph as evidence. Misconception: Students may try to explain everything from the day. Transition: Next, partner-check clarity.">
+<h2>Notebook Six: write four sentences.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>I changed</b><span>one setting</span></article><article class="task-card green fragment" data-fragment><b>The graph showed</b><span>one pattern</span></article><article class="task-card gold fragment" data-fragment><b>I think it means</b><span>one idea</span></article><article class="task-card coral fragment" data-fragment><b>One limitation</b><span>one blind spot</span></article></div>
+        </section>
+
+        <section class="frame light-frame split-frame discussion-frame" data-title="Partner Check" data-notes="Cue: Partners use Notebook Six to check whether the graph explanation is understandable and evidence-based. Misconception: Students may assume their graph is self-explanatory. Transition: Next, share with the group.">
+<div class="split"><div class="copy"><p class="eyebrow">Notebook Six partner check</p><h2>Can your partner find your evidence?</h2><p class="callout fragment" data-fragment>Switch notebooks and point to the graph.</p><p class="callout fragment" data-fragment>Ask: claim, evidence, limitation?</p></div><div class="hyper-panel"><canvas data-animation="discussionBoard"></canvas></div></div>
+        </section>
+
+        <section class="frame light-frame split-frame notebook-frame" data-title="Mini-Share" data-notes="Cue: Students present from Notebook Six using the exact sentence frame and point to their selected graph. Misconception: Students may ramble without pointing to the graph. Transition: Next, recap the whole day.">
+<div class="split"><div class="copy"><p class="eyebrow">Notebook Six mini-share</p><h2>Present one final graph.</h2><div class="notebook-link-row"><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a class="primary" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">Open Notebook Six</a></div><article class="term fragment" data-fragment><b>Point</b><span>show the graph</span></article><article class="term fragment" data-fragment><b>Read</b><span>four sentences</span></article><article class="term fragment" data-fragment><b>End</b><span>one limitation</span></article></div><div class="hyper-panel"><canvas data-animation="miniShareBoard"></canvas></div></div>
+        </section>
+
+        <section class="frame dark-frame loop-frame model-loop-frame" data-title="Whole-Day Recap" data-notes="Cue: Connect the full tutorial in one chain that ends with limitation. Misconception: Students may remember activities but not the overall idea. Transition: Next, preview what deeper study adds.">
+<div class="loop-layout"><div class="video-card model-canvas-card"><canvas data-animation="dayChain"></canvas></div><div><p class="eyebrow">Recap</p><h2>Brain code is change we can test.</h2><div class="loop-steps"><span class="fragment" data-fragment>brain task</span><span class="fragment" data-fragment>variable</span><span class="fragment" data-fragment>model</span><span class="fragment" data-fragment>comparison</span><span class="fragment" data-fragment>evidence</span><span class="fragment" data-fragment>limitation</span></div></div></div>
+        </section>
+
+        <section class="frame mist-frame task-frame" data-title="What Comes Next" data-notes="Cue: Use this slide only as a bridge to the deeper course, not as new content to teach today. Misconception: Students may ask for mechanisms that belong later. Transition: Next, write the exit ticket.">
+<h2>Preview only: the deeper course zooms in.</h2><div class="task-grid"><article class="task-card fragment" data-fragment><b>ions</b><span>later course</span></article><article class="task-card green fragment" data-fragment><b>channels</b><span>later course</span></article><article class="task-card gold fragment" data-fragment><b>action potentials</b><span>later course</span></article><article class="task-card coral fragment" data-fragment><b>spike timing</b><span>later course</span></article></div>
+        </section>
+
+        <section class="frame dark-frame final-frame" data-title="Final Exit Ticket" data-notes="Cue: End with a quick written reflection and resource links. Misconception: Students may only say “it was cool”; ask for one learned idea and one wonder. Transition: Transition out by pointing to the Colab folder for continued practice.">
+<div class="final-copy"><p class="eyebrow">Exit ticket</p><h2>Today I learned ___. Next I wonder ___.</h2><div class="final-resource-links"><a href="./materials.html" target="_blank" rel="noopener">Package links</a><a href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">Colab folder</a><a href="https://colab.research.google.com/drive/1nvXbt6HHNDYvwjQsyyec9LceSyUMfLVv" target="_blank" rel="noopener">Notebook Zero</a><a href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">Notebook One</a><a href="https://colab.research.google.com/drive/1UNOOj6Nwk5EoTeLu8mVPwVmG_2MOzf6v" target="_blank" rel="noopener">Notebook Two</a><a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/03_Brain_Code_Afternoon_Graph_Spike_Lab.ipynb" target="_blank" rel="noopener">Notebook Three</a><a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb" target="_blank" rel="noopener">Notebook Four</a><a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/05_Brain_Code_Decision_Practice_Lab.ipynb" target="_blank" rel="noopener">Notebook Five</a><a href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">Notebook Six</a></div></div><canvas class="float-canvas" data-animation="finalNetwork"></canvas>
+        </section>
+      </main>
+
+      <footer class="controlbar">
+        <button type="button" id="prevBtn" aria-label="Previous">&larr;</button>
+        <button type="button" id="nextBtn" aria-label="Next">&rarr;</button>
+        <button type="button" id="fullBtn" aria-label="Fullscreen">Full</button>
+      </footer>
+    </div>
+
+    <script src="app.js?v=one-day-6hr-1"></script>
+  </body>
+</html>

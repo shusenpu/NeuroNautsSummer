@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1300" role="img" aria-labelledby="title desc">
+  <title id="title">Upper body and brain tissue components</title>
+  <desc id="desc">A labeled classroom sketch showing neurons, glia, blood vessels, and chemicals inside brain tissue.</desc>
+  <defs>
+    <linearGradient id="panelBg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3f8fb"/>
+      <stop offset="1" stop-color="#d4ecfb"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eaf5fb"/>
+      <stop offset="1" stop-color="#c8e1ef"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#102033" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#009cde"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#007a33"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#e03c31"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#ffb81c"/>
+    </marker>
+    <style>
+      .label { font: 800 46px Aptos, Inter, Arial, sans-serif; fill: #004c97; }
+      .small { font: 800 31px Aptos, Inter, Arial, sans-serif; fill: #102033; }
+      .tiny { font: 800 26px Aptos, Inter, Arial, sans-serif; fill: #102033; }
+      .call { font: 900 44px Aptos, Inter, Arial, sans-serif; fill: #fff; }
+      .callSub { font: 800 27px Aptos, Inter, Arial, sans-serif; fill: #fff; }
+      .tissueTitle { font: 900 34px Aptos, Inter, Arial, sans-serif; fill: #fff; }
+    </style>
+  </defs>
+
+  <rect width="900" height="1300" fill="url(#panelBg)"/>
+  <path d="M0 1090 C160 1045 288 1088 450 1050 C636 1005 752 1035 900 990 L900 1300 L0 1300 Z" fill="#c6e5f6" opacity="0.55"/>
+
+  <text x="54" y="78" class="label">Brain tissue has working parts</text>
+  <text x="56" y="124" class="small">A brain is connected to the body</text>
+  <text x="56" y="160" class="small">and built from living cells.</text>
+
+  <g filter="url(#shadow)">
+    <path d="M165 580 C110 636 80 730 84 828 L84 1090 L407 1090 L407 828 C412 730 382 636 326 580 C302 557 190 557 165 580 Z" fill="url(#body)" stroke="#8dc8e8" stroke-width="4"/>
+    <path d="M198 540 C190 485 208 439 245 415 C280 392 324 405 343 438 C368 482 348 541 302 564 C264 582 215 571 198 540 Z" fill="#e8c7aa" stroke="#a98467" stroke-width="4"/>
+    <path d="M236 565 C236 612 226 646 210 673 L318 673 C302 643 294 611 296 565 Z" fill="#e8c7aa" stroke="#a98467" stroke-width="4"/>
+    <path d="M196 439 C217 397 286 383 333 424 C314 410 281 409 252 428 C230 443 214 464 205 494 C198 477 193 456 196 439 Z" fill="#2b4965"/>
+  </g>
+
+  <g transform="translate(188 443)">
+    <path d="M83 13 C135 10 173 46 170 94 C167 150 111 180 63 159 C24 142 7 105 17 68 C25 35 48 16 83 13 Z" fill="#dcefff" stroke="#004c97" stroke-width="5"/>
+    <path d="M46 77 C44 49 66 32 91 36 C111 39 122 53 124 72 C147 75 157 88 154 106 C151 129 128 135 108 127 C93 145 64 144 51 126 C29 129 16 114 21 96 C25 82 34 77 46 77 Z" fill="#009cde" opacity="0.8"/>
+    <path d="M52 91 C78 74 102 72 141 87" fill="none" stroke="#004c97" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="98" cy="91" r="9" fill="#ffb81c"/>
+  </g>
+
+  <path d="M366 500 C470 430 560 420 664 475" fill="none" stroke="#009cde" stroke-width="8" stroke-dasharray="14 12" marker-end="url(#arrowBlue)"/>
+  <text x="465" y="420" class="small" fill="#004c97">zoom in</text>
+
+  <g transform="translate(460 430)" filter="url(#shadow)">
+    <rect x="0" y="0" width="382" height="506" rx="34" fill="#ffffff" stroke="#d6e3ea" stroke-width="4"/>
+    <rect x="25" y="28" width="332" height="54" rx="14" fill="#004c97"/>
+    <text x="191" y="64" text-anchor="middle" class="tissueTitle">Brain tissue</text>
+
+    <g transform="translate(28 110)">
+      <path d="M108 80 C81 54 52 51 33 68 M108 80 C83 86 55 113 42 144 M108 80 C133 47 168 40 193 56 M108 80 C139 91 165 117 177 151" fill="none" stroke="#009cde" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="108" cy="80" r="31" fill="#009cde" stroke="#004c97" stroke-width="5"/>
+      <path d="M139 89 C171 103 201 118 232 144" fill="none" stroke="#009cde" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="240" cy="151" r="9" fill="#ffb81c"/>
+
+      <path d="M260 50 C247 33 256 14 276 18 C291 1 316 10 315 32 C336 42 332 69 309 72 C295 91 266 78 270 58 Z" fill="#007a33" opacity="0.82"/>
+      <path d="M258 210 C248 191 259 172 280 177 C295 160 323 171 318 197 C340 209 329 238 304 235 C287 250 260 235 268 214 Z" fill="#007a33" opacity="0.82"/>
+
+      <path d="M18 238 C80 213 135 220 197 252 C235 272 273 272 326 247" fill="none" stroke="#e03c31" stroke-width="18" stroke-linecap="round"/>
+      <path d="M22 238 C86 215 141 224 199 253 C236 272 276 271 326 247" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.65"/>
+      <circle cx="70" cy="225" r="9" fill="#e03c31"/>
+      <circle cx="109" cy="223" r="9" fill="#004c97"/>
+      <circle cx="150" cy="235" r="9" fill="#e03c31"/>
+      <circle cx="229" cy="262" r="9" fill="#004c97"/>
+      <circle cx="281" cy="259" r="9" fill="#e03c31"/>
+
+      <circle cx="209" cy="141" r="7" fill="#ffb81c"/>
+      <circle cx="220" cy="130" r="6" fill="#ffb81c"/>
+      <circle cx="226" cy="162" r="6" fill="#ffb81c"/>
+      <circle cx="252" cy="139" r="6" fill="#ffb81c"/>
+      <path d="M203 150 C222 152 239 151 256 145" fill="none" stroke="#ffb81c" stroke-width="4" stroke-dasharray="7 7"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M614 568 L512 536" fill="none" stroke="#009cde" stroke-width="5" marker-end="url(#arrowBlue)"/>
+    <rect x="40" y="728" width="420" height="104" rx="14" fill="#009cde" filter="url(#shadow)"/>
+    <text x="65" y="773" class="call">Neurons</text>
+    <text x="65" y="810" class="callSub">send electrical signals</text>
+
+    <path d="M724 552 L733 520" fill="none" stroke="#007a33" stroke-width="5" marker-end="url(#arrowGreen)"/>
+    <rect x="40" y="846" width="420" height="104" rx="14" fill="#007a33" filter="url(#shadow)"/>
+    <text x="65" y="891" class="call">Glia</text>
+    <text x="65" y="928" class="callSub">support and protect neurons</text>
+
+    <path d="M646 808 L496 828" fill="none" stroke="#e03c31" stroke-width="5" marker-end="url(#arrowRed)"/>
+    <rect x="40" y="964" width="420" height="104" rx="14" fill="#e03c31" filter="url(#shadow)"/>
+    <text x="65" y="1009" class="call">Blood vessels</text>
+    <text x="65" y="1046" class="callSub">deliver O2 and glucose</text>
+
+    <path d="M712 680 L698 625" fill="none" stroke="#ffb81c" stroke-width="5" marker-end="url(#arrowGold)"/>
+    <rect x="40" y="1082" width="420" height="104" rx="14" fill="#ffb81c" filter="url(#shadow)"/>
+    <text x="65" y="1127" class="call" fill="#102033">Chemicals</text>
+    <text x="65" y="1164" class="callSub" fill="#102033">change what signals mean</text>
+  </g>
+
+  <g opacity="0.6">
+    <circle cx="760" cy="1065" r="5" fill="#97c800"/>
+    <circle cx="795" cy="1094" r="4" fill="#009cde"/>
+    <circle cx="720" cy="1115" r="4" fill="#ffb81c"/>
+    <path d="M722 1076 L760 1065 L795 1094 L720 1115" fill="none" stroke="#8dc8e8" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UWF NeuroNauts 2026 | Dr. Pu Materials</title>
+    <style>
+      :root {
+        --blue: #004c97;
+        --green: #007a33;
+        --sky: #009cde;
+        --gold: #ffb81c;
+        --coral: #e03c31;
+        --ink: #102033;
+        --mist: #f3f8fb;
+        --line: #d6e3ea;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--mist);
+        font-family: Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      header {
+        padding: 40px min(7vw, 76px);
+        color: var(--white);
+        background: linear-gradient(135deg, #003865, #071927);
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 860px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(42px, 6vw, 76px);
+        line-height: 0.98;
+      }
+
+      header p {
+        max-width: 760px;
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 21px;
+        line-height: 1.35;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 40px));
+        margin: 34px auto 46px;
+        display: grid;
+        gap: 22px;
+      }
+
+      section {
+        padding: 28px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-left: 10px solid var(--sky);
+        box-shadow: 0 20px 48px rgba(16, 32, 51, 0.12);
+      }
+
+      section:nth-child(2) {
+        border-left-color: var(--green);
+      }
+
+      section:nth-child(3) {
+        border-left-color: var(--gold);
+      }
+
+      h2 {
+        color: var(--blue);
+        font-size: 30px;
+        line-height: 1.1;
+      }
+
+      p {
+        margin-top: 12px;
+        color: #495466;
+        font-size: 18px;
+        line-height: 1.42;
+      }
+
+      .grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      a.card {
+        min-height: 108px;
+        padding: 18px;
+        display: block;
+        color: var(--ink);
+        background: var(--mist);
+        border: 1px solid var(--line);
+        text-decoration: none;
+      }
+
+      a.card strong {
+        display: block;
+        color: var(--blue);
+        font-size: 19px;
+        line-height: 1.15;
+      }
+
+      a.card span {
+        display: block;
+        margin-top: 8px;
+        color: #495466;
+        font-size: 15px;
+        line-height: 1.32;
+        overflow-wrap: anywhere;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        color: var(--white);
+        background: var(--blue);
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        color: var(--blue);
+        background: var(--mist);
+        border: 1px solid var(--line);
+      }
+
+      .note {
+        color: #667085;
+        font-size: 15px;
+      }
+
+      @media (max-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>UWF NeuroNauts 2026</h1>
+      <p>Brain Code one-day tutorial materials for Dr. Pu: HTML slides, Colab notebooks, teacher schedule, and shareable course links.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Start Here</h2>
+        <p>Use the slides as the main tutorial path. Use the materials page when students need notebook or schedule links.</p>
+        <div class="actions">
+          <a class="button" href="./index.html">Open HTML Slides</a>
+          <a class="button secondary" href="./teacher_schedule.md">Teacher Schedule</a>
+          <a class="button secondary" href="./README.md">Package README</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Google Drive Colab Links</h2>
+        <p>These Drive-hosted materials were verified as link-viewable with anyone reader permission.</p>
+        <div class="grid">
+          <a class="card" href="https://drive.google.com/drive/folders/1PQxsKbFy1lTByQSW3sHUsw9XGr1MjShX" target="_blank" rel="noopener">
+            <strong>Colab Folder</strong>
+            <span>Notebook Zero, Notebook One, Notebook Two, and Drive README</span>
+          </a>
+          <a class="card" href="https://colab.research.google.com/drive/1nvXbt6HHNDYvwjQsyyec9LceSyUMfLVv" target="_blank" rel="noopener">
+            <strong>Notebook Zero</strong>
+            <span>Colab warm-up: run one cell, edit one sentence, change one signal value.</span>
+          </a>
+          <a class="card" href="https://colab.research.google.com/drive/1rfd7Icx9YsYbOel-0lfvMYtUmkkTlsEk" target="_blank" rel="noopener">
+            <strong>Notebook One</strong>
+            <span>Simple neuron model: input strength and first spike prediction.</span>
+          </a>
+          <a class="card" href="https://colab.research.google.com/drive/1UNOOj6Nwk5EoTeLu8mVPwVmG_2MOzf6v" target="_blank" rel="noopener">
+            <strong>Notebook Two</strong>
+            <span>Intro decision model: one evidence path and one simple setting change.</span>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>GitHub Colab Links</h2>
+        <p>These notebooks are included in this GitHub folder and open directly in Colab.</p>
+        <div class="grid">
+          <a class="card" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/03_Brain_Code_Afternoon_Graph_Spike_Lab.ipynb" target="_blank" rel="noopener">
+            <strong>Notebook Three</strong>
+            <span>Afternoon graph experiments: input strength, threshold, and input duration.</span>
+          </a>
+          <a class="card" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/04_Brain_Code_Spike_Train_Lab.ipynb" target="_blank" rel="noopener">
+            <strong>Notebook Four</strong>
+            <span>Spike trains: count spikes, estimate firing rate, and compute simple ISI gaps.</span>
+          </a>
+          <a class="card" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/05_Brain_Code_Decision_Practice_Lab.ipynb" target="_blank" rel="noopener">
+            <strong>Notebook Five</strong>
+            <span>Decision restart: one path, many paths, and the bridge to the full lab.</span>
+          </a>
+          <a class="card" href="https://colab.research.google.com/github/shusenpu/NeuroNautsSummer/blob/main/UWF_NeuroNauts_2026_Dr_Pu/notebooks/06_Brain_Code_Comprehensive_Decision_Lab.ipynb" target="_blank" rel="noopener">
+            <strong>Notebook Six</strong>
+            <span>Comprehensive decision lab and final mini-share preparation.</span>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Local Files Included</h2>
+        <p>The package also includes assets, media, all seven notebook files, and the teacher schedule.</p>
+        <p class="note">Folders: <code>assets/</code>, <code>media/</code>, <code>notebooks/</code>. Files: <code>index.html</code>, <code>styles.css</code>, <code>app.js</code>, <code>teacher_schedule.md</code>.</p>
+      </section>
+    </main>
+  </body>
+</html>
